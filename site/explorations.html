@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorations -- Collatz FMF Framework</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="theorems.html">Theorems</a>
+  <a href="explorations.html" class="active">Explorations</a>
+  <a href="paper.html">Paper</a>
+</nav>
+
+<h1>Exploration Timeline</h1>
+
+<p>44 computational experiments spanning six phases, from initial FMF verification through frontier analysis. Each entry is color-coded:
+  <span style="color:#3a8a3a; font-weight:600;">positive finding</span>,
+  <span style="color:#b83030; font-weight:600;">negative result</span>,
+  <span style="color:#2a5a8a; font-weight:600;">key theorem</span>.
+</p>
+
+<!-- Phase 1 -->
+<div class="phase-group">
+  <h2>Phase 1: FMF Verification (explore01--03)</h2>
+  <ul class="exp-list">
+    <li class="positive"><span class="exp-num">explore01</span> -- FMF formula verified for 1M values, zero failures</li>
+    <li class="key"><span class="exp-num">explore02</span> -- Closed-form FMF value formula found: \(F(x) = 2(3^{t+2}m - 1)\)</li>
+    <li class="positive"><span class="exp-num">explore03</span> -- All 200 tested numbers eventually descend under FMF iteration</li>
+  </ul>
+</div>
+
+<!-- Phase 2 -->
+<div class="phase-group">
+  <h2>Phase 2: Descent Analysis (explore04--10)</h2>
+  <ul class="exp-list">
+    <li class="positive"><span class="exp-num">explore04</span> -- Net bits always negative over full epochs</li>
+    <li class="key"><span class="exp-num">explore05</span> -- FMF formula proved algebraically (Theorem A)</li>
+    <li class="positive"><span class="exp-num">explore06</span> -- \(v_2\) distribution analysis confirms geometric decay</li>
+    <li class="positive"><span class="exp-num">explore07</span> -- Hard cases analysis: maximum 21 hops to descend</li>
+    <li class="key"><span class="exp-num">explore08</span> -- Exact \(v_2(\mathrm{FMF})\) formula via 2-adic inverse</li>
+    <li class="positive"><span class="exp-num">explore09</span> -- FMF-accelerated Collatz engine achieves ~6x compression over standard iteration</li>
+    <li class="positive"><span class="exp-num">explore10</span> -- FMF graph structure reveals hubs and convergence funnels</li>
+  </ul>
+</div>
+
+<!-- Phase 3 -->
+<div class="phase-group">
+  <h2>Phase 3: Markov and Spectral (explore11--19)</h2>
+  <ul class="exp-list">
+    <li class="key"><span class="exp-num">explore11</span> -- State-independent transitions discovered empirically</li>
+    <li class="key"><span class="exp-num">explore12</span> -- State independence proved algebraically (Theorem B)</li>
+    <li class="positive"><span class="exp-num">explore13</span> -- Cycle exclusion analysis: no short FMF cycles</li>
+    <li class="positive"><span class="exp-num">explore14</span> -- Cramer drift bound: \(-0.830\) bits/hop</li>
+    <li class="positive"><span class="exp-num">explore15</span> -- Supermartingale analysis: \(\alpha^* = 1.008\), near-optimal</li>
+    <li class="positive"><span class="exp-num">explore16</span> -- Autocorrelation decays rapidly, self-correction observed</li>
+    <li class="key"><span class="exp-num">explore17</span> -- Spectral radius \(\rho = 0.8638 < 1\) computed (Theorem C)</li>
+    <li class="positive"><span class="exp-num">explore18</span> -- Type-dependent self-correction: high-\(t\) maps to Type A with \(P \sim 90\%\)</li>
+    <li class="key"><span class="exp-num">explore19</span> -- Analytical transition matrix is rank-1; \(\rho = \mathbb{E}[R^\alpha]\) exactly</li>
+  </ul>
+</div>
+
+<!-- Phase 4 -->
+<div class="phase-group">
+  <h2>Phase 4: Pointwise Challenge (explore20--29)</h2>
+  <ul class="exp-list">
+    <li class="negative"><span class="exp-num">explore20</span> -- Multi-step contraction FAILS: no uniform multi-step bound exists</li>
+    <li class="negative"><span class="exp-num">explore21</span> -- Worst-case growth UNBOUNDED: arbitrarily long growth phases exist</li>
+    <li class="positive"><span class="exp-num">explore22</span> -- Growth phase structure: maximum 7 hops observed up to \(2^{60}\)</li>
+    <li class="positive"><span class="exp-num">explore23</span> -- \(2^n - 1\) trajectory analysis: these "hard" numbers still converge</li>
+    <li class="positive"><span class="exp-num">explore24</span> -- Epoch bound established: \(\leq 3.15 \cdot \log_2(x)\) steps</li>
+    <li class="positive"><span class="exp-num">explore25</span> -- Universal epoch bound verified computationally to 60 bits</li>
+    <li class="negative"><span class="exp-num">explore26</span> -- Cesaro argument fails for finite trajectories</li>
+    <li class="positive"><span class="exp-num">explore27</span> -- Growth phase mechanics: rigid structural constraints identified</li>
+    <li class="positive"><span class="exp-num">explore28</span> -- Phantom cycles in finite automaton analysis (no real cycles)</li>
+    <li class="positive"><span class="exp-num">explore29</span> -- \(m\)-value magnitude analysis: outputs cluster near inputs</li>
+  </ul>
+</div>
+
+<!-- Phase 5 -->
+<div class="phase-group">
+  <h2>Phase 5: 5n+1 Discriminant and Quartering (explore30--41)</h2>
+  <ul class="exp-list">
+    <li class="key"><span class="exp-num">explore30</span> -- 3/4 discriminant found: 3 is the largest odd integer less than 4</li>
+    <li class="positive"><span class="exp-num">explore31</span> -- 2-adic proximity chains; inverse movement rate quantified</li>
+    <li class="positive"><span class="exp-num">explore32</span> -- Mixed-metric height function constructed</li>
+    <li class="negative"><span class="exp-num">explore33</span> -- Carry propagation approach fails to give uniform bound</li>
+    <li class="key"><span class="exp-num">explore34</span> -- Growth-to-Type-A split proved: exactly 50/50</li>
+    <li class="key"><span class="exp-num">explore35</span> -- Growth-B acyclicity proved: no cycles in state space</li>
+    <li class="positive"><span class="exp-num">explore36</span> -- Complete proof structure assembled: 6 of 7 lemmas closed</li>
+    <li class="key"><span class="exp-num">explore37</span> -- Compatibility tree density \(= (1/4)^k\) proved</li>
+    <li class="key"><span class="exp-num">explore38</span> -- Quartering Law algebraic proof completed (Theorem D)</li>
+    <li class="key"><span class="exp-num">explore39</span> -- Formal proof: \(\mathbb{P}(\text{continue}) = 1/4\) exactly</li>
+    <li class="positive"><span class="exp-num">explore40</span> -- Complete proof assembly and gap audit</li>
+    <li class="positive"><span class="exp-num">explore41</span> -- Bit consumption vs growth: growth is inherently self-limiting</li>
+  </ul>
+</div>
+
+<!-- Phase 6 -->
+<div class="phase-group">
+  <h2>Phase 6: Frontier (explore42--44)</h2>
+  <ul class="exp-list">
+    <li class="negative"><span class="exp-num">explore42</span> -- Ergodicity of FMF mod \(2^K\): NEGATIVE (not ergodic)</li>
+    <li class="negative"><span class="exp-num">explore43</span> -- 2-adic expansion of Growth-B map: expanding, not contracting</li>
+    <li class="key"><span class="exp-num">explore44</span> -- Sharp almost-all formalization; Tao comparison; Baker analysis</li>
+  </ul>
+</div>
+
+<footer>
+  Hamed Mohammadpour &middot; Collatz FMF Project &middot; <a href="index.html">Home</a>
+</footer>
+
+</body>
+</html>

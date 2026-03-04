@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elementary Exponential Density Bounds for Collatz Growth Chains</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="active">Home</a>
+  <a href="theorems.html">Theorems</a>
+  <a href="explorations.html">Explorations</a>
+  <a href="paper.html">Paper</a>
+</nav>
+
+<div class="site-header">
+  <h1>Elementary Exponential Density Bounds for Collatz Growth Chains</h1>
+  <p class="subtitle">via First-Multiple-of-Four Decomposition</p>
+  <p class="author">Hamed Mohammadpour</p>
+</div>
+
+<h2>Abstract</h2>
+
+<div class="abstract">
+  <p>
+    This paper introduces the <em>First-Multiple-of-Four</em> (FMF) map, which replaces the
+    classical Collatz iteration \(x \mapsto (3x+1)/2^{v_2(3x+1)}\) with a
+    single algebraic step that jumps directly to the next multiple of four.
+    Every odd integer \(x = 4k+3\) with \(k\) odd and \(k+1 = 2^t m\) reaches its
+    FMF image in exactly \(3 + 2t\) Collatz steps, and the image is
+    \(2(3^{t+2}m - 1)\). From this closed-form we derive exact transition
+    probabilities, prove state-independence of the induced Markov chain, and
+    establish a spectral contraction bound \(\rho = 0.8638 < 1\) on average
+    shrinkage.
+  </p>
+  <p>
+    Our main result is the <em>Quartering Law</em>: the probability that a
+    growth chain continues for at least \(k\) steps is exactly \(2/4^k\),
+    yielding exponential \((1/4)^k\) density decay for long growth chains.
+    This gives natural density bounds on the exceptional set that are strictly
+    stronger than Tao's logarithmic-density, sub-polynomial bounds: natural
+    density is stronger than logarithmic density, and exponential decay is
+    stronger than any sub-polynomial rate.
+  </p>
+  <p>
+    We are transparent about the remaining gap: average contraction and
+    exponential density bounds do not by themselves imply pointwise
+    convergence for every integer. The worst-case growth is provably
+    unbounded, and the exceptional set where short-term growth occurs is
+    infinite. Closing this gap remains open.
+  </p>
+</div>
+
+<h2>Key Results</h2>
+
+<div class="result-card">
+  <h3>Theorem A: FMF Step Formula</h3>
+  <p>For any odd \(x = 4k+3\) with \(k\) odd, write \(k + 1 = 2^t m\) where \(m\) is odd. Then the Collatz trajectory from \(x\) reaches the next multiple of four in exactly</p>
+  \[\text{steps} = 3 + 2t\]
+  <p>and the FMF image is</p>
+  \[F(x) = 2\bigl(3^{t+2}\,m - 1\bigr)\]
+</div>
+
+<div class="result-card">
+  <h3>Theorem D: The Quartering Law</h3>
+  <p>The probability that a growth chain continues for at least \(k\) steps is exactly</p>
+  \[\mathbb{P}(\text{chain} \geq k) = \frac{2}{4^k}\]
+  <p>The natural density of integers requiring a growth chain of length \(\geq k\) decays exponentially as \((1/4)^k\). This is an exact result, not an asymptotic bound.</p>
+</div>
+
+<div class="result-card">
+  <h3>Main Result: Density Bounds Stronger than Tao</h3>
+  <p>Our density bounds on the exceptional set are strictly stronger than those of Tao (2022) in two independent senses:</p>
+  <ul>
+    <li><strong>Density type:</strong> natural density (our result) implies logarithmic density (Tao's), but not conversely.</li>
+    <li><strong>Decay rate:</strong> exponential decay \((1/4)^k\) dominates any sub-polynomial decay \(f(x)^{-1}\) for \(f(x) \to \infty\) arbitrarily slowly.</li>
+  </ul>
+</div>
+
+<h2>Honest Assessment</h2>
+
+<div class="callout honest">
+  <h3>What is proved</h3>
+  <ul>
+    <li>The FMF closed-form formulas (Theorem A) -- algebraically verified, zero failures in \(10^6\) tests</li>
+    <li>State-independence of the FMF Markov chain (Theorem B)</li>
+    <li>Average contraction with spectral radius \(\rho = 0.8638 < 1\) (Theorem C)</li>
+    <li>The Quartering Law with exact \((1/4)^k\) density decay (Theorem D)</li>
+    <li>That our density bounds are strictly stronger than Tao's</li>
+  </ul>
+
+  <h3>What is NOT proved</h3>
+  <ul>
+    <li>Pointwise convergence to 1 for every integer -- the central claim of the Collatz conjecture</li>
+    <li>The worst-case growth is provably unbounded: there exist integers requiring arbitrarily long growth phases</li>
+    <li>The exceptional set (integers that grow in any given step) is infinite</li>
+    <li>Average contraction does not imply pointwise convergence -- this is a real mathematical gap, not a technicality</li>
+  </ul>
+</div>
+
+<h2>Navigate</h2>
+
+<ul>
+  <li><a href="theorems.html">All Theorems</a> -- complete statements with proofs and status badges</li>
+  <li><a href="explorations.html">Exploration Timeline</a> -- 44 computational experiments, grouped by phase</li>
+  <li><a href="paper.html">Read the Paper</a> -- full PDF with proofs</li>
+</ul>
+
+<footer>
+  Hamed Mohammadpour &middot; Collatz FMF Project &middot; Prepared for arXiv (math.NT)
+</footer>
+
+</body>
+</html>

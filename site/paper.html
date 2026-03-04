@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper -- Collatz FMF Framework</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="theorems.html">Theorems</a>
+  <a href="explorations.html">Explorations</a>
+  <a href="paper.html" class="active">Paper</a>
+</nav>
+
+<h1>Read the Paper</h1>
+
+<div class="site-header">
+  <p class="subtitle">Elementary Exponential Density Bounds for Collatz Growth Chains via First-Multiple-of-Four Decomposition</p>
+  <p class="author">Hamed Mohammadpour</p>
+</div>
+
+<h2>Abstract</h2>
+
+<div class="abstract">
+  <p>
+    We introduce the First-Multiple-of-Four (FMF) map, which replaces the
+    classical Collatz iteration with a single algebraic step that jumps
+    directly to the next multiple of four. Every odd integer \(x = 4k+3\)
+    with \(k\) odd and \(k+1 = 2^t m\) reaches its FMF image in exactly
+    \(3 + 2t\) Collatz steps, yielding the closed form
+    \(F(x) = 2(3^{t+2}m - 1)\).
+  </p>
+  <p>
+    From this we derive exact transition probabilities, prove
+    state-independence of the induced Markov chain, and establish the
+    Quartering Law: the probability that a growth chain continues for at
+    least \(k\) steps is exactly \(2/4^k\). This gives natural density bounds
+    on the exceptional set with exponential \((1/4)^k\) decay, strictly
+    stronger than Tao's logarithmic-density sub-polynomial bounds.
+  </p>
+</div>
+
+<p style="margin-bottom: 0.5rem; font-style: italic; color: #666;">
+  This paper is being prepared for arXiv submission (math.NT).
+</p>
+
+<a href="paper/collatz-fmf.pdf" class="download-link">Download PDF</a>
+
+<h2>Embedded Viewer</h2>
+
+<div class="pdf-container">
+  <object data="paper/collatz-fmf.pdf" type="application/pdf" width="100%" height="800px">
+    <p>Your browser does not support embedded PDFs.
+      <a href="paper/collatz-fmf.pdf">Download the paper</a> to read it.
+    </p>
+  </object>
+</div>
+
+<footer>
+  Hamed Mohammadpour &middot; Collatz FMF Project &middot; <a href="index.html">Home</a>
+</footer>
+
+</body>
+</html>

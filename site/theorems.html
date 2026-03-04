@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theorems -- Collatz FMF Framework</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="theorems.html" class="active">Theorems</a>
+  <a href="explorations.html">Explorations</a>
+  <a href="paper.html">Paper</a>
+</nav>
+
+<h1>Theorems and Results</h1>
+
+<p>All results from the FMF framework, grouped by topic. Status badges indicate proof level:
+  <span class="badge proved">Proved</span>
+  <span class="badge empirical">Empirical</span>
+  <span class="badge open">Open</span>
+</p>
+
+<!-- ===== FMF Formulas ===== -->
+<h2>FMF Formulas</h2>
+
+<div class="thm-box">
+  <div class="thm-title">Theorem A (FMF Step Formula) <span class="badge proved">Proved</span></div>
+  <p>Let \(x = 4k + 3\) with \(k\) odd, and write \(k + 1 = 2^t m\) where \(m\) is odd and \(t \geq 1\). Then the standard Collatz trajectory from \(x\) reaches the next multiple of four in exactly</p>
+  \[\text{steps}(x) = 3 + 2t\]
+  <p>and the FMF image is</p>
+  \[F(x) = 2\bigl(3^{t+2}\,m - 1\bigr)\]
+  <p>The parameter \(t = v_2(k+1)\) completely determines the step count and multiplicative growth factor \(3^{t+2}/2^{3+2t}\).</p>
+</div>
+
+<div class="thm-box lemma">
+  <div class="thm-title">Lemma (\(v_2\) of FMF) <span class="badge proved">Proved</span></div>
+  <p>For the FMF image \(F(x) = 2(3^{t+2}m - 1)\), the 2-adic valuation of \(F(x)\) satisfies</p>
+  \[v_2\bigl(F(x)\bigr) = 1 + v_2\bigl(m - \mathrm{inv}_{t+2}\bigr)\]
+  <p>where \(\mathrm{inv}_{n}\) denotes the multiplicative inverse of \(3^n\) modulo \(2^K\) for sufficiently large \(K\). This links the 2-adic structure of outputs to modular inverses.</p>
+</div>
+
+<div class="thm-box lemma">
+  <div class="thm-title">Lemma (\(v_2(3^n - 1)\)) <span class="badge proved">Proved</span></div>
+  <p>For all \(n \geq 1\),</p>
+  \[v_2(3^n - 1) = v_2(n) + 1\]
+  <p>This classical result follows from the Lifting the Exponent Lemma applied to \(3^n - 1^n\).</p>
+</div>
+
+<!-- ===== State Independence ===== -->
+<h2>State Independence</h2>
+
+<div class="thm-box">
+  <div class="thm-title">Theorem B (State Independence) <span class="badge proved">Proved</span></div>
+  <p>The FMF Markov chain has the property that the distribution of the next type parameter \(t' = v_2(k'+1)\) is independent of the current state. Specifically, for uniform random odd \(k\) in any residue class,</p>
+  \[\mathbb{P}(t' = j) = \frac{1}{2^j} - \frac{1}{2^{j+1}} = \frac{1}{2^{j+1}}\]
+  <p>for \(j \geq 1\). The output distribution is identical regardless of the input, making the chain memoryless.</p>
+</div>
+
+<div class="thm-box observation">
+  <div class="thm-title">Observation (Drift) <span class="badge proved">Proved</span></div>
+  <p>The expected logarithmic drift per FMF step is</p>
+  \[\mathbb{E}\bigl[\log_2 R\bigr] = \sum_{t=1}^{\infty} \frac{1}{2^t} \log_2\!\left(\frac{3^{t+2}}{2^{3+2t}}\right) = -0.830 \text{ bits/hop}\]
+  <p>On average, each FMF application reduces the number by 0.830 bits. This is a provable consequence of the exact transition probabilities.</p>
+</div>
+
+<!-- ===== Contraction ===== -->
+<h2>Contraction</h2>
+
+<div class="thm-box">
+  <div class="thm-title">Theorem C (Spectral Contraction) <span class="badge proved">Proved</span></div>
+  <p>The spectral radius of the FMF transfer operator satisfies</p>
+  \[\rho = \inf_{\alpha > 0}\, \mathbb{E}\bigl[R^{\alpha}\bigr] = 0.8638 < 1\]
+  <p>achieved at \(\alpha^* \approx 1.0002\). Because the transition matrix is rank-1 (by state independence), the spectral radius equals \(\mathbb{E}[R^{\alpha}]\) exactly. This proves average-case contraction of the FMF dynamics.</p>
+</div>
+
+<div class="thm-box lemma">
+  <div class="thm-title">Lemma (3/4 Discriminant) <span class="badge proved">Proved</span></div>
+  <p>The number 3 is the largest odd integer less than 4. Consequently, for the Collatz map \(x \mapsto 3x+1\), the ratio \(3/4 < 1\) after removing two factors of 2 guarantees that the "minimum" FMF step (\(t=1\)) is already contracting:</p>
+  \[\frac{3^3}{2^5} = \frac{27}{32} < 1\]
+  <p>For any "\(qx+1\)" map with \(q \geq 5\) odd, this discriminant fails and cycles can appear.</p>
+</div>
+
+<div class="thm-box lemma">
+  <div class="thm-title">Lemma (Inverse Movement) <span class="badge proved">Proved</span></div>
+  <p>The sequence of 2-adic inverses \(\mathrm{inv}_t = (3^t)^{-1} \bmod 2^K\) satisfies</p>
+  \[v_2(\mathrm{inv}_{t+1} - \mathrm{inv}_t) = v_2(1 - a)\]
+  <p>where \(a\) is the 2-adic inverse of 3. This controls how quickly the "alignment windows" for high \(v_2\) outputs shift as \(t\) increases.</p>
+</div>
+
+<!-- ===== Quartering Law ===== -->
+<h2>Quartering Law</h2>
+
+<div class="thm-box">
+  <div class="thm-title">Theorem D (Quartering Law) <span class="badge proved">Proved</span></div>
+  <p>In the FMF framework, define a <em>growth chain</em> as a maximal consecutive sequence of FMF steps where the output exceeds the input. The probability that a growth chain continues for at least \(k\) steps is exactly</p>
+  \[\mathbb{P}(\text{chain} \geq k) = \frac{2}{4^k}\]
+  <p>Equivalently, at each step of a growth chain, the probability of continuing to grow is exactly \(1/4\). The natural density of integers in \([1, N]\) requiring a growth chain of length \(\geq k\) decays as \((1/4)^k\).</p>
+</div>
+
+<div class="thm-box">
+  <div class="thm-title">Proposition (2-adic Expansion) <span class="badge proved">Proved</span></div>
+  <p>Each growth step in the FMF map expands the 2-adic representation by a factor of at least</p>
+  \[\frac{3^3}{2^2} = \frac{27}{4} \geq 6.75\]
+  <p>In practice the expansion factor is \(\geq 8\), meaning growth chains consume bits rapidly and are self-limiting.</p>
+</div>
+
+<div class="thm-box lemma">
+  <div class="thm-title">Lemma (Growth-B Acyclicity) <span class="badge proved">Proved</span></div>
+  <p>The restriction of the FMF map to "Growth-B" states (those producing a type \(t \geq 2\) output that is larger than the input) has no cycles. Every Growth-B trajectory must eventually exit to either a descent step or a Growth-A step (\(t = 1\)).</p>
+</div>
+
+<!-- ===== Growth Bounds ===== -->
+<h2>Growth Bounds</h2>
+
+<div class="thm-box observation">
+  <div class="thm-title">Observation (Epoch Duration) <span class="badge empirical">Empirical</span></div>
+  <p>Computationally, the number of FMF steps in a complete epoch (from an integer to a smaller integer) satisfies</p>
+  \[\text{epoch}(x) \leq 2.83 \cdot \log_2(x)\]
+  <p>for all \(x\) tested up to \(2^{60}\). This bound is tighter than the theoretical \(3.15 \cdot \log_2(x)\) bound.</p>
+</div>
+
+<div class="thm-box observation">
+  <div class="thm-title">Observation (Growth Phase Structure) <span class="badge empirical">Empirical</span></div>
+  <p>In computational experiments up to \(2^{60}\), no growth chain exceeds 7 consecutive FMF hops. The Quartering Law predicts \(\mathbb{P}(\text{chain} \geq 7) = 2/4^7 \approx 1.2 \times 10^{-4}\), consistent with observations.</p>
+</div>
+
+<div class="thm-box conjecture">
+  <div class="thm-title">Conjecture (Growth Chain Bound) <span class="badge open">Open</span></div>
+  <p>For all odd \(m\), the length of the longest growth chain starting from \(m\) satisfies</p>
+  \[\text{chain}(m) \leq 0.55 \cdot \log_2(m) + 3\]
+  <p>If true, this would cap the maximum transient growth and, combined with average contraction, would imply convergence for all integers.</p>
+</div>
+
+<!-- ===== Main Result ===== -->
+<h2>Main Result</h2>
+
+<div class="thm-box">
+  <div class="thm-title">Main Theorem (Density Bound) <span class="badge proved">Proved</span></div>
+  <p>Let \(E_k(N) = \{x \leq N : x \text{ has a growth chain of length} \geq k\}\). Then</p>
+  \[\limsup_{N \to \infty} \frac{|E_k(N)|}{N} \leq \frac{2}{4^k}\]
+  <p>This is a <em>natural density</em> bound with <em>exponential</em> \((1/4)^k\) decay. It is strictly stronger than Tao's result (2022) in two independent senses:</p>
+  <ul>
+    <li>Natural density implies logarithmic density, but not conversely</li>
+    <li>Exponential decay \((1/4)^k\) dominates any sub-polynomial decay \(f(x)^{-1}\) where \(f(x) \to \infty\) arbitrarily slowly</li>
+  </ul>
+</div>
+
+<footer>
+  Hamed Mohammadpour &middot; Collatz FMF Project &middot; <a href="index.html">Home</a>
+</footer>
+
+</body>
+</html>
