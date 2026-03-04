@@ -27,7 +27,7 @@ This decreasing ratio is consistent with the spectral contraction: larger intege
   - Within growth phases, $t$-values tend to _increase_ (mean change $+0.755$, with $P(op("increase")) = 0.585$). This is surprising: higher $t$ means more multiplication by $3$, which should produce more growth. Growth terminates not because $t$ decreases, but because $v_2(op("FMF"))$ occasionally takes a large value despite high $t$.
 ]
 
-#observation(name: "$2^n - 1$ Trajectories")[
+#observation(name: "Mersenne-type Trajectories")[
   The integers $x = 2^n - 1$ are natural worst-case candidates: they have maximal $t$-parameter ($t = n - 2$) and minimal $v_2(op("FMF")) = 2$ when $n$ is odd. Despite this:
   - $F(2^n - 1)$ is Type A in $21\/22$ cases for $n = 3, dots, 24$.
   - The first-hop ratio grows as approximately $(3\/2)^n \/ 2^(v_2(3^n - 1) - 1)$.
