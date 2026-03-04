@@ -14,7 +14,7 @@ Why does $3n + 1$ converge while $5n + 1$ does not? This section answers the que
 ]
 
 #proof[
-  For $x = 4k + 1$, we have $op("FMF")(x) = a(4k + 1) + 1 = 4(a k + (a+1)\/4)$. The ratio to $x$ is approximately $a(4k+1)\/(4k+1) dot.c 1\/4 = a\/4$ up to lower-order terms. For $a = 3$, the FMF is $4(3k + 1)$ and $F(x) = (3k+1)\/2^(v_2(3k+1))$, which satisfies $F(x) lt.eq 3k + 1 < 3(4k+1)\/4 = 3x\/4 < x$ for $x gt.eq 5$. For $a = 5$, the FMF is $4(5k + (3\/2))$, and $F(x) gt.eq (5k + 1) > x$ for all $k gt.eq 1$.
+  For $x = 4k + 1$, the first Collatz step gives $a x + 1 = a(4k+1) + 1$, which is divisible by $4$ when $a equiv 3 mod 4$. For $a = 3$: $3(4k+1) + 1 = 12k + 4 = 4(3k+1)$, so the FMF is reached in one step. The hop output satisfies $F(x) lt.eq 3k + 1 < 3x\/4 < x$ for $x gt.eq 5$, since $3\/4 < 1$. For $a = 5$: $5(4k+1) + 1 = 20k + 6 equiv 2 mod 4$, so the FMF requires additional steps, but the initial ratio $a x\/x = 5 > 4$ already ensures net growth. More generally, the first-step ratio $a\/4$ determines the dominant contraction or expansion mode: for $a lt.eq 3$ the ratio is $lt.eq 3\/4 < 1$; for $a gt.eq 5$ the ratio is $gt.eq 5\/4 > 1$.
 ]
 
 #v(0.3em)

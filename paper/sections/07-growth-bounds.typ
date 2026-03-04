@@ -20,7 +20,7 @@ This decreasing ratio is consistent with the spectral contraction: larger intege
 
 #observation(name: "Growth Phase Structure")[
   Among all observed growth phases (across $1.5 times 10^6$ growth chains):
-  - Maximum duration: $7$ hops (with a single exceptional case of $37$ hops at $x = 270271$).
+  - Maximum growth-B chain: $7$ hops (strict $v_2 = 2$ definition).
   - $66.4%$ of growth phases consist of a single hop.
   - $99.3%$ of growth phases have duration $<= 3$ hops.
   - Maximum total growth: approximately $10$ bits above the starting value.

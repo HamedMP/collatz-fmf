@@ -19,7 +19,7 @@ I begin by establishing the exact algebraic machinery underlying the FMF decompo
 #v(0.3em)
 
 #definition(name: "Type classification")[
-  An odd number $x$ is _Type A_ if $x equiv 1 mod 4$, and _Type B_ if $x equiv 3 mod 4$. For Type B, writing $x = 4k + 3$ with $k$ odd and $k + 1 = 2^t dot m$ ($m$ odd, $t gt.eq 1$), the parameter $t$ is called the _depth_ of $x$.
+  An odd number $x$ is _Type A_ if $x equiv 1 mod 4$, and _Type B_ if $x equiv 3 mod 4$. For Type B with $x = 4k + 3$: if $k$ is even, the FMF is reached in $3$ steps (Case B1). If $k$ is odd, writing $k + 1 = 2^t dot m$ ($m$ odd, $t gt.eq 1$), the parameter $t$ is called the _depth_ of $x$ (Case B2).
 ]
 
 #v(0.3em)

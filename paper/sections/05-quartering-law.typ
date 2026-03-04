@@ -87,10 +87,10 @@ The condition $v_2(op("FMF")) = 2$ means the FMF value is divisible by $4$ but n
 The Quartering Law is not a coincidence of residue counting but reflects a deep structural property of the growth-B map in $ZZ_2$.
 
 #proposition(name: "2-adic Expansion")[
-  The growth-B map $m arrow.r.bar m' = op("odd_part")((3^(t+2) m - 1)\/4)$ is 2-adically _expanding_ with factor $2^(3+t') >= 8$ per step, where $t' = v_2(m'+1)$ determines the next $t$-parameter. This expansion scrambles the low-order bits of $m$ in $ZZ_2$, providing the structural explanation for the Quartering Law: expanding maps on $ZZ_2$ drive equidistribution of residues, making each step's growth-B condition effectively independent of the previous step.
+  The growth-B map $m arrow.r.bar m' = op("odd_part")((3^(t+2) m + 1)\/8)$ is 2-adically _expanding_ with factor $2^(3+t') >= 8$ per step, where $t' = v_2((3^(t+2) m + 1)\/8)$ determines the next depth parameter. This expansion scrambles the low-order bits of $m$ in $ZZ_2$, providing the structural explanation for the Quartering Law: expanding maps on $ZZ_2$ drive equidistribution of residues, making each step's growth-B condition effectively independent of the previous step.
 ]
 #proof[
-  In 2-adic terms, the growth-B map computes $3^(t+2) m - 1$, divides by $4$ (a fixed contraction by $|4|_2 = 1\/4$ in the 2-adic absolute value), and extracts the odd part (a further contraction). But from the perspective of $m$ as a 2-adic integer, the map $m arrow.r.bar 3^(t+2) m$ is an isometry (multiplication by a unit), while the subsequent $m arrow.r.bar op("odd_part")((m-1)\/4)$ shifts away the bottom $2 + v_2(m-1) - 1$ bits. This is a $2^(v_2+1)$-fold expansion on $ZZ_2$ (increasing the 2-adic absolute value), with $v_2 >= 2$ giving expansion factor $>= 8$.
+  The growth-B map computes $q = (3^(t+2) m + 1)\/8$, then extracts $m' = op("odd_part")(q)$. For two inputs $m_1, m_2$ in the growth-B domain with the same output valuation $t'$: the difference $q_1 - q_2 = 3^(t+2)(m_1 - m_2)\/8$. Since $3^(t+2)$ is a 2-adic unit ($|3^(t+2)|_2 = 1$), we have $|q_1 - q_2|_2 = |m_1 - m_2|_2 \/ |8|_2 = 8|m_1 - m_2|_2$. Taking the odd part divides by $2^(t')$, giving total expansion $|m'_1 - m'_2|_2 = 2^(3+t') |m_1 - m_2|_2$, with minimum factor $8$ when $t' = 0$.
 
   Expanding maps on compact groups are well-known to be ergodic with respect to Haar measure. In $ZZ_2$, this means the iterates of $m$ under the growth-B map equidistribute modulo $2^K$ for any fixed $K$, which is precisely the independence condition underlying the Quartering Law.
 ]

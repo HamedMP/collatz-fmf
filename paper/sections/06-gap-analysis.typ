@@ -68,7 +68,7 @@ The gap between "almost all orbits converge" and "all orbits converge" is not a 
 *The precise remaining question.* The gap reduces to a single question in $p$-adic dynamics:
 
 #conjecture(name: "Growth-B Domain Emptiness")[
-  The growth-B map $m arrow.r.bar op("odd_part")((3^(t+2) m - 1)\/4)$, restricted to the growth-B domain of $ZZ_2$ (those $m$ with $3^(t+2) m equiv 3 mod 4$ and output again in the growth-B domain), has no infinite orbit in $ZZ$.
+  The growth-B map $m arrow.r.bar op("odd_part")((3^(t+2) m + 1)\/8)$, restricted to the growth-B domain of $ZZ_2$ (those $m$ with $3^(t+2) m equiv 7 mod 8$ and output again in the growth-B domain), has no infinite orbit in $ZZ$.
 ]
 
 Equivalently: does there exist an odd positive integer $m_0$ such that the growth-B iteration, started at $m_0$, never exits the growth-B domain? If no such $m_0$ exists, the Collatz conjecture follows (combined with the spectral contraction and cycle exclusion results). If such an $m_0$ exists, it would provide a counterexample to the conjecture.

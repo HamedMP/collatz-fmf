@@ -58,13 +58,4 @@ State independence has immediate probabilistic consequences for the hop dynamics
 
 The negative drift means that a "typical" hop reduces $x$ by a factor of roughly $2^(0.83)$. However, drift alone does not prove convergence --- rare large-$t$ hops can produce exponential growth, and it is the _tail behavior_ of these growth events that determines whether all trajectories converge.
 
-#observation(name: "Self-Correction")[
-  After a high-depth Type B hop (which causes growth), the subsequent hop is biased toward Type A (which causes shrinkage). Specifically:
-  $ PP("Type A next" | "Type B with" t = 6) approx 81%, \
-    PP("Type A next" | "Type B with" t = 11) approx 91%. $
-  This bias is an intrinsic property of the output distribution --- it follows from Theorem B applied to the output state --- and is _type-dependent_, not growth-dependent. That is, the correction mechanism operates on the algebraic structure of the output, not on its magnitude.
-]
-
-#v(0.3em)
-
-Self-correction provides qualitative support for convergence: growth events tend to be followed by compensating shrinkage. But making this quantitative requires the contraction analysis of the next section.
+State independence is itself a self-correction mechanism: regardless of how severe a growth event is, the very next hop has probability $1\/2$ of being Type A (which always shrinks). The dynamics cannot "lock in" to a growth mode --- every hop resets the odds. Making this quantitative requires the contraction analysis of the next section.

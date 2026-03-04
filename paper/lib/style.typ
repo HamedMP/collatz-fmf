@@ -66,18 +66,20 @@
     #v(1.5em)
   ]
 
-  if abstract != "" [
-    #set par(first-line-indent: 0pt)
-    #block(
-      width: 85%,
-      inset: (x: 0pt),
-    )[
-      #align(center)[*Abstract*]
-      #v(0.3em)
-      #set text(size: 10pt)
-      #abstract
+  if abstract != "" {
+    align(center)[
+      #set par(first-line-indent: 0pt)
+      #block(
+        width: 85%,
+        inset: (x: 0pt),
+      )[
+        #align(center)[*Abstract*]
+        #v(0.3em)
+        #set text(size: 10pt)
+        #abstract
+      ]
     ]
-  ]
+  }
 
   v(1em)
   line(length: 100%, stroke: 0.5pt + rgb("#ccc"))
