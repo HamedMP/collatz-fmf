@@ -24,7 +24,9 @@ jobs:
         uses: typst-community/setup-typst@v4
 
       - name: Compile paper
-        run: typst compile paper/main.typ site/paper/collatz-fmf.pdf
+        run: |
+          mkdir -p site/paper
+          typst compile paper/main.typ site/paper/collatz-fmf.pdf
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
