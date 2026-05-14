@@ -48,7 +48,7 @@
   doc
 }
 
-#let title-page(title: "", subtitle: "", authors: (), date: "", abstract: "", keywords: "") = {
+#let title-page(title: "", subtitle: "", authors: (), date: "", abstract: "", keywords: "", msc: "") = {
   set par(first-line-indent: 0pt)
   align(center)[
     #v(2cm)
@@ -87,6 +87,16 @@
       #set text(size: 10pt)
       #block(width: 85%)[
         *Keywords:* #keywords
+      ]
+    ]
+  }
+
+  if msc != "" {
+    v(0.35em)
+    align(center)[
+      #set text(size: 10pt)
+      #block(width: 85%)[
+        *MSC 2020:* #msc
       ]
     ]
   }

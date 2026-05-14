@@ -14,6 +14,7 @@
     The paper also gives pointwise reductions for the first bounded-depth obstruction classes. Binary-depth return obstructions are reduced to an explicit 2-adic return-code partial map with survival density $(2\/15)^L$; the reduced ${0,1}$ gap obstruction is reduced to a parallel partial map with survival density $112^(-L)$. Periodic, finite-defect, low-complexity, balanced/Sturmian, and several automatic-template obstruction classes are excluded, leaving a concrete unweighted terminal-window counting problem. These are elementary density and reduction theorems for isolated Collatz growth mechanisms, not a proof of the Collatz conjecture and not a replacement for Tao's orbit-minimum theorem. The remaining "almost all $arrow.r$ all" gap is stated explicitly as a pointwise problem in 2-adic dynamics.
   ],
   keywords: [Collatz conjecture; 3x+1 problem; 2-adic dynamics; natural density; terminal-window counting],
+  msc: [Primary 11B83; Secondary 37A45, 11Y55],
 )
 
 #include "sections/01-introduction.typ"
