@@ -108,8 +108,9 @@ Before external submission:
   companion repository note, `diagnostics.md`, rather than in the main paper.
 - After any future structural change, rerun the full verifier snapshot recorded
   in `proof-obligations.md`.
-- Ask an external number theorist to review only the exact algebra, density
-  normalizations, and obstruction reductions before broad circulation.
+- Use `referee-brief.md` when asking an external number theorist to review only
+  the exact algebra, density normalizations, and obstruction reductions before
+  broad circulation.
 
 ## Latest Local Sanity Checks
 
