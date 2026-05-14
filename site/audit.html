@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audit Trail -- Collatz FMF Framework</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="theorems.html">Theorems</a>
+  <a href="explorations.html">Explorations</a>
+  <a href="paper.html">Paper</a>
+  <a href="audit.html" class="active">Audit</a>
+</nav>
+
+<h1>Audit Trail</h1>
+
+<p>
+  This page collects the repository notes that define the manuscript's claim
+  boundary, verification scope, and external-review handoff. The paper is a
+  density-and-reduction manuscript for FMF Collatz growth mechanisms. It is not
+  a proof of the Collatz conjecture.
+</p>
+
+<div class="callout honest">
+  <strong>Completion status:</strong> the remaining mathematical gap is the
+  pointwise bridge from density-zero obstruction classes to universal FMF
+  descent. In the current framework this is expressed as an unweighted
+  terminal-window/rank problem.
+</div>
+
+<h2>Review Documents</h2>
+
+<div class="result-card">
+  <h3>Proof Obligations</h3>
+  <p>
+    Completion verdict, prompt-to-artifact checklist, missing theorem inventory,
+    and the practical next mathematical target.
+  </p>
+  <p><a href="https://github.com/HamedMP/collatz-fmf/blob/main/proof-obligations.md">Read proof-obligations.md</a></p>
+</div>
+
+<div class="result-card">
+  <h3>Publication Readiness</h3>
+  <p>
+    Submission audit distinguishing the defensible preprint contribution from
+    the unresolved Collatz-proof requirements.
+  </p>
+  <p><a href="https://github.com/HamedMP/collatz-fmf/blob/main/publication-readiness.md">Read publication-readiness.md</a></p>
+</div>
+
+<div class="result-card">
+  <h3>Referee Brief</h3>
+  <p>
+    A focused checklist for an external number theorist reviewing the algebra,
+    density normalizations, reductions, and remaining gap.
+  </p>
+  <p><a href="https://github.com/HamedMP/collatz-fmf/blob/main/referee-brief.md">Read referee-brief.md</a></p>
+</div>
+
+<div class="result-card">
+  <h3>Diagnostics Companion</h3>
+  <p>
+    Reader-facing explanation of what the verification scripts check and what
+    they do not establish.
+  </p>
+  <p><a href="https://github.com/HamedMP/collatz-fmf/blob/main/diagnostics.md">Read diagnostics.md</a></p>
+</div>
+
+<h2>Current Proof Target</h2>
+
+<p>
+  A Collatz proof through this approach would require a pointwise theorem strong
+  enough to show that every odd integer greater than one eventually reaches a
+  smaller odd integer under FMF iteration. The most concrete current sufficient
+  subtarget is a pair of uniform unweighted terminal-window bounds:
+</p>
+
+<pre><code>W_R(B,L) &lt;= C_R(B+1)(2/15)^L
+W_G(B,L) &lt;= C_G B 112^(-L)</code></pre>
+
+<p>
+  The current manuscript proves weighted, shell, cutoff, and obstruction-class
+  estimates toward these statements, but not the full unweighted bounds.
+</p>
+
+<footer>
+  Hamed Mohammadpour &middot; Collatz FMF Project &middot; <a href="index.html">Home</a>
+</footer>
+
+</body>
+</html>
