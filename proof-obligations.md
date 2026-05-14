@@ -126,10 +126,9 @@ Suggested attack order:
 
 ## Verification Snapshot
 
-Full snapshot last checked on May 10, 2026. The packaged quick snapshot was
-checked on May 14, 2026 with:
+Full snapshot last checked on May 14, 2026 with:
 
-- `bash scripts/verify_snapshot.sh quick`
+- `bash scripts/verify_snapshot.sh full`
 
 The commands below are packaged in `scripts/verify_snapshot.sh`. The default
 `quick` mode runs the core algebra/reduction checks and paper compile; `full`

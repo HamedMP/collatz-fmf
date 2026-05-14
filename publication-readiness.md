@@ -117,14 +117,14 @@ Before external submission:
 
 ## Latest Local Sanity Checks
 
-The following checks were run after the publication-framing commit:
+The packaged full verifier was run on May 14, 2026:
 
-- `bash scripts/verify_snapshot.sh quick`
-- `typst compile paper/main.typ site/paper/collatz-fmf.pdf`
-- `python3 explorations/explore54_return_minima.py --max-length 20`
-- `python3 explorations/explore53_gap_minima.py --max-length 14`
-- `python3 explorations/explore58_critical_discrepancy.py`
-- `git diff --check -- paper/main.typ paper/sections/01-introduction.typ paper/sections/06-gap-analysis.typ README.md`
+- `bash scripts/verify_snapshot.sh full`
+
+This includes the Typst compile, PDF text smoke check, core algebra and
+reduction scripts, bounded-alphabet profiles, uniform-morphism diagnostics
+through the recorded frontier, the q=9 boundary scan, the bounded-alphabet beam
+search, and `git diff --check`.
 
 These checks support the current density/reduction manuscript. They do not
 verify the missing pointwise Collatz theorem.
