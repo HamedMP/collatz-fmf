@@ -1,10 +1,12 @@
 #import "../lib/theorem.typ": *
 
-= Main Results and Logical Dependencies
+#v(0.8em)
+#text(size: 1.45em, weight: "bold")[Main Results and Logical Dependencies]
 
-This section records the logical shape of the paper before the technical proofs begin. The main contribution is not a proof of Collatz, but an exact coordinate system and a set of reductions that make one pointwise obstruction explicit.
+This overview records the logical shape of the paper before the technical proofs begin. The main contribution is not a proof of Collatz, but an exact coordinate system and a set of reductions that make one pointwise obstruction explicit.
 
-== Established theorem package
+#v(0.6em)
+#text(size: 1.18em, weight: "bold")[Established theorem package]
 
 #theorem(name: "FMF Density and Obstruction Package")[
   The First-Multiple-of-Four coordinate system establishes the following results.
@@ -23,7 +25,8 @@ This section records the logical shape of the paper before the technical proofs 
 
 The theorem package has three roles. First, it isolates deterministic contraction through the Type A channel. Second, it proves sharp density decay for the dominant strict growth mechanism. Third, it turns the first nontrivial pointwise obstructions into explicit arithmetic problems rather than heuristic exceptional sets.
 
-== Dependency map
+#v(0.6em)
+#text(size: 1.18em, weight: "bold")[Dependency map]
 
 #table(
   columns: (1.4fr, 1.4fr, 2.2fr),
@@ -41,7 +44,8 @@ The theorem package has three roles. First, it isolates deterministic contractio
   [Gap analysis], [Section 6], [States what remains open and why density does not imply universal convergence.],
 )
 
-== Endpoint reduction map
+#v(0.6em)
+#text(size: 1.18em, weight: "bold")[Endpoint reduction map]
 
 The longest part of Section 5 is organized around two endpoint theorems and the counting criteria that would close them.
 
@@ -66,7 +70,8 @@ The longest part of Section 5 is organized around two endpoint theorems and the 
   [Removes periodic, finite-defect, sparse-label, low-complexity, balanced/Sturmian, and several automatic-template branches from the endpoint obstruction list.],
 )
 
-== Missing pointwise bridge
+#v(0.6em)
+#text(size: 1.18em, weight: "bold")[Missing pointwise bridge]
 
 #conjecture(name: "Uniform Terminal-Window Rank Bound")[
   There are constants $C_R,C_G>0$ such that for every height bound $B$ and prefix length $L$,
