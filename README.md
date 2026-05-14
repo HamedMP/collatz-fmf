@@ -30,6 +30,7 @@ proof-obligations.md checklist of what remains for a complete proof
 publication-readiness.md submission audit and claim-boundary checklist
 referee-brief.md external-review handoff for algebra and reduction checks
 proof.md       historical research log; not the current manuscript
+plan.md        historical exploration log; early claims are superseded
 critic.md      historical literature/context review of the research log
 ```
 

@@ -1298,7 +1298,11 @@ The counting argument assumes the mod-2^B analysis tracks the full chain. But ea
 
 Density → 0 does NOT imply the set is empty for specific integers. (Analogy: primes have density 0 but infinitely many exist.) The intersection ∩_k {m : chain(m) ≥ k} has Haar measure 0 in Z_2, but measure-zero sets can contain positive integers.
 
-**The FMF advantage over Tao:** The (1/4)^k exponential density decay is stronger than Tao's sub-polynomial decay, and the proof is entirely elementary (mod-8 arithmetic). But the "almost all → all" barrier remains.
+**Current correction:** The `(1/4)^k` exponential density decay is a sharp
+natural-density statement for the strict growth-B event. It should not be
+presented as directly stronger than Tao's theorem, because Tao controls orbit
+minima while this log controls one isolated growth mechanism. The "almost all
+to all" barrier remains.
 
 ---
 
@@ -1326,9 +1330,18 @@ The compatibility tree (Theorem 38) provides the strongest evidence yet for grow
 3. Orbit bounds decrease with m-magnitude (Theorem 37) ✓
 4. Max chain / log2(m) bounded by ~0.5 for large m (empirical) ✓
 
-The (1/4)^k density decay is now proved algebraically (Theorem 40). The equidistribution chain: unit multiplication → q uniform → odd part equidistribution → m' mod 8 uniform → growth-B selects 1/4. Combined with state-independence (Theorem 12), steps are independent, giving P(chain >= k) = (1/4)^k exactly. Theorem 41 adds the bit consumption analysis: 4.0 bits consumed per step, net 3.83 after growth. The chain length bound 0.55·log2(m) holds empirically with 0 violations in 1.5M tests.
+The (1/4)^k density decay is now proved algebraically (Theorem 40). The
+equidistribution chain is: unit multiplication -> q uniform -> odd part
+equidistribution -> m' mod 8 uniform -> growth-B selects 1/4. Later audit
+clarified that this is a natural-density cylinder calculation, not independence
+along each deterministic trajectory. Theorem 41 adds the bit consumption
+analysis: 4.0 bits consumed per step, net 3.83 after growth. The chain length
+bound 0.55·log2(m) holds empirically with 0 violations in 1.5M tests.
 
-**Status correction:** Lemma G is proved for almost all integers (density 1), but NOT for every integer. The gap is the same "almost all → all" barrier that Tao faces, though the FMF decay rate ((1/4)^k) is exponentially stronger than Tao's sub-polynomial rate.
+**Status correction:** Lemma G is a density statement, not a theorem for every
+integer. The gap is the same "almost all to all" barrier that appears throughout
+Collatz work. The FMF decay rate applies to a narrower growth-chain event and is
+not directly comparable to Tao's orbit-minimum theorem.
 
 ---
 

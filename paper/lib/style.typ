@@ -8,7 +8,7 @@
     header: context {
       if counter(page).get().first() > 1 [
         #set text(size: 9pt, fill: rgb("#666"))
-        _Elementary Exponential Density Bounds for Collatz Growth Chains_
+        _First-Multiple-of-Four Coordinates for Collatz Growth Chains_
         #h(1fr)
         #counter(page).display()
       ]

@@ -1,5 +1,14 @@
 # Collatz Mod-4 Exploration Plan
 
+> **Historical status note (May 2026 review):** this is an exploratory work log,
+> not the current manuscript and not the repository's claim boundary. Some early
+> entries below record proof attempts or comparisons that were later corrected.
+> The vetted statement of what is proved is in `paper/main.typ`,
+> `proof-obligations.md`, `publication-readiness.md`, and `referee-brief.md`.
+> In particular, the FMF density bounds are not a proof of Collatz and should
+> not be described as directly stronger than Tao's almost-all orbit-minimum
+> theorem, because the measured events are different.
+
 ## Summary of Hamed's Findings (Aug 2023)
 
 ### Core Framework
@@ -206,7 +215,10 @@ Based on literature review and gap analysis, five new exploration directions:
 - Growth chain length bound 0.55*log2(m) [EMPIRICAL -- 0 violations but not proved]
 - "Bounded growth + average contraction => descent" [CONCRETE REMAINING QUESTION]
 
-The FMF Quartering Law gives stronger density decay ((1/4)^k exponential) than Tao (sub-polynomial), via elementary mod-8 arithmetic. This is a genuine advance in decay rate and proof simplicity, but the "almost all → all" gap remains.
+The FMF Quartering Law gives elementary exponential decay, `(1/4)^k`, for the
+strict growth-chain event. Later audit clarified that this should not be
+compared as a direct strengthening of Tao's theorem, because Tao controls a
+different orbit-minimum event. The "almost all to all" gap remains.
 
 **What explore41 adds beyond explore40:** (1) Measured actual bit consumption per step (~4 bits, far exceeding growth of 0.17 bits). (2) Showed carry depth D(j) = j + C is linear (constant excess). (3) Proposed and verified the 0.55*log2(m) bound. (4) Identified the PRECISE mathematical gap: the mod-2^K analysis can track ~K/3 steps but needs ~K/2 for the density argument. (5) Showed the remaining question "bounded growth + average contraction => descent" is strictly narrower than Tao's barrier, since FMF has pointwise growth bounds that Tao doesn't.
 
@@ -235,10 +247,13 @@ The FMF Quartering Law gives stronger density decay ((1/4)^k exponential) than T
 
 ### explore44: Sharp Almost-All Formalization and Tao Comparison -- DONE
 **PRECISE STATEMENT OF WHAT IS PROVED:**
-- Natural density (strictly stronger than Tao's logarithmic density)
-- Exponential decay (1/4)^k (vs Tao's sub-polynomial)
+- Natural-density control for strict FMF growth-chain events, which are narrower
+  than Tao's orbit-minimum event and therefore not directly comparable
+- Exponential decay (1/4)^k for that isolated growth-chain event
 - Elementary proof (mod-8 arithmetic vs 3-adic entropy)
-- Corrected initial probability: P(chain ≥ k) = 2/4^k (factor of 2 for initiation)
+- Corrected normalization after later audit: among all odd starts, strict
+  growth-B chains of length at least k have density 4^-k; the expression
+  2/4^k applies only after conditioning on a Type B start.
 
 **EXCEPTIONAL SET IS PROVABLY INFINITE:**
 - By pigeonhole: for C < 1, infinitely many n have chain ≥ C·log_4(n)
@@ -252,7 +267,8 @@ The FMF Quartering Law gives stronger density decay ((1/4)^k exponential) than T
 
 **HONEST ASSESSMENT:**
 1. The Quartering Law + density corollary are rigorous, publishable results
-2. Density type (natural > logarithmic) is strictly stronger than Tao's
+2. The Tao comparison must be qualified because the FMF and Tao events are
+   different; natural density is stronger only when the same event is measured
 3. The "almost all → all" gap is a frontier problem in p-adic dynamics
 4. No known tool (Baker, ergodic theory, 2-adic expansion) can close it
 5. Closing requires new mathematics: effective equidistribution in Z_2, p-adic Littlewood-type results, or mixing estimates for the Collatz map
@@ -263,7 +279,8 @@ The FMF Quartering Law gives stronger density decay ((1/4)^k exponential) than T
 ## Phase 8: Paper Writing
 
 ### Paper structure: /paper/main.typ (Typst)
-- Title: "Elementary Exponential Density Bounds for Collatz Growth Chains via First-Multiple-of-Four Decomposition"
+- Current title: "First-Multiple-of-Four Coordinates for Collatz Growth Chains:
+  Density Bounds and Pointwise Obstruction Reductions"
 - 8 sections planned: Introduction, FMF Formulas, State Independence, Contraction, Quartering Law, Gap Analysis, Growth Bounds, Future
 
 ### Status
