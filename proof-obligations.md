@@ -25,8 +25,8 @@ The repository now contains a rigorous reduction and a strong package of density
 | User-requested deliverable | Concrete artifact/evidence | Coverage |
 | --- | --- | --- |
 | Criticize the proof | `review.md`; this file's missing-obligations table | Covered: identifies the pointwise/rank gap and rejects density-only completion |
-| Improve the proof | Section 5 lemmas; `lemma-roadmap.md` entries 11e.*; verifier scripts | Partially covered: many obstruction classes are now excluded or reduced |
-| Come up with all needed lemmas | `lemma-roadmap.md` plus Section 5 propositions | Incomplete: the terminal-window/rank and higher-complexity landing lemmas are still missing |
+| Improve the proof | Sections 5--8 lemmas; `lemma-roadmap.md` entries 11e.*; verifier scripts | Partially covered: many obstruction classes are now excluded or reduced |
+| Come up with all needed lemmas | `lemma-roadmap.md` plus Sections 5--8 propositions | Incomplete: the terminal-window/rank and higher-complexity landing lemmas are still missing |
 | Prove Collatz through FMF | No artifact proves pointwise descent for every odd `x > 1` | Missing |
 | Verify algebra and reductions | `explorations/explore52_*` through `explorations/explore76_*`; Typst compile | Supporting evidence only, not a replacement for the missing universal theorem |
 | Decide what to do next | Practical Next Target below | Covered: higher-complexity finite-alphabet exclusion and unweighted terminal-window counting are the next targets |
@@ -52,17 +52,17 @@ A completed proof must establish all of the following.
 | Arbitrarily long finite growth shadows | `paper/sections/05-quartering-law.typ`, `paper/sections/06-gap-analysis.typ` | Proved; prevents finite maximum-chain arguments |
 | Binary return-code reduction | `paper/sections/05-quartering-law.typ`, `lemma-roadmap.md` | Proved reduction |
 | Reduced `{0,1}` gap-code reduction | `paper/sections/05-quartering-law.typ`, `lemma-roadmap.md` | Proved reduction |
-| Periodic branch exclusion | `explorations/explore68_periodic_branches.py`, Section 5 | Proved for the formal branch families |
-| Terminal-window formulation | `explorations/explore62_terminal_windows.py`, Section 5 | Proved |
-| Terminal depth bounds | `explorations/explore64_terminal_ranks.py`, Section 5 | Proved; fixed terminal states have only logarithmically bounded depth |
-| Terminal rank, weighted, shell, and low-expansion window bounds | `explorations/explore64_terminal_ranks.py`, `explorations/explore69_window_shells.py`, Section 5 | Proved, but weighted/shell/cutoff only; high-expansion low-window words remain open |
-| Backward branch and moment contraction | `explorations/explore60_backward_branches.py`, Section 5 | Proved for the reduced systems |
-| Reset-spike and finite reset-neighborhood transparency | `explorations/explore52_binary_partial_map.py`, Section 5 | Proved |
-| Fixed-count positive-label and finite-defect periodic-shadow strata | Section 5, `lemma-roadmap.md` | Proved divergent for both return and reduced-gap least residues |
-| Fixed low-factor-complexity binary strata | Section 5, `lemma-roadmap.md` | Proved divergent for both return and reduced-gap least residues via Morse-Hedlund plus prefix compactness |
-| Balanced/Sturmian-like binary frontier | Section 5, `lemma-roadmap.md` | Proved excluded: rational slopes are periodic, while irrational lower mechanical/Sturmian landings would require delayed prefix recurrences contradicted by the standard Sturmian recurrence function |
-| Automatic and small uniform morphic binary templates | Section 5, `lemma-roadmap.md`, `explorations/explore77_uniform_morphism_recurrence.py`, `explorations/explore78_uniform_morphism_symbolic_witness.py` | Thue-Morse, period-doubling, and binary 2-, 3-, 4-, 5-, and 6-uniform fixed-point templates are excluded; larger uniform morphisms remain diagnostic |
-| Prefix-language compactness principle | Section 5, `lemma-roadmap.md` | Proved as reusable reduction from bounded restricted minima to an ordinary infinite code |
+| Periodic branch exclusion | `explorations/explore68_periodic_branches.py`, Sections 6--8 | Proved for the formal branch families |
+| Terminal-window formulation | `explorations/explore62_terminal_windows.py`, Sections 6--7 | Proved |
+| Terminal depth bounds | `explorations/explore64_terminal_ranks.py`, Sections 6--7 | Proved; fixed terminal states have only logarithmically bounded depth |
+| Terminal rank, weighted, shell, and low-expansion window bounds | `explorations/explore64_terminal_ranks.py`, `explorations/explore69_window_shells.py`, Sections 6--7 | Proved, but weighted/shell/cutoff only; high-expansion low-window words remain open |
+| Backward branch and moment contraction | `explorations/explore60_backward_branches.py`, Sections 6--7 | Proved for the reduced systems |
+| Reset-spike and finite reset-neighborhood transparency | `explorations/explore52_binary_partial_map.py`, Sections 6--8 | Proved |
+| Fixed-count positive-label and finite-defect periodic-shadow strata | Sections 6--8, `lemma-roadmap.md` | Proved divergent for both return and reduced-gap least residues |
+| Fixed low-factor-complexity binary strata | Sections 6--8, `lemma-roadmap.md` | Proved divergent for both return and reduced-gap least residues via Morse-Hedlund plus prefix compactness |
+| Balanced/Sturmian-like binary frontier | Section 6, `lemma-roadmap.md` | Proved excluded: rational slopes are periodic, while irrational lower mechanical/Sturmian landings would require delayed prefix recurrences contradicted by the standard Sturmian recurrence function |
+| Automatic and small uniform morphic binary templates | Section 6, `lemma-roadmap.md`, `explorations/explore77_uniform_morphism_recurrence.py`, `explorations/explore78_uniform_morphism_symbolic_witness.py` | Thue-Morse, period-doubling, and binary 2-, 3-, 4-, 5-, and 6-uniform fixed-point templates are excluded; larger uniform morphisms remain diagnostic |
+| Prefix-language compactness principle | Sections 6--8, `lemma-roadmap.md` | Proved as reusable reduction from bounded restricted minima to an ordinary infinite code |
 | Honest non-proof framing | `README.md`, `review.md`, `paper/sections/06-gap-analysis.typ` | Present |
 
 ## Missing Obligations
@@ -165,7 +165,7 @@ their limitations.
 - `typst compile paper/main.typ site/paper/collatz-fmf.pdf`
 - `pdftotext site/paper/collatz-fmf.pdf /tmp/collatz-fmf.txt`
 - `rg -n` PDF-text checks for the main-results overview, expected section
-  numbers, Theorem A--D labels, and Proposition 5.52
+  numbers, Theorem A--D labels, and Proposition 6.52
 - `git diff --check`
 
-Scope: these commands verify the algebraic reductions, periodic exclusions, reset-neighborhood transparency, terminal-window/rank formulations, weighted and shell estimates, mechanical normal-form recurrences, recurrence-speed diagnostics, template recurrence diagnostics, uniform-morphism recurrence diagnostics, and finite diagnostic frontiers currently used by the paper. The q=5 and q=6 uniform-morphism theorems are now proved in Section 5 by finite classification; `explore78` verifies the q=6 symbolic-prefix witness table that repairs the pure-power diagnostic failure, records clean q=7 and q=8 diagnostics, and isolates the first q=9 reduced-gap boundary case. `explore79` confirms that this residual q=9 case has no successful symbolic-prefix gap witness through length `50,000`. These commands do not verify the missing pointwise Collatz descent theorem or the unweighted terminal-window counting theorem.
+Scope: these commands verify the algebraic reductions, periodic exclusions, reset-neighborhood transparency, terminal-window/rank formulations, weighted and shell estimates, mechanical normal-form recurrences, recurrence-speed diagnostics, template recurrence diagnostics, uniform-morphism recurrence diagnostics, and finite diagnostic frontiers currently used by the paper. The q=5 and q=6 uniform-morphism theorems are now proved in Section 6 by finite classification; `explore78` verifies the q=6 symbolic-prefix witness table that repairs the pure-power diagnostic failure, records clean q=7 and q=8 diagnostics, and isolates the first q=9 reduced-gap boundary case. `explore79` confirms that this residual q=9 case has no successful symbolic-prefix gap witness through length `50,000`. These commands do not verify the missing pointwise Collatz descent theorem or the unweighted terminal-window counting theorem.

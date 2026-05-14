@@ -234,7 +234,7 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   Thus a binary-depth infinite obstruction cannot be a bounded recurrence in this normal form. If it has infinitely many depth-$0$ states, those states form a strictly increasing sequence of ordinary integers. If it has only finitely many depth-$0$ states, then the depth sequence is eventually all $1$s, which is already excluded by the no-eventually-periodic-depth proposition. This still does not prove the binary-depth case; it converts it into an arithmetic problem about satisfying the gate congruences along an increasing sequence.
 ]
 
-== Binary return codes
+= Binary Return Codes
 
 #lemma(name: "Binary Return-Block Gate")[
   In the binary-depth normal form, fix $r >= 0$. The return block
@@ -2159,7 +2159,7 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   The real lower bound is the binary return-length height bound applied to the $j$-th block. The $3$-adic congruence follows from the binary return reset proposition after reducing its displayed congruence modulo $3^(3r_j+1)$.
 ]
 
-== Reduced binary gap map
+= Reduced ${0,1}$ Gap Codes
 
 #proposition(name: "Binary ${0,1}$ Gap 3-adic Clock")[
   In the binary return subcase where all return lengths are $0$ or $1$, suppose a return block of length $1$ is followed by $k >= 0$ return blocks of length $0$ before the next length-$1$ return. Let $n$ be the depth-$0$ return parameter immediately after the first length-$1$ block, and let $n_i$ be the parameter after the following $i$ zero-return blocks. Then
@@ -3340,7 +3340,7 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   By the gap terminal monotonicity proposition, the rounded terminal coordinate is eventually constant exactly when the corresponding gap-prefix increments are eventually zero. The ${0,1}$ zero-increment tail equivalence says precisely that such a zero-increment tail is equivalent to an infinite integer orbit of the same gap map starting from $u_N$.
 ]
 
-== Reduced gap endpoint dynamics
+= Endpoint Dynamics and Growth-B Coding
 
 #proposition(name: "Binary ${0,1}$ Gap Terminal Zero-Increment Tail Uniqueness")[
   Fix a finite gap prefix and its auxiliary terminal state $u_N$. There is at most one infinite gap suffix for which all later rounded terminal increments are zero.
@@ -3681,7 +3681,7 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
 ]
 
 #remark[
-  This corollary rules out any proof strategy based on a uniform finite maximum for growth chains. The best plausible pointwise bounds must grow with the size of the starting value, such as the empirical $O(log x)$ epoch bounds in Section 7.
+  This corollary rules out any proof strategy based on a uniform finite maximum for growth chains. The best plausible pointwise bounds must grow with the size of the starting value, such as the empirical $O(log x)$ epoch bounds in Section 10.
 ]
 
 #proposition(name: "Logarithmic Lower Bound for Growth-B Chain Bounds")[

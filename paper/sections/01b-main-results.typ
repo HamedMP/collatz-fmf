@@ -20,7 +20,7 @@ This overview records the logical shape of the paper before the technical proofs
 ]
 
 #proof[
-  The first item is Theorem A in Section 2. The second and third items are Theorems B and C in Sections 3 and 4. The fourth and fifth items are proved in Section 5 by the Quartering Law and the explicit all-zero branch. The final item is the sequence of binary return and reduced-gap reductions in Section 5, including the partial-map, boundedness, terminal-window, start-count, rank, and endpoint-dichotomy statements.
+  The first item is Theorem A in Section 2. The second and third items are Theorems B and C in Sections 3 and 4. The fourth and fifth items are proved in Section 5 by the Quartering Law and the explicit all-zero branch. The final item is the sequence of binary return, reduced-gap, and endpoint reductions in Sections 6--8, including the partial-map, boundedness, terminal-window, start-count, rank, and endpoint-dichotomy statements.
 ]
 
 The theorem package has three roles. First, it isolates deterministic contraction through the Type A channel. Second, it proves sharp density decay for the dominant strict growth mechanism. Third, it turns the first nontrivial pointwise obstructions into explicit arithmetic problems rather than heuristic exceptional sets.
@@ -37,17 +37,18 @@ The theorem package has three roles. First, it isolates deterministic contractio
   [Fractional moment], [Section 4], [Proves average contraction in the density model.],
   [Quartering Law], [Section 5], [Gives exact $4^(-k)$ density for strict growth-B chains.],
   [Finite-shadow construction], [Section 5], [Shows that finite forbidden-pattern proofs cannot work.],
-  [Binary return map], [Section 5], [Reduces bounded-depth return obstructions to explicit 2-adic landing.],
-  [Reduced gap map], [Section 5], [Reduces the first nonconstant binary alphabet to a second explicit partial map.],
-  [Terminal windows], [Section 5], [Reformulates low prefix residues as low normalized terminal heights.],
-  [Weighted and shell bounds], [Section 5], [Control inverse-expansion mass and fixed shells, but not full unweighted rank.],
-  [Gap analysis], [Section 6], [States what remains open and why density does not imply universal convergence.],
+  [Binary return map], [Section 6], [Reduces bounded-depth return obstructions to explicit 2-adic landing.],
+  [Reduced gap map], [Section 7], [Reduces the first nonconstant binary alphabet to a second explicit partial map.],
+  [Terminal windows], [Sections 6--7], [Reformulates low prefix residues as low normalized terminal heights.],
+  [Weighted and shell bounds], [Sections 6--7], [Control inverse-expansion mass and fixed shells, but not full unweighted rank.],
+  [Endpoint dynamics], [Section 8], [States the remaining bounded/unbounded obstruction dichotomies.],
+  [Gap analysis], [Section 9], [States what remains open and why density does not imply universal convergence.],
 )
 
 #v(0.6em)
 #text(size: 1.18em, weight: "bold")[Endpoint reduction map]
 
-The longest part of Section 5 is organized around two endpoint theorems and the counting criteria that would close them.
+The return and reduced-gap material is organized around two endpoint theorems and the counting criteria that would close them.
 
 #table(
   columns: (1.25fr, 1.8fr, 2.15fr),

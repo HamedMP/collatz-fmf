@@ -50,5 +50,5 @@ The constant $0.55$ arises naturally from the growth-B dynamics: each growth-B s
 ]
 
 #remark[
-  The gap between the empirical constant $0.55$ and the heuristic estimate $0.26$ reflects the fact that not all bits are consumed uniformly: carry propagation in the multiplication $3^(t+2) m$ can preserve low-order bit patterns for several steps before the expansion effect dominates. A rigorous proof of the Growth Chain Bound would require effective control over this carry propagation, which connects to the same equidistribution questions identified in Section 6.
+  The gap between the empirical constant $0.55$ and the heuristic estimate $0.26$ reflects the fact that not all bits are consumed uniformly: carry propagation in the multiplication $3^(t+2) m$ can preserve low-order bit patterns for several steps before the expansion effect dominates. A rigorous proof of the Growth Chain Bound would require effective control over this carry propagation, which connects to the same equidistribution questions identified in Section 9.
 ]

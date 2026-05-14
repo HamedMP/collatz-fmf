@@ -990,7 +990,7 @@ The only remaining image is `phi(0)=011111`. If `phi(1)=111111`, the fixed point
 - `j=2,k=5`: the symbolic prefix `01` recurs at position `8`, so prefixes of length `2*6^h` recur with ratio `4`.
 - `j>=3`: the symbolic prefix `01` recurs by position `11`, so prefixes of length `2*6^h` recur with ratio at most `11/2`.
 
-The endpoint inequalities in Section 5 verify the density-recurrence criterion in each case.
+The endpoint inequalities in Sections 6--8 verify the density-recurrence criterion in each case.
 
 Verifier: `explorations/explore78_uniform_morphism_symbolic_witness.py` enumerates all `2048` binary `6`-uniform morphisms prolongable on `0`; all are covered by periodicity, density-free symbolic recurrence, or asymptotic density recurrence. The weakest margins are still positive: return `0.184`, gap `0.513`.
 

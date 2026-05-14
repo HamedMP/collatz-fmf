@@ -102,16 +102,12 @@ unweighted rank theorem. It does not prove that theorem.
 
 Before external submission:
 
-- Split the very long Section 5 into shorter sections: growth-B density,
-  binary return codes, reduced gap codes, terminal-window estimates, and
-  obstruction-class exclusions.
-- Keep the main-results endpoint map synchronized with the strongest Section 5
-  endpoint theorems and criteria as the manuscript is reorganized.
+- Keep the main-results endpoint map synchronized with the strongest Sections
+  5--8 endpoint theorems and criteria as the manuscript is reorganized.
 - Keep finite diagnostic output and long exploratory classifications in the
   companion repository note, `diagnostics.md`, rather than in the main paper.
-- Run the full verifier snapshot in `proof-obligations.md` after the split.
-- Add a compact "not a proof of Collatz" paragraph to the abstract and
-  introduction, which the current manuscript now has.
+- After any future structural change, rerun the full verifier snapshot recorded
+  in `proof-obligations.md`.
 - Ask an external number theorist to review only the exact algebra, density
   normalizations, and obstruction reductions before broad circulation.
 
@@ -122,7 +118,7 @@ The packaged full verifier was run on May 14, 2026:
 - `bash scripts/verify_snapshot.sh full`
 
 This includes the Typst compile, PDF text smoke checks for expected section
-numbers, Theorem A--D labels, and key theorem labels, core algebra and reduction scripts,
+numbers, Theorem A--D labels, and key endpoint labels, core algebra and reduction scripts,
 bounded-alphabet profiles, uniform-morphism diagnostics through the recorded
 frontier, the q=9 boundary scan, the bounded-alphabet beam search, and
 `git diff --check`.

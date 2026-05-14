@@ -34,13 +34,16 @@ if command -v pdftotext >/dev/null 2>&1; then
     "Main Results and Logical Dependencies"
     "^2\\. FMF Formulas and the Hop Map"
     "^5\\. The Quartering Law"
-    "^6\\. What This Does and Does Not Prove"
-    "^8\\. Future Directions"
+    "^6\\. Binary Return Codes"
+    "^7\\. Reduced \\{0, 1\\} Gap Codes"
+    "^8\\. Endpoint Dynamics and Growth-B Coding"
+    "^9\\. What This Does and Does Not Prove"
+    "^11\\. Future Directions"
     "Theorem 2\\.4 \\(Theorem A: FMF Step Formula\\)"
     "Theorem 3\\.6 \\(Theorem B: State Distribution\\)"
     "Theorem 4\\.8 \\(Theorem C: Fractional-Moment Contraction\\)"
     "Theorem 5\\.9 \\(Theorem D: The Quartering Law\\)"
-    "Proposition 5\\.52 \\(Binary Return Weighted Expansion-Shell Count\\)"
+    "Proposition 6\\.52 \\(Binary Return Weighted Expansion-Shell Count\\)"
   )
   if command -v rg >/dev/null 2>&1; then
     for pattern in "${paper_patterns[@]}"; do

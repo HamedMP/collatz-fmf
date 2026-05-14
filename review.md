@@ -76,7 +76,7 @@ The unbounded side is also sharper now: long return blocks require incoming heig
 
 Finite reset neighborhoods are now explicitly ruled out as a shortcut. Inside any fixed congruence class `n ≡ -85/88 (mod 3^s)` or `a ≡ -1/128 (mod 3^s)`, the same dyadic finite-prefix densities and bounded-label densities hold. So the reset-spike alternative cannot be closed by any finite `3`-adic trap; it needs an infinite pointwise or height-sensitive argument.
 
-Section 5 now packages these alternatives as sharpened endpoint theorems for both the binary return system and the reduced gap system.
+Sections 6--8 now package these alternatives as sharpened endpoint theorems for both the binary return system and the reduced gap system.
 
 There is also a weighted contraction: return backward fibers contract every positive power moment, and gap backward fibers contract every `theta`-moment satisfying `(43/81)^theta + (8/9)^theta < 1` (threshold about `2.28216`). Cubic mass is a simple strict case: the gap contraction constant is `43^3/(729*217) < 1`, despite finite merging. This is promising structure for a future rank proof, but frontier diagnostics show it does not by itself bound the number of low prefix residues uniformly; an additional terminal-height or stopping-time estimate is still needed.
 
