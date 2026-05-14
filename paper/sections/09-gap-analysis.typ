@@ -40,9 +40,9 @@ Tao @tao2022 proves that almost all Collatz orbits attain almost bounded values,
 
 *Decay rate.* Tao's theorem controls a much more global orbit-minimum event. The Quartering Law gives exponential decay for the narrower growth-B-chain event: the fraction among odd starts with growth-B length $>= k$ is $4^(-k)$. This is a sharp elementary bound for that mechanism, but it does not imply Tao's theorem and Tao's theorem does not imply it.
 
-*Methods.* Tao's proof uses entropy methods in 3-adic analysis, Syracuse random variables, and concentration inequalities. The FMF proof uses elementary mod-8 arithmetic and the unit structure of 2-adic integers. The FMF approach is entirely self-contained and requires no machinery beyond undergraduate algebra.
+*Methods.* Tao's proof uses entropy methods in 3-adic analysis, Syracuse random variables, and concentration inequalities. The core FMF density proof uses elementary mod-8 arithmetic and the unit structure of 2-adic integers; later obstruction-class exclusions use additional combinatorial and symbolic-dynamical input.
 
-*The shared wall.* Despite these differences, both approaches encounter the same fundamental barrier: neither can cross from density control to all integer trajectories. In Tao's framework, the obstacle is that logarithmic-density exceptional sets can be nonempty. In the FMF framework, the obstacle is that residue-density and Haar-measure arguments do not exclude exceptional integer orbits. The two formulations of the gap are closely related.
+*The related wall.* Despite these differences, both approaches encounter a density-to-pointwise barrier: neither argument, as stated, crosses from density control to all integer trajectories. In Tao's framework, the obstacle is that logarithmic-density exceptional sets can be nonempty. In the FMF framework, the obstacle is that residue-density and Haar-measure arguments do not exclude exceptional integer orbits. The two formulations of the gap are closely related.
 
 == The $5n+1$ litmus test
 
@@ -63,7 +63,7 @@ The FMF framework thus identifies a concrete structural reason why the $3n+1$ dr
 
 == Why the gap is hard
 
-The gap between "almost all orbits converge" and "all orbits converge" is not a technical limitation of this paper. It is a reflection of a deep mathematical obstruction that affects all known approaches.
+The gap between "almost all orbits converge" and "all orbits converge" is not a bookkeeping limitation of this paper. It is the central obstruction for the present density-and-reduction approach.
 
 *Tao's barrier.* Tao has observed that any proof of the Collatz conjecture must either exploit existing results in transcendence theory or diophantine approximation, or contribute genuinely new methods to one of these areas. The FMF framework's 2-adic analysis, while providing structural insight, does not engage with transcendence theory. It establishes equidistribution of $3^n mod 2^K$ for fixed $K$ and growing $n$, but this is a standard fact about multiplicative groups modulo prime powers. The hard part --- controlling what happens for $K$ growing with $n$ --- requires quantitative equidistribution estimates that are not available from mod-$8$ arguments alone.
 
