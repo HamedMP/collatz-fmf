@@ -30,10 +30,23 @@ run typst compile paper/main.typ site/paper/collatz-fmf.pdf
 
 if command -v pdftotext >/dev/null 2>&1; then
   run pdftotext site/paper/collatz-fmf.pdf /tmp/collatz-fmf.txt
+  paper_patterns=(
+    "Main Results and Logical Dependencies"
+    "^2\\. FMF Formulas and the Hop Map"
+    "^5\\. The Quartering Law"
+    "^6\\. What This Does and Does Not Prove"
+    "^8\\. Future Directions"
+    "Theorem 5\\.9 \\(The Quartering Law\\)"
+    "Proposition 5\\.52 \\(Binary Return Weighted Expansion-Shell Count\\)"
+  )
   if command -v rg >/dev/null 2>&1; then
-    run rg -n "Main Results and Logical Dependencies|Expansion-Shell Count" /tmp/collatz-fmf.txt
+    for pattern in "${paper_patterns[@]}"; do
+      run rg -n "$pattern" /tmp/collatz-fmf.txt
+    done
   else
-    run grep -nE "Main Results and Logical Dependencies|Expansion-Shell Count" /tmp/collatz-fmf.txt
+    for pattern in "${paper_patterns[@]}"; do
+      run grep -nE "$pattern" /tmp/collatz-fmf.txt
+    done
   fi
 else
   printf '\n==> skipping pdftotext check; pdftotext is not installed\n'

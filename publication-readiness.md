@@ -121,10 +121,11 @@ The packaged full verifier was run on May 14, 2026:
 
 - `bash scripts/verify_snapshot.sh full`
 
-This includes the Typst compile, PDF text smoke check, core algebra and
-reduction scripts, bounded-alphabet profiles, uniform-morphism diagnostics
-through the recorded frontier, the q=9 boundary scan, the bounded-alphabet beam
-search, and `git diff --check`.
+This includes the Typst compile, PDF text smoke checks for expected section
+numbers and key theorem labels, core algebra and reduction scripts,
+bounded-alphabet profiles, uniform-morphism diagnostics through the recorded
+frontier, the q=9 boundary scan, the bounded-alphabet beam search, and
+`git diff --check`.
 
 These checks support the current density/reduction manuscript. They do not
 verify the missing pointwise Collatz theorem.
