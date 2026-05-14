@@ -106,6 +106,8 @@ Before external submission:
   5--8 endpoint theorems and criteria as the manuscript is reorganized.
 - Keep finite diagnostic output and long exploratory classifications in the
   companion repository note, `diagnostics.md`, rather than in the main paper.
+- Use `submission-checklist.md` as the concrete file inventory and command gate
+  before circulating or archiving a draft.
 - After any future structural change, rerun the full verifier snapshot recorded
   in `proof-obligations.md`.
 - Use `referee-brief.md` when asking an external number theorist to review only

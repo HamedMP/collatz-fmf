@@ -28,6 +28,7 @@ lemma-roadmap.md proof-status roadmap and missing pointwise bridge lemmas
 review.md       critical review and repaired theorem framing
 proof-obligations.md checklist of what remains for a complete proof
 publication-readiness.md submission audit and claim-boundary checklist
+submission-checklist.md concrete pre-submission gates and file inventory
 referee-brief.md external-review handoff for algebra and reduction checks
 proof.md       historical research log; not the current manuscript
 plan.md        historical exploration log; early claims are superseded

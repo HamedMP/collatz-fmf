@@ -24,7 +24,7 @@ The repository now contains a rigorous reduction and a strong package of density
 
 | User-requested deliverable | Concrete artifact/evidence | Coverage |
 | --- | --- | --- |
-| Make the paper publication-ready | `paper/main.typ`, `site/paper/collatz-fmf.pdf`, `README.md`, `publication-readiness.md`, `referee-brief.md`, and `diagnostics.md` | Partially covered: the package is presentable as a density-and-reduction preprint, but not as a Collatz proof; external referee review is still needed before broad circulation |
+| Make the paper publication-ready | `paper/main.typ`, `site/paper/collatz-fmf.pdf`, `README.md`, `publication-readiness.md`, `submission-checklist.md`, `referee-brief.md`, and `diagnostics.md` | Partially covered: the package is presentable as a density-and-reduction preprint, but not as a Collatz proof; external referee review is still needed before broad circulation |
 | Produce an important mathematical contribution | Paper Sections 2--8; Sections 6--8 endpoint reductions; verifier snapshot | Covered as a candidate contribution: exact FMF coordinates, sharp density laws, terminal-window reductions, and obstruction-class exclusions |
 | Make it potentially fit a major prize | This file, `publication-readiness.md`, and the missing-obligations table below | Not covered: a prize-level Collatz result would require closing pointwise descent or an equivalent universal theorem |
 | Solve Collatz completely if possible | No artifact proves pointwise descent for every odd `x > 1` | Missing |

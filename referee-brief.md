@@ -79,6 +79,7 @@ not this unweighted theorem.
 - `site/paper/collatz-fmf.pdf`: rendered manuscript.
 - `publication-readiness.md`: claim-boundary and submission audit.
 - `proof-obligations.md`: completion checklist and missing theorem inventory.
+- `submission-checklist.md`: source package, command, and claim-boundary gates.
 - `diagnostics.md`: what the verifier scripts do and do not establish.
 - `review.md`: critical review of the proof framing.
 
