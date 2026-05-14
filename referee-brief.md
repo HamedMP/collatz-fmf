@@ -34,6 +34,19 @@ The manuscript may claim:
 - Exclusion of periodic, finite-defect, low-complexity, balanced/Sturmian, and
   several small automatic/uniform-morphic obstruction templates.
 
+## Claim Matrix
+
+| Claim | Where to audit | What to check | Limitation to keep explicit |
+| --- | --- | --- | --- |
+| Exact FMF odd-to-odd hop formulas | Sections 2 and 5 | The Type A/Type B split, hop length, and output formulas cover every odd input and agree with the standard Collatz map. | Algebraic exactness does not by itself imply descent. |
+| Natural-density state laws | Sections 3--4 | The sample space is odd starts in residue boxes, and the 2-adic inverse counts produce the stated distribution and fractional moment. | These are density-model statements, not independence along a fixed orbit. |
+| Quartering Law | Section 5 | Conditional on already being in a growth-B hop, each further strict growth-B continuation imposes exactly one quarter of the remaining odd starts. | Density decay does not rule out an exceptional integer trajectory. |
+| Finite growth-shadow construction | Section 5 | The all-zero branch gives arbitrarily long finite strict growth-B shadows. | This blocks finite forbidden-pattern proofs; it is not evidence for divergence. |
+| Binary return reduction | Section 6 | The return-code congruences, partial map, critical-series landing criterion, and terminal-window identities are equivalent formulations. | The reduction leaves the unweighted rank/landing theorem open. |
+| Reduced `{0,1}` gap reduction | Section 7 | The complete-gap survival density is `112^-L` and the gap partial map preserves ordinary-integer landing in both directions. | Gap merging and terminal multiplicity are not yet uniformly controlled. |
+| Endpoint dichotomies | Section 8 | Any remaining bounded-depth obstruction is forced into the stated higher-complexity landing or reset-spike alternatives. | These dichotomies cover the first bounded-depth obstruction classes, not arbitrary mixed FMF epochs. |
+| Template exclusions | Sections 6--8 | Periodic, finite-defect, low-complexity, balanced/Sturmian, and listed uniform-morphic branches are excluded by stated recurrence or compactness arguments. | The exclusions are class theorems, not a theorem for all aperiodic finite-alphabet words. |
+
 ## Claims To Reject
 
 The manuscript should not be accepted as claiming:
