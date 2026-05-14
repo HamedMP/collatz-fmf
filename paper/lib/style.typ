@@ -48,7 +48,7 @@
   doc
 }
 
-#let title-page(title: "", subtitle: "", authors: (), date: "", abstract: "") = {
+#let title-page(title: "", subtitle: "", authors: (), date: "", abstract: "", keywords: "") = {
   set par(first-line-indent: 0pt)
   align(center)[
     #v(2cm)
@@ -77,6 +77,16 @@
         #v(0.3em)
         #set text(size: 10pt)
         #abstract
+      ]
+    ]
+  }
+
+  if keywords != "" {
+    v(0.8em)
+    align(center)[
+      #set text(size: 10pt)
+      #block(width: 85%)[
+        *Keywords:* #keywords
       ]
     ]
   }
