@@ -30,7 +30,11 @@ run typst compile paper/main.typ site/paper/collatz-fmf.pdf
 
 if command -v pdftotext >/dev/null 2>&1; then
   run pdftotext site/paper/collatz-fmf.pdf /tmp/collatz-fmf.txt
-  run rg -n "Main Results and Logical Dependencies|Expansion-Shell Count" /tmp/collatz-fmf.txt
+  if command -v rg >/dev/null 2>&1; then
+    run rg -n "Main Results and Logical Dependencies|Expansion-Shell Count" /tmp/collatz-fmf.txt
+  else
+    run grep -nE "Main Results and Logical Dependencies|Expansion-Shell Count" /tmp/collatz-fmf.txt
+  fi
 else
   printf '\n==> skipping pdftotext check; pdftotext is not installed\n'
 fi
