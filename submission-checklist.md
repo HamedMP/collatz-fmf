@@ -19,7 +19,7 @@ preprint. It is not a checklist for claiming a proof of the Collatz conjecture.
 | --- | --- | --- | --- |
 | Rendered manuscript | `site/paper/collatz-fmf.pdf` | Primary PDF | Must be rebuilt from `paper/main.typ` immediately before submission |
 | Typst source | `paper/main.typ`, `paper/sections/*.typ`, `paper/lib/*.typ` | Reproducible source package | Must compile with the same command listed below |
-| Submission package script | `scripts/package_submission.sh` | Creates the source/PDF/review archive | Must run successfully in `quick` mode before submission |
+| Submission package script | `scripts/package_submission.sh` | Creates the source/PDF/review archive | Must run successfully in `quick` mode before submission and smoke-test representative diagnostics from the archived copy |
 | Bibliography | `paper/refs.bib` | External references | Check that every cited claim has a corresponding entry |
 | Citation metadata | `CITATION.cff` | Repository citation | Must describe the project as a density-and-reduction manuscript |
 | Proof obligations | `proof-obligations.md` | Completion verdict and missing theorem inventory | Must still say `Status: **not complete**` unless pointwise descent is proved |

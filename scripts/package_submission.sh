@@ -10,8 +10,9 @@ Usage: scripts/package_submission.sh [quick|full|skip-verify] [output-dir]
 
 Builds a reproducible submission bundle for the FMF density-and-reduction
 manuscript. This packages the PDF, Typst sources, verification scripts,
-diagnostics, and claim-boundary notes. It does not certify a proof of the
-Collatz conjecture.
+diagnostics, and claim-boundary notes, then smoke-tests representative
+diagnostics from the archived copy. It does not certify a proof of the Collatz
+conjecture.
 USAGE
 }
 
@@ -53,6 +54,21 @@ copy_file() {
   local dst="${pkg_dir}/${src}"
   mkdir -p "$(dirname "$dst")"
   cp "$src" "$dst"
+}
+
+smoke_archive() {
+  local smoke_dir="${tmp_dir}/archive-smoke"
+  mkdir -p "$smoke_dir"
+  tar -C "$smoke_dir" -xzf "$archive"
+
+  (
+    cd "${smoke_dir}/${name}"
+    python3 explorations/explore62_terminal_windows.py >/dev/null
+    python3 explorations/explore75_mechanical_recurrence.py --length 16 --search-factor 8 >/dev/null
+    python3 explorations/explore76_template_recurrence.py --length 16 --search-factor 8 >/dev/null
+    python3 explorations/explore78_uniform_morphism_symbolic_witness.py --q 2 --max-prefix-symbols 2 --search-length 128 >/dev/null
+    python3 explorations/explore81_rank_bound_frontier.py --bits 24 >/dev/null
+  )
 }
 
 mkdir -p "$pkg_dir" "$out_dir"
@@ -126,6 +142,8 @@ copy_file site/paper/collatz-fmf.pdf
 
 tar -C "$tmp_dir" -czf "$archive" "$name"
 shasum -a 256 "$archive" > "$checksum"
+smoke_archive
 
 printf 'Created %s\n' "$archive"
 printf 'Created %s\n' "$checksum"
+printf 'Archive smoke test completed\n'

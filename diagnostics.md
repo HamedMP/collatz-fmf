@@ -22,6 +22,10 @@ bash scripts/verify_snapshot.sh full
 The full snapshot was last run successfully on May 14, 2026. Its exact command
 list is recorded in `proof-obligations.md`.
 
+The submission packaging script also extracts the finished archive and runs a
+small representative diagnostic smoke test from that archived copy. This checks
+that the bundle closes over the helper modules needed by the packaged scripts.
+
 ## Diagnostic Groups
 
 | Group | Scripts | Evidence provided |
