@@ -2,7 +2,7 @@
 
 = What This Does and Does Not Prove
 
-This section provides an honest accounting of the results in this paper: what has been established rigorously, what remains open, and why the remaining gap is genuinely hard. I consider this assessment essential. The Collatz conjecture has attracted a large body of work that overstates its conclusions; I aim to avoid that failure mode.
+This section provides a direct accounting of the results in this paper: what has been established rigorously, what remains open, and why the remaining gap is genuinely hard. The Collatz conjecture has attracted a large body of work that overstates its conclusions; the purpose here is to avoid that failure mode.
 
 == What is proved
 
@@ -22,7 +22,7 @@ The following results are established by exact algebraic arguments, not heuristi
 
 == What is not proved
 
-I do not prove the Collatz conjecture. Specifically:
+This paper does not prove the Collatz conjecture. Specifically:
 
 - *Not every trajectory is shown to converge.* The density bounds show that the set of odd integers with strict growth-B chains of length $>= k$ has natural density $4^(-k)$, which tends to zero. But natural density zero does not mean the set is empty. In fact, the explicit all-zero branch gives infinitely many starts
   $ x_L = 4(8^L - 1) - 1 $

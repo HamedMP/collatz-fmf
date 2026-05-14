@@ -34,7 +34,7 @@ The contribution here is complementary to stochastic models of the $3x+1$ and $5
 
 #v(0.5em)
 
-*What this paper does not prove.* We do not prove the Collatz conjecture. The gap between density statements and universal pointwise convergence remains open and is, in my view, a frontier problem in $p$-adic dynamics. The reductions above make that gap more precise, but they do not eliminate it. I state this limitation upfront and devote Section 9 to an honest analysis of this gap, including why the contraction, growth-chain, and terminal-window results do not close it.
+*What this paper does not prove.* This paper does not prove the Collatz conjecture. The gap between density statements and universal pointwise convergence remains open and is treated here as a frontier problem in $p$-adic dynamics. The reductions above make that gap more precise, but they do not eliminate it. This limitation is stated upfront, and Section 9 gives a direct analysis of the gap, including why the contraction, growth-chain, and terminal-window results do not close it.
 
 #v(0.5em)
 

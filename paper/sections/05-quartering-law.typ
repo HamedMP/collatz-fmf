@@ -6,7 +6,7 @@ The fractional-moment contraction of Section 4 establishes that the _average_ ho
 
 == Growth chains
 
-I begin by isolating the dominant growth mechanism.
+The argument begins by isolating the dominant growth mechanism.
 
 #definition(name: "Growth-B Chain")[
   A _growth-B chain_ of length $k$ starting at odd $x_0$ is a maximal sequence $x_0, x_1, dots, x_k$ of consecutive FMF hops where each hop $x_i arrow.r x_(i+1)$ satisfies:

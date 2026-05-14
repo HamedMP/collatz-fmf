@@ -2,7 +2,7 @@
 
 = FMF Formulas and the Hop Map
 
-I begin by establishing the exact algebraic machinery underlying the FMF decomposition. The key insight is that Collatz dynamics, when viewed through the lens of the first multiple of four, decompose into a small number of cases with closed-form formulas.
+This section establishes the exact algebraic machinery underlying the FMF decomposition. The key insight is that Collatz dynamics, when viewed through the lens of the first multiple of four, decompose into a small number of cases with closed-form formulas.
 
 == Definitions
 
@@ -51,11 +51,11 @@ I begin by establishing the exact algebraic machinery underlying the FMF decompo
 ]
 
 #proof[
-  Cases A and B1 are direct computation. I prove Case B2 in detail.
+  Cases A and B1 are direct computation. It remains to prove Case B2.
 
   Write $x = 4k + 3$ with $k$ odd and $k + 1 = 2^t m$, so $x = 2^(t+2) m - 1$. The first three Collatz steps yield:
   $ x arrow.r^(3x+1) 3 dot 2^(t+2) m - 2 arrow.r^(\/2) 3 dot 2^(t+1) m - 1 arrow.r^(3x+1) 3^2 dot 2^(t+1) m - 2. $
-  The value $3^2 dot 2^(t+1) m - 2 = 2(3^2 dot 2^t m - 1)$ is divisible by $2$ but not by $4$, since $t gt.eq 1$ makes $3^2 dot 2^t m$ even and hence $3^2 dot 2^t m - 1$ odd. I continue with strictly alternating $\/2$ and $3x+1$ steps. After each pair of steps, the power of $2$ in the leading coefficient decreases by one. At step $2i + 1$ (for $i = 1, dots, t$), the sequence value has the form $3^(i+1) dot 2^(t-i+2) m - 2$.
+  The value $3^2 dot 2^(t+1) m - 2 = 2(3^2 dot 2^t m - 1)$ is divisible by $2$ but not by $4$, since $t gt.eq 1$ makes $3^2 dot 2^t m$ even and hence $3^2 dot 2^t m - 1$ odd. The trajectory then continues with strictly alternating $\/2$ and $3x+1$ steps. After each pair of steps, the power of $2$ in the leading coefficient decreases by one. At step $2i + 1$ (for $i = 1, dots, t$), the sequence value has the form $3^(i+1) dot 2^(t-i+2) m - 2$.
 
   At step $2t + 3$, we arrive at
   $ 3(3^(t+1) dot 2m - 1) + 1 = 2(3^(t+2) m - 1). $

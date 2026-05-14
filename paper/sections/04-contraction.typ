@@ -2,7 +2,7 @@
 
 = Fractional-Moment Contraction and the $3\/4$ Discriminant
 
-The FMF decomposition cleanly isolates the elementary contraction channel in the $3n+1$ problem. For the generalized map $C_a(n) = a n + 1$, the first value divisible by $4$ has asymptotic ratio $a\/4$ on the immediate-FMF residue class. The multiplier $a = 3$ is the largest odd value for which this channel contracts. I then use the state-distribution theorem to compute an exact asymptotic fractional moment for the FMF hop ratio.
+The FMF decomposition cleanly isolates the elementary contraction channel in the $3n+1$ problem. For the generalized map $C_a(n) = a n + 1$, the first value divisible by $4$ has asymptotic ratio $a\/4$ on the immediate-FMF residue class. The multiplier $a = 3$ is the largest odd value for which this channel contracts. The state-distribution theorem then gives an exact asymptotic fractional moment for the FMF hop ratio.
 
 == The $a\/4$ Discriminant
 
@@ -41,7 +41,7 @@ The discriminant reveals that $3$ occupies a unique position: it is the largest 
 ]
 
 #proof[
-  I compute the three FMF input cases separately, ignoring only the lower-order additive constants in the ratio; these vanish in natural density as the free parameter tends to infinity.
+  The computation separates the three FMF input cases, ignoring only the lower-order additive constants in the ratio; these vanish in natural density as the free parameter tends to infinity.
 
   *Type A.* For $x = 4k + 1$, $F(x) = (3k+1) \/ 2^J$ with $J = v_2(3k+1)$. As $k$ ranges by natural density, $PP(J = j) = 2^(-(j+1))$ for $j gt.eq 0$. The asymptotic ratio is $(3\/4) 2^(-J)$, so
   $ EE[R^alpha | A] = (3\/4)^alpha sum_(j=0)^(infinity) 2^(-(j+1)) 2^(-alpha j) = (3\/4)^alpha / (2 - 2^(-alpha)). $

@@ -12,7 +12,7 @@ The central structural result of the FMF framework is that, when inputs are coun
 ]
 
 #proof[
-  I treat the general Type B2 case; the Type A and Type B0 cases are the same argument with different odd affine forms.
+  It suffices to treat the general Type B2 case; the Type A and Type B0 cases are the same argument with different odd affine forms.
 
   Let $x = 4k + 3$ with $k$ odd and $k + 1 = 2^t m$ ($m$ odd, $t gt.eq 1$). By Theorem A, $op("FMF")(x) = 2(3^(t+2) m - 1)$ and
   $ F(x) = (3^(t+2) m - 1) / 2^(v_2(3^(t+2) m - 1)). $
