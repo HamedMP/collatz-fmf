@@ -207,4 +207,4 @@ The FMF framework establishes:
 - That these properties correctly distinguish $3n+1$ from $5n+1$ at the structural level.
 - That the remaining gap is a precise, well-defined question in $p$-adic dynamics, not a vague "we need better bounds."
 
-What it does not establish is the conjecture itself. The honest conclusion is that the FMF framework provides elementary density bounds for a clearly isolated Collatz growth mechanism, but the passage from density bounds to universal convergence remains a frontier problem.
+What it does not establish is the conjecture itself. The conclusion is that the FMF framework provides elementary density bounds for a clearly isolated Collatz growth mechanism, but the passage from density bounds to universal convergence remains open.

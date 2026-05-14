@@ -24,4 +24,4 @@ for these normalized terminal-window counts would settle the corresponding fixed
 
 == Acknowledgments
 
-The systematic explorations --- each designed to test a specific hypothesis, verify it computationally, attempt a proof, and honestly record failures --- were essential to identifying which results could be made rigorous and which could not.
+The systematic explorations --- each designed to test a specific hypothesis, verify it computationally, attempt a proof, and record failures explicitly --- were essential to identifying which results could be made rigorous and which could not.

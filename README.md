@@ -11,7 +11,7 @@ Density bounds and pointwise obstruction reductions via First-Multiple-of-Four (
 - **Pointwise obstruction reductions:** The binary-depth return obstruction is reduced to an explicit return-code partial map with survival density (2/15)^L; the reduced {0,1} gap obstruction has survival density 112^-L.
 - **Main contribution:** Elementary natural-density bounds and exact reductions for isolated FMF growth mechanisms. This is not a proof of Collatz.
 
-## Honest Assessment
+## Claim Boundary
 
 The "almost all to all" gap remains open. There are infinitely many finite growth-shadow starts, but no nonconvergent exception is known. In the current formulation, the sharp endpoint is a 2-adic terminal-window/rank problem.
 
