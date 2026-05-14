@@ -20,7 +20,7 @@ for these normalized terminal-window counts would settle the corresponding fixed
 
 *Connection to Syracuse random variables.* Tao's proof @tao2022 constructs Syracuse random variables that model the Collatz dynamics in a measure-theoretic framework. The FMF decomposition provides a natural discretization of these variables: each FMF hop corresponds to a block of Syracuse steps with algebraically determined length. Translating between the two frameworks could clarify whether the Quartering Law's growth-chain bounds can be combined with Tao's logarithmic-density machinery.
 
-*Code availability.* The computational explorations underlying this paper are available at the project repository. The core verification scripts are self-contained, with verification counts and failure rates reported inline.
+*Code and data availability.* The computational explorations underlying this paper are included in the accompanying project repository under `explorations/`, with verifier entry points in `scripts/verify_snapshot.sh`. The companion note `diagnostics.md` explains what each diagnostic group checks and, equally importantly, what it does not prove. No external dataset is required; the scripts generate their finite residue, terminal-window, and template checks directly from the formulas in the manuscript. The quick reproducibility command is `bash scripts/verify_snapshot.sh quick`, while the longer recorded frontier check is `bash scripts/verify_snapshot.sh full`.
 
 == Acknowledgments
 
