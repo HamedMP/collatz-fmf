@@ -30,21 +30,29 @@
 
 <div class="abstract">
   <p>
-    We introduce the First-Multiple-of-Four (FMF) decomposition, which
-    partitions Collatz trajectories into odd-to-odd hops through the first
-    value divisible by four. The decomposition yields exact algebraic formulas
-    for hop length and output value, natural-density output laws from 2-adic
-    inverse structure, and an exact asymptotic fractional-moment contraction
-    \(\mathbb{E}[R^{0.53}] \approx 0.8638 < 1\) for the FMF hop ratio.
+    The First-Multiple-of-Four (FMF) decomposition partitions Collatz dynamics
+    into odd-to-odd hops ending at the first value divisible by four. In these
+    coordinates the hop length and output value have exact algebraic formulas,
+    the output states have natural-density laws obtained from 2-adic inverse
+    structure, and the FMF hop ratio has an exact asymptotic fractional-moment
+    contraction \(\mathbb{E}[R^{0.53}] \approx 0.8638 < 1\) in the density
+    model.
   </p>
   <p>
     The main density result is the Quartering Law: conditioned on a growth-B
     hop, each further growth-B continuation has density factor \(1/4\), so
-    strict growth-B chains of length at least \(k\) have odd-start density
-    \(4^{-k}\). The paper also reduces the first bounded-depth pointwise
-    obstructions to binary return-code and reduced \(\{0,1\}\) gap partial
-    maps, leaving a precise unweighted terminal-window counting problem.
-    These results do not prove the Collatz conjecture.
+    the density among odd starts of a strict growth-B chain of length at least
+    \(k\) is \(4^{-k}\). The paper also gives pointwise reductions for the
+    first bounded-depth obstruction classes: binary-depth return obstructions
+    reduce to an explicit return-code partial map with survival density
+    \((2/15)^L\), while the reduced \(\{0,1\}\) gap obstruction has survival
+    density \(112^{-L}\).
+  </p>
+  <p>
+    These are density and reduction theorems for isolated Collatz growth
+    mechanisms, not a proof of the Collatz conjecture and not a replacement for
+    Tao's orbit-minimum theorem. The remaining pointwise gap is an unweighted
+    terminal-window/rank problem in \(2\)-adic dynamics.
   </p>
 </div>
 
