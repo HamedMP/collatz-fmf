@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elementary Exponential Density Bounds for Collatz Growth Chains</title>
+  <title>First-Multiple-of-Four Coordinates for Collatz Growth Chains</title>
   <link rel="stylesheet" href="style.css">
   <script>
   MathJax = { tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] } };
@@ -20,8 +20,8 @@
 </nav>
 
 <div class="site-header">
-  <h1>Elementary Exponential Density Bounds for Collatz Growth Chains</h1>
-  <p class="subtitle">via First-Multiple-of-Four Decomposition</p>
+  <h1>First-Multiple-of-Four Coordinates for Collatz Growth Chains</h1>
+  <p class="subtitle">Density bounds and pointwise obstruction reductions</p>
   <p class="author">Hamed Mohammadpour</p>
 </div>
 
@@ -29,31 +29,30 @@
 
 <div class="abstract">
   <p>
-    This paper introduces the <em>First-Multiple-of-Four</em> (FMF) map, which replaces the
-    classical Collatz iteration \(x \mapsto (3x+1)/2^{v_2(3x+1)}\) with a
-    single algebraic step that jumps directly to the next multiple of four.
-    Every odd integer \(x = 4k+3\) with \(k\) odd and \(k+1 = 2^t m\) reaches its
-    FMF image in exactly \(3 + 2t\) Collatz steps, and the image is
-    \(2(3^{t+2}m - 1)\). From this closed-form we derive exact transition
-    probabilities, prove state-independence of the induced Markov chain, and
-    establish a spectral contraction bound \(\rho = 0.8638 < 1\) on average
-    shrinkage.
+    This paper introduces the <em>First-Multiple-of-Four</em> (FMF)
+    decomposition, which partitions Collatz trajectories into odd-to-odd hops
+    through the first value divisible by four. The decomposition gives exact
+    algebraic formulas for hop length and output value, natural-density output
+    laws from 2-adic inverse structure, and an exact asymptotic fractional
+    moment contraction \(\mathbb{E}[R^{0.53}] \approx 0.8638 < 1\) for the
+    FMF hop ratio.
   </p>
   <p>
-    Our main result is the <em>Quartering Law</em>: the probability that a
-    growth chain continues for at least \(k\) steps is exactly \(2/4^k\),
-    yielding exponential \((1/4)^k\) density decay for long growth chains.
-    This gives natural density bounds on the exceptional set that are strictly
-    stronger than Tao's logarithmic-density, sub-polynomial bounds: natural
-    density is stronger than logarithmic density, and exponential decay is
-    stronger than any sub-polynomial rate.
+    The main density result is the <em>Quartering Law</em>: among starts
+    already in a growth-B hop, each additional growth-B continuation has
+    density factor \(1/4\), so the density among odd starts of a strict
+    growth-B chain of length at least \(k\) is \(4^{-k}\). The paper also gives
+    exact pointwise obstruction reductions for the first bounded-depth cases:
+    binary-depth return obstructions reduce to a 2-adic return-code partial
+    map with survival density \((2/15)^L\), while the reduced \(\{0,1\}\) gap
+    obstruction has survival density \(112^{-L}\).
   </p>
   <p>
-    We are transparent about the remaining gap: average contraction and
-    exponential density bounds do not by themselves imply pointwise
-    convergence for every integer. The worst-case growth is provably
-    unbounded, and the exceptional set where short-term growth occurs is
-    infinite. Closing this gap remains open.
+    These are density and reduction theorems for isolated Collatz growth
+    mechanisms. They are not a proof of the Collatz conjecture and not a
+    replacement for Tao's orbit-minimum theorem. The remaining pointwise gap is
+    stated explicitly as an unweighted terminal-window/rank problem in
+    \(p\)-adic dynamics.
   </p>
 </div>
 
@@ -69,17 +68,18 @@
 
 <div class="result-card">
   <h3>Theorem D: The Quartering Law</h3>
-  <p>The probability that a growth chain continues for at least \(k\) steps is exactly</p>
-  \[\mathbb{P}(\text{chain} \geq k) = \frac{2}{4^k}\]
-  <p>The natural density of integers requiring a growth chain of length \(\geq k\) decays exponentially as \((1/4)^k\). This is an exact result, not an asymptotic bound.</p>
+  <p>Conditioned on already being in a growth-B hop, each additional growth-B continuation has density factor</p>
+  \[\mathbb{P}(\text{continue}) = \frac{1}{4}\]
+  <p>Among all odd starts, strict growth-B chains of length at least \(k\) have natural density \(4^{-k}\). This is a natural-density statement, not a pointwise stopping theorem.</p>
 </div>
 
 <div class="result-card">
-  <h3>Main Result: Density Bounds Stronger than Tao</h3>
-  <p>Our density bounds on the exceptional set are strictly stronger than those of Tao (2022) in two independent senses:</p>
+  <h3>Pointwise Obstruction Reductions</h3>
+  <p>The first bounded-depth pointwise obstructions are reduced to explicit partial maps and terminal-window counting problems:</p>
   <ul>
-    <li><strong>Density type:</strong> natural density (our result) implies logarithmic density (Tao's), but not conversely.</li>
-    <li><strong>Decay rate:</strong> exponential decay \((1/4)^k\) dominates any sub-polynomial decay \(f(x)^{-1}\) for \(f(x) \to \infty\) arbitrarily slowly.</li>
+    <li>Binary return-code survival density \((2/15)^L\)</li>
+    <li>Reduced \(\{0,1\}\) gap-code survival density \(112^{-L}\)</li>
+    <li>Periodic, finite-defect, low-complexity, balanced/Sturmian, and several small automatic-template obstruction classes are excluded.</li>
   </ul>
 </div>
 
@@ -92,7 +92,7 @@
     <li>State-independence of the FMF Markov chain (Theorem B)</li>
     <li>Average contraction with spectral radius \(\rho = 0.8638 < 1\) (Theorem C)</li>
     <li>The Quartering Law with exact \((1/4)^k\) density decay (Theorem D)</li>
-    <li>That our density bounds are strictly stronger than Tao's</li>
+    <li>Exact binary return-code and reduced-gap obstruction reductions</li>
   </ul>
 
   <h3>What is NOT proved</h3>
@@ -108,7 +108,7 @@
 
 <ul>
   <li><a href="theorems.html">All Theorems</a> -- complete statements with proofs and status badges</li>
-  <li><a href="explorations.html">Exploration Timeline</a> -- 44 computational experiments, grouped by phase</li>
+  <li><a href="explorations.html">Exploration Timeline</a> -- computational experiments and diagnostics, grouped by phase</li>
   <li><a href="paper.html">Read the Paper</a> -- full PDF with proofs</li>
 </ul>
 

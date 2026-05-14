@@ -27,6 +27,13 @@
   <span class="badge open">Open</span>
 </p>
 
+<div class="callout honest">
+  <strong>Claim boundary:</strong> this page summarizes density and reduction
+  results. It does not claim a proof of the Collatz conjecture. The missing
+  pointwise bridge is the unweighted terminal-window/rank theorem described in
+  the paper and repository audit notes.
+</div>
+
 <!-- ===== FMF Formulas ===== -->
 <h2>FMF Formulas</h2>
 
@@ -49,7 +56,13 @@
 <div class="thm-box lemma">
   <div class="thm-title">Lemma (\(v_2(3^n - 1)\)) <span class="badge proved">Proved</span></div>
   <p>For all \(n \geq 1\),</p>
-  \[v_2(3^n - 1) = v_2(n) + 1\]
+  \[
+    v_2(3^n - 1)=
+    \begin{cases}
+      1, & n \text{ odd},\\
+      v_2(n)+2, & n \text{ even}.
+    \end{cases}
+  \]
   <p>This classical result follows from the Lifting the Exponent Lemma applied to \(3^n - 1^n\).</p>
 </div>
 
@@ -58,9 +71,8 @@
 
 <div class="thm-box">
   <div class="thm-title">Theorem B (State Independence) <span class="badge proved">Proved</span></div>
-  <p>The FMF Markov chain has the property that the distribution of the next type parameter \(t' = v_2(k'+1)\) is independent of the current state. Specifically, for uniform random odd \(k\) in any residue class,</p>
-  \[\mathbb{P}(t' = j) = \frac{1}{2^j} - \frac{1}{2^{j+1}} = \frac{1}{2^{j+1}}\]
-  <p>for \(j \geq 1\). The output distribution is identical regardless of the input, making the chain memoryless.</p>
+  <p>The FMF output-state distribution is independent of the input state in natural density. This is a statement about residue classes over many starts, not independence along a single deterministic trajectory.</p>
+  <p>In the density model, the relevant \(2\)-adic valuations have the expected geometric law.</p>
 </div>
 
 <div class="thm-box observation">
@@ -99,21 +111,21 @@
 
 <div class="thm-box">
   <div class="thm-title">Theorem D (Quartering Law) <span class="badge proved">Proved</span></div>
-  <p>In the FMF framework, define a <em>growth chain</em> as a maximal consecutive sequence of FMF steps where the output exceeds the input. The probability that a growth chain continues for at least \(k\) steps is exactly</p>
-  \[\mathbb{P}(\text{chain} \geq k) = \frac{2}{4^k}\]
-  <p>Equivalently, at each step of a growth chain, the probability of continuing to grow is exactly \(1/4\). The natural density of integers in \([1, N]\) requiring a growth chain of length \(\geq k\) decays as \((1/4)^k\).</p>
+  <p>In the FMF framework, define a <em>growth chain</em> as a maximal consecutive sequence of FMF steps where the output exceeds the input. Conditioned on a growth-B hop, the next hop is again growth-B with density</p>
+  \[\mathbb{P}(\text{continue}\mid\text{growth-B}) = \frac{1}{4}\]
+  <p>Equivalently, among all odd starts, strict growth-B chains of length at least \(k\) have natural density \(4^{-k}\). The older expression \(2/4^k\) is only the conditional normalization after the start is already known to be Type B.</p>
 </div>
 
 <div class="thm-box">
   <div class="thm-title">Proposition (2-adic Expansion) <span class="badge proved">Proved</span></div>
   <p>Each growth step in the FMF map expands the 2-adic representation by a factor of at least</p>
-  \[\frac{3^3}{2^2} = \frac{27}{4} \geq 6.75\]
-  <p>In practice the expansion factor is \(\geq 8\), meaning growth chains consume bits rapidly and are self-limiting.</p>
+  \[8\]
+  <p>This helps explain the density decay, but it does not by itself prove pointwise termination of every growth chain.</p>
 </div>
 
 <div class="thm-box lemma">
   <div class="thm-title">Lemma (Growth-B Acyclicity) <span class="badge proved">Proved</span></div>
-  <p>The restriction of the FMF map to "Growth-B" states (those producing a type \(t \geq 2\) output that is larger than the input) has no cycles. Every Growth-B trajectory must eventually exit to either a descent step or a Growth-A step (\(t = 1\)).</p>
+  <p>The periodic growth-B branch families have no positive cycles: a cycle would force an equality \(3^a = 2^b\) in the relevant multiplier equation. This excludes periodic obstructions, but it does not exclude arbitrary nonperiodic growth-B depth sequences.</p>
 </div>
 
 <!-- ===== Growth Bounds ===== -->
@@ -123,7 +135,7 @@
   <div class="thm-title">Observation (Epoch Duration) <span class="badge empirical">Empirical</span></div>
   <p>Computationally, the number of FMF steps in a complete epoch (from an integer to a smaller integer) satisfies</p>
   \[\text{epoch}(x) \leq 2.83 \cdot \log_2(x)\]
-  <p>for all \(x\) tested up to \(2^{60}\). This bound is tighter than the theoretical \(3.15 \cdot \log_2(x)\) bound.</p>
+  <p>for the tested ranges. This is empirical evidence only; a universal epoch bound would be a pointwise theorem strong enough to imply Collatz by descent.</p>
 </div>
 
 <div class="thm-box observation">
@@ -135,20 +147,21 @@
   <div class="thm-title">Conjecture (Growth Chain Bound) <span class="badge open">Open</span></div>
   <p>For all odd \(m\), the length of the longest growth chain starting from \(m\) satisfies</p>
   \[\text{chain}(m) \leq 0.55 \cdot \log_2(m) + 3\]
-  <p>If true, this would cap the maximum transient growth and, combined with average contraction, would imply convergence for all integers.</p>
+  <p>If proved in a sufficiently strong pointwise form and combined with recovery after mixed growth and shrinkage phases, this would materially strengthen the FMF route to Collatz.</p>
 </div>
 
 <!-- ===== Main Result ===== -->
 <h2>Main Result</h2>
 
 <div class="thm-box">
-  <div class="thm-title">Main Theorem (Density Bound) <span class="badge proved">Proved</span></div>
+  <div class="thm-title">Main Theorem (Density and Reduction Package) <span class="badge proved">Proved</span></div>
   <p>Let \(E_k(N) = \{x \leq N : x \text{ has a growth chain of length} \geq k\}\). Then</p>
-  \[\limsup_{N \to \infty} \frac{|E_k(N)|}{N} \leq \frac{2}{4^k}\]
-  <p>This is a <em>natural density</em> bound with <em>exponential</em> \((1/4)^k\) decay. It is strictly stronger than Tao's result (2022) in two independent senses:</p>
+  \[\limsup_{N \to \infty} \frac{|E_k(N)|}{N} \leq 4^{-k}\]
+  <p>This is a natural-density statement about strict growth-B chains, together with exact reductions of the first bounded-depth pointwise obstructions to return-code and reduced-gap partial maps. It should not be compared as a replacement for Tao's orbit-minimum theorem, because the measured events are different.</p>
   <ul>
-    <li>Natural density implies logarithmic density, but not conversely</li>
-    <li>Exponential decay \((1/4)^k\) dominates any sub-polynomial decay \(f(x)^{-1}\) where \(f(x) \to \infty\) arbitrarily slowly</li>
+    <li>Binary return-code survival density: \((2/15)^L\)</li>
+    <li>Reduced \(\{0,1\}\) gap-code survival density: \(112^{-L}\)</li>
+    <li>Remaining target: an unweighted terminal-window/rank theorem.</li>
   </ul>
 </div>
 

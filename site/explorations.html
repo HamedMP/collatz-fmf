@@ -21,11 +21,18 @@
 
 <h1>Exploration Timeline</h1>
 
-<p>44 computational experiments spanning six phases, from initial FMF verification through frontier analysis. Each entry is color-coded:
+<p>This page records the first 44 historical computational experiments that led to the current manuscript. Later verifier scripts are documented in the repository diagnostics. Each entry is color-coded:
   <span style="color:#3a8a3a; font-weight:600;">positive finding</span>,
   <span style="color:#b83030; font-weight:600;">negative result</span>,
   <span style="color:#2a5a8a; font-weight:600;">key theorem</span>.
 </p>
+
+<div class="callout honest">
+  <strong>Scope:</strong> these explorations are research notes and finite
+  diagnostics. They do not prove the Collatz conjecture. The current claim
+  boundary is the rendered paper plus the repository files
+  <code>proof-obligations.md</code> and <code>diagnostics.md</code>.
+</div>
 
 <!-- Phase 1 -->
 <div class="phase-group">
@@ -75,7 +82,7 @@
     <li class="negative"><span class="exp-num">explore21</span> -- Worst-case growth UNBOUNDED: arbitrarily long growth phases exist</li>
     <li class="positive"><span class="exp-num">explore22</span> -- Growth phase structure: maximum 7 hops observed up to \(2^{60}\)</li>
     <li class="positive"><span class="exp-num">explore23</span> -- \(2^n - 1\) trajectory analysis: these "hard" numbers still converge</li>
-    <li class="positive"><span class="exp-num">explore24</span> -- Epoch bound established: \(\leq 3.15 \cdot \log_2(x)\) steps</li>
+    <li class="positive"><span class="exp-num">explore24</span> -- Epoch bound observed: \(\leq 3.15 \cdot \log_2(x)\) steps in the tested range</li>
     <li class="positive"><span class="exp-num">explore25</span> -- Universal epoch bound verified computationally to 60 bits</li>
     <li class="negative"><span class="exp-num">explore26</span> -- Cesaro argument fails for finite trajectories</li>
     <li class="positive"><span class="exp-num">explore27</span> -- Growth phase mechanics: rigid structural constraints identified</li>
@@ -94,11 +101,11 @@
     <li class="negative"><span class="exp-num">explore33</span> -- Carry propagation approach fails to give uniform bound</li>
     <li class="key"><span class="exp-num">explore34</span> -- Growth-to-Type-A split proved: exactly 50/50</li>
     <li class="key"><span class="exp-num">explore35</span> -- Growth-B acyclicity proved: no cycles in state space</li>
-    <li class="positive"><span class="exp-num">explore36</span> -- Complete proof structure assembled: 6 of 7 lemmas closed</li>
+    <li class="positive"><span class="exp-num">explore36</span> -- Proof-attempt structure assembled; later audit isolated the remaining pointwise gap</li>
     <li class="key"><span class="exp-num">explore37</span> -- Compatibility tree density \(= (1/4)^k\) proved</li>
     <li class="key"><span class="exp-num">explore38</span> -- Quartering Law algebraic proof completed (Theorem D)</li>
     <li class="key"><span class="exp-num">explore39</span> -- Formal proof: \(\mathbb{P}(\text{continue}) = 1/4\) exactly</li>
-    <li class="positive"><span class="exp-num">explore40</span> -- Complete proof assembly and gap audit</li>
+    <li class="positive"><span class="exp-num">explore40</span> -- Proof assembly attempt and gap audit</li>
     <li class="positive"><span class="exp-num">explore41</span> -- Bit consumption vs growth: growth is inherently self-limiting</li>
   </ul>
 </div>

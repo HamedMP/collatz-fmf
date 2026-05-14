@@ -22,7 +22,7 @@
 <h1>Read the Paper</h1>
 
 <div class="site-header">
-  <p class="subtitle">Elementary Exponential Density Bounds for Collatz Growth Chains via First-Multiple-of-Four Decomposition</p>
+  <p class="subtitle">First-Multiple-of-Four Coordinates for Collatz Growth Chains: Density Bounds and Pointwise Obstruction Reductions</p>
   <p class="author">Hamed Mohammadpour</p>
 </div>
 
@@ -30,25 +30,26 @@
 
 <div class="abstract">
   <p>
-    We introduce the First-Multiple-of-Four (FMF) map, which replaces the
-    classical Collatz iteration with a single algebraic step that jumps
-    directly to the next multiple of four. Every odd integer \(x = 4k+3\)
-    with \(k\) odd and \(k+1 = 2^t m\) reaches its FMF image in exactly
-    \(3 + 2t\) Collatz steps, yielding the closed form
-    \(F(x) = 2(3^{t+2}m - 1)\).
+    We introduce the First-Multiple-of-Four (FMF) decomposition, which
+    partitions Collatz trajectories into odd-to-odd hops through the first
+    value divisible by four. The decomposition yields exact algebraic formulas
+    for hop length and output value, natural-density output laws from 2-adic
+    inverse structure, and an exact asymptotic fractional-moment contraction
+    \(\mathbb{E}[R^{0.53}] \approx 0.8638 < 1\) for the FMF hop ratio.
   </p>
   <p>
-    From this we derive exact transition probabilities, prove
-    state-independence of the induced Markov chain, and establish the
-    Quartering Law: the probability that a growth chain continues for at
-    least \(k\) steps is exactly \(2/4^k\). This gives natural density bounds
-    on the exceptional set with exponential \((1/4)^k\) decay, strictly
-    stronger than Tao's logarithmic-density sub-polynomial bounds.
+    The main density result is the Quartering Law: conditioned on a growth-B
+    hop, each further growth-B continuation has density factor \(1/4\), so
+    strict growth-B chains of length at least \(k\) have odd-start density
+    \(4^{-k}\). The paper also reduces the first bounded-depth pointwise
+    obstructions to binary return-code and reduced \(\{0,1\}\) gap partial
+    maps, leaving a precise unweighted terminal-window counting problem.
+    These results do not prove the Collatz conjecture.
   </p>
 </div>
 
 <p style="margin-bottom: 0.5rem; font-style: italic; color: #666;">
-  This paper is being prepared for arXiv submission (math.NT).
+  This is a density-and-reduction manuscript, not a claimed proof of the Collatz conjecture.
 </p>
 
 <a href="paper/collatz-fmf.pdf" class="download-link">Download PDF</a>
