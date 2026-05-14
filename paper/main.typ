@@ -15,6 +15,7 @@
 
 #include "sections/01-introduction.typ"
 #include "sections/01b-main-results.typ"
+#include "sections/01c-notation.typ"
 #include "sections/02-fmf-formulas.typ"
 #include "sections/03-state-independence.typ"
 #include "sections/04-contraction.typ"

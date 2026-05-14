@@ -32,6 +32,7 @@ if command -v pdftotext >/dev/null 2>&1; then
   run pdftotext site/paper/collatz-fmf.pdf /tmp/collatz-fmf.txt
   paper_patterns=(
     "Main Results and Logical Dependencies"
+    "Notation Guide"
     "^2\\. FMF Formulas and the Hop Map"
     "^5\\. The Quartering Law"
     "^6\\. Binary Return Codes"

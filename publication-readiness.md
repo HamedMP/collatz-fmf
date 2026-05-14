@@ -118,8 +118,8 @@ The packaged full verifier was run on May 14, 2026:
 
 - `bash scripts/verify_snapshot.sh full`
 
-This includes the Typst compile, PDF text smoke checks for expected section
-numbers, Theorem A--D labels, and key endpoint labels, core algebra and reduction scripts,
+This includes the Typst compile, PDF text smoke checks for the main-results and
+notation front matter, expected section numbers, Theorem A--D labels, and key endpoint labels, core algebra and reduction scripts,
 bounded-alphabet profiles, uniform-morphism diagnostics through the recorded
 frontier, the q=9 recurrence and residue boundary scans, the bounded-alphabet beam search, and
 `git diff --check`.

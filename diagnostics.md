@@ -31,7 +31,7 @@ list is recorded in `proof-obligations.md`.
 | Periodic and bounded-alphabet branches | `explore68_periodic_branches.py`, `explore70_bounded_alphabet_minima.py`, `explore72_bounded_alphabet_beam.py` | Checks periodic exclusions and finite `{0,1}` minima/profiles; the beam search is heuristic evidence, not a proof. |
 | Aperiodic and balanced templates | `explore71_aperiodic_templates.py`, `explore73_balanced_frontier.py`, `explore74_mechanical_landing.py`, `explore75_mechanical_recurrence.py`, `explore76_template_recurrence.py` | Checks finite evidence and recurrence witnesses for balanced, mechanical, and named automatic-style templates. |
 | Uniform morphism frontier | `explore77_uniform_morphism_recurrence.py`, `explore78_uniform_morphism_symbolic_witness.py`, `explore79_q9_boundary.py`, `explore80_q9_boundary_residues.py` | Supports the small-uniform-morphism exclusions, records the residual q=9 reduced-gap recurrence boundary, and checks prefix-residue growth along that specific morphic word. |
-| Paper build and hygiene | `typst compile`, `pdftotext`, `git diff --check` | Confirms the manuscript builds, key rendered text, expected section numbers, Theorem A--D labels, and endpoint labels are present, and edited files have no whitespace errors. |
+| Paper build and hygiene | `typst compile`, `pdftotext`, `git diff --check` | Confirms the manuscript builds, key rendered text, front-matter labels, expected section numbers, Theorem A--D labels, and endpoint labels are present, and edited files have no whitespace errors. |
 
 ## What The Scripts Do Not Establish
 
