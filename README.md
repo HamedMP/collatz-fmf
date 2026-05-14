@@ -26,6 +26,7 @@ explorations/   Python exploration and verifier scripts
 lemma-roadmap.md proof-status roadmap and missing pointwise bridge lemmas
 review.md       critical review and repaired theorem framing
 proof-obligations.md checklist of what remains for a complete proof
+publication-readiness.md submission audit and claim-boundary checklist
 ```
 
 ## Building
