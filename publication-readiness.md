@@ -105,8 +105,8 @@ Before external submission:
 - Split the very long Section 5 into shorter sections: growth-B density,
   binary return codes, reduced gap codes, terminal-window estimates, and
   obstruction-class exclusions.
-- Convert the strongest endpoint statements into a small number of named main
-  theorems with a dependency graph.
+- Keep the main-results endpoint map synchronized with the strongest Section 5
+  endpoint theorems and criteria as the manuscript is reorganized.
 - Move finite diagnostic output and long exploratory classifications to an
   appendix or companion repository note.
 - Run the full verifier snapshot in `proof-obligations.md` after the split.

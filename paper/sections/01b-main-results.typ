@@ -41,6 +41,31 @@ The theorem package has three roles. First, it isolates deterministic contractio
   [Gap analysis], [Section 6], [States what remains open and why density does not imply universal convergence.],
 )
 
+== Endpoint reduction map
+
+The longest part of Section 5 is organized around two endpoint theorems and the counting criteria that would close them.
+
+#table(
+  columns: (1.25fr, 1.8fr, 2.15fr),
+  inset: 5pt,
+  [*Endpoint object*], [*Named statements*], [*What they prove or isolate*],
+  [Binary return map],
+  [Binary Return Partial Map; Binary Return Counting, Critical-Rank, and Terminal-Rank Criteria],
+  [Reduces the bounded binary-depth obstruction to an explicit positive-integer partial map and to equivalent finite-height counting and rank problems.],
+  [Binary return endpoint],
+  [Binary Obstruction Dichotomy; Binary Return Terminal Tail Dichotomy; Sharpened Binary Return Endpoint],
+  [Shows that any remaining binary return obstruction must be either a higher-complexity bounded-alphabet ordinary landing or an unbounded reset-spike approaching $-85\/88$ in $QQ_3$.],
+  [Reduced ${0,1}$ gap map],
+  [Binary ${0,1}$ Gap Partial Map; Gap Counting, Critical-Rank, and Terminal-Rank Criteria],
+  [Reduces the first nonconstant return-alphabet case to a second explicit partial map with survival density $112^(-L)$ and parallel terminal-window formulations.],
+  [Reduced ${0,1}$ gap endpoint],
+  [Binary ${0,1}$ Gap Obstruction Dichotomy; Gap Terminal Tail Dichotomy; Sharpened Binary ${0,1}$ Gap Endpoint],
+  [Shows that any remaining reduced-gap obstruction must be either a higher-complexity bounded-alphabet ordinary landing or an unbounded reset-spike approaching $-1\/128$ in $QQ_3$.],
+  [Excluded template classes],
+  [Low-Complexity Divergence; Balanced Ordinary Landing Exclusion; Binary Two- through Six-Uniform Morphic Template Exclusion],
+  [Removes periodic, finite-defect, sparse-label, low-complexity, balanced/Sturmian, and several automatic-template branches from the endpoint obstruction list.],
+)
+
 == Missing pointwise bridge
 
 #conjecture(name: "Uniform Terminal-Window Rank Bound")[
