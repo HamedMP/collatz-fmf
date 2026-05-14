@@ -86,10 +86,10 @@
 <h2>Contraction</h2>
 
 <div class="thm-box">
-  <div class="thm-title">Theorem C (Spectral Contraction) <span class="badge proved">Proved</span></div>
-  <p>The spectral radius of the FMF transfer operator satisfies</p>
-  \[\rho = \inf_{\alpha > 0}\, \mathbb{E}\bigl[R^{\alpha}\bigr] = 0.8638 < 1\]
-  <p>achieved at \(\alpha^* \approx 1.0002\). Because the transition matrix is rank-1 (by state independence), the spectral radius equals \(\mathbb{E}[R^{\alpha}]\) exactly. This proves average-case contraction of the FMF dynamics.</p>
+  <div class="thm-title">Theorem C (Fractional-Moment Contraction) <span class="badge proved">Proved</span></div>
+  <p>For the FMF hop ratio \(R=F(x)/x\), the exact asymptotic natural-density moment \(M(\alpha)=\mathbb{E}[R^\alpha]\) satisfies</p>
+  \[M(0.53) \approx 0.8638 < 1.\]
+  <p>The critical exponent solving \(M(\alpha^*)=1\) is approximately \(\alpha^* \approx 1.0002\). This is a density-model fractional-moment contraction statement, not a pointwise Lyapunov function for every trajectory.</p>
 </div>
 
 <div class="thm-box lemma">

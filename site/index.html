@@ -88,9 +88,9 @@
 <div class="callout honest">
   <h3>What is proved</h3>
   <ul>
-    <li>The FMF closed-form formulas (Theorem A) -- algebraically verified, zero failures in \(10^6\) tests</li>
-    <li>State-independence of the FMF Markov chain (Theorem B)</li>
-    <li>Average contraction with spectral radius \(\rho = 0.8638 < 1\) (Theorem C)</li>
+    <li>The FMF closed-form formulas (Theorem A), with finite script checks as supporting verification</li>
+    <li>Input-state-independent FMF output distributions in natural density (Theorem B)</li>
+    <li>Fractional-moment contraction \(M(0.53) \approx 0.8638 < 1\) in the density model (Theorem C)</li>
     <li>The Quartering Law with exact \((1/4)^k\) density decay (Theorem D)</li>
     <li>Exact binary return-code and reduced-gap obstruction reductions</li>
   </ul>
@@ -98,9 +98,10 @@
   <h3>What is NOT proved</h3>
   <ul>
     <li>Pointwise convergence to 1 for every integer -- the central claim of the Collatz conjecture</li>
-    <li>The worst-case growth is provably unbounded: there exist integers requiring arbitrarily long growth phases</li>
-    <li>The exceptional set (integers that grow in any given step) is infinite</li>
-    <li>Average contraction does not imply pointwise convergence -- this is a real mathematical gap, not a technicality</li>
+    <li>A universal pointwise bound on all growth phases or mixed recovery epochs</li>
+    <li>That density-zero exceptional sets are empty</li>
+    <li>The unweighted terminal-window/rank theorem needed to close the first bounded-depth obstructions</li>
+    <li>Average contraction does not imply pointwise convergence; this is the main mathematical gap</li>
   </ul>
 </div>
 
