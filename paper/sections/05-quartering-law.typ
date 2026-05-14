@@ -234,6 +234,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   Thus a binary-depth infinite obstruction cannot be a bounded recurrence in this normal form. If it has infinitely many depth-$0$ states, those states form a strictly increasing sequence of ordinary integers. If it has only finitely many depth-$0$ states, then the depth sequence is eventually all $1$s, which is already excluded by the no-eventually-periodic-depth proposition. This still does not prove the binary-depth case; it converts it into an arithmetic problem about satisfying the gate congruences along an increasing sequence.
 ]
 
+== Binary return codes
+
 #lemma(name: "Binary Return-Block Gate")[
   In the binary-depth normal form, fix $r >= 0$. The return block
   $ 0 arrow.r 1^r arrow.r 0 $
@@ -714,6 +716,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   for every $N$, contradicting the assumed unboundedness.
 ]
 
+== Binary return partial map
+
 #proposition(name: "Binary Return Reparameterization")[
   Suppose a binary-depth continuation is at a depth-$0$ state with parameter $n_j$, and suppose the next return block is $0 arrow.r 1^(r_j) arrow.r 0$. Let $epsilon_j = 7$ if $r_j$ is even and $epsilon_j = 5$ if $r_j$ is odd. Then there is a positive odd integer $w_j equiv epsilon_j mod 8$ such that
   $ 33 n_j + 32 = 16^(r_j) w_j. $
@@ -759,6 +763,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   $33n+32 = 16^r(epsilon_r + 8u)$
   for some integer $u$, i.e. to the displayed factorization with $w=epsilon_r+8u$. Conversely, such a factorization gives precisely the closed gate congruence for that return block. The formula for $T(n)$ is the return reparameterization formula. Finally, a binary-depth obstruction with infinitely many depth-$0$ states decomposes uniquely into consecutive return blocks, so it is an infinite orbit of $T$; and any infinite orbit of $T$ reconstructs those return blocks.
 ]
+
+== Binary return terminal windows
 
 #proposition(name: "Binary Return Backward Branch Formula")[
   Fix a terminal depth-$0$ return state $n'$ and a return length $r >= 0$. Let
@@ -1188,6 +1194,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   As in the cubic case, there is at most one backward preimage. If it exists, the backward contraction proposition gives $n < (8\/9)n'$. Raising to the positive power $theta$ gives the claim.
 ]
 
+== Binary return obstruction classes
+
 #proposition(name: "Binary Return $y$-Normal Form")[
   Put $y_j = 33n_j + 32$. If the $j$-th binary return block has length $r_j$, then
   $ y_j = 16^(r_j) w_j $
@@ -1382,6 +1390,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
 
   The contrapositive of the equality argument says that a non-eventually-periodic word must satisfy $p_x(j+1)>p_x(j)$ for every $j>=1$. Since $p_x(1)=q$, induction gives $p_x(m)>=m+q-1$.
 ]
+
+== Balanced and morphic binary templates
 
 #definition(name: "Balanced Binary Word")[
   A finite or infinite binary word is _balanced_ if any two finite factors $u$ and $v$ of the same length satisfy
@@ -2062,6 +2072,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   The $6$-uniform proof explains the earlier false boundary in the pure power-length diagnostic. Some morphisms fail the density test at lengths $6^h$, but their longer symbolic prefixes, such as $2 dot 6^h$, recur much faster and are still excluded by the same prefix-recurrence height barrier.
 ]
 
+== Binary return recurrence criteria
+
 #proposition(name: "Binary Return Low-Complexity Divergence")[
   Fix $m>=1$. For a finite binary return word $w in {0,1}^L$, let $p_w(m)$ be the number of distinct length-$m$ factors appearing in $w$, with $p_w(m)=0$ when $L<m$. Let $mu_(L,m)^("low")$ be the least return-prefix residue among length-$L$ binary return words satisfying $p_w(m) <= m$. Then
   $ mu_(L,m)^("low") arrow.r infinity $
@@ -2146,6 +2158,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
 #proof[
   The real lower bound is the binary return-length height bound applied to the $j$-th block. The $3$-adic congruence follows from the binary return reset proposition after reducing its displayed congruence modulo $3^(3r_j+1)$.
 ]
+
+== Reduced binary gap map
 
 #proposition(name: "Binary ${0,1}$ Gap 3-adic Clock")[
   In the binary return subcase where all return lengths are $0$ or $1$, suppose a return block of length $1$ is followed by $k >= 0$ return blocks of length $0$ before the next length-$1$ return. Let $n$ be the depth-$0$ return parameter immediately after the first length-$1$ block, and let $n_i$ be the parameter after the following $i$ zero-return blocks. Then
@@ -2461,6 +2475,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   Conversely, each infinite positive orbit of the partial map reconstructs consecutive zero gaps followed by length-$1$ returns in the binary return system. Thus the two formulations are equivalent.
 ]
 
+== Reduced gap terminal windows
+
 #proposition(name: "Binary ${0,1}$ Gap Backward Branch Formula")[
   Fix a terminal normalized state $a'$ and a gap length $k >= 0$. A positive state $a$ maps to $a'$ through a complete ${0,1}$ gap transition of length $k$ if and only if
   $ a = (2^(3k+7) a' + 8^k) / 3^(2k+5) $
@@ -2770,6 +2786,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   $ (43\/81)^theta < 1 - (8\/9)^theta, $
   which is the stated condition.
 ]
+
+== Reduced gap prefix minima
 
 #proposition(name: "Finite ${0,1}$ Gap Words Are Realizable")[
   For every finite sequence of zero-gap lengths $(k_0, dots, k_(L-1))$, there are infinitely many positive normalized states $a_0$ whose ${0,1}$ gap itinerary begins with exactly this sequence.
@@ -3322,6 +3340,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
   By the gap terminal monotonicity proposition, the rounded terminal coordinate is eventually constant exactly when the corresponding gap-prefix increments are eventually zero. The ${0,1}$ zero-increment tail equivalence says precisely that such a zero-increment tail is equivalent to an infinite integer orbit of the same gap map starting from $u_N$.
 ]
 
+== Reduced gap endpoint dynamics
+
 #proposition(name: "Binary ${0,1}$ Gap Terminal Zero-Increment Tail Uniqueness")[
   Fix a finite gap prefix and its auxiliary terminal state $u_N$. There is at most one infinite gap suffix for which all later rounded terminal increments are zero.
 ]
@@ -3607,6 +3627,8 @@ The Quartering Law is not a coincidence of residue counting but reflects a deep 
 
   Reducing $Q_r n_(j+1) = P_r n_j + D_r$ modulo $3$ gives $-n_(j+1) equiv 1 mod 3$, so $n_(j+1) equiv 2 mod 3$.
 ]
+
+== Growth-B coding endpoint
 
 #proposition(name: "Bounded-Depth Real Expansion")[
   For a growth-B continuation prefix of length $N$ with depths $0 <= t_i <= T$, the affine multiplier from $m_0$ to $m_N$ is
