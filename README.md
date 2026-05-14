@@ -39,6 +39,12 @@ typst compile paper/main.typ site/paper/collatz-fmf.pdf
 
 The current verifier snapshot is listed in `proof-obligations.md`.
 
+```bash
+bash scripts/verify_snapshot.sh quick
+```
+
+Use `bash scripts/verify_snapshot.sh full` for the longer frontier checks.
+
 ## License
 
 CC BY 4.0

@@ -126,7 +126,14 @@ Suggested attack order:
 
 ## Verification Snapshot
 
-Last checked on May 10, 2026:
+Full snapshot last checked on May 10, 2026. The packaged quick snapshot was
+checked on May 14, 2026 with:
+
+- `bash scripts/verify_snapshot.sh quick`
+
+The commands below are packaged in `scripts/verify_snapshot.sh`. The default
+`quick` mode runs the core algebra/reduction checks and paper compile; `full`
+also runs the longer frontier scans listed later in this section.
 
 - `python3 explorations/explore52_binary_partial_map.py`
 - `python3 explorations/explore60_backward_branches.py`

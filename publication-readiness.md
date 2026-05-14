@@ -119,6 +119,7 @@ Before external submission:
 
 The following checks were run after the publication-framing commit:
 
+- `bash scripts/verify_snapshot.sh quick`
 - `typst compile paper/main.typ site/paper/collatz-fmf.pdf`
 - `python3 explorations/explore54_return_minima.py --max-length 20`
 - `python3 explorations/explore53_gap_minima.py --max-length 14`
