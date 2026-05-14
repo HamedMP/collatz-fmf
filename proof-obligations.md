@@ -49,9 +49,9 @@ A completed proof must establish all of the following.
 | Natural-density state distribution | `paper/sections/03-state-independence.typ` | Proved as density, not trajectory independence |
 | Fractional-moment contraction | `paper/sections/04-contraction.typ` | Proved as average contraction |
 | Quartering Law | `paper/sections/05-quartering-law.typ` | Proved as natural-density decay |
-| Arbitrarily long finite growth shadows | `paper/sections/05-quartering-law.typ`, `paper/sections/06-gap-analysis.typ` | Proved; prevents finite maximum-chain arguments |
-| Binary return-code reduction | `paper/sections/05-quartering-law.typ`, `lemma-roadmap.md` | Proved reduction |
-| Reduced `{0,1}` gap-code reduction | `paper/sections/05-quartering-law.typ`, `lemma-roadmap.md` | Proved reduction |
+| Arbitrarily long finite growth shadows | `paper/sections/05-quartering-law.typ`, `paper/sections/09-gap-analysis.typ` | Proved; prevents finite maximum-chain arguments |
+| Binary return-code reduction | `paper/sections/06-binary-return-codes.typ`, `lemma-roadmap.md` | Proved reduction |
+| Reduced `{0,1}` gap-code reduction | `paper/sections/07-reduced-gap-codes.typ`, `lemma-roadmap.md` | Proved reduction |
 | Periodic branch exclusion | `explorations/explore68_periodic_branches.py`, Sections 6--8 | Proved for the formal branch families |
 | Terminal-window formulation | `explorations/explore62_terminal_windows.py`, Sections 6--7 | Proved |
 | Terminal depth bounds | `explorations/explore64_terminal_ranks.py`, Sections 6--7 | Proved; fixed terminal states have only logarithmically bounded depth |
@@ -63,7 +63,7 @@ A completed proof must establish all of the following.
 | Balanced/Sturmian-like binary frontier | Section 6, `lemma-roadmap.md` | Proved excluded: rational slopes are periodic, while irrational lower mechanical/Sturmian landings would require delayed prefix recurrences contradicted by the standard Sturmian recurrence function |
 | Automatic and small uniform morphic binary templates | Section 6, `lemma-roadmap.md`, `explorations/explore77_uniform_morphism_recurrence.py`, `explorations/explore78_uniform_morphism_symbolic_witness.py` | Thue-Morse, period-doubling, and binary 2-, 3-, 4-, 5-, and 6-uniform fixed-point templates are excluded; larger uniform morphisms remain diagnostic |
 | Prefix-language compactness principle | Sections 6--8, `lemma-roadmap.md` | Proved as reusable reduction from bounded restricted minima to an ordinary infinite code |
-| Honest non-proof framing | `README.md`, `review.md`, `paper/sections/06-gap-analysis.typ` | Present |
+| Honest non-proof framing | `README.md`, `review.md`, `paper/sections/09-gap-analysis.typ` | Present |
 
 ## Missing Obligations
 

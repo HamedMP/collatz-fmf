@@ -19,8 +19,11 @@
 #include "sections/03-state-independence.typ"
 #include "sections/04-contraction.typ"
 #include "sections/05-quartering-law.typ"
-#include "sections/06-gap-analysis.typ"
-#include "sections/07-growth-bounds.typ"
-#include "sections/08-future.typ"
+#include "sections/06-binary-return-codes.typ"
+#include "sections/07-reduced-gap-codes.typ"
+#include "sections/08-endpoint-dynamics.typ"
+#include "sections/09-gap-analysis.typ"
+#include "sections/10-growth-bounds.typ"
+#include "sections/11-future.typ"
 
 #bibliography("refs.bib")
