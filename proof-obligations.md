@@ -132,7 +132,9 @@ Full snapshot last checked on May 14, 2026 with:
 
 The commands below are packaged in `scripts/verify_snapshot.sh`. The default
 `quick` mode runs the core algebra/reduction checks and paper compile; `full`
-also runs the longer frontier scans listed later in this section.
+also runs the longer frontier scans listed later in this section. The companion
+note `diagnostics.md` groups these scripts by mathematical role and records
+their limitations.
 
 - `python3 explorations/explore52_binary_partial_map.py`
 - `python3 explorations/explore60_backward_branches.py`

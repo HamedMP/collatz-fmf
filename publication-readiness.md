@@ -107,8 +107,8 @@ Before external submission:
   obstruction-class exclusions.
 - Keep the main-results endpoint map synchronized with the strongest Section 5
   endpoint theorems and criteria as the manuscript is reorganized.
-- Move finite diagnostic output and long exploratory classifications to an
-  appendix or companion repository note.
+- Keep finite diagnostic output and long exploratory classifications in the
+  companion repository note, `diagnostics.md`, rather than in the main paper.
 - Run the full verifier snapshot in `proof-obligations.md` after the split.
 - Add a compact "not a proof of Collatz" paragraph to the abstract and
   introduction, which the current manuscript now has.

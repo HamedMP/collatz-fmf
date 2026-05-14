@@ -23,6 +23,7 @@ See `proof-obligations.md` for the completion verdict, verified artifacts, and t
 paper/          Typst source for the paper
 site/           GitHub Pages website
 explorations/   Python exploration and verifier scripts
+diagnostics.md  companion note explaining verifier scope and limitations
 lemma-roadmap.md proof-status roadmap and missing pointwise bridge lemmas
 review.md       critical review and repaired theorem framing
 proof-obligations.md checklist of what remains for a complete proof
@@ -37,7 +38,9 @@ typst compile paper/main.typ site/paper/collatz-fmf.pdf
 
 ## Verification
 
-The current verifier snapshot is listed in `proof-obligations.md`.
+The current verifier snapshot is listed in `proof-obligations.md`. See
+`diagnostics.md` for a reader-facing guide to what each script group verifies
+and what remains outside computational coverage.
 
 ```bash
 bash scripts/verify_snapshot.sh quick
