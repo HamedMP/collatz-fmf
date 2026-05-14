@@ -93,5 +93,6 @@ run python3 explorations/explore78_uniform_morphism_symbolic_witness.py --q 7 --
 run python3 explorations/explore78_uniform_morphism_symbolic_witness.py --q 8 --search-length 8192
 run python3 explorations/explore78_uniform_morphism_symbolic_witness.py --q 9 --max-prefix-symbols 18 --search-length 40000
 run python3 explorations/explore72_bounded_alphabet_beam.py --max-length 120 --beam-width 2000 --report-every 20
+run python3 explorations/explore81_rank_bound_frontier.py
 
 printf '\nFull verification snapshot completed.\n'

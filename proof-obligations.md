@@ -59,6 +59,7 @@ A completed proof must establish all of the following.
 | Periodic branch exclusion | `explorations/explore68_periodic_branches.py`, Sections 6--8 | Proved for the formal branch families |
 | Terminal-window formulation | `explorations/explore62_terminal_windows.py`, Sections 6--7 | Proved |
 | Terminal depth bounds | `explorations/explore64_terminal_ranks.py`, Sections 6--7 | Proved; fixed terminal states have only logarithmically bounded depth |
+| Finite rank-bound frontier | `explorations/explore81_rank_bound_frontier.py` | Diagnostic through `B=2^60-1`: current finite constants peak at about `4.456` for return and `9.631` for gap; not a uniform theorem |
 | Terminal rank, weighted, shell, and low-expansion window bounds | `explorations/explore64_terminal_ranks.py`, `explorations/explore69_window_shells.py`, Sections 6--7 | Proved, but weighted/shell/cutoff only; high-expansion low-window words remain open |
 | Backward branch and moment contraction | `explorations/explore60_backward_branches.py`, Sections 6--7 | Proved for the reduced systems |
 | Reset-spike and finite reset-neighborhood transparency | `explorations/explore52_binary_partial_map.py`, Sections 6--8 | Proved |

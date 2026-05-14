@@ -99,7 +99,8 @@ for file in explorations/explore52_binary_partial_map.py \
   explorations/explore77_uniform_morphism_recurrence.py \
   explorations/explore78_uniform_morphism_symbolic_witness.py \
   explorations/explore79_q9_boundary.py \
-  explorations/explore80_q9_boundary_residues.py; do
+  explorations/explore80_q9_boundary_residues.py \
+  explorations/explore81_rank_bound_frontier.py; do
   copy_file "$file"
 done
 
