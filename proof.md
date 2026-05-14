@@ -1,5 +1,7 @@
 # Towards a Proof of the Collatz Conjecture via the FMF Framework
 
+> **Status note (May 2026 review):** this file is a research log, not a completed proof. The exact FMF formulas are solid, but the later average-contraction and growth-chain arguments do **not** prove the Collatz conjecture. The current cleaned-up version is the Typst paper in `paper/`, which recasts the strongest results as density theorems and leaves the pointwise "almost all to all" gap open.
+
 ## 1. Setup and Notation
 
 **Collatz function:** C(n) = n/2 if n even, 3n+1 if n odd.
@@ -379,7 +381,7 @@ At alpha = 0.5: E[R^0.5] = 0.863, uniform across all bit-lengths.
 
 The spectral radius **stabilizes** at ~0.8638, strongly suggesting convergence to a limit < 1.
 
-**Interpretation:** If the transition matrix entries converge to their limiting values (which follows from 2-adic equidistribution), then rho < 1 universally, and L(x) = x^0.53 * w(x mod M) is a contracting function under the FMF map -- **which proves Collatz**.
+**Corrected interpretation:** If the transition matrix entries converge to their limiting values, then the weighted model has average contraction. This is useful evidence, but it is not a pointwise contraction under the deterministic FMF map and does not prove Collatz.
 
 ### Theorem 18: Type-Dependent Self-Correction (explore18)
 
@@ -404,7 +406,7 @@ The compensatory mechanism: high-t B hops produce outputs whose binary structure
 
 ## 12. Results from explore19
 
-### Theorem 19: Analytical Transition Matrix (explore19) -- CLOSES THE GAP
+### Theorem 19: Analytical Transition Matrix (explore19) -- AVERAGE CONTRACTION ONLY
 
 **Statement:** The transition matrix T is rank-1 (all rows identical) because of state-independence (Theorem 12). Therefore:
 
@@ -434,7 +436,7 @@ where:
 
 At alpha = 0.53: theoretical rho = 0.8638, matching empirical value from explore17 to 4 significant figures.
 
-**Why this closes the gap:** The transition matrix entries are NOT computed from finite samples -- they are determined by the exact 2-adic distribution (Theorem 12). Since v_2(m - inv) follows an exact geometric distribution for ANY odd m (not just m in some range), the matrix entries ARE their limiting values. No convergence argument is needed.
+**Corrected status:** This does **not** close the pointwise gap. The fractional-moment entries are determined by exact 2-adic density calculations, but they are still average statements over residue classes. They do not imply that every deterministic trajectory samples those residue classes with the required frequencies.
 
 **Verified:** Theoretical predictions match empirical computations for N = 10K through 500K.
 
@@ -626,7 +628,7 @@ with equality approached only at x = 27 (the famous hard case). For x > 1000, th
 
 **Decomposition:** Each epoch splits into growth (mean 0.40, max 7 hops) and recovery (mean 1.33, max 31 hops). Recovery hops closely match theory: recovery ≈ peak_growth_bits / 0.83.
 
-**Why this (almost) proves Collatz:** If epoch_duration(x) <= C * log2(x) for all x, then:
+**Conditional implication:** If epoch_duration(x) <= C * log2(x) for all x, then:
 1. Each epoch brings x to some x' < x
 2. The next epoch has duration <= C * log2(x') < C * log2(x)
 3. The total number of hops to reach 1 from x is at most sum_{i=0}^{x} C * log2(x - i), which is finite
@@ -1074,6 +1076,8 @@ Use exponential sum / Gauss sum techniques to bound the equidistribution rate of
 
 ### Theorem 36: Growth-B Acyclicity (explore35) -- PROVED for K <= 8
 
+**2026 status note:** This finite-truncation statement is superseded by the cleaner exact lemma in `paper/sections/05-quartering-law.typ`: a cycle made entirely of growth-B hops is impossible because each growth-B hop strictly increases the odd value. The finite residue-graph computations are therefore only exploratory evidence about escape rates. They are not needed for acyclicity, and they do not address the real remaining obstruction: an infinite nonperiodic growth-B path in positive integers.
+
 **Statement:** The growth-B transition map on the state space (t, m mod 2^K) has NO CYCLES for K = 4, 6, 8.
 
 **The explicit map:** For a Type B hop with v_2(FMF) = 2 and output Type B:
@@ -1379,7 +1383,7 @@ Minimum expansion: 8 (when t'=0). Average expansion: ~16 (since E[t']=1).
 | Controls | Growth chain length | Col_min directly |
 | Gap to full proof | Same | Same |
 
-**The exceptional set is provably infinite:** By pigeonhole, for any C < 1, infinitely many n have a growth chain of length ≥ C·log₄(n). This is structural, not a deficiency of the proof.
+**The exceptional finite-shadow set is provably infinite:** The explicit all-zero family `m_0 = 8^L - 1`, `x_L = 4m_0 - 1`, has at least `L` consecutive growth-B hops. Thus any universal logarithmic upper bound for growth-B chain length needs constant at least `1/3` in base-2 logarithms, equivalently `2/3` in base-4 logarithms. The stronger old pigeonhole claim with arbitrary `C < 1` is not justified by the fixed-length density theorem alone.
 
 **Baker's theorem cannot close the gap:** Growth chain conditions are 2-adic (residue classes mod 2^K), while Baker's theorem bounds archimedean quantities (|2^a - 3^b|). The two operate on orthogonal structures.
 

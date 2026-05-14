@@ -1,25 +1,31 @@
-# Elementary Exponential Density Bounds for Collatz Growth Chains
+# First-Multiple-of-Four Coordinates for Collatz Growth Chains
 
-Via First-Multiple-of-Four (FMF) decomposition.
+Density bounds and pointwise obstruction reductions via First-Multiple-of-Four (FMF) decomposition.
 
 ## Key Results
 
 - **Theorem A (FMF Step Formula):** Exact algebraic formulas for hop length and output value
-- **Theorem B (State Independence):** Hop output distributions are state-independent via 2-adic inverse structure
-- **Theorem C (Spectral Contraction):** rho = 0.8638 < 1 from exact 2-adic formulas
-- **Theorem D (Quartering Law):** Growth chain continuation probability = 1/4 exactly, giving (1/4)^k density decay
-- **Main Theorem:** Natural-density bounds strictly stronger than Tao's logarithmic-density result, with exponential rather than sub-polynomial decay, via elementary mod-8 arithmetic
+- **Theorem B (State Distribution):** Hop output distributions are input-state independent in natural density via 2-adic inverse structure
+- **Theorem C (Fractional-Moment Contraction):** E[R^0.53] ~= 0.8638 < 1 from exact asymptotic 2-adic formulas
+- **Theorem D (Quartering Law):** Growth chain continuation has density factor 1/4, giving 4^-k decay among odd starts
+- **Pointwise obstruction reductions:** The binary-depth return obstruction is reduced to an explicit return-code partial map with survival density (2/15)^L; the reduced {0,1} gap obstruction has survival density 112^-L.
+- **Main contribution:** Elementary natural-density bounds and exact reductions for isolated FMF growth mechanisms. This is not a proof of Collatz.
 
 ## Honest Assessment
 
-The "almost all to all" gap remains open. The exceptional set is provably infinite. This is a frontier problem in p-adic dynamics.
+The "almost all to all" gap remains open. There are infinitely many finite growth-shadow starts, but no nonconvergent exception is known. This is a frontier problem in p-adic dynamics.
+
+See `proof-obligations.md` for the completion verdict, verified artifacts, and the exact missing pointwise theorem.
 
 ## Structure
 
 ```
 paper/          Typst source for the paper
 site/           GitHub Pages website
-explorations/   44 Python exploration scripts
+explorations/   Python exploration and verifier scripts
+lemma-roadmap.md proof-status roadmap and missing pointwise bridge lemmas
+review.md       critical review and repaired theorem framing
+proof-obligations.md checklist of what remains for a complete proof
 ```
 
 ## Building
@@ -27,6 +33,10 @@ explorations/   44 Python exploration scripts
 ```bash
 typst compile paper/main.typ site/paper/collatz-fmf.pdf
 ```
+
+## Verification
+
+The current verifier snapshot is listed in `proof-obligations.md`.
 
 ## License
 

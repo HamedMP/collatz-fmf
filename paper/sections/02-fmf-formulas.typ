@@ -55,7 +55,7 @@ I begin by establishing the exact algebraic machinery underlying the FMF decompo
 
   Write $x = 4k + 3$ with $k$ odd and $k + 1 = 2^t m$, so $x = 2^(t+2) m - 1$. The first three Collatz steps yield:
   $ x arrow.r^(3x+1) 3 dot 2^(t+2) m - 2 arrow.r^(\/2) 3 dot 2^(t+1) m - 1 arrow.r^(3x+1) 3^2 dot 2^(t+1) m - 2. $
-  The value $3^2 dot 2^(t+1) m - 2 = 2(3^2 dot 2^t m - 1)$ is divisible by $2$ but not by $4$ (since $3^2 dot 2^t m - 1$ is odd only if $t = 0$, which is excluded). I continue with strictly alternating $\/2$ and $3x+1$ steps. After each pair of steps, the power of $2$ in the leading coefficient decreases by one. At step $2i + 1$ (for $i = 1, dots, t$), the sequence value has the form $3^(i+1) dot 2^(t-i+2) m - 2$.
+  The value $3^2 dot 2^(t+1) m - 2 = 2(3^2 dot 2^t m - 1)$ is divisible by $2$ but not by $4$, since $t gt.eq 1$ makes $3^2 dot 2^t m$ even and hence $3^2 dot 2^t m - 1$ odd. I continue with strictly alternating $\/2$ and $3x+1$ steps. After each pair of steps, the power of $2$ in the leading coefficient decreases by one. At step $2i + 1$ (for $i = 1, dots, t$), the sequence value has the form $3^(i+1) dot 2^(t-i+2) m - 2$.
 
   At step $2t + 3$, we arrive at
   $ 3(3^(t+1) dot 2m - 1) + 1 = 2(3^(t+2) m - 1). $
@@ -64,6 +64,17 @@ I begin by establishing the exact algebraic machinery underlying the FMF decompo
   Thus $op("FMF")(x) = 2(3^(t+2) m - 1)$ with step count $2t + 3 = 3 + 2t$.
 
   This formula has been verified symbolically for $t = 1, dots, 15$ and numerically for $10^6$ random odd inputs.
+]
+
+#proposition(name: "Unified Type B Formula")[
+  For every Type B input $x = 4k+3$, write $k+1 = 2^t m$ with $m$ odd and $t >= 0$. Then
+  $ x = 2^(t+2)m - 1, quad op("FMF")(x) = 2(3^(t+2)m - 1). $
+  The case $t=0$ is exactly Case B1, and the cases $t >= 1$ are Case B2.
+]
+#proof[
+  For $t >= 1$ this is Theorem A. If $t=0$, then $k+1=m$ is odd, so $k=m-1$ is even. Writing $k=2j$ gives $m=2j+1$, and Case B1 gives
+  $ op("FMF")(x) = 4(9j+4) = 36j+16 = 18(2j+1)-2 = 2(9m-1), $
+  which is the displayed formula with $t=0$.
 ]
 
 == Supporting Lemmas
@@ -96,12 +107,12 @@ I begin by establishing the exact algebraic machinery underlying the FMF decompo
 The FMF hop map $F$ has a clean growth/shrinkage dichotomy:
 
 *Type A hops always shrink.* For $x = 4k + 1$, the FMF is $4(3k+1)$ and $v_2(op("FMF")) gt.eq 2$. The hop output satisfies
-$ F(x) = (3k + 1) / 2^(v_2(3k+1) - 2) lt.eq (3k + 1) lt (3x) / 4. $
-Since $3\/4 < 1$, every Type A hop strictly reduces the iterate (up to bounded error for small $x$).
+$ F(x) = (3k + 1) / 2^(v_2(3k+1)) lt.eq (3k + 1) lt x $
+for every $k gt.eq 1$. The case $k = 0$ is $x = 1$, the terminal fixed point of the odd accelerated dynamics. Thus every nontrivial Type A hop strictly reduces the odd iterate.
 
 *Type B hops may grow.* The net multiplicative effect of a Type B2 hop is
 $ F(x) / x approx 3^(t+2) / 2^(t + 1 + v_2(op("FMF"))) $
-which exceeds $1$ when $t$ is large relative to $v_2(op("FMF"))$. The worst case is $v_2(op("FMF")) = 1$ (minimum stripping), giving a ratio of $3^(t+2) \/ 2^(t+2)$, which grows as $(3\/2)^t$.
+which exceeds $1$ when $t$ is large relative to $v_2(op("FMF"))$. Since the FMF is itself divisible by $4$, the minimum is $v_2(op("FMF")) = 2$. In that worst case the asymptotic ratio is $3^(t+2) \/ 2^(t+3)$, which still grows exponentially with $t$.
 
 *Compression.* The average number of Collatz steps per FMF hop is
 $ EE["steps"] = 1 / 2 dot 1 + 1 / 4 dot 3 + sum_(t=1)^(infinity) 1 / 2^(t+2) (3 + 2t) = 1 / 2 + 3 / 4 + sum_(t=1)^(infinity) (3 + 2t) / 2^(t+2) = 1 / 2 + 3 / 4 + 7 / 4 = 3, $

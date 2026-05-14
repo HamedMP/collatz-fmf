@@ -14,7 +14,7 @@ An _epoch_ for an odd integer $x$ is the sequence of FMF hops from $x$ until the
   The mean epoch is $1.74$ hops. The descent rate is $100%$ across $250 000$ tests. The ratio $op("epoch")(x) \/ log_2(x)$ _decreases_ with the magnitude of $x$: for $x > 10^4$, the maximum ratio drops to $1.63$, and for random 60-bit integers, the maximum observed ratio is $0.13$.
 ]
 
-This decreasing ratio is consistent with the spectral contraction: larger integers have more bits, and the negative drift of $-0.83$ bits per hop becomes statistically dominant over longer trajectories.
+This decreasing ratio is consistent with the fractional-moment contraction: larger integers have more bits, and the negative average drift of roughly $-0.83$ bits per hop becomes statistically dominant over longer sampled trajectories.
 
 == Growth phase structure
 
@@ -46,7 +46,7 @@ This decreasing ratio is consistent with the spectral contraction: larger intege
 The constant $0.55$ arises naturally from the growth-B dynamics: each growth-B step consumes approximately $log_2(8) - log_2(3^2) approx 3.83 - 3.17 = 0.66$ bits of precision in the $m$-value while generating approximately $0.17$ bits of net trajectory growth (since $v_2 = 2$ gives a multiplier of $3^(t+2)\/4$, and $log_2(3\/4) approx -0.415$ per effective step).
 
 #observation(name: "Bit Consumption")[
-  Each growth-B step consumes approximately $4$ bits of precision in the $m$-parameter (through the 2-adic expansion of factor $>= 8$) and generates approximately $0.17$ bits of net trajectory growth. The net consumption is approximately $3.83$ bits per step. Since the $m$-parameter has at most $log_2(m_0)$ bits of precision, the growth chain is bounded by $log_2(m_0) \/ 3.83 approx 0.26 dot log_2(m_0)$ steps before the expanding map exhausts the available precision.
+  Each growth-B step appears to consume several bits of precision in the $m$-parameter (through the 2-adic expansion of factor $>= 8$) while generating comparatively little net trajectory growth in typical low-$t$ branches. This supports a heuristic growth-chain bound of order $log_2(m_0)$, but the conversion from average bit consumption to a pointwise bound is not yet rigorous.
 ]
 
 #remark[

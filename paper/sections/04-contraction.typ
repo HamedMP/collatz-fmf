@@ -1,60 +1,58 @@
 #import "../lib/theorem.typ": *
 
-= Spectral Contraction and the $3\/4$ Discriminant
+= Fractional-Moment Contraction and the $3\/4$ Discriminant
 
-Why does $3n + 1$ converge while $5n + 1$ does not? This section answers the question precisely: the ratio $a\/4$ for the generalized map $C_a(n) = a n + 1$ determines whether Type A hops shrink or grow, and $a = 3$ is the _largest_ odd integer for which they shrink. I then leverage this structural advantage together with Theorem B to prove spectral contraction with $rho < 1$.
+The FMF decomposition cleanly isolates the elementary contraction channel in the $3n+1$ problem. For the generalized map $C_a(n) = a n + 1$, the first value divisible by $4$ has asymptotic ratio $a\/4$ on the immediate-FMF residue class. The multiplier $a = 3$ is the largest odd value for which this channel contracts. I then use the state-distribution theorem to compute an exact asymptotic fractional moment for the FMF hop ratio.
 
 == The $a\/4$ Discriminant
 
 #lemma(name: "The $a\/4$ Discriminant")[
-  Consider the generalized Collatz map $C_a(n) = a n + 1$ for odd $a gt.eq 3$. For a Type A input $x equiv 1 mod 4$, the FMF is $a x + 1 equiv 0 mod 4$, reached in one step. The immediate shrinkage ratio is
-  $ op("FMF")(x) / (4 ceil(x\/4)) approx a / 4. $
-  For $a = 3$: ratio $= 3\/4 < 1$, so Type A hops _always_ shrink. \
-  For $a gt.eq 5$: ratio $= a\/4 > 1$, so Type A hops _always_ grow.
+  Consider the generalized odd branch $C_a(n) = a n + 1$ for odd $a gt.eq 3$. There is a unique odd residue class modulo $4$ on which $a x + 1$ is divisible by $4$, namely $x equiv -a^(-1) mod 4$. On that immediate-FMF channel the odd hop has asymptotic ratio $a\/4$ before any extra powers of $2$ are stripped.
+
+  For $a = 3$, the immediate channel is $x equiv 1 mod 4$, and every nontrivial such hop shrinks. For every odd $a gt.eq 5$, the immediate channel has asymptotic ratio $a\/4 > 1$, so this deterministic contraction channel disappears.
 ]
 
 #proof[
-  For $x = 4k + 1$, the first Collatz step gives $a x + 1 = a(4k+1) + 1$, which is divisible by $4$ when $a equiv 3 mod 4$. For $a = 3$: $3(4k+1) + 1 = 12k + 4 = 4(3k+1)$, so the FMF is reached in one step. The hop output satisfies $F(x) lt.eq 3k + 1 < 3x\/4 < x$ for $x gt.eq 5$, since $3\/4 < 1$. For $a = 5$: $5(4k+1) + 1 = 20k + 6 equiv 2 mod 4$, so the FMF requires additional steps, but the initial ratio $a x\/x = 5 > 4$ already ensures net growth. More generally, the first-step ratio $a\/4$ determines the dominant contraction or expansion mode: for $a lt.eq 3$ the ratio is $lt.eq 3\/4 < 1$; for $a gt.eq 5$ the ratio is $gt.eq 5\/4 > 1$.
+  Since $a$ is odd, it is invertible modulo $4$. Thus $a x + 1 equiv 0 mod 4$ exactly when $x equiv -a^(-1) mod 4$. On this residue class, write $x = 4k + r$ with fixed odd $r$. Then $a x + 1 = 4(a k + c)$ for an integer constant $c$ depending only on $a$ and $r$. After dividing by at least this factor $4$, the odd output is at most $a k + c$, while the input is $4k + r$, so the asymptotic ratio is $a\/4$.
+
+  For $a = 3$, the immediate residue is $r = 1$, and $3(4k+1)+1 = 4(3k+1)$. The hop output is $(3k+1)\/2^(v_2(3k+1)) lt 4k+1$ for every $k gt.eq 1$. For odd $a gt.eq 5$, the same immediate channel has limiting ratio $a\/4 > 1$, so it cannot supply a uniform pointwise contraction analogous to the $3n+1$ Type A hop.
 ]
 
 #v(0.3em)
 
-The discriminant reveals that $3$ occupies a unique position: it is the largest odd integer below $4$. This is the elementary reason that $3n + 1$ dynamics are contractive on average.
+The discriminant reveals that $3$ occupies a unique position: it is the largest odd integer below $4$. This is the elementary reason that the $3n+1$ FMF dynamics have a deterministic contraction channel of density $1\/2$.
 
 #remark[
-  For $a = 1$ (the map $n + 1$), the dynamics are trivially bounded. For $a = 3$, the competition between Type A shrinkage and Type B growth is delicate. For $a gt.eq 5$, _both_ types grow on average, and indeed $5n + 1$ trajectories are known to diverge for most initial values.
+  For $a = 1$ (the map $n + 1$), the dynamics are trivially bounded. For $a = 3$, the competition between Type A shrinkage and Type B growth is delicate. For $a gt.eq 5$, the immediate-FMF channel no longer contracts, and the analogous random-walk drift becomes positive in the standard $5n+1$ model.
 ]
 
-== Spectral Contraction
+== Fractional-Moment Contraction
 
-#theorem(name: "Spectral Contraction")[
-  Define the FMF transition matrix $T$ on the weighted state space indexed by input types (A, B with depth $t = 0, 1, 2, dots$), where the $(i, j)$ entry is the expected value of $(F(x)\/x)^alpha$ conditional on input state $i$ and output state $j$. By Theorem B (State Independence), $T$ is rank-$1$: every row is identical. Therefore
-  $ rho(T) = op("tr")(T) / n = EE[R^alpha] $
-  where $R = F(x)\/x$ is the hop ratio. At the optimal exponent $alpha = 0.53$:
-  $ rho = EE[R^(0.53)] = 0.8638 < 1. $
+#theorem(name: "Fractional-Moment Contraction")[
+  Let $R(x) = F(x)\/x$ be the FMF hop ratio. In natural density over odd inputs, the asymptotic fractional moment of $R$ is
 
-  The expected value decomposes over input types as
-  $ EE[R^alpha] = PP(A) dot EE[R^alpha | A] + sum_(t=0)^(infinity) PP(B, t) dot EE[R^alpha | B(t)] $
-  where $PP(A) = 1\/2$ and $PP(B, t) = 1\/2^(t+2)$. Each conditional expectation is computed from the exact $2$-adic distribution of $v_2(op("FMF"))$, not from finite samples.
+  $ M(alpha) &= 1\/2 dot (3\/4)^alpha / (2 - 2^(-alpha)) \
+    &quad + 1\/4 dot (9\/4)^alpha / (2^(1+alpha) - 1) \
+    &quad + sum_(t=1)^(infinity) 1\/2^(t+2) dot ((3\/2)^(t+2))^alpha / (2^(1+alpha) - 1). $
 
-  The _critical exponent_ $alpha^*$ where $EE[R^(alpha^*)] = 1$ satisfies
-  $ alpha^* = 1.0002. $
+  The series converges for $alpha < log 2 \/ log(3\/2)$. At $alpha = 0.53$,
+  $ M(0.53) approx 0.8638 < 1. $
+  The critical exponent satisfying $M(alpha^*) = 1$ is approximately $alpha^* = 1.0002$.
 ]
 
 #proof[
-  *Rank-$1$ structure.* By Theorem B, the output state distribution is identical for every input state. Therefore row $i$ of $T$ equals row $j$ for all $i, j$, making $T$ a rank-$1$ matrix. The unique nonzero eigenvalue equals the common row sum, which is $EE[R^alpha]$.
+  I compute the three FMF input cases separately, ignoring only the lower-order additive constants in the ratio; these vanish in natural density as the free parameter tends to infinity.
 
-  *Type A contribution.* For Type A inputs, $F(x) = (3k+1) \/ 2^(v_2(3k+1))$ where $x = 4k + 1$. The ratio satisfies $R = F(x)\/x approx (3\/4) dot 2^(-v)$ where $v = v_2(3k+1) - 2$. Since $v$ follows a geometric distribution with parameter $1\/2$ (from the $2$-adic structure), we have
-  $ EE[R^alpha | A] = (3 / 4)^alpha sum_(v=0)^(infinity) (1 / 2^v)^alpha dot 1 / 2^v = (3 / 4)^alpha dot 1 / (1 - 2^(-alpha - 1)). $
+  *Type A.* For $x = 4k + 1$, $F(x) = (3k+1) \/ 2^J$ with $J = v_2(3k+1)$. As $k$ ranges by natural density, $PP(J = j) = 2^(-(j+1))$ for $j gt.eq 0$. The asymptotic ratio is $(3\/4) 2^(-J)$, so
+  $ EE[R^alpha | A] = (3\/4)^alpha sum_(j=0)^(infinity) 2^(-(j+1)) 2^(-alpha j) = (3\/4)^alpha / (2 - 2^(-alpha)). $
 
-  *Type B contribution.* For Type B with depth $t$, the ratio is $R approx 3^(t+2) \/ 2^(t + 1 + v)$ where $v = v_2(op("FMF")) - 1$ follows a geometric distribution. Thus
-  $ EE[R^alpha | B(t)] = (3^(t+2) / 2^(t+1))^alpha dot 1 / (1 - 2^(-alpha - 1)). $
+  *Type B0.* For $x = 8j + 3$, $F(x) = (9j+4) \/ 2^J$ with $J = v_2(9j+4)$ and the same distribution $PP(J = j) = 2^(-(j+1))$. The asymptotic ratio is $(9\/8) 2^(-J)$, equivalently $(9\/4) 2^(-W)$ with $W gt.eq 1$ geometric, hence
+  $ EE[R^alpha | "B0"] = (9\/4)^alpha / (2^(1+alpha) - 1). $
 
-  *Summation.* Combining:
-  $ EE[R^alpha] = 1 / (1 - 2^(-alpha-1)) [1 / 2 (3 / 4)^alpha + sum_(t=0)^(infinity) 1 / 2^(t+2) (3^(t+2) / 2^(t+1))^alpha]. $
-  The inner sum converges for $alpha < log 2 \/ log(3\/2) approx 1.71$. Numerical evaluation at $alpha = 0.53$ yields $rho = 0.8638$.
+  *Type B with $t gt.eq 1$.* For $x = 2^(t+2)m - 1$, $F(x) = (3^(t+2)m - 1) \/ 2^J$ with $J = v_2(3^(t+2)m - 1)$. Since $3^(t+2)m - 1$ is always even, $PP(J = j) = 2^(-j)$ for $j gt.eq 1$. The asymptotic ratio is $(3\/2)^(t+2) 2^(-J)$, so
+  $ EE[R^alpha | B(t)] = ((3\/2)^(t+2))^alpha / (2^(1+alpha) - 1). $
 
-  *Critical exponent.* The equation $EE[R^(alpha^*)] = 1$ is solved numerically, giving $alpha^* = 1.0002$. The proximity of $alpha^*$ to $1$ reflects the delicate balance in Collatz dynamics: the average contraction barely dominates the worst-case growth.
+  Finally, the input-state densities are $PP(A) = 1\/2$, $PP("B0") = 1\/4$, and $PP(B(t)) = 2^(-(t+2))$ for $t gt.eq 1$. Summing the three contributions gives $M(alpha)$. Numerical evaluation gives $M(0.53) approx 0.8638$ and $M(alpha^*) = 1$ at $alpha^* approx 1.0002$.
 ]
 
 == Inverse Movement Rate
@@ -82,5 +80,5 @@ The following lemma quantifies how quickly the $2$-adic inverses shift as the de
 The $1$-bit minimum shift for $a = 3$ means that consecutive $2$-adic inverses are maximally "close" in the $2$-adic metric, producing the slowest possible decorrelation between consecutive hops. This is another facet of why $3n + 1$ sits at the boundary: the dynamics are contractive, but only barely, with the tightest possible coupling between successive states.
 
 #remark[
-  The spectral contraction $rho = 0.8638 < 1$ is equivalent to the average contraction results of Carletti and Fanelli @carletti2017, who established a similar bound via different methods (direct estimation of Lyapunov exponents). This derivation arrives at the same conclusion through a more structured route: the rank-$1$ reduction from Theorem B converts a potentially infinite-dimensional spectral problem into a single scalar equation $EE[R^alpha] < 1$, making the contraction both exact and elementary.
+  The fractional-moment contraction $M(0.53) approx 0.8638 < 1$ is closely related to the average-contraction results of Carletti and Fanelli @carletti2017, who estimate Collatz Lyapunov exponents by different methods. The FMF derivation makes the contribution of the Type A contraction channel and the Type B valuation tail explicit.
 ]
