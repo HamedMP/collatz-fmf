@@ -73,6 +73,7 @@ run python3 explorations/explore76_template_recurrence.py
 run python3 explorations/explore77_uniform_morphism_recurrence.py
 run python3 explorations/explore78_uniform_morphism_symbolic_witness.py
 run python3 explorations/explore79_q9_boundary.py
+run python3 explorations/explore80_q9_boundary_residues.py
 run git diff --check
 
 if [[ "$mode" == "quick" ]]; then
