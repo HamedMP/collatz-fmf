@@ -64,6 +64,11 @@ smoke_archive() {
   (
     cd "${smoke_dir}/${name}"
     python3 explorations/explore62_terminal_windows.py >/dev/null
+    python3 explorations/explore55_height_survival.py --return-max-bits 16 --gap-max-bits 16 >/dev/null
+    python3 explorations/explore56_counting_discrepancy.py >/dev/null
+    python3 explorations/explore57_start_counts.py >/dev/null
+    python3 explorations/explore58_critical_discrepancy.py >/dev/null
+    python3 explorations/explore59_critical_clusters.py >/dev/null
     python3 explorations/explore75_mechanical_recurrence.py --length 16 --search-factor 8 >/dev/null
     python3 explorations/explore76_template_recurrence.py --length 16 --search-factor 8 >/dev/null
     python3 explorations/explore78_uniform_morphism_symbolic_witness.py --q 2 --max-prefix-symbols 2 --search-length 128 >/dev/null
@@ -103,6 +108,11 @@ for file in explorations/explore51_binary_return_code.py \
   explorations/explore52_binary_partial_map.py \
   explorations/explore53_gap_minima.py \
   explorations/explore54_return_minima.py \
+  explorations/explore55_height_survival.py \
+  explorations/explore56_counting_discrepancy.py \
+  explorations/explore57_start_counts.py \
+  explorations/explore58_critical_discrepancy.py \
+  explorations/explore59_critical_clusters.py \
   explorations/explore60_backward_branches.py \
   explorations/explore62_terminal_windows.py \
   explorations/explore64_terminal_ranks.py \
