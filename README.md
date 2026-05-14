@@ -20,20 +20,21 @@ See `proof-obligations.md` for the completion verdict, verified artifacts, and t
 ## Structure
 
 ```
-paper/          Typst source for the paper
-site/           GitHub Pages website
-explorations/   Python exploration and verifier scripts
-diagnostics.md  companion note explaining verifier scope and limitations
-lemma-roadmap.md proof-status roadmap and missing pointwise bridge lemmas
-review.md       critical review and repaired theorem framing
-proof-obligations.md checklist of what remains for a complete proof
+paper/                  Typst source for the paper
+site/                   rendered website and PDF location
+explorations/           selected verifier scripts used by the snapshot
+scripts/                reproducibility and packaging entry points
+diagnostics.md          companion note explaining verifier scope and limitations
+lemma-roadmap.md        proof-status roadmap and missing pointwise bridge lemmas
+review.md               critical review and repaired theorem framing
+proof-obligations.md    checklist of what remains for a complete proof
 publication-readiness.md submission audit and claim-boundary checklist
 submission-checklist.md concrete pre-submission gates and file inventory
-referee-brief.md external-review handoff for algebra and reduction checks
-proof.md       historical research log; not the current manuscript
-plan.md        historical exploration log; early claims are superseded
-critic.md      historical literature/context review of the research log
+referee-brief.md        external-review handoff for algebra and reduction checks
 ```
+
+Historical research logs in the development repository are superseded by the
+files above and are not part of the submission bundle.
 
 ## Building
 
