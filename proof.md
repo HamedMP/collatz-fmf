@@ -1,6 +1,8 @@
 # Towards a Proof of the Collatz Conjecture via the FMF Framework
 
 > **Status note (May 2026 review):** this file is a research log, not a completed proof. The exact FMF formulas are solid, but the later average-contraction and growth-chain arguments do **not** prove the Collatz conjecture. The current cleaned-up version is the Typst paper in `paper/`, which recasts the strongest results as density theorems and leaves the pointwise "almost all to all" gap open.
+>
+> **Canonical source warning:** the theorem labels and proof sketches below are historical working notes. Do not cite this file as the current manuscript, a proof claim, or the repository's claim boundary. Use `paper/main.typ`, `proof-obligations.md`, `publication-readiness.md`, and `referee-brief.md` for the vetted statement of what is proved and what remains missing.
 
 ## 1. Setup and Notation
 
