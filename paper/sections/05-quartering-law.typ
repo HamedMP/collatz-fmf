@@ -74,7 +74,7 @@ The condition $v_2(op("FMF")) = 2$ means the FMF value is divisible by $4$ but n
 
 == The main result
 
-#theorem(name: "The Quartering Law")[
+#theorem(name: "Theorem D: The Quartering Law")[
   In natural density, conditional on being in a growth-B hop, the density factor for one additional growth-B continuation is exactly $1\/4$. Consequently, among odd starting integers, the density of starts whose strict growth-B chain has length at least $k$ is
   $ delta_k = 4^(-k) quad (k gt.eq 1). $
   Equivalently, among Type B starts $x equiv 3 mod 4$, the conditional density is $2 \/ 4^k$.

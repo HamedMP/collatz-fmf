@@ -165,7 +165,7 @@ their limitations.
 - `typst compile paper/main.typ site/paper/collatz-fmf.pdf`
 - `pdftotext site/paper/collatz-fmf.pdf /tmp/collatz-fmf.txt`
 - `rg -n` PDF-text checks for the main-results overview, expected section
-  numbers, Theorem 5.9, and Proposition 5.52
+  numbers, Theorem A--D labels, and Proposition 5.52
 - `git diff --check`
 
 Scope: these commands verify the algebraic reductions, periodic exclusions, reset-neighborhood transparency, terminal-window/rank formulations, weighted and shell estimates, mechanical normal-form recurrences, recurrence-speed diagnostics, template recurrence diagnostics, uniform-morphism recurrence diagnostics, and finite diagnostic frontiers currently used by the paper. The q=5 and q=6 uniform-morphism theorems are now proved in Section 5 by finite classification; `explore78` verifies the q=6 symbolic-prefix witness table that repairs the pure-power diagnostic failure, records clean q=7 and q=8 diagnostics, and isolates the first q=9 reduced-gap boundary case. `explore79` confirms that this residual q=9 case has no successful symbolic-prefix gap witness through length `50,000`. These commands do not verify the missing pointwise Collatz descent theorem or the unweighted terminal-window counting theorem.

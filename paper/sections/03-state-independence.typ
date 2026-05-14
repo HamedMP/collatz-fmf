@@ -4,7 +4,7 @@
 
 The central structural result of the FMF framework is that, when inputs are counted by natural density inside a fixed FMF input state, the output state law is the same for every input state. This is a density theorem, not a statement that a single deterministic trajectory has independent successive states.
 
-#theorem(name: "State Distribution")[
+#theorem(name: "Theorem B: State Distribution")[
   Let $F(x)$ denote the FMF hop output. Fix any FMF input state: Type A, Type B with $t = 0$, or Type B with fixed $t gt.eq 1$. As the free parameter in that state ranges over residue classes modulo $2^K$ (over odd residues for the B2 parameter $m$) and $K arrow.r infinity$, the output state distribution is independent of the chosen input state. Specifically,
 
   $ PP(F(x) "is Type A") &= 1 / 2, \

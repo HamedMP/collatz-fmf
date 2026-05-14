@@ -40,7 +40,7 @@ I begin by establishing the exact algebraic machinery underlying the FMF decompo
 
 == The FMF Step Formula
 
-#theorem(name: "FMF Step Formula")[
+#theorem(name: "Theorem A: FMF Step Formula")[
   Let $x$ be an odd positive integer. The number of Collatz steps from $x$ to $op("FMF")(x)$, and the value of $op("FMF")(x)$, are determined as follows.
 
   *Case A* ($x equiv 1 mod 4$, i.e., $x = 4k + 1$): Exactly $1$ step. $op("FMF")(x) = 3x + 1 = 4(3k + 1)$.

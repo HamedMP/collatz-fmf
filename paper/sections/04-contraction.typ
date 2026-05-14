@@ -28,7 +28,7 @@ The discriminant reveals that $3$ occupies a unique position: it is the largest 
 
 == Fractional-Moment Contraction
 
-#theorem(name: "Fractional-Moment Contraction")[
+#theorem(name: "Theorem C: Fractional-Moment Contraction")[
   Let $R(x) = F(x)\/x$ be the FMF hop ratio. In natural density over odd inputs, the asymptotic fractional moment of $R$ is
 
   $ M(alpha) &= 1\/2 dot (3\/4)^alpha / (2 - 2^(-alpha)) \
