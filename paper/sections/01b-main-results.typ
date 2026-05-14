@@ -17,6 +17,7 @@ This overview records the logical shape of the paper before the technical proofs
   + Strict growth-B continuations have density factor exactly $1\/4$ at each step.
   + Arbitrarily long finite growth-B shadows exist, so no finite forbidden-pattern argument can settle the pointwise problem.
   + The first binary-depth return obstruction and the reduced ${0,1}$ gap obstruction reduce to explicit positive-integer partial maps, critical-series landing criteria, and terminal-window counting problems.
+  + Prefix-recurrence height barriers and density-recurrence criteria exclude balanced/Sturmian and several automatic-template landing branches, and describe what any remaining binary landing must avoid.
 ]
 
 #proof[
@@ -66,6 +67,9 @@ The return and reduced-gap material is organized around two endpoint theorems an
   [Reduced ${0,1}$ gap endpoint],
   [Binary ${0,1}$ Gap Obstruction Dichotomy; Gap Terminal Tail Dichotomy; Sharpened Binary ${0,1}$ Gap Endpoint],
   [Shows that any remaining reduced-gap obstruction must be either a higher-complexity bounded-alphabet ordinary landing or an unbounded reset-spike approaching $-1\/128$ in $QQ_3$.],
+  [Prefix-recurrence barriers],
+  [Binary Landing Prefix-Recurrence Height Barrier; Binary Density-Recurrence Exclusion Criterion; Density-Free Fast Prefix-Recurrence Exclusion],
+  [Gives reusable pointwise tests showing that sufficiently fast recurring binary prefixes are incompatible with positive ordinary return or reduced-gap landings.],
   [Excluded template classes],
   [Low-Complexity Divergence; Balanced Ordinary Landing Exclusion; Binary Two- through Six-Uniform Morphic Template Exclusion],
   [Removes periodic, finite-defect, sparse-label, low-complexity, balanced/Sturmian, and several automatic-template branches from the endpoint obstruction list.],
