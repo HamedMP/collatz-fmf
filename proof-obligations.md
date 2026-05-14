@@ -32,7 +32,7 @@ The repository now contains a rigorous reduction and a strong package of density
 | Improve the proof | Sections 5--8 lemmas; `lemma-roadmap.md` entries 11e.*; verifier scripts | Partially covered: many obstruction classes are now excluded or reduced |
 | Come up with all needed lemmas | `lemma-roadmap.md` plus Sections 5--8 propositions | Incomplete: the terminal-window/rank and higher-complexity landing lemmas are still missing |
 | Prove Collatz through FMF | No artifact proves pointwise descent for every odd `x > 1` | Missing |
-| Verify algebra and reductions | `explorations/explore52_*` through `explorations/explore80_*`; Typst compile | Supporting evidence only, not a replacement for the missing universal theorem |
+| Verify algebra and reductions | Packaged verifier scripts from `explorations/explore52_*` through `explorations/explore81_*`, plus their helper modules; Typst compile | Supporting evidence only, not a replacement for the missing universal theorem |
 | Decide what to do next | Practical Next Target below | Covered: higher-complexity finite-alphabet exclusion and unweighted terminal-window counting are the next targets |
 
 ## Success Criteria
@@ -172,6 +172,7 @@ their limitations.
 - `pdftotext site/paper/collatz-fmf.pdf /tmp/collatz-fmf.txt`
 - `rg -n` PDF-text checks for the main-results overview, notation guide,
   expected section numbers, Theorem A--D labels, and Proposition 6.52
-- `git diff --check`
+- `git diff --check` when the verifier is run inside a Git worktree; unpacked
+  submission archives skip this hygiene check.
 
-Scope: these commands verify the algebraic reductions, periodic exclusions, reset-neighborhood transparency, terminal-window/rank formulations, weighted and shell estimates, mechanical normal-form recurrences, recurrence-speed diagnostics, template recurrence diagnostics, uniform-morphism recurrence diagnostics, and finite diagnostic frontiers currently used by the paper. The q=5 and q=6 uniform-morphism theorems are now proved in Section 6 by finite classification; `explore78` verifies the q=6 symbolic-prefix witness table that repairs the pure-power diagnostic failure, records clean q=7 and q=8 diagnostics, and isolates the first q=9 reduced-gap boundary case. `explore79` confirms that this residual q=9 case has no successful symbolic-prefix gap witness through length `50,000`; `explore80` records prefix-residue growth along the same boundary word. These commands do not verify the missing pointwise Collatz descent theorem or the unweighted terminal-window counting theorem.
+Scope: these commands verify the algebraic reductions, periodic exclusions, reset-neighborhood transparency, terminal-window/rank formulations, weighted and shell estimates, mechanical normal-form recurrences, recurrence-speed diagnostics, template recurrence diagnostics, uniform-morphism recurrence diagnostics, and finite diagnostic frontiers currently used by the paper. The q=5 and q=6 uniform-morphism theorems are now proved in Section 6 by finite classification; `explore78` verifies the q=6 symbolic-prefix witness table that repairs the pure-power diagnostic failure, records clean q=7 and q=8 diagnostics, and isolates the first q=9 reduced-gap boundary case. `explore79` confirms that this residual q=9 case has no successful symbolic-prefix gap witness through length `50,000`; `explore80` records prefix-residue growth along the same boundary word. When run from an unpacked archive rather than a Git checkout, the verifier skips only the `git diff --check` hygiene step. These commands do not verify the missing pointwise Collatz descent theorem or the unweighted terminal-window counting theorem.

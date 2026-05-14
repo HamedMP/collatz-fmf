@@ -83,8 +83,12 @@ done
 copy_file scripts/verify_snapshot.sh
 copy_file scripts/package_submission.sh
 
-for file in explorations/explore52_binary_partial_map.py \
+for file in explorations/explore51_binary_return_code.py \
+  explorations/explore52_binary_partial_map.py \
+  explorations/explore53_gap_minima.py \
+  explorations/explore54_return_minima.py \
   explorations/explore60_backward_branches.py \
+  explorations/explore62_terminal_windows.py \
   explorations/explore64_terminal_ranks.py \
   explorations/explore66_terminal_zero_digits.py \
   explorations/explore68_periodic_branches.py \

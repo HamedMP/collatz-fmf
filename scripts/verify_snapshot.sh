@@ -61,6 +61,7 @@ fi
 
 run python3 explorations/explore52_binary_partial_map.py
 run python3 explorations/explore60_backward_branches.py
+run python3 explorations/explore62_terminal_windows.py
 run python3 explorations/explore64_terminal_ranks.py
 run python3 explorations/explore66_terminal_zero_digits.py
 run python3 explorations/explore68_periodic_branches.py
@@ -75,7 +76,11 @@ run python3 explorations/explore77_uniform_morphism_recurrence.py
 run python3 explorations/explore78_uniform_morphism_symbolic_witness.py
 run python3 explorations/explore79_q9_boundary.py
 run python3 explorations/explore80_q9_boundary_residues.py
-run git diff --check
+if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  run git diff --check
+else
+  printf '\n==> skipping git diff --check; not inside a Git worktree\n'
+fi
 
 if [[ "$mode" == "quick" ]]; then
   printf '\nQuick verification snapshot completed.\n'
