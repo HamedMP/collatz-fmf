@@ -12,6 +12,10 @@ The difficulty lies in the interplay between multiplication (the $3n+1$ branch) 
 
 #v(0.5em)
 
+The contribution here is complementary to stochastic models of the $3x+1$ and $5x+1$ maps @kontorovich2009 and to average-contraction estimates for Collatz orbits @carletti2017. The FMF coordinates do not assume random parity choices. They give exact residue-class formulas for one accelerated odd-to-odd map, then use those formulas to isolate a particular growth mechanism and the first bounded-depth pointwise obstructions. This makes the resulting density statements elementary and reproducible, while also making clear why they do not by themselves cross the gap from almost-all behavior to universal convergence.
+
+#v(0.5em)
+
 *The FMF decomposition.* This paper takes a different approach. Rather than analyzing individual Collatz steps, we group them into _hops_. Each hop takes an odd number $x$ and runs the Collatz iteration until the first value divisible by $4$ is reached --- the _First Multiple of Four_ (FMF). Dividing out the full power of $2$ yields the next odd number. On average, one FMF hop compresses roughly six Collatz steps into a single algebraic operation, and the hop map admits exact closed-form formulas.
 
 #v(0.5em)
