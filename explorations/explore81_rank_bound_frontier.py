@@ -25,6 +25,7 @@ from explore64_terminal_ranks import worst_return_terminal_rank
 
 
 DEFAULT_BITS = tuple(range(24, 61, 4))
+EXTENDED_BITS = (64,)
 
 EXPECTED_RETURN = {
     24: (6, 262_143, 2),
@@ -37,6 +38,7 @@ EXPECTED_RETURN = {
     52: (16, 67_477_744_910_335, 3),
     56: (16, 67_477_744_910_335, 3),
     60: (16, 67_477_744_910_335, 3),
+    64: (16, 67_477_744_910_335, 3),
 }
 
 EXPECTED_GAP = {
@@ -50,6 +52,7 @@ EXPECTED_GAP = {
     52: (4, 32_679_099, 2),
     56: (4, 32_679_099, 2),
     60: (4, 32_679_099, 2),
+    64: (4, 32_679_099, 2),
 }
 
 
@@ -151,9 +154,18 @@ def main() -> None:
         nargs="*",
         help="bit cutoffs B=2^bits-1 to scan; defaults to 24,28,...,60",
     )
+    parser.add_argument(
+        "--extended",
+        action="store_true",
+        help="also scan the slower recorded 64-bit spot check",
+    )
     args = parser.parse_args()
 
-    rows = [frontier_row(bits) for bits in parse_bits(args.bits)]
+    bits = parse_bits(args.bits)
+    if args.extended and not args.bits:
+        bits = bits + EXTENDED_BITS
+
+    rows = [frontier_row(bit) for bit in bits]
     for row in rows:
         verify_expected(row)
     print_rows(rows)
