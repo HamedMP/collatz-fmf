@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this FMF Collatz manuscript or its verification scripts, please cite it as a density-and-reduction paper, not as a proof of the Collatz conjecture."
+title: "First-Multiple-of-Four Coordinates for Collatz Growth Chains: Density Bounds and Pointwise Obstruction Reductions"
+authors:
+  - family-names: Mohammadpour
+    given-names: Hamed
+date-released: 2026-05-14
+version: "2026.05"
+license: CC-BY-4.0
+keywords:
+  - Collatz conjecture
+  - 3x+1 problem
+  - 2-adic dynamics
+  - natural density
+  - terminal-window counting
+abstract: "This manuscript develops First-Multiple-of-Four coordinates for Collatz growth chains, proves natural-density and fractional-moment results, and reduces the first bounded-depth pointwise obstruction classes to explicit terminal-window counting problems. It does not claim a proof of the Collatz conjecture."
+preferred-citation:
+  type: article
+  title: "First-Multiple-of-Four Coordinates for Collatz Growth Chains: Density Bounds and Pointwise Obstruction Reductions"
+  authors:
+    - family-names: Mohammadpour
+      given-names: Hamed
+  year: 2026
+  month: 5
+  notes: "Manuscript and companion verification repository."

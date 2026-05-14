@@ -13,7 +13,7 @@ Density bounds and pointwise obstruction reductions via First-Multiple-of-Four (
 
 ## Honest Assessment
 
-The "almost all to all" gap remains open. There are infinitely many finite growth-shadow starts, but no nonconvergent exception is known. This is a frontier problem in p-adic dynamics.
+The "almost all to all" gap remains open. There are infinitely many finite growth-shadow starts, but no nonconvergent exception is known. In the current formulation, the sharp endpoint is a 2-adic terminal-window/rank problem.
 
 See `proof-obligations.md` for the completion verdict, verified artifacts, and the exact missing pointwise theorem.
 
@@ -55,3 +55,8 @@ Use `bash scripts/verify_snapshot.sh full` for the longer frontier checks.
 ## License
 
 CC BY 4.0
+
+## Citation
+
+Citation metadata is provided in `CITATION.cff`. Please cite the project as a
+density-and-reduction manuscript, not as a proof of the Collatz conjecture.
