@@ -36,8 +36,8 @@
 
 **Proof (Case B2):** Write k+1 = 2^t · m with m odd, t ≥ 1. Then x = 2^(t+2)·m - 1. Starting from x, the Collatz sequence strictly alternates (3x+1, /2) with coefficients:
 
-- Step 2j-1: value = 3^j · 2^(t+2-j+1) · m - 2 (odd, since 3^j · 2^(t+2-j+1) is even, minus 2)
-- Step 2j: value = 3^j · 2^(t+2-j) · m - 1 (the /2 of previous)
+- Step 2j-1: value = 3^j · 2^(t+2-j+1) · m - 2 (even, ≡ 2 mod 4 since 3^j · 2^(t+2-j+1) ≡ 0 mod 4 for j ≤ t, minus 2)
+- Step 2j: value = 3^j · 2^(t+2-j) · m - 1 (the /2 of previous; odd for j ≤ t)
 
 The power of 2 in the leading coefficient decreases by 1 every two steps. At step 2t+2, the coefficient of m is 3^(t+1) · 2, so the value is 3^(t+1)·2m - 1 (odd). Then step 2t+3 = 3+2t applies 3x+1:
 
@@ -434,7 +434,7 @@ where:
 | 0.53 | 0.6567 | 0.8141 | 1.0094 | 0.8610 |
 | 1.00 | 0.5000 | 0.7500 | 1.1251 | 0.9684 |
 
-**Theoretical alpha* = 1.0002** (where E[R^alpha] = 1 exactly).
+**Theoretical alpha* = 1 exactly** (where E[R^alpha] = 1). [Corrected July 2026: the earlier reported value 1.0002 was a truncation artifact of explore19.py's t<30 series cutoff. The exact series at alpha=1 evaluates to the rational identity M(1) = 1/4 + 3/16 + 9/16 = 1.]
 
 At alpha = 0.53: theoretical rho = 0.8638, matching empirical value from explore17 to 4 significant figures.
 
@@ -834,7 +834,7 @@ The FMF framework transforms Collatz into a walk on log-scale with:
 2. **State-independent** first-hop transitions (Theorem 12)
 3. **Negative drift** mu = -0.83 (Theorem 10, uniform across magnitudes)
 4. **Exponential tail bound** via Cramer: P(reach H) <= exp(-0.70*H) (Theorem 14)
-5. **Critical exponent** alpha* = 1.0002 for E[R^alpha] < 1 (Theorem 19, refined from 1.008)
+5. **Critical exponent** alpha* = 1 exactly for E[R^alpha] = 1 (Theorem 19; corrected July 2026 from the truncated values 1.008 and 1.0002 — M(1) = 1/4 + 3/16 + 9/16 = 1 is an exact rational identity)
 6. **Self-correcting** dynamics: high-t hops bias toward Type A next (Theorem 18)
 7. **Known cycle lower bounds** making non-trivial cycles effectively impossible (Theorem 13)
 8. **Spectral radius = E[R^alpha]** exactly, via rank-1 structure (Theorem 19)
@@ -1434,3 +1434,368 @@ Sections 5-8 written (2026-03-04):
 - **Section 8 (Future Directions):** Effective equidistribution, Z_2 invariant sets, computational extensions, Syracuse random variable connection, code availability, acknowledgments.
 
 Paper theorem labels: Theorem A = FMF Step Formula, Theorem B = State Independence, Theorem C = Spectral Contraction, Theorem D = Quartering Law. All 8 sections complete.
+
+---
+
+## 23. July 2026 Audit and New Theorems (Multi-Agent Session)
+
+> Status: results below were produced by an adversarial multi-agent session on
+> July 19, 2026. Each "refereed x2" item survived two independent adversarial
+> verification agents that re-implemented and attacked every step. Items marked
+> "pending referees" await the second referee round. Vetted claim boundary
+> remains proof-obligations.md; this section is the session log.
+
+### Theorem 45: Exact Critical Exponent alpha* = 1 (CORRECTION of Theorems 15/19)
+
+**Statement:** In the FMF density model of Theorem C, the fractional-moment
+series satisfies M(1) = 1 EXACTLY:
+
+M(1) = 1/2·(3/4)/(2−1/2) + 1/4·(9/4)/3 + (1/3)·Σ_{t≥1}(3/4)^{t+2}
+     = 1/4 + 3/16 + 9/16 = 1.
+
+Hence alpha* = 1 exactly. The values 1.008 (explore15) and 1.0002 (explore19)
+were truncation artifacts (t<30 cutoff). Since every summand of M is strictly
+increasing in alpha, M(alpha) < 1 for all alpha < 1, which upgrades the
+previously numerical claim M(0.53) ≈ 0.8638 < 1 to a proved strict inequality.
+This is the FMF form of the classical fact that the Syracuse first-moment
+heuristic Σ 2^{-a}·(3/2^a) = 1 is exactly critical. [PROVED; independently
+verified three times: contraction auditor, architecture auditor, main session.]
+
+### Theorem 46: q=9 Boundary Word Exclusion (refereed x2) — CLOSES the last open uniform-morphic template
+
+**Statement:** The fixed point w of the 9-uniform morphism 0→011111111,
+1→100000000 (equivalently w_n = parity of the number of nonzero base-9 digits
+of n) has no positive ordinary reduced-gap code, and no positive ordinary
+return code.
+
+**New tool (Factor-Recurrence Height Barrier):** if an infinite {0,1} gap word
+with positive ordinary code A has equal length-m factors (ones-count kappa) at
+positions i < i', then the shifted-suffix states a_i ≡ a_{i'} (mod 2^{7m+3kappa})
+with a_{i'} > a_i, forcing 2^{7m+3kappa} < a_{i'} ≤ A(243/128)^{i'}(9/8)^{K_{i'}}.
+This strictly generalizes the paper's initial-prefix-recurrence barrier to
+arbitrary (including overlapping) factor occurrences. Applied to the scaled
+8th-power factor B_t^8 = w[9^t..10·9^t) occurring at positions 9^t and 2·9^t
+for every t ≥ 1, the modulus 2^{68·9^t+12(−7)^t} beats the growth envelope
+A·3^{12·9^t}/2^{17·9^t}, forcing A > 2^{55·9^t} for every t — impossible.
+
+**Secondary:** the initial recurrence function of w is exactly
+sigma(l) = 17·9^t on (9^t, 2·9^t], = 90·9^t on (2·9^t, 9^{t+1}], sigma(1)=10;
+min sigma(l)/l = 17/2, so the old initial-prefix route (needed < 8.41772) was
+provably dead, not merely dead to length 50,000.
+
+### Theorem 47: Complexity Threshold for {0,1} Landings (refereed x2)
+
+**Statement (Same-Factor State-Separation + occurrence counting):** every
+infinite {0,1} return word with a positive ordinary return code must satisfy
+liminf p(m)/m ≥ T_R ∈ (3.1493, 3.1494); every infinite {0,1} reduced-gap word
+with a positive ordinary gap code must satisfy liminf p(m)/m ≥ T_G ∈ (6.2390,
+6.2391), where p is factor complexity. Mechanism: equal factors at two positions
+force state congruence mod the standalone factor modulus (2^{3m+4·ones} return,
+2^{7m+3·ones} gap) plus strict state growth, so few distinct factors ⇒ too many
+forced coincidences ⇒ states outrun the landing growth envelope.
+
+**Consequences:** subsumes in one stroke the eventually-periodic, fixed-defect,
+sparse-label, low-complexity (p(m) ≤ m), and balanced/Sturmian exclusions;
+applies to non-recurrent words untouchable by prefix-recurrence machinery;
+independently re-closes q=9 (p(m) = 4(m−1) < 6.239·m). Remaining open {0,1}
+regime: aperiodic words with liminf p(m)/m above the thresholds.
+
+### Theorem 48: AP Survivor Bounds — first unconditional unweighted rank-type estimates (REFEREED July 21: main bounds and downstream-sufficiency CONFIRMED; saturation obstruction confirmed as stated but its summary's "all sieve variants" gloss narrowed to translate-invariant forms only)
+
+**Statement:** with D_L the set of integers formally admitting ≥ L binary return
+blocks, there is an absolute C with, for every arithmetic progression P of odd
+difference and length N: #(P ∩ D_L) ≤ C·N^{3/10} for all L ≥ log_8 N + 3, and
+#(P ∩ D_L) ≤ C(N·2^{−2.1L} + 2^{0.9L}) for all L. Hence
+W_R(B,L) ≤ C((B+1)2^{−2.1L} + 2^{0.9L}); gap analogue W_G(B,L) ≤
+C(B·2^{−5.46L} + 2^{1.54L}). Exponent floors: alpha_R = 0.287761 (root of
+Σ_r 2^{−(4r+3)β} = 1), alpha_G = 0.212323.
+
+**Saturation obstruction (proved):** translate-invariant counting schemes
+(second-moment/Cauchy-Schwarz/large-sieve on congruence-class structure) cannot
+reach C(B+1)θ^L, since sup over translated APs of length 1 stays ≥ 1 at every L.
+Any proof of the full rank conjecture must use arithmetic separation of
+normalized terminal heights — confirming Section 6's own diagnosis.
+
+**Downstream simplification (proved):** the endpoint application does NOT need
+the sharp bases 2/15, 1/112 — any uniform f(B)g(L) with g(L) → 0 suffices; the
+sharp bases matter only for the survival-depth constants.
+
+### Theorem 49: The Rank Conjecture is 3-Free — 5n+1 Litmus on the Endgame (REFEREED July 21: CONFIRMED — a=5 block coding re-derived independently (P_r = 25·125^r, D_r = (160·125^r−51·16^r)/109, same Q_r = 2^(4r+3)); survival bases proved purely 2-adic; F_5(13)=13 lies outside every excluded class (v_2=5); the secondary documentation flag against referee-brief.md was withdrawn as overreach)
+
+**Statement:** the entire binary return/gap counting apparatus transfers
+verbatim to 5n+1: same gate moduli Q_r = 2^{4r+3}, q_k = 2^{3k+7}, same
+constants 2/15 and 1/112, same quartering 1/4, same terminal-window identities
+and periodic exclusions (with P_r = a^2(a^3)^r, a = 5). Since 5n+1 has a proven
+nontrivial cycle (13) and (conjecturally) divergent orbits, the W_R/W_G rank
+conjecture — even proved with sharp constants and combined with completion-gate
+steps 1–3 — cannot imply convergence. The constant 3 must enter at step 4
+(mixed growth/recovery epochs), where a/4 < 1 gives 3n+1 its deterministic
+Type-A contraction channel (F_5(13) = 13 is the concrete witness that the 5n+1
+endgame has an FMF fixed point outside every excluded class).
+
+**Repo framing consequence:** referee-brief.md / proof-obligations.md should
+present the rank theorem as necessary-for-this-route but structurally
+insufficient; step 4 is where the actual Collatz content lives.
+
+### Theorem 50: FMF–Tao Renewal Correspondence (REFEREED July 21: CONFIRMED x2, minor caveats)
+
+**Statement:** the FMF hop decomposition coincides with the renewal
+decomposition of Tao's Syracuse valuation sequence a_i = v_2(3·Syr^{i−1}(N)+1)
+at letters a_i ≥ 2 (Type A ↔ block (b), b ≥ 2; Type B with k+1 = 2^t m ↔ block
+(1,…,1,b) with t+1 ones). Every FMF exact density law is therefore a functional
+of the iid-Geom(2) layer that is already exact in Tao's framework. The
+natural-density upgrade of Tao's theorem reduces to two sharply-stated lemmas
+(tilted character-decay for Geom(μ), μ ≈ 2 uniform; first-passage stabilization
+from uniform windows); the regime 3^k with k ≤ n^{1/2−δ} is PROVED to follow
+from Tao's published Prop 1.17. [Checked numerically: tilted character sums
+decay at rates 0.61–0.88/step across the needed tilt range.]
+
+### Parity-Certificate Program Results (REFEREED July 21: split verdict — all load-bearing computations independently confirmed; Theorem H(c) backward direction withdrawn as unproven side statement; the "bounded horizon, all x" CST lemma is classical Terras 1976 machinery, novelty framing dropped)
+
+- Exact maximal mod-2^n descent certificates to n = 28: uncertified counts equal
+  OEIS A076227 with ZERO additive failures at every frontier step ⇒ every
+  integer x ≥ 2 with coefficient stopping time tau(x) ≤ 28 satisfies
+  sigma(x) = tau(x) (bounded-horizon verification of Terras' CST conjecture,
+  complementary to the bounded-x literature).
+- Hybrid no-gain theorem: FMF-pattern certificates ARE parity certificates
+  (explicit block bijection: FMF hop with v_2(x+1)=j ↔ parity block 1^j 0^w);
+  hybrids certify exactly the Terras classes at every modulus/horizon ≤ 28.
+- Paradox-size bound: enumeration of paradoxical stopping values for all 7 known
+  paradoxical pairs is provably complete (largest bound ~2^38.3 << 2^71 Barina).
+- Delimiter: the uncertified frontier grows ~1.93^n forever — no finite-modulus
+  certificate scheme, with any horizon, can close the pointwise gap.
+
+### Theorem 51: Universal Uniform-Morphic Exclusion — "Theorem G" (July 21, refereed x2, minor)
+
+**Statement:** Let y ∈ {0,1}^∞ be a fixed point of ANY q-uniform morphism
+φ: {0,1} → {0,1}^q, q ≥ 2 (no aperiodicity or primitivity assumed). Then y
+admits no positive ordinary reduced-gap code: a code A would have to satisfy
+A > 2^{3·q^t} for every t ≥ 0. Return form: M + 1 > 2^{q^t}. Coding form: fixed
+points over alphabets of ≤ 6 letters (gap) / ≤ 3 letters (return) are excluded,
+hence every binary q-automatic gap word with a ≤ 6-state msd-first DFAO, for
+every q. Proof: pigeonhole equal letters at positions p1 < p2 ≤ 2; φ^t-images
+give the same length-q^t factor at p1·q^t and p2·q^t ≤ 2q^t; the shift-code +
+forced-prefix-congruence lemmas force the two orbit states congruent mod
+2^{7m+3κ} while strict monotonicity and the growth envelope cap the later
+state — integer certificates 3^7 < 2^12 (gap), 3^5 < 2^8 (return). Subsumes the
+repo's separate q = 2..6 classifications and the q=9 boundary word (Theorem 46)
+in one argument. Companion mechanical theorems for the q=9 word: exact
+recurrence function R(n) = 747·9^k + n − 1 on bands [9^k+2, 9^{k+1}+1],
+R(n) ≤ 748n − 1 sharp; initial-prefix recurrence τ(n) ≥ 8.5n with liminf
+exactly 17/2 — proving the density-recurrence route could never have closed
+q=9 (it fails by exactly the Pythagorean comma 3^12/2^19).
+
+### Theorem 52: Transfer-Operator No-Go Package (July 21; negative result)
+
+The spectral/functional-equation route is exactly mapped and provably cannot
+close the pointwise gap. Positive structure (exact): Syracuse and FMF transfer
+operators on Z_2 (and the annealed 3-adic chains mod 3^j) are
+nilpotent-plus-rank-one at every finite level (spectrum {1} ∪ {0}, finite-time
+exact mixing); Hölder gap g_α = 1/(2^{1+α} − 1) (= 1/3 at α = 1), FMF hop gap
+= g² = 1/9 (exact squaring identity). Obstructions (proved): (1) operator-level
+5x+1 litmus — branch weights, contraction ratios, Hölder constants and all
+finite-level spectra are IDENTICAL for qx+1 for every odd q, and 5x+1 has the
+integer cycle {13, 33, 83}; (2) dense-null trichotomy — reach-1 points
+(countable, dense), divergence-type points (uncountable, dense), and extra
+ergodic invariant measures coexist on mutually dense Haar-null sets, so
+almost-everywhere is topologically optimal on Z_2; (3) the Berg–Meinardus
+truncated solution space has dimension ~N/6 growing linearly (verified exactly
+to N = 3·10^6) — certified finite truncation is impossible. Sole 3-specific
+spectral quantity found: L²-criticality Σ 4^{−k}·(weights) = 1/3 = |3|_3.
+
+### Theorem 53: Cycle Bounds at the 2^71 Floor + FMF Hop Identity (July 21, refereed x2)
+
+(1) The 2025 verification floor 2^71 does NOT extend Hercher's m ≤ 91 m-cycle
+exclusion: the unique surviving candidate at m = 92 is the 43rd convergent of
+log₂3, (K, L) = (205632218873398596256, 120287136981023372109), with gap
+6.2447·10^{−43}, a factor 5.1 below the achievable width floor; m = 92 becomes
+excludable iff the floor reaches ≈ 2^{73.869}. Conditional milestone map:
+2^74 ⇒ m ≤ 92; 2^76 ⇒ 100; 2^82 ⇒ 103; 2^90 ⇒ 122 — binding obstructions are
+exactly the convergents preceding the large partial quotients 37, 55.
+(2) NEW IDENTITY (proved): the Simons–de Weger local-minimum count m of any
+nontrivial cycle EQUALS its number of FMF hops. Hence the current record reads:
+**every nontrivial Collatz cycle makes at least 92 FMF hops.** All-growth-B
+cycles are impossible; the 3n−1 map's 17-cycle is an all-B 2-hop cycle, so no
+sign-agnostic argument can force a Type A hop in a hypothetical cycle.
+
+### Theorem 54: Pointwise Descent Record σ = κ to Horizon 301,993 (July 21, refereed x2, minor)
+
+**Statement:** for EVERY odd x > 1 (unbounded) with coefficient stopping time
+κ(x) ≤ 301,993 Terras steps (492,529 single steps): T^j(x) > x for j < κ(x) and
+T^{κ(x)}(x) < x, i.e. σ(x) = κ(x). Extends Terras 1976 (2,593) by ×116 and
+Garner 1981 (64,508, conditional) by ×4.7; self-contained (proved threshold
+lemma with exceptions ≤ B(m) = ⌊(m·3^m − 1)/(2(2^n − 3^m))⌋, exact integer
+ledger Θ(301,993) = 10,824,133,905, zero-exception scan of 1.35·10^9
+candidates). Equivalent: for every n ≤ 301,993, every odd x > 1 outside the
+explicit ballot family B_n mod 2^n (|B_n| = A076227(n), density < 2^{−15,093}
+at the top horizon) descends below itself within n steps. Corollary: every
+nontrivial cycle has Terras length > 301,993 (Hercher's bounds remain
+stronger). Structure theorem for the uncertified tree: exact ballot
+characterization, 1-or-2 branching with deficits precisely at Beatty jumps of
+log₃2, no leaves; an uncountable Cantor set of box dimension in
+[0.946954, 0.949956]. REFUTED: the conjecture that the uncertified tree is the
+closure of FMF growth-B patterns (strict inclusion with exponential gap:
+Narayana growth 1.46557 vs γ ≥ 1.9279). Conditional on Rozier–Terracol
+(Discrete Math. 2026), the horizon extends to κ ≤ 665,684,250.
+
+### Theorem 55: The Two-Lemma Reduction and Lemma E (July 21 endgame, refereed x2, minor)
+
+**Theorem R (PROVED, conditional structure):** Let H1 = "the binary return
+partial map T(n) has no infinite positive-integer orbit" (equivalently
+μ_L → ∞). Let **Lemma E** = "every non-descending FMF orbit is eventually a
+depth-{0,1} growth-B chain" (letters l_j = (s_j, v_j) ∉ G01 = {(2,2),(3,2)}
+only finitely often, where s = v_2(x+1), v = v_2(FMF)). Then H1 + E ⇒ every
+odd x > 1 has finite epoch ⇒ pointwise FMF descent ⇒ Collatz. Proof uses the
+new unconditional **Lemma P**: no infinite positive orbit of m' = (27m+1)/16,
+because 16(11m'+1) = 27(11m+1) forces v_2(11m_0+1) ≥ 4k for all k.
+Lemma E's 5n+1 analogue is FALSE (F_5(13) = 13, hop letter (3,5)): E carries
+ALL the 3-dependence of any completion through this framework. Supporting
+partials (proved): the ballot inequality for non-descending prefixes
+(S_N/N ≥ log_{3/2}2; the coefficient 2 − log₂a flips sign at a = 4); bounded
+depth-sum orbits descend effectively (l ≤ 1 + 1.4094·T′); eventually-periodic
+hop words are exactly cycles (no divergent orbit has an eventually periodic
+hop word); mixed-pattern shadow theorem (every finite hop word is one residue
+class mod 2^(H+1) — no finite forbidden-pattern strategy works). Dimension
+identity: α_R = −log₂ y with y³ + y⁴ = 1; the rank program's scope has box
+dimension 0.2878 vs ≥ 0.9470 for the uncertified Cantor set E must empty.
+
+### Theorem 56: Tilted Character Decay S4-T and the State of the Tao Upgrade (July 21, refereed x2, minor)
+
+Tao's Proposition 1.17 generalizes verbatim to Geom(μ)-driven Syracuse
+characters uniformly on every compact of the contractive regime
+q ∈ (q*, 1), q* = 1 − log2/log3: the k ≤ n^(1/2−δ) restriction is removed for
+all tilts the natural-density program needs; the joint affine version (Tao's
+Remark 1.16) holds at zero extra cost. Exact criticality: Prop 1.14's
+collision-entropy step costs exp[βk(1 − H₂(q))ln2] — polynomial iff q = 1/2 —
+so it survives exactly the shrinking tilts |q − 1/2| ≤ K/√k required and
+fails for fixed tilts. S5 (first-passage stabilization): combinatorial kernel
+proved (exhaustive fiber bijection), analytic equidistribution input proved
+via Rhin's irrationality measure of log₂3 (rate log^{−0.131}x); the remaining
+work is a rebuild of Tao's Section 5 bookkeeping with pinned sums — no
+obstruction identified, NOT yet proved. Full S4+S5 would give natural-density
+almost-all, not all.
+
+### Theorem 57: Exact Criticality of the Rank Bases and the Class-Counting No-Go (July 21, refereed x2, minor)
+
+(T1) W_R(B,L) ≥ C(L+s, s), s = ⌊(⌊log₂B⌋ − 3L)/4⌋; hence
+sup_L W_R(B,L) ≥ B^(α_R − o(1)) inside the anchored window — the AP-Survivor
+exponent α_R = 0.287761 is optimal even for position-aware counting.
+(T2) For every ρ < 2/15, W_R(B,L) ≤ C(B+1)ρ^L is FALSE along
+(L,B) = (15s, 2^(49s)) via 16·H(1/16) = 49 + 15·log₂(2/15); the base 2/15 is
+exactly critical (floor ratio Θ(s^{−1/2}) at 2/15). Gap analogue: 1/112
+exactly critical via 8·H(1/8) = 52 − 7·log₂112. (E) The per-B decay target
+[∀B: W_R(B,L) ≤ C_B·g(L), g → 0] is EQUIVALENT to μ_L → ∞. (BLOCKING) Every
+certificate from the interval+AP counting recursion is ≥ 1 for all (B,L) via
+the r = 0 chain (witness: W_R(100,3) = 0, certified ≥ 1) — no class-counting
+scheme can prove H_R(B) < ∞ for any B. Positional deep-gate emptiness
+(16^r > 33B + 32 ⇒ empty below B) is real but does not remove the thick-class
+defect term. All statements transfer verbatim to 5n+1, as expected.
+
+### Theorem 58 (CANDIDATE — awaiting human review): Natural-Density Upgrade of Tao's Theorem ("Theorem ND", July 21 round 4, AI-refereed x2 NOT-REFUTED)
+
+**Claimed statement:** there is an absolute C such that for every N0 ≥ 16,
+the set {N : Col_min(N) > N0} has upper natural density ≤ C·log^(−1/25) N0;
+consequently Col_min(N) ≤ f(N) for almost all N in NATURAL density, for every
+f → ∞. New components (each claimed proved, machine-checked): Lemma P7
+(s-pinned character sums bounded by Tao's own Section-7 majorant — the total
+valuation is measurable w.r.t. his pair-sum conditioning); **Lemma J*** — the
+fine-scale mixing of the entire affine map (S_n, X_n), exactly the object of
+Tao's Remark 1.16 ("plausibly attainable from the methods in this paper");
+Lemma R (pinned-sum renewal-equidistribution, limit 1/ln(4/3), via Rhin's
+effective irrationality measure of log₂3); uniform-window Prop 5.2-U with
+standoff inequality. The limiting first-passage measure equals Tao's
+log-density one. Manuscript: notes/round4-july2026/s5-completion/PROOFS.md
+(571 lines). **Status: candidate only. Two independent adversarial AI
+referees failed to refute (minor findings; all Tao citations verified against
+the arXiv v7 text; all scripts pass). NOT established mathematics until
+reviewed by a human expert; excluded from proof-obligations.md.**
+
+### Theorem 59: Lemma E Partials — Depth Hierarchy and the Statistical No-Go (July 21 round 4, refereed; one-clause repair to LE1(c) noted)
+
+Hop-word factor barrier: every odd x whose hop word lies in a finite alphabet
+A and is not eventually periodic satisfies p(m) > (h_min·m + 1 −
+log₂(x₀+1))/Γ for all m. Corollary: depth-{0,1,2} hop words need
+liminf p(m)/m ≥ 3/log₂(41/16) = 2.20986 — the first proved slice of Lemma E
+strictly beyond depth {0,1}. Invariant table: the depth-2 analogue of Lemma P
+is 32(49m′+1) = 81(49m+1) (invariant 7²); general d_s = 3^s − 2^(s+1);
+block-power lemma v_2(D_u x − B_u) ≥ k·H_u kills all periodic-tail u^∞
+obstructions (|u| ≤ 91 via Hercher; all-expanding u unconditionally).
+Reduction R₂: H1 over depth-{0,1,2} + depth-{1,2} + E₂ ⇒ Collatz. NO-GO:
+the ballot inequality restricts letter frequencies only through the
+expanding/contracting dichotomy — exact witnesses achieve non-G01 letter
+density 1 among non-descending prefixes, so no purely statistical
+(frequency-based) quantitative form of Lemma E can exist; E must be proved by
+arithmetic, not letter statistics.
+
+### Theorem 60: Full-Shift Ambient Language and the Sharpened 3-Dependent Thresholds (July 21 round 4)
+
+The ambient language of the binary return and reduced-gap coding systems is
+the full shift: every finite binary word occupies exactly one nonempty
+residue class, and every infinite word is the exact itinerary of a unique
+2-adic seed (the all-zero seed is −1). Hence NO upper bound on landing-word
+factor complexity follows from the generation mechanism — a complexity pincer
+is impossible without invoking H1 itself. Salvage theorems: sharpened
+pointwise density-coupled thresholds — return landing words satisfy
+p_w(m) ≥ (3m − log₂(M+1))/(5log₂3 − 7), giving liminf p/m ≥ T_R′ =
+3.2439007; gap: T_G′ = 6.3942268; uniform-density floor 7/(5log₂3 − 7) =
+7.5691 for both. The bound is genuinely 3-dependent: T_R′(a) = 3/(5log₂a − 7)
+becomes vacuous exactly at a ≥ 4 — the first complexity-type exclusion that
+passes the 5n+1 litmus.
+
+### Theorem 61: Mirror Equivalence and Two-Prime Vacuity (July 21 round 5; definitive negative result)
+
+**Mirror Equivalence Lemma:** for every return word prefix,
+U_N = (P_N R_N + D_N)/Q_N equals the least nonnegative residue V_N of
+D_N Q_N^{-1} mod P_N = 3^(2N+3S_N). Proof: Q_N | P_N R_N + D_N;
+0 < U_N < P_N from 0 < D_N < P_N; U_N Q_N ≡ D_N mod P_N; a class mod P_N has
+one member in [0, P_N). The 2-adic and 3-adic prefix data are therefore the
+SAME information under an explicit affine bijection. **Theorem V:** for fixed
+M and word w, 3-adic consistency with positive integer states below the
+envelope of M ⟺ R_N ≤ M — verbatim the rank condition; the per-block 3-adic
+consistency fraction is exactly 1 and no two-prime pincer can prune the word
+tree beyond the (already exponent-optimal) rank program. Kill census (10^6
+seeds, a = 3 and a = 5): all kills are 2-adic gate failures; zero 3-adic or
+positivity kills; the apparatus is a-blind (5-adic mirror identical).
+Salvage: exact information ledger (letter r consumes 4r+3 seed bits forward
+and dictates 3r+2 state trits backward — the state's low ternary digits spell
+the reversed recent word), and the **mirror form of H1**: a small-least-
+residue statement modulo powers of 3 with 2-power denominators, placing H1 in
+the Erdős–Lagarias ternary-digits-of-2^n / Furstenberg ×2×3 rigidity class.
+
+### Theorem 62: The Cocycle, the Reset Law, and the Core of Lemma E (July 21 round 5, refereed ×2, minor)
+
+A1 (cocycle): B_uw = 3^(S_w) B_u + 2^(H_u) B_w and identically for D; Lemma P
+is the power-degenerate case. A2 (master identity):
+v_2(D_p x₀ − B_p) = H_p + v_2(x₀ − x_k) for every prefix p of every hop word.
+A3 (classification): a fixed-form certificate with forced
+v_2(a·x₀ + b) → ∞ exists iff the word's 2-adic seed ξ(w) is rational
+(a·ξ + b = 0); for irrational seeds the Lemma-P mechanism provably cannot
+apply; recognizing aperiodic rational-seed words is equivalent in difficulty
+to the Lagarias periodicity conjecture. B (reset law): crossing an
+intervening block m updates ν = v_2(U_u) by ν′ = min(ν, ω) − H_m — a RESET to
+the Wronskian level ω(u,m) = v_2(D_u B_m − B_u D_m), given by a proved closed
+formula; the only escape is the coincidence channel ν = ω. Hence the residual
+core of Lemma E: an infinite non-descending obstruction requires infinitely
+many exact valuation coincidences — 2-adic near-approaches to eventually-
+periodic rational seeds — with orbit size the only non-circular lever.
+**Spike-ledger theorem (new, unconditional):** all hop words whose depth
+spikes outrun the drift budget at geometric ratio > log₂3 are excluded
+(sharp; multiplier-covariant) — a proved slice of the unbounded-alphabet
+branch. Hierarchy pincer impossible: transported thresholds strictly decrease
+with depth.
+
+### Audit Outcome Summary
+
+All core claims CONFIRMED (Theorems A–D, Sections 6–8 reductions, verifier
+35/35). One numerical error found and fixed (alpha* = 1 exactly). Presentation
+repairs identified: explicit cylinder-AP lemma + countable-additivity line for
+Theorem D; strict M_w > −1 induction for terminal windows; completion-gate
+step 4 disclosed as an unwritten second gap; W_G noted as logically redundant
+given W_R. Literature: Barina 2^71 still current; arXiv:2601.03297 v5 downgraded
+its cycle-finiteness claim to conditional (do not cite as unconditional).
+
+**The Collatz conjecture remains open.** The pointwise gap now stands sharpened:
+{0,1} landings need liminf p(m)/m > 3.1493 (return) / 6.2390 (gap); q ≤ 9
+uniform-morphic templates are ALL excluded; translate-invariant counting cannot
+finish the rank bound; and any completion through this route must inject the
+constant 3 at the mixed-epoch stage.

@@ -1,6 +1,7 @@
 # Publication Readiness Audit
 
-Current date: May 14, 2026.
+Current date: May 14, 2026. Claim-boundary sections last updated July 31, 2026
+to incorporate the July 19--21, 2026 refereed rounds (`proof.md` Section 23).
 
 ## Verdict
 
@@ -61,7 +62,27 @@ The manuscript can defensibly claim:
 - Exclusion of several obstruction classes: periodic, finite-defect periodic
   shadows, fixed sparse-label strata, low-complexity strata, balanced/Sturmian
   branches, and several small automatic/uniform-morphic templates.
-- A precise remaining proof target: an unweighted terminal-window/rank theorem.
+- From the July 19--21, 2026 refereed rounds (`proof.md` Section 23,
+  Theorems 45--62):
+  - Universal uniform-morphic exclusion ("Theorem G"): every binary
+    `q`-uniform-morphic fixed point excluded for every `q >= 2`, including the
+    q=9 boundary word.
+  - Complexity thresholds for `{0,1}` landings: `liminf p(m)/m >= T_R` in
+    `(3.1493, 3.1494)` (return) / `T_G` in `(6.2390, 6.2391)` (gap), with
+    sharpened 3-dependent versions `T_R' = 3.2439007`, `T_G' = 6.3942268`.
+  - Unconditional AP Survivor rank-type bounds with exponent floors
+    `alpha_R = 0.287761`, `alpha_G = 0.212323`, plus exact criticality of the
+    bases `2/15` and `1/112` and the saturation/class-counting no-gos.
+  - The two-lemma reduction (Theorem 55): H1 + Lemma E imply Collatz, with the
+    unconditional Lemma P.
+  - The 5n+1 litmus: the rank apparatus is multiplier-blind, so rank bounds
+    alone cannot imply convergence.
+  - Mirror Equivalence / two-prime vacuity, and the cocycle / reset-law /
+    spike-ledger structure of Lemma E.
+  - Certified descent record `sigma = kappa` to `301,993` Terras steps; every
+    nontrivial cycle makes at least 92 FMF hops.
+- A precise remaining proof target: the two lemmas H1 and Lemma E of the
+  refereed two-lemma reduction.
 
 ## Claims To Avoid
 
@@ -74,6 +95,11 @@ The manuscript should not claim:
 - That finite verifier runs prove a universal theorem.
 - That the FMF results are strictly stronger than Tao's theorem without
   qualifying that the events being measured are different.
+- That the candidate natural-density upgrade of Tao's theorem ("Theorem ND",
+  `notes/round4-july2026/s5-completion/PROOFS.md`) is established mathematics:
+  it is AI-proved and AI-refereed only and awaits human expert review.
+- That rank/terminal-window bounds alone would prove convergence: the 5n+1
+  litmus (Theorem 49) shows the rank apparatus is multiplier-blind.
 
 ## Prize-Level Completion Gate
 
@@ -81,22 +107,40 @@ To become a Collatz proof, the paper must add a theorem implying:
 
 > For every odd `x > 1`, some finite FMF iterate is smaller than `x`.
 
-Within the current framework, the most concrete sufficient route is:
+Within the current framework, the most concrete sufficient route is the
+refereed two-lemma reduction (`proof.md` Section 23, Theorem 55):
 
-1. Prove the return terminal-window count
-   `W_R(B,L) <= C(B+1)(2/15)^L` uniformly in `B,L`.
-2. Prove the reduced gap terminal-window count
-   `W_G(B,L) <= C B 112^(-L)` uniformly in `B,L`.
-3. Use those fixed-height bounds to rule out infinite positive binary return
-   and reduced `{0,1}` gap orbits.
-4. Generalize from the first bounded-depth obstructions to all growth-B and
-   mixed recovery epochs.
-5. Deduce pointwise FMF descent for every odd `x > 1`, then conclude Collatz by
-   infinite descent.
+1. Prove H1: no infinite positive orbit of the binary return partial map,
+   equivalently `mu_L -> infinity`. The original fixed-height form
+   `W_R(B,L) <= C(B+1)(2/15)^L` suffices (the gap count `W_G` is logically
+   redundant given `W_R`, and any uniform `f(B)g(L)` with `g(L) -> 0` also
+   suffices), but the proof must be position-aware and non-class-counting: the
+   base `2/15` is exactly critical, translate-invariant schemes provably
+   saturate, and interval+AP class-counting certificates are provably useless.
+2. Prove Lemma E: every non-descending FMF orbit is eventually a depth-`{0,1}`
+   growth-B chain. This is the 3-specific missing piece (its 5n+1 analogue is
+   false), and it must be proved by arithmetic — its core is exact valuation
+   coincidences tied to rational seeds — not by letter statistics.
+3. Conclude by Theorem 55: H1 + Lemma E imply pointwise FMF descent for every
+   odd `x > 1`, hence Collatz by infinite descent.
 
-The current paper reaches step 0: it defines the objects, proves exact
-equivalences, proves density and weighted bounds, and identifies the missing
-unweighted rank theorem. It does not prove that theorem.
+Two updates to the old five-step gate:
+
+- The former step 4 (bounded-depth to all mixed recovery epochs) now HAS a
+  writeup: the mixed-epoch bridge and the two-lemma reduction formalize it
+  exactly, with Lemma E as the isolated missing piece.
+- The rank-only route (the old steps 1--3 by themselves) is proved
+  insufficient by the 5n+1 litmus (Theorem 49): the entire rank apparatus
+  transfers verbatim to 5n+1, which has the nontrivial cycle 13.
+
+The current paper reaches step 0 of this route: it defines the objects, proves
+exact equivalences, and proves density and weighted bounds. The claim inventory
+has since grown by the addendum section (`proof.md` Section 23, Theorems
+45--62, from the July 19--21, 2026 adversarial rounds; the load-bearing
+positive claims adversarially refereed, Theorem 58 candidate-only), which adds
+the reduction itself, the
+unconditional AP Survivor bounds, and the negative delimiters — but neither H1
+nor Lemma E is proved.
 
 ## Submission Work Remaining
 

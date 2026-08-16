@@ -27,6 +27,7 @@ if [[ "$mode" != "quick" && "$mode" != "full" ]]; then
 fi
 
 run typst compile paper/main.typ site/paper/collatz-fmf.pdf
+run python3 scripts/check_site_links.py
 
 if command -v pdftotext >/dev/null 2>&1; then
   run pdftotext site/paper/collatz-fmf.pdf /tmp/collatz-fmf.txt

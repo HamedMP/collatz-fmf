@@ -41,6 +41,9 @@ Run the quick verifier before any draft circulation:
 bash scripts/verify_snapshot.sh quick
 ```
 
+This includes `scripts/check_site_links.py`, which verifies local links in the
+static site and the rendered PDF location.
+
 Run the full verifier before archival submission or after structural manuscript
 changes:
 

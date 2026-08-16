@@ -30,5 +30,6 @@
 #include "sections/09-gap-analysis.typ"
 #include "sections/10-growth-bounds.typ"
 #include "sections/11-future.typ"
+#include "sections/12-july2026-addendum.typ"
 
 #bibliography("refs.bib")

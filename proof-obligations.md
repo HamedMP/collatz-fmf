@@ -33,7 +33,7 @@ The repository now contains a rigorous reduction and a strong package of density
 | Come up with all needed lemmas | `lemma-roadmap.md` plus Sections 5--8 propositions | Incomplete: the terminal-window/rank and higher-complexity landing lemmas are still missing |
 | Prove Collatz through FMF | No artifact proves pointwise descent for every odd `x > 1` | Missing |
 | Verify algebra and reductions | Packaged verifier scripts from `explorations/explore52_*` through `explorations/explore81_*`, plus their helper modules; Typst compile | Supporting evidence only, not a replacement for the missing universal theorem |
-| Decide what to do next | Practical Next Target below | Covered: higher-complexity finite-alphabet exclusion and unweighted terminal-window counting are the next targets |
+| Decide what to do next | Practical Next Target below | Covered: the two lemmas of the refereed two-lemma reduction (H1 via position-aware arithmetic counting, Lemma E via the valuation-coincidence route) are the next targets |
 
 ## Success Criteria
 
@@ -69,6 +69,17 @@ A completed proof must establish all of the following.
 | Automatic and small uniform morphic binary templates | Section 6, `lemma-roadmap.md`, `explorations/explore77_uniform_morphism_recurrence.py`, `explorations/explore78_uniform_morphism_symbolic_witness.py` | Thue-Morse, period-doubling, and binary 2-, 3-, 4-, 5-, and 6-uniform fixed-point templates are excluded; larger uniform morphisms remain diagnostic |
 | Prefix-language compactness principle | Sections 6--8, `lemma-roadmap.md` | Proved as reusable reduction from bounded restricted minima to an ordinary infinite code |
 | Honest non-proof framing | `README.md`, `review.md`, `paper/sections/09-gap-analysis.typ` | Present |
+| Universal uniform-morphic exclusion ("Theorem G", including q=9) | `proof.md` Section 23, Theorems 46 and 51 | Proved, refereed x2: every binary fixed point of every `q`-uniform morphism, all `q >= 2` with no aperiodicity or primitivity hypothesis, admits no positive ordinary reduced-gap or return code; subsumes the separate q=2..6 classifications and closes the q=9 boundary word |
+| Complexity thresholds for `{0,1}` landings | `proof.md` Section 23, Theorems 47 and 60 | Proved, refereed x2 (Theorem 47): return landings need `liminf p(m)/m >= T_R` in `(3.1493, 3.1494)`, gap landings `>= T_G` in `(6.2390, 6.2391)`; the sharpened pointwise density-coupled versions `T_R' = 3.2439007` and `T_G' = 6.3942268` with uniform-density floor `7.5691`, genuinely 3-dependent (`T_R'(a) = 3/(5 log2(a) - 7)` vacuous exactly at `a >= 4`), are proved with machine-verified certificates (Theorem 60) but not separately refereed |
+| AP Survivor unconditional rank-type bounds | `proof.md` Section 23, Theorem 48 | Proved, refereed: `W_R(B,L) <= C((B+1)2^(-2.1L) + 2^(0.9L))` and `W_G(B,L) <= C(B 2^(-5.46L) + 2^(1.54L))` uniformly; exponent floors `alpha_R = 0.287761`, `alpha_G = 0.212323`; the additive `2^(0.9L)` term means these do not yet satisfy `g(L) -> 0` |
+| Exact criticality of the rank bases | `proof.md` Section 23, Theorem 57 | Proved, refereed x2: the base `2/15` (return) is exactly critical via `16 H(1/16) = 49 + 15 log2(2/15)`, and `1/112` (gap) via `8 H(1/8) = 52 - 7 log2(112)`; for every `rho < 2/15` the bound `C(B+1)rho^L` is false; the AP-Survivor exponent `alpha_R` is optimal even for position-aware counting |
+| Saturation and class-counting no-gos | `proof.md` Section 23, Theorems 48 and 57 | Proved: translate-invariant counting schemes can never reach `C(B+1)theta^L`, and every interval+AP class-counting certificate is `>= 1` for all `(B,L)`, so no class-counting scheme can prove `H_R(B) < infinity` for any `B` |
+| 5n+1 multiplier-blindness of the rank apparatus | `proof.md` Section 23, Theorem 49 | Proved, refereed: the whole return/gap counting apparatus (moduli `Q_r = 2^(4r+3)`, constants `2/15`, `1/112`, quartering `1/4`, terminal windows, periodic exclusions) transfers verbatim to 5n+1, which has the genuine cycle `F_5(13) = 13` outside every excluded class; rank bounds alone can never imply convergence |
+| Two-lemma reduction (Theorem R) with Lemma P | `proof.md` Section 23, Theorem 55 | Proved conditional structure, refereed x2: H1 (no infinite positive binary return orbit) plus Lemma E (every non-descending FMF orbit is eventually a depth-`{0,1}` growth-B chain) imply pointwise FMF descent and Collatz; unconditional Lemma P: no infinite positive orbit of `m' = (27m+1)/16` via `16(11m'+1) = 27(11m+1)` |
+| Mirror Equivalence and two-prime vacuity | `proof.md` Section 23, Theorem 61 | Proved: the 2-adic and 3-adic prefix data are the same information under an explicit affine bijection; 3-adic consistency below the envelope of `M` is verbatim the rank condition, so no two-prime pincer can prune the word tree; H1 has an equivalent mirror form in the Erdos--Lagarias / Furstenberg x2x3 class |
+| Cocycle, reset law, and spike-ledger | `proof.md` Section 23, Theorem 62 | Proved, refereed x2: cocycle `B_uw = 3^(S_w) B_u + 2^(H_u) B_w`, master identity `v_2(D_p x_0 - B_p) = H_p + v_2(x_0 - x_k)`, reset law `nu' = min(nu, omega) - H_m`; unconditional spike-ledger theorem excludes all hop words whose depth spikes outrun the drift budget at geometric ratio `> log2(3)` |
+| Certified pointwise descent record | `proof.md` Section 23, Theorem 54 | Proved, refereed x2: `sigma(x) = kappa(x)` for every odd `x > 1` with coefficient stopping time `kappa(x) <= 301,993` Terras steps (492,529 single steps); exact ledger `Theta(301,993) = 10,824,133,905`, zero-exception scan of `1.35e9` candidates |
+| Cycle bound in FMF coordinates | `proof.md` Section 23, Theorem 53 | Proved, refereed x2: the Simons--de Weger m-cycle count equals the FMF hop count, so every nontrivial Collatz cycle makes at least 92 FMF hops at the current `2^71` floor |
 
 ## Missing Obligations
 
@@ -88,46 +99,40 @@ A completed proof must establish all of the following.
 
 ## Current Sharp Endpoint
 
-The strongest current reduction is:
+After the July 19--21, 2026 refereed rounds (`proof.md` Section 23, Theorems 45--62), the strongest reduction is the two-lemma reduction of Theorem 55: H1 + Lemma E imply pointwise FMF descent and hence Collatz. The remaining gap is exactly these two lemmas.
 
-- A bounded obstruction must be a genuinely non-eventually-periodic finite-alphabet word whose restricted least-prefix minima fail to diverge, whose factor complexity is strictly above the balanced Sturmian frontier, whose nonzero labels occur infinitely often in the `{0,1}` cases, whose binary low-complexity strata with `p_w(m) <= m` already diverge, whose balanced sublinear-density factor-window strata already diverge, whose balanced rational-slope branch is excluded, and whose itinerary has unbounded edit distance from every eventually periodic template. The balanced/Sturmian subcase is now excluded by the fast prefix-recurrence argument, the Thue-Morse and period-doubling templates are excluded by explicit automatic prefix recurrences, and all binary 2-, 3-, 4-, 5-, and 6-uniform morphic fixed-point templates are excluded by finite classification plus recurrence criteria. This remains far short of a general automatic-sequence theorem. Symbolic-prefix diagnostics cover q=7 and q=8, but q=9 leaves a concrete reduced-gap boundary case, `0->011111111, 1->100000000`, with best checked symbolic recurrence ratio `17/2` and negative gap margin through a targeted recurrence scan to prefix length `50,000`. The same boundary word, equivalently the parity of the number of nonzero base-9 digits, has checked gap-prefix residue bit-length growth through the default milestone scan in `explorations/explore80_q9_boundary_residues.py`; this is evidence against a landing, not a theorem. Any remaining binary landing must satisfy the prefix-recurrence height barrier tying recurrence times and early symbol counts to the prefix modulus; in particular, no infinitely recurring prefix subsequence may have ratio below the density-free cutoffs, and any class satisfying the sharper density-recurrence exclusion inequality is ruled out.
-- An unbounded obstruction must be a reset-spike orbit: incoming real height tends to infinity along long labels, while the following state converges to `-85/88` in the return system or `-1/128` in the reduced gap system.
-- Fixed terminal states cannot support arbitrarily deep prefixes; terminal depth is logarithmic in terminal height. The unresolved issue is uniform breadth/rank across terminals, and merge multiplicity in the reduced gap system.
-- Weighted terminal-window estimates are now available on both sides, fixed expansion shells have ordinary weighted-to-count bounds, and low-expansion windows have ordinary cutoff counts. These do not yet control the high-expansion low-window words needed for the unweighted rank theorem.
+- **H1** (no infinite positive orbit of the binary return partial map `T`, equivalently `mu_L -> infinity`): any proof is now known to require a position-aware, NON-class-counting arithmetic argument. The base `2/15` is exactly critical (Theorem 57), translate-invariant counting schemes provably saturate (Theorem 48), and every interval+AP class-counting certificate is `>= 1` for all `(B,L)`, so no class-counting scheme can prove `H_R(B) < infinity` for any `B`. The per-`B` decay target is equivalent to `mu_L -> infinity` itself: sufficient downstream but not one bit easier. In mirror form (Theorem 61), H1 is a small-least-residue statement modulo powers of 3 with 2-power denominators, in the Erdos--Lagarias / Furstenberg x2x3 rigidity class.
+- **Lemma E** (every non-descending FMF orbit is eventually a depth-`{0,1}` growth-B chain): now known to require arithmetic, not statistics — exact witnesses achieve non-G01 letter density 1 among non-descending prefixes, so no purely frequency-based quantitative form of E exists (Theorem 59). Its residual core is infinitely many exact valuation coincidences: 2-adic near-approaches to eventually-periodic rational seeds, tied to the Lagarias periodicity conjecture (Theorem 62). The unbounded-alphabet branch is partially closed by the unconditional spike-ledger theorem (depth spikes outrunning the drift budget at geometric ratio `> log2(3)` are excluded).
 
-Thus the next proof obligation is not another density calculation. It is an unweighted pointwise counting, height-separation, or 2-adic landing theorem.
+Two framing facts constrain the route:
 
-The existing cutoff estimates do not have the right asymptotic shape by themselves: the smallest possible expansion still grows exponentially in `L`, while the desired survivor rates decay exponentially. A proof must therefore exploit arithmetic separation of normalized terminal heights, not only terminal escape or expansion size.
-The shell estimates make the same point in another coordinate: converting inverse-expansion mass into ordinary counts costs a factor exponential in the shell index.
-Fixed expansion shells occur only at bounded prefix depth, so an infinite obstruction must pass through arbitrarily high shells.
+- The uniform gap-rank conjecture `W_G` is logically redundant given `W_R`: the `{0,1}` gap system is a sub-case of the return system.
+- Rank bounds alone cannot imply convergence (5n+1 litmus, Theorem 49): the entire rank apparatus is multiplier-blind, and `F_5(13) = 13` sits outside every excluded class. Lemma E carries all the 3-dependence of any completion through this framework (its 5n+1 analogue is false, witness hop letter `(3,5)`); the coefficient `2 - log2(a)` in the ballot inequality flips sign exactly at `a = 4`.
 
 ## Practical Next Target
 
-The most concrete target remains the terminal-window counting theorem:
+The concrete targets are now the two lemmas of the refereed reduction (Theorem 55).
+
+For H1, the original terminal-window statement
 
 `W_R(B,L) <= C(B+1)(2/15)^L`
 
-and
+remains a sufficient fixed-height form (the gap analogue `W_G(B,L) <= C B 112^(-L)` is redundant given `W_R`), but two refereed simplifications and two refereed constraints apply:
 
-`W_G(B,L) <= C B 112^(-L)`.
+- Any uniform `f(B) g(L)` bound with `g(L) -> 0` suffices downstream; the sharp base `2/15` is not needed (Theorem 48). The per-`B` decay target is equivalent to `mu_L -> infinity` (Theorem 57).
+- The AP Survivor bound already gives the exponential main term unconditionally; what is missing is removing the additive `2^(0.9L)` defect, which is the thick-class count and is positionally irremovable by counting alone.
+- The proof must be position-aware (translate-invariant schemes saturate) and must not be a class-counting certificate (every interval+AP certificate is `>= 1` for all `(B,L)`).
+- Uniform-morphic, low-complexity, balanced/Sturmian, and now ALL `q`-uniform-morphic fixed-point landings are excluded (Theorem G); the surviving `{0,1}` regime is aperiodic words with `liminf p(m)/m` above the sharpened thresholds `T_R' = 3.2439007` (return) / `T_G' = 6.3942268` (gap).
 
-Proving these would settle the fixed-height return and reduced-gap obstructions. Failure to prove them should be treated as the main unresolved mathematical gap, not as a documentation or verification issue.
+For Lemma E, the mapped route is arithmetic: the cocycle/master-identity/reset-law structure of Theorem 62, whose residual core is infinitely many exact valuation coincidences tied to rational seeds and the Lagarias periodicity conjecture. Proved slices to extend: the depth-`{0,1,2}` complexity bound `3/log2(41/16) = 2.20986` (Theorem 59), the block-power lemma (all periodic tails `u^infinity` with `|u| <= 91`), and the spike-ledger theorem for the unbounded-alphabet branch.
 
-Smaller bounded-alphabet subtargets:
+Note that even both rank bounds with sharp constants cannot alone imply convergence (5n+1 litmus): H1 without Lemma E does not close the pointwise gap, and neither lemma is dispensable.
 
-- Return: prove `mu_L^(<=1) -> infinity`, where `mu_L^(<=1)` is the least return-prefix residue among length-`L` words over return lengths `{0,1}`.
-- Reduced gap: prove `nu_L^(<=1) -> infinity`, where `nu_L^(<=1)` is the least gap-prefix residue among length-`L` words over zero-gap lengths `{0,1}`.
+## Candidate Results (Not Repo Claims)
 
-These subtargets would not prove the full theorem, but they are the first genuinely nonconstant finite-alphabet cases after constant and eventually periodic branches have been excluded.
-
-The current finite `{0,1}` minimizers are sparse in `1` labels. The fixed-count sparse strata are now proved harmless: for each fixed `J`, the least residues among words with at most `J` positive labels diverge in both the return and reduced-gap systems. More generally, bounded-defect perturbations of any eventually periodic template are proved harmless, and fixed low-factor-complexity strata `p_w(m) <= m` diverge by compactness plus Morse-Hedlund. The balanced-prefix minima are now removed from the obstruction list: any balanced counterexample reduces to a lower mechanical Sturmian word, but the Sturmian recurrence function gives fast prefix recurrences that contradict the delayed recurrence forced by an ordinary landing. The remaining `{0,1}` problem is therefore sharper: rule out higher-complexity aperiodic binary codings with uniformly positive-density labels, no fixed periodic shadow, and prefix recurrences that evade the density-recurrence exclusion inequality.
-
-Suggested attack order:
-
-1. Generalize from balanced/Sturmian `{0,1}` words to higher-complexity uniformly positive-density aperiodic binary words.
-2. Generalize from `{0,1}` to each fixed finite alphabet `{0, ..., R}` or `{0, ..., K}`.
-3. Upgrade finite-alphabet divergence to the full unweighted terminal-window rank theorem.
-4. Use the rank theorem to close the fixed-height return/gap obstructions, then connect that back to pointwise FMF descent.
+| Candidate | Artifact | Status |
+| --- | --- | --- |
+| **Theorem ND (CANDIDATE)**: natural-density upgrade of Tao's theorem — `{N : Col_min(N) > N0}` has upper natural density `<= C log^(-1/25) N0` | `notes/round4-july2026/s5-completion/PROOFS.md` (571-line manuscript; verification scripts sA--sE alongside) | Awaiting human review; not a repo claim. AI-proved and AI-refereed only (two independent adversarial AI referees, both NOT-REFUTED with minor findings). Treat exactly as an unrefereed preprint draft; it does not change any obligation above. |
 
 ## Verification Snapshot
 

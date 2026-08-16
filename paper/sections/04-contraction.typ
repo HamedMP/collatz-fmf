@@ -37,7 +37,8 @@ The discriminant reveals that $3$ occupies a unique position: it is the largest 
 
   The series converges for $alpha < log 2 \/ log(3\/2)$. At $alpha = 0.53$,
   $ M(0.53) approx 0.8638 < 1. $
-  The critical exponent satisfying $M(alpha^*) = 1$ is approximately $alpha^* = 1.0002$.
+  The critical exponent satisfying $M(alpha^*) = 1$ is exactly $alpha^* = 1$: the displayed series evaluates at $alpha = 1$ to the rational identity
+  $ M(1) = 1/4 + 3/16 + 9/16 = 1. $
 ]
 
 #proof[
@@ -52,7 +53,9 @@ The discriminant reveals that $3$ occupies a unique position: it is the largest 
   *Type B with $t gt.eq 1$.* For $x = 2^(t+2)m - 1$, $F(x) = (3^(t+2)m - 1) \/ 2^J$ with $J = v_2(3^(t+2)m - 1)$. Since $3^(t+2)m - 1$ is always even, $PP(J = j) = 2^(-j)$ for $j gt.eq 1$. The asymptotic ratio is $(3\/2)^(t+2) 2^(-J)$, so
   $ EE[R^alpha | B(t)] = ((3\/2)^(t+2))^alpha / (2^(1+alpha) - 1). $
 
-  Finally, the input-state densities are $PP(A) = 1\/2$, $PP("B0") = 1\/4$, and $PP(B(t)) = 2^(-(t+2))$ for $t gt.eq 1$. Summing the three contributions gives $M(alpha)$. Numerical evaluation gives $M(0.53) approx 0.8638$ and $M(alpha^*) = 1$ at $alpha^* approx 1.0002$.
+  Finally, the input-state densities are $PP(A) = 1\/2$, $PP("B0") = 1\/4$, and $PP(B(t)) = 2^(-(t+2))$ for $t gt.eq 1$. Summing the three contributions gives $M(alpha)$.
+
+  At $alpha = 1$ each piece is rational: the Type A term is $1\/2 dot (3\/4) \/ (3\/2) = 1\/4$, the B0 term is $1\/4 dot (9\/4) \/ 3 = 3\/16$, and the $t gt.eq 1$ tail is $1\/3 sum_(t gt.eq 1) (3\/4)^(t+2) = 9\/16$; the sum is exactly $1$, so $alpha^* = 1$. Since each summand of $M$ is strictly increasing in $alpha$ on the convergence range, $M(alpha) < 1$ for every $alpha < 1$; in particular $M(0.53) < 1$, and the value $M(0.53) approx 0.8638$ follows from the explicit series, whose tail beyond $t = T$ is bounded by the geometric bound $sum_(t > T) 2^(-(t+2)) (3\/2)^(0.53(t+2)) \/ (2^(1.53) - 1)$ with ratio $(3\/2)^(0.53) \/ 2 < 0.62$.
 ]
 
 == Inverse Movement Rate

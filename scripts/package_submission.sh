@@ -63,6 +63,7 @@ smoke_archive() {
 
   (
     cd "${smoke_dir}/${name}"
+    python3 scripts/check_site_links.py >/dev/null
     python3 explorations/explore62_terminal_windows.py >/dev/null
     python3 explorations/explore55_height_survival.py --return-max-bits 16 --gap-max-bits 16 >/dev/null
     python3 explorations/explore56_counting_discrepancy.py >/dev/null
@@ -103,6 +104,7 @@ done
 
 copy_file scripts/verify_snapshot.sh
 copy_file scripts/package_submission.sh
+copy_file scripts/check_site_links.py
 
 for file in explorations/explore51_binary_return_code.py \
   explorations/explore52_binary_partial_map.py \

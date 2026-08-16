@@ -12,7 +12,7 @@ The following results are established by exact algebraic arguments, not heuristi
 
 + *State distribution (Theorem B).* In natural density over the free parameter in each input state, the distribution of the FMF hop output --- its mod-4 class, its $t$-parameter, and its $v_2$ parameter --- is identical regardless of the input state. This follows from the structure of 2-adic inverses: since $3^(t+2)$ is a unit in $ZZ_2$, multiplication by $3^(t+2)$ permutes residue classes. This is _not_ a heuristic independence assumption about a single trajectory; it is a residue-counting theorem.
 
-+ *Fractional-moment contraction (Theorem C).* The FMF hop ratio satisfies the exact asymptotic natural-density formula $EE[R^0.53] approx 0.8638 < 1$. The exact value $alpha^* approx 1.0002$ satisfies $EE[R^(alpha^*)] = 1$. This is a rigorous average contraction statement for the FMF density model, not a pointwise contraction theorem.
++ *Fractional-moment contraction (Theorem C).* The FMF hop ratio satisfies the exact asymptotic natural-density formula $EE[R^0.53] approx 0.8638 < 1$. The critical exponent is exactly $alpha^* = 1$: the moment series at $alpha = 1$ evaluates to the rational identity $M(1) = 1\/4 + 3\/16 + 9\/16 = 1$, the FMF form of the classical fact that the Syracuse first-moment heuristic is exactly critical. This is a rigorous average contraction statement for the FMF density model, not a pointwise contraction theorem.
 
 + *The Quartering Law (Theorem D).* Growth-B chains have continuation density factor exactly $1\/4$ per step. Among odd starts, the density of strict growth-B chains of length at least $k$ is $4^(-k)$; conditioned on Type B starts it is $2\/4^k$. The proof uses only mod-8 arithmetic and the unit structure of $3^(t+2)$ in $ZZ_2$.
 
