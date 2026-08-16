@@ -1784,6 +1784,29 @@ spikes outrun the drift budget at geometric ratio > log₂3 are excluded
 branch. Hierarchy pincer impossible: transported thresholds strictly decrease
 with depth.
 
+### Observation 63: FM2^k Hops Are Geometric Aggregates of FMF Hops (August 16, 2026; machine-verified, not refereed)
+
+**Statement:** For k >= 3 define FM2^k(x) as the first orbit value of odd x
+divisible by 2^k and F_k(x) = FM2^k(x)/2^{v_2}. Then (i) the number N of FMF
+hops composing one FM2^k hop is geometric with P(N=j) = p(1-p)^{j-1},
+p = 2^{-(k-2)}, in 2-adic density (verified exactly mod 2^16 for k=3,4,5);
+(ii) by Wald's identity the mean log2-drift per Collatz step equals
+(log2 3 - 2)/3 for every k (measured -0.135..-0.139 for k=2..6); (iii) the
+worst-case single-hop ratio grows without bound in the bit-length for every k,
+with 2^n-1 the common adversary; (iv) k=2 is the largest k for which the hop
+map is total on odd integers > 1, since the cycle 1->4->2->1 contains no
+multiple of 8.
+
+**Proof sketch:** (i) is the geometric law for v_2(FMF) (Lemma, Section 2)
+applied at each landing with the density-level independence of Theorem B;
+(ii) is Wald with the stopping time N; (iii) FM2^k(2^n-1) is reached at the
+first FMF landing of 2^n-1 with v_2 >= k, which for k <= v_2(3^n-1)+1 is the
+FMF landing itself. (iv) is inspection of the trivial cycle.
+
+**Consequence:** the FMF framework is the k=2 member of the Terras parity-vector
+family; changing k re-chunks the same chain and does not touch H1 or Lemma E.
+Script: explorations/explore82_fm2k_generalization.py.
+
 ### Audit Outcome Summary
 
 All core claims CONFIRMED (Theorems A–D, Sections 6–8 reductions, verifier

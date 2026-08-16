@@ -684,3 +684,26 @@ but NOT separately refereed; Thm 58 (ND) candidate-only, awaiting human review.
 Repo state: all changes uncommitted (commit only on request). Next human
 decisions unchanged: human expert review of the ND manuscript (start at
 REFEREE-PACKAGE.md), then whether to publish the addendum.
+
+### August 16, 2026 — direction check: FM2^k generalization (explore82)
+
+- **explore82_fm2k_generalization.py**: DONE - Tests the "First Multiple of 2^k"
+  generalization of the FMF hop (k=2 is FMF). Results: (1) the FM2^k hop is
+  EXACTLY a geometric(2^-(k-2)) number of FMF hops (residue counts mod 2^16 match
+  to 4 decimals for k=3,4,5) — because v_2(FMF) is geometric from 2 (Theorem A
+  lemma), P(v_2 >= k) = 2^-(k-2). (2) Mean log2-drift per Collatz step is
+  k-independent: -0.135/-0.138/-0.139/-0.139/-0.138 for k=2..6 vs theory
+  (log2 3 - 2)/3 = -0.1383 (Wald: N is a stopping time). Chunking cannot buy
+  average drift. (3) Worst-case single-hop ratio still grows with bit-length for
+  every k (2^n-1 is the same adversary for all k: 5326x at 28 bits for k=2,3,4,5);
+  the pointwise gap is chunking-invariant. (4) P(growth) per hop falls
+  0.28/0.13/0.056/0.018/0.006/0.0004 for k=2,3,4,5,6,8 — purely because a longer
+  hop averages more, not a new mechanism. Structural note: **k=2 is the largest k
+  for which the hop map is total** — for k>=3 the trivial cycle 1->4->2->1
+  contains no multiple of 2^k, so FM2^k is undefined on orbits that reach 1
+  before a 2^k-multiple. Side-observation: next-hop mean log-ratio conditioned
+  on previous landing v_2 = 2 / 3 / >=4 is -0.837 / -0.888 / -0.903 (weak
+  dependence, consistent with explore16). **Conclusion: FM2^k is a
+  re-chunking of the FMF chain (equivalently, the classical Terras parity-vector
+  framework at modulus 2^k); it yields no new lever on H1 or Lemma E. Worth one
+  remark in the paper ("why 4") — not a research direction.**
