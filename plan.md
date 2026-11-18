@@ -829,3 +829,18 @@ distribution of ternary digits of powers of 2 (equivalently binary digits of
 powers of 3) at height comparable to the exponent, i.e. the Erdős
 ternary-digit / Furstenberg ×2×3 regime that Theorem 61 already identified.
 No route from any proved result of this round to H1 or Lemma E is known.
+
+Fourth wave, literature search (November 18, 2026) — **novelty corrections**:
+a dedicated prior-art search found that Theorem 70 (harmonic bound, bounded
+residue, sojourn exponent, cycle length) is already public with stronger
+constants (Nikzad–Frinkle–Bagherzadeh, Hexagon 2611.00033, Sept–Nov 2026;
+García–Tal 1999; MathOverflow 513539; rStation paper 28), that the repetition
+barrier and Sturmian exclusion of Theorem 65 are Dubickas 2009 (Glasgow Math.
+J. 51, Thm 5), and that Theorem 68 sits inside Bernstein–Lagarias 1996
+Appendix B. proof.md carries a prior-art notice at the top of the Round 6
+section. What remains ours: independent Lean formalizations; possibly the
+two-block lemma for non-primitive morphic words; the S-unit window law and
+the H1 seed-count log saving (no prior art found, thin coverage). Lesson for
+the process: run the literature agent BEFORE refereeing and formalizing, and
+search preprint servers and forums directly (Hexagon, Zenodo, rStation,
+StackExchange API, GitHub) — general web search surfaced none of these.

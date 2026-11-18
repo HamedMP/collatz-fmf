@@ -1827,6 +1827,54 @@ failed to break it; **no result of this round has had human review.** Records:
 notes/round6-nov2026/ (track `REPORT.md` files and `referee-*/REPORT.md`).
 **Nothing in this round proves Collatz, H1 or Lemma E.**
 
+#### PRIOR ART NOTICE (added 18 November 2026 after a dedicated literature search; read before citing anything below)
+
+A prior-art search (notes/round6-nov2026/literature/REPORT.md; primary
+sources fetched and quoted there) found that several results of this round
+were already public. **Novelty claims below are superseded by this notice.**
+
+- **Theorem 70 (harmonic bound, bounded residue, sojourn exponent): KNOWN.**
+  Nikzad–Frinkle–Bagherzadeh, "On Bounds for Reciprocal Sums and Residues in
+  Collatz Orbits, and Their Consequences" (Hexagon 2611.00033v1, draft
+  22 Sept 2026, posted 3 Nov 2026; AI-assisted, unrefereed) prove, for every
+  non-repeating path, Σ_odd 1/x < 1 and residue < 4/3 (with computation;
+  40.94 and 8.45·10^5 without), by the same Terras-bijection counting; they
+  state that this answers Roosendaal's weak residue conjecture. Their bounds
+  are stronger than ours (27.2; 5.72). Summability along divergent orbits is
+  in MathOverflow 513539 (24 July 2026), derived from García–Tal, Acta Arith.
+  90 (1999), and in Lean in `msharpe248/collatz` (5 Sept 2026). The
+  X^0.94996 sojourn count and a stronger log saving ((log)^(−3/2), arbitrary
+  windows) are in "rStation paper 28" (26 Oct 2026) and Leen (Zenodo). The
+  exact cycle length p = ⌈a·log₂3⌉ is a one-line corollary of their residue
+  bound for non-terminating orbits (e^(3/50) < 2^(1/3)). What this repo adds:
+  an independent, kernel-checked (Lean), computation-free proof for all
+  trajectories with weaker constants. **No priority is claimed.**
+- **Theorem 65 (repetition barrier; Sturmian/episturmian case): KNOWN
+  mechanism.** Dubickas, Glasgow Math. J. 51 (2009), Theorem 5: for a
+  Collatz orbit tending to infinity with parity word X, the factor
+  complexity satisfies P(X, n) > 1.70951129 n for large n, by exactly this
+  repetition argument; this excludes Sturmian parity words. Related 2026
+  preprints: Allikvere (Zenodo 21543841), De Jesús (Zenodo 23108509; Hexagon
+  2611.00459), and Lean results in `msharpe248/collatz`. Possibly new here:
+  the weighted two-block lemma (L) and the exclusion of non-primitive binary
+  morphic two-block words whose complexity exceeds those thresholds; this
+  has not been checked case by case against the cited bounds.
+- **Theorem 68 (rigidity): KNOWN-WEAKER.** Bernstein–Lagarias, Canad. J.
+  Math. 48 (1996), Appendix B, classify all maps with the parity-prefix
+  property (solenoidal conjugates of the shift). Uniqueness of T under the
+  size bounds (II), (III) and the explicit family S_a were not found stated;
+  present them as a corollary of that classification plus an archimedean
+  pinning.
+- **Short-interval statement:** mechanism is Tijdeman 1974 (gaps between
+  3-smooth-type numbers); the statement itself was not found.
+- **Conditional "density one ⇔ Collatz" item:** anticipated by L. Mazur's
+  blog comment of 6 Sept 2026.
+- **No prior art found (search coverage thin; weak evidence of novelty):**
+  Theorem 66 (S-unit window law) and the (log X)^(−0.0512) saving on the H1
+  seed count.
+- **Record update:** the predecessor exponent 0.9251 is out of date; Müller
+  (Zenodo 21643795, 28 July 2026) claims 0.93756.
+
 #### Theorem 64 (KERNEL-CHECKED): the two-lemma reduction is an equivalence
 
 `CollatzConjecture ↔ H1 ∧ LemmaE` (lean/CollatzFMF/TheoremR.lean), together
@@ -1977,8 +2025,9 @@ on indices below K:
 Only the 3x+1 map is formalized, not 3x−1.
 **Litmus:** equally true for 3n−1 (cycles through 1, 5, 17 checked), so it
 cannot separate +1 from −1 and is no route to descent; the proof collapses
-for 5n+1 (uses 3 < 4). Novelty: not found in print in three searches; it is a
-short step from Terras 1976 and Lagarias 1985 and may be folklore.
+for 5n+1 (uses 3 < 4). **Novelty: none for the statements** — see the prior-art
+notice at the top of this section (Nikzad–Frinkle–Bagherzadeh 2026;
+García–Tal 1999; MathOverflow 513539).
 
 #### Further Round 6 items
 
