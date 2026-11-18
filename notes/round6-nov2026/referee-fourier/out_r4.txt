@@ -1,0 +1,5 @@
+best constant c0 with 2N_{k-7} >= c0 N_k, k>=8: 4/9 (k=10): True
+eps=0.1 c=0.0475 beta=0.98042261 delta=4.7084e-03: sup_K log2[N_K beta^(cK)/N_K^(1-delta)] = 3.354e-03 <= delta*log2(1.6384) = 3.354e-03
+eps=0.001 c=0.01 beta=0.99999803 delta=9.8963e-08: sup_K log2[N_K beta^(cK)/N_K^(1-delta)] = 7.049e-08 <= delta*log2(1.6384) = 7.049e-08
+eta=0.05 delta=eta/s=0.1738: N_K^delta/2^(eta K) at K=100,1000,5000 = [1.0484, 1.0484, 1.0484] (>1: integers in (2^(eta K), N_K^delta] are outside (D)'s range)
+eta=0.20 delta=eta/s=0.6950: N_K^delta/2^(eta K) at K=100,1000,5000 = [1.2083, 1.2083, 1.2083] (>1: integers in (2^(eta K), N_K^delta] are outside (D)'s range)

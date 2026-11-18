@@ -904,3 +904,10 @@ regime; in fractal-geometry terms, power decay for an explicit
 non-homogeneous self-similar measure). Published tools stop at logarithmic
 rates. Lemma E has no reduction of this kind at all: the all-trajectory tools
 cannot distinguish its target. Nothing proved here is a route to Collatz.
+
+Session end (November 18, 2026): w5-fourier's reductions were refereed
+(none broken; two small repairs). A sixth attempt (w6-runs: triangle geometry
+of bad nodes; paths of slope 1.33–1.5 against hypotenuse slope 1.585) was
+killed by a usage limit before producing anything; its brief is saved at
+notes/round6-nov2026/w6-runs/BRIEF.md and is the next step. Current status
+and open items: notes/round6-nov2026/HANDOFF.md, top section.

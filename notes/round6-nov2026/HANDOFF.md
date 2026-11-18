@@ -1,65 +1,88 @@
 # Collatz FMF — Round 6 handoff
 
-## Status after the 2026-11-17 terminal session (READ THIS FIRST; it supersedes sections 2–5 below)
+## Status as of 2026-11-18, end of session (READ THIS FIRST; it supersedes everything below)
 
-All eight track cards of section 5 were run, the second wave (step 9) was run,
-and the consolidation (step 10) is done. **Collatz, H1 and Lemma E remain
-open.** Nothing is committed.
+**Collatz, H1 and Lemma E are open. Nothing found in this round is a route to
+a proof.** Everything is AI-produced and AI-refereed; no human review.
+Branch `round6-nov2026` is pushed; PR https://github.com/HamedMP/collatz-fmf/pull/1.
 
-Where to read:
-- `proof.md` → "Round 6 (November 2026)": Theorems 64–70 with status labels.
-- `plan.md` → "November 17, 2026 — Round 6": per-track outcomes, dead ends,
-  corrected "still open" lists, six open leads.
-- `LEDGER.md` (this directory): 23 approach families, blocked routes, and the
-  mandatory control maps (5n+1, 3n−1, 3n+d, S_a for every a).
-- `<track>/REPORT.md` and `referee-*/REPORT.md` for every agent. Most were
-  saved by the coordinator from the agent's final message because the
-  agents' own REPORT.md writes were refused by the harness.
-- Lean: `lean/CollatzFMF/` — Basic, FMF, Return, TheoremR, Barrier, TwoBlock,
-  BarrierH1, KLSound, Harmonic, HarmonicBeta (+ three axiom-audit files).
-  `lake build` passes (18,280 jobs); standard axioms only; no sorry.
+### Where to read
+- `proof.md` → "Round 6 (November 2026)": prior-art notice first, then
+  Theorems 64–70 and "Further Round 6 items", each with a status label.
+- `plan.md` → from "November 17, 2026 — Round 6" to the end: per-wave
+  outcomes, dead ends, where the campaign stands.
+- `LEDGER.md` (this directory): 29 approach families with why each is
+  blocked, the mandatory control maps (5n+1, 3n−1, 3n+d, S_a), and the
+  process rule (prior-art search before refereeing).
+- `literature/REPORT.md`: what is already known (changes several novelty
+  claims).
+- `<track>/REPORT.md`, `referee-*/REPORT.md`: every agent's report (most
+  saved by the coordinator because agents' own writes were refused).
 
-What exists now, by strength of check (no human review of anything):
-- KERNEL-CHECKED: Collatz ⇔ H1 ∧ Lemma E; repetition barrier and two-block
-  exclusion (Thm 65 A, L, B); Krasikov–Lagarias soundness (Thm 67, a known
-  statement, new proof); uniform harmonic bound Σ 1/x_k ≤ 1196 along every
-  distinct stretch of every trajectory (Thm 70; refereed constant 27.2 not
-  formalized).
-- PROVED + blind hostile AI referee: S-unit window law (Thm 66, modulo
-  Evertse 1984, ineffective); corollaries of Thm 65; rigidity of T and the
-  control family S_a (Thm 68); H1 Cantor-set formulation and no-go (Thm 69);
-  residue bound, sojourn count, cycle-length corollary of Thm 70; short-
-  interval statement; Theorem ND sound modulo five repairs (no priority).
-- CANDIDATE: F_2[x] closed formula; lemmas FP-0, G2, T; power-run
-  compression; conditional density-existence theorem (derivation refereed,
-  hypothesis is Mazur's unrebuilt Lean result).
-- Others' claims, statement-audited only: Mazur's positive density, 0.90
-  exponent, natural-density descent (all pin Lean v4.30.0-rc2; rebuilding
-  needs a second Mathlib download, which the owner has not approved).
+### What exists, by strength of check
+- **Kernel-checked in Lean** (`lean/CollatzFMF/`, Mathlib v4.36.0,
+  `lake build` = 18,306 jobs, standard axioms only, no sorry, no
+  native_decide): Collatz ⇔ H1 ∧ Lemma E; repetition barrier and two-block
+  exclusion; Krasikov–Lagarias soundness; rigidity of T and the S_a control
+  family; harmonic bound Σ 1/x_k ≤ 27.93 on any stretch of distinct terms;
+  residue bounds; sojourn count 10·1.9322^L; exact cycle length
+  p = ⌈a·log₂3⌉ for every cycle with all elements ≥ 2^71.
+- **Third-party, rebuilt here:** Mazur's positive-density theorem (Lean
+  v4.30.0-rc2, standard axioms; kernel replay not run; second Mathlib cache
+  lives in `mazur-audit/build/`, about 8 GB, untracked).
+- **Proved + AI-refereed, not formalized:** S-unit window law (modulo
+  Evertse 1984); log savings on the H1 seed count ((log X)^(−0.0650)) and on
+  the sojourn count; Fourier-decay reductions (w5-fourier Props 1–4, Thm 5,
+  Lemma R); barriers and no-go results; Theorem ND sound modulo five repairs.
+- **Not new (see prior-art notice):** the harmonic/residue/sojourn/cycle
+  statements (Nikzad–Frinkle–Bagherzadeh 2026; García–Tal 1999), the
+  repetition barrier and Sturmian exclusion (Dubickas 2009), the class of
+  parity-prefix maps (Bernstein–Lagarias 1996). Ours there: independent Lean
+  proofs only.
 
-Update 2026-11-18 (third wave): committed on branch `round6-nov2026`
-(not pushed). Additionally KERNEL-CHECKED: rigidity of T and the S_a control
-family (Thm 68); harmonic bound 162, residue bound, cycle exponent bounds,
-conditional exact cycle length, sojourn count 10·1.9322^L (Thm 70). Lemmas
-FP-0 and G2 were attacked: neither power saving was proved; each gave a
-refereed logarithmic gain and a reduction to the Erdős ternary-digit regime
-(see plan.md "Third wave" and LEDGER.md families 19′, 24).
+### Where the mathematics stands
+Five waves of attacks on H1's counting form all reduce, by proved and
+refereed steps, to one open problem: power Fourier decay / digit
+equidistribution for an explicit affine self-similar set with multipliers 2
+and 3 (Erdős ternary-digit, Furstenberg ×2×3 regime). Published tools give
+only logarithmic rates. Sharpest current form: hypothesis (D) in
+`w6-runs/BRIEF.md` ⇒ pointwise power decay ⇒ lemma FP-0. FP-0 is a counting
+statement, true or false together with its 3n−1 analogue; proving it would
+NOT prove H1. Lemma E has no reduction of this kind at all: the available
+all-trajectory tools cannot see its target (w4-E).
 
-Open decisions for the owner:
-1. Whether to allow a second Mathlib fetch (~6–7 GB, agent's estimate) to
-   rebuild Mazur's positive-density Lean.
-2. Whether to commit. Never commit `kl-exponent/lit/kollatz/`,
-   `kl-exponent/cert/` (4.5 GB), `mazur-audit/{src,dl,build}/` or
-   `lean/.lake/` — all are in `.gitignore` now.
-3. Whether any of Thms 65, 68, 70 is worth a human referee / literature
-   check before it is described outside the repo (novelty is unconfirmed:
-   two or three web searches each).
+### Next step (the one live lead)
+Run `w6-runs/BRIEF.md`. It was launched on 18 Nov and killed by a usage
+limit before producing anything (the limit was reported to reset on
+23 Nov 2026, 13:00 UTC). It tests a geometric observation: in the (p,k) grid
+bad nodes should form triangles with hypotenuse slope log₂3 = 1.585, while
+admissible paths have slope 1.33–1.5, so paths would cross triangles instead
+of running along them (in the sister problem G2 they were parallel, which
+killed that attack). The sketch is the coordinator's and unverified; its
+first job is exact computation of real triangles. Outcomes: (D) proved,
+(D) refuted, or a precise residual statement about chains of large triangles.
 
-Next mathematical steps, if continuing (each strictly weaker than Collatz):
-lemma G2 (lowers the 0.95 exponent in Thm 70); lemma FP-0 (beats the 0.2878
-seed-count exponent); Lemma T (ternary morphisms); formalize the sharp
-constants of Thm 70 and the corollaries of Thm 65 in Lean; F_2[x] Period
-Lemma. No known route from any of these to H1 or Lemma E.
+### Other open items, in order of usefulness
+1. Human literature check and human referee before describing anything
+   outside the repo; soften or cite per `literature/REPORT.md`. Theorems 65
+   and 68 still carry "possibly new" parts that were not checked case by
+   case against Dubickas 2009 and Bernstein–Lagarias 1996.
+2. `SmallHyp 32 E 497` (Lean hypothesis for the sharp residue bound): check
+   that the exhaustive run below 2^32 establishes it in exactly that form.
+3. Kernel replay (lean4checker) of the Mazur rebuild; rebuild of the
+   0.90-exponent archive needs ~10.6 GB RAM.
+4. Unrefereed candidates: w4-E corollaries, w4-free Benford law, F_2[x]
+   closed formula (Period Lemma open), Lemma T (ternary morphisms).
+5. Update "0.9251" to "0.93756 claimed (Müller, Zenodo, July 2026)" wherever
+   the predecessor exponent record is quoted outside proof.md's notice.
+
+### Housekeeping
+- Never commit: `kl-exponent/lit/kollatz/`, `kl-exponent/cert/` (4.5 GB),
+  `mazur-audit/{src,dl,build}/`, `literature/dl/`, `lean/.lake/`, compiled
+  binaries (all in `.gitignore`). Disk: about 32 GB free.
+- Do not touch `~/projects/collatz-handoff-202608160853-eeb165`.
+- Subagents' `REPORT.md` writes are refused by the harness: have them return
+  the full report in the final message and save it from the coordinator.
 
 ---
 

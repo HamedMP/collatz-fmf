@@ -1,0 +1,28 @@
+2N_{k-7} >= 0.4 N_k fails at k in [8,5000]: []  ; k<8 would be: [(4, 3), (5, 4), (6, 4), (7, 5)]
+ N_k = N_{k-6}+2N_{k-7}+N_{k-8} for 8<=k<=5000: True
+ min ratio 2N_{k-7}/N_k: 0.444444 at k=10; limit 0.495060
+ N_{k-6}<=2N_{k-7}, N_{k-8}<=N_{k-7} for k>=9: True ; k=8: (2, 4, 1, 2)
+Theorem 5 violations (|G|<=U<=N beta^g; 5 eps x 10 h x K=8..60, root + internal nodes): 0  near-tight cases |T|>0.98U: 0
+   K=40 h=1 |T|=33.282 U=1478.321 N*beta^g=3757.960 g=1 N_K=3833
+   K=60 h=1 |T|=242.325 U=39230.883 N*beta^g=191164.595 g=4 N_K=206897
+   K=40 h=2 |T|=25.064 U=1460.453 N*beta^g=3612.258 g=3 N_K=3833
+   K=60 h=2 |T|=168.596 U=24888.887 N*beta^g=187422.090 g=5 N_K=206897
+   K=40 h=3 |T|=34.584 U=1463.587 N*beta^g=3612.258 g=3 N_K=3833
+   K=60 h=3 |T|=98.502 U=30658.268 N*beta^g=187422.090 g=5 N_K=206897
+   K=40 h=5 |T|=26.552 U=1580.438 N*beta^g=3757.960 g=1 N_K=3833
+   K=60 h=5 |T|=28.911 U=40906.590 N*beta^g=187422.090 g=5 N_K=206897
+   K=40 h=11 |T|=26.483 U=1549.629 N*beta^g=3757.960 g=1 N_K=3833
+   K=60 h=11 |T|=551.664 U=42313.163 N*beta^g=194981.831 g=3 N_K=206897
+   K=40 h=27 |T|=40.898 U=1427.117 N*beta^g=3684.389 g=2 N_K=3833
+   K=60 h=27 |T|=447.450 U=53346.362 N*beta^g=198875.290 g=2 N_K=206897
+   K=40 h=243 |T|=54.548 U=1379.875 N*beta^g=3684.389 g=2 N_K=3833
+   K=60 h=243 |T|=671.935 U=74247.273 N*beta^g=198875.290 g=2 N_K=206897
+random xi mod 2^K violations: 0
+Traceback (most recent call last):
+  File "/home/matrix/home/projects/collatz/repo/notes/round6-nov2026/referee-fourier/r2_thm5.py", line 70, in <module>
+    print("  2N_{k-7} >= %.4f N_k for all 8<=k<=5000: %s" % (cst, all(2*N[k-7] >= cst*N[k] for k in range(8, 5001))))
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matrix/home/projects/collatz/repo/notes/round6-nov2026/referee-fourier/r2_thm5.py", line 70, in <genexpr>
+    print("  2N_{k-7} >= %.4f N_k for all 8<=k<=5000: %s" % (cst, all(2*N[k-7] >= cst*N[k] for k in range(8, 5001))))
+                                                                                  ~~~^~~~~
+OverflowError: int too large to convert to float
