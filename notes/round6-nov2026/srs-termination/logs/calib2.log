@@ -1,0 +1,44 @@
+G0y        st0 n=10 natural full org d=1 V=2  UNSAT      0.0s 
+G0y        st0 n=10 natural full rev d=1 V=2  UNSAT      0.0s 
+G0y        st0 n=10 natural top  org d=1 V=2  UNSAT      0.0s 
+G0y        st0 n=10 natural top  rev d=1 V=2  UNSAT      0.0s 
+G0y        st0 n=10 natural full org d=1 V=3  UNSAT      0.0s 
+G0y        st0 n=10 natural full rev d=1 V=3  UNSAT      0.0s 
+G0y        st0 n=10 natural top  org d=1 V=3  UNSAT      0.0s 
+G0y        st0 n=10 natural top  rev d=1 V=3  UNSAT      0.0s 
+G0y        st0 n=10 natural full org d=1 V=4  UNSAT      0.0s 
+G0y        st0 n=10 natural full rev d=1 V=4  UNSAT      0.0s 
+G0y        st0 n=10 natural top  org d=1 V=4  UNSAT      0.0s 
+G0y        st0 n=10 natural top  rev d=1 V=4  UNSAT      0.0s 
+G0y        st0 n=10 natural full org d=1 V=5  UNSAT      0.1s 
+G0y        st0 n=10 natural full rev d=1 V=5  UNSAT      0.1s 
+G0y        st0 n=10 natural top  org d=1 V=5  UNSAT      0.1s 
+G0y        st0 n=10 natural top  rev d=1 V=5  UNSAT      0.1s 
+G0y        st0 n=10 arctic  full org d=1 V=3  UNSAT      0.0s 
+G0y        st0 n=10 arctic  top  org d=1 V=3  UNSAT      0.0s 
+G0y        st0 n=10 arctic  top  rev d=1 V=3  UNSAT      0.0s 
+G0y        st0 n=10 arctic  full org d=1 V=4  UNSAT      0.0s 
+G0y        st0 n=10 arctic  top  org d=1 V=4  UNSAT      0.0s 
+G0y        st0 n=10 arctic  top  rev d=1 V=4  UNSAT      0.0s 
+G0y        st0 n=10 natural full org d=2 V=2  UNSAT      0.0s 
+G0y        st0 n=10 natural full rev d=2 V=2  UNSAT      0.0s 
+G0y        st0 n=10 natural top  org d=2 V=2  UNSAT      0.1s 
+G0y        st0 n=10 natural top  rev d=2 V=2  UNSAT      0.1s 
+G0y        st0 n=10 natural full org d=2 V=3  UNSAT      0.7s 
+G0y        st0 n=10 natural full rev d=2 V=3  SAT        0.6s f f f f R -> f 0 0 R
+G0y        st1 n= 9 natural full org d=1 V=2  SAT        0.0s L 0 -> L t
+G0y        st2 n= 8 natural full org d=1 V=2  SAT        0.0s L 1 -> L f f
+G0y        st3 n= 7 natural full org d=1 V=2  SAT        0.0s L 2 -> L f t
+G0y        st4 n= 6 natural full org d=1 V=2  UNSAT      0.0s 
+G0y        st4 n= 6 natural full rev d=1 V=2  UNSAT      0.0s 
+G0y        st4 n= 6 natural full org d=1 V=3  SAT        0.0s f 2 -> 1 f
+G0y        st5 n= 5 natural full org d=1 V=2  SAT        0.0s t 1 -> 2 f
+G0y        st6 n= 4 natural full org d=1 V=2  SAT        0.0s t 0 -> 1 t
+G0y        st7 n= 3 natural full org d=1 V=2  SAT        0.0s f 1 -> 0 t
+G0y        st8 n= 2 natural full org d=1 V=2  UNSAT      0.0s 
+G0y        st8 n= 2 natural full rev d=1 V=2  UNSAT      0.0s 
+G0y        st8 n= 2 natural full org d=1 V=3  SAT        0.0s f 0 -> 0 f
+G0y        st9 n= 1 natural full org d=1 V=2  UNSAT      0.0s 
+G0y        st9 n= 1 natural full rev d=1 V=2  UNSAT      0.0s 
+G0y        st9 n= 1 natural full org d=1 V=3  SAT        0.0s t 2 -> 2 t
+== G0y: PROVED, 0 rules remain: 

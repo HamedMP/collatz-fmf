@@ -1,0 +1,4 @@
+L1 Terras bijection on [2^L,2^(L+1)): OK for L<=12, maps (3,1),(3,-1),(3,5),(5,1)
+L2 descent lemma: 1253851 exact instances, 0 violations
+L3 remainder bound: 131070 exact instances, 0 violations
+L4 ancestor lemma + inequality W <= bad + ovh + (2/8)W: 3375 trajectories OK; max harmonic sum 2.936235 at n=1986

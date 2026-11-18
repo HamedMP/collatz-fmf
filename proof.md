@@ -1691,24 +1691,35 @@ scheme can prove H_R(B) < ∞ for any B. Positional deep-gate emptiness
 (16^r > 33B + 32 ⇒ empty below B) is real but does not remove the thick-class
 defect term. All statements transfer verbatim to 5n+1, as expected.
 
-### Theorem 58 (CANDIDATE — awaiting human review): Natural-Density Upgrade of Tao's Theorem ("Theorem ND", July 21 round 4, AI-refereed x2 NOT-REFUTED)
+### Theorem 58 (CANDIDATE; AI-generated, no human review; no priority): Natural-Density Form of Tao's Theorem ("Theorem ND", July 21 round 4; re-refereed November 2026)
 
-**Claimed statement:** there is an absolute C such that for every N0 ≥ 16,
-the set {N : Col_min(N) > N0} has upper natural density ≤ C·log^(−1/25) N0;
-consequently Col_min(N) ≤ f(N) for almost all N in NATURAL density, for every
-f → ∞. New components (each claimed proved, machine-checked): Lemma P7
-(s-pinned character sums bounded by Tao's own Section-7 majorant — the total
-valuation is measurable w.r.t. his pair-sum conditioning); **Lemma J*** — the
-fine-scale mixing of the entire affine map (S_n, X_n), exactly the object of
-Tao's Remark 1.16 ("plausibly attainable from the methods in this paper");
-Lemma R (pinned-sum renewal-equidistribution, limit 1/ln(4/3), via Rhin's
-effective irrationality measure of log₂3); uniform-window Prop 5.2-U with
-standoff inequality. The limiting first-passage measure equals Tao's
-log-density one. Manuscript: notes/round4-july2026/s5-completion/PROOFS.md
-(571 lines). **Status: candidate only. Two independent adversarial AI
-referees failed to refute (minor findings; all Tao citations verified against
-the arXiv v7 text; all scripts pass). NOT established mathematics until
-reviewed by a human expert; excluded from proof-obligations.md.**
+**Claimed statement:** for every N0 ≥ 16 the set {N : Col_min(N) > N0} has
+upper natural density at most C·(log N0)^(−1/25), with an absolute constant C
+that is NOT explicit; hence Col_min(N) ≤ f(N) for almost all N in natural
+density whenever f → ∞. Derivation:
+notes/round4-july2026/s5-completion/PROOFS.md (self-dated 21 July 2026; first
+committed 16 August 2026), to be read with the five repairs and nine
+corrections of the round-6 referee report
+(notes/round6-nov2026/nd-referee/REPORT.md); that AI referee found no fatal
+gap (its credence that the repaired manuscript proves the statement: 0.80).
+Components: Lemma P7 (s-pinned character sums bounded by Tao's Section-7
+majorant), Lemma J* (fine-scale mixing of the affine map (S_n, X_n), the
+object of Tao's Remark 1.16), Lemma R (pinned-sum renewal-equidistribution
+via an irrationality measure of log₂3), uniform-window Prop 5.2-U.
+
+**Priority:** the result was first claimed by J. Allikvere (Zenodo
+10.5281/zenodo.21340150, version 1 of 13 July 2026) by essentially the same
+method, and by L. Mazur (ProofAtlas, version 2 dated 21 July 2026, claimed
+Lean-checked) with explicit time bounds; T. Tao (blog comment, 23 August 2026)
+refers to such work as AI-generated solutions "if they check out". **The
+repository claims no priority and no novelty.** The exponent 1/25 is a
+bookkeeping choice that depends on Rhin's 1987 measure for 1, log 2, log 3
+with exponent 7.616 above an unspecified height (PROOFS.md misquotes it as
+valid for all heights; the explicit all-heights exponent 13.3 gives about
+1/36 by the same argument).
+
+**Status: candidate only. Not established mathematics; excluded from
+proof-obligations.md.**
 
 ### Theorem 59: Lemma E Partials — Depth Hierarchy and the Statistical No-Go (July 21 round 4, refereed; one-clause repair to LE1(c) noted)
 
@@ -1806,6 +1817,194 @@ FMF landing itself. (iv) is inspection of the trivial cycle.
 **Consequence:** the FMF framework is the k=2 member of the Terras parity-vector
 family; changing k re-chunks the same chain and does not touch H1 or Lemma E.
 Script: explorations/explore82_fm2k_generalization.py.
+
+### Round 6 (November 2026): Theorems 64–70 and Prior-Art Corrections
+
+Status labels: PROVED (full proof written), KERNEL-CHECKED (Lean 4, Mathlib,
+axioms propext / Classical.choice / Quot.sound only), VERIFIED to a bound,
+CANDIDATE, REFUTED. "AI-refereed" means one or two blind hostile AI referees
+failed to break it; **no result of this round has had human review.** Records:
+notes/round6-nov2026/ (track `REPORT.md` files and `referee-*/REPORT.md`).
+**Nothing in this round proves Collatz, H1 or Lemma E.**
+
+#### Theorem 64 (KERNEL-CHECKED): the two-lemma reduction is an equivalence
+
+`CollatzConjecture ↔ H1 ∧ LemmaE` (lean/CollatzFMF/TheoremR.lean), together
+with Theorem A (FMF formulas, against the semantic definition "first Collatz
+iterate divisible by 4"), Lemma P, the return map, and the block identity
+88·16^r·n' + 85·16^r = 3·27^r·(33n+32). Lemma E must be stated with weak
+non-descent and x₀ > 1 (it is false at x₀ = 1). The direction
+Collatz ⇒ H1 ∧ E is trivial in content; this is a faithfulness check of
+Theorem 55, not new mathematics. By the equivalence, the pair (H1, E) is
+exactly as hard as the conjecture. Not formalized: the "μ_L → ∞" form of H1,
+"finite epoch", the Theorem 62 identities.
+
+#### Theorem 65 (KERNEL-CHECKED for A, L, B; PROVED + AI-refereed for the rest): repetition barrier and two-block exclusion
+
+Single-coordinate form of the return map on w = 33n+32: letter a:
+w → (9w+1)/8 (w ≡ 7 mod 8), letter b: w → 27w/16 (16 | w); a return block of
+length r is b^r a. For a word v put B(v) = 3|v|_a + 4|v|_b,
+e(v) = 2|v|_a + 3|v|_b.
+
+- **(A) Repetition barrier** (Theorem 46 in these coordinates, any alphabet):
+  if a factor u occurs at positions i < i' of the itinerary of w₀ ≥ 1 and p is
+  the prefix of length i', then 2^(B(u)+B(p)) < (w₀+1)·3^e(p).
+- **(L) Weighted two-block lemma** (the new idea): every infinite word over
+  two blocks c, d starting with c, with positive additive weights l, has a
+  factor u occurring at positions i < i' with l(prefix up to i') ≤ 3·l(u)
+  and l(u) ≥ l(c).
+- **(B) Two-block exclusion:** if the itinerary of a positive integer w₀
+  lies in {X,Y}^ω with first block X, then
+  (w₀+1)^4 · 3^(9B(X)) > 2^(16B(X)).
+- **Corollaries (PROVED, AI-refereed, not in Lean):** no positive integer has
+  an itinerary that is a block coding of a fixed point of a non-erasing binary
+  morphism (non-uniform included); the same for two-block hierarchies whose
+  first-block length tends to infinity, and for standard episturmian words
+  over a finite alphabet. This closes, for two letters, the lead "extend
+  Theorem 51 beyond uniform morphisms".
+- **Collatz-orbit form (PROVED, AI-refereed):** a weakly non-descending orbit
+  whose parity sequence is two-block decomposable with block ones-density
+  ≤ θ' < (4/3)/log₂3 = 0.8412 is eventually periodic or has
+  |X|(1 − 3g − 3θ' log₂(1+1/(3x₀))) < log₂ x₀, g = θ' log₂3 − 1.
+- **Negative (PROVED, AI-refereed):** for moduli prime to 6 the only modular
+  invariant of the return map is w ≡ −1 (mod 11).
+- **Obstruction (VERIFIED to 242,218 letters):** for the return word
+  r_j = 4 + y_j, y the fixed point of 0→0312113, 1→201, 2→000303302,
+  3→301110, every repetition-type argument yields only w₀ > 2^62. The
+  same-factor method cannot reach H1 for general words.
+- **Litmus:** (B) fails for 5n+1 (needs 3^9 < 2^16; 5^9 > 2^16); its
+  conclusion is false for 3n−1 at the fixed point w = 1 (strict growth
+  fails). Scope: (B) excludes nothing observed; it bites only when
+  B(X) > 2.305·log₂(w₀+1).
+
+#### Theorem 66 (PROVED conditional on Evertse 1984 Cor. 1; AI-refereed ×2; ineffective): S-unit window law
+
+For odd x write x+1 = 2^s·m; along the hop orbit let S_k = Σ_{i<k} s_i,
+H_k = Σ_{i<k} h_i. For every fixed k ≥ 1 and δ > 0 only finitely many odd x₀
+have H_k + s_k > (1+δ)·log₂(x₀+1). Consequences: for each fixed k,
+limsup_j (s_j+…+s_{j+k})/(s_0+…+s_{j−1}) ≤ log₂(3/2); no positive integer has
+a hop word with liminf s_{j+1}/s_j > 1 (Theorem 62 had boundary log₂3);
+S_j, H_j, log x_j are e^{o(j)} in the hop count; return-map version for words
+of fixed length. **Limits:** constants ineffective and dependent on k; a
+version uniform in k is FALSE (x₀ = 1 forces C(k,δ) ≥ 2k − δ); vacuous for
+bounded depths and bounded alphabets; transfers verbatim to 5n+1 and 3n−1
+(checked for d = 1 only in the 3n+d family), so it is a size constraint and
+gives no descent. Prior art: Chang (arXiv:2603.11066) has the S-unit
+reformulation and reports the Subspace route as blocked. Not formalized.
+
+#### Theorem 67 (KERNEL-CHECKED): Krasikov–Lagarias soundness by induction on the predecessor set
+
+If positive weights c on residues m ≡ 2 (mod 3) modulo 3^k satisfy the
+Krasikov–Lagarias rows at exponent γ and M = max c, then for every
+a ≡ 2 (mod 3) not on a cycle and every real x ≥ a,
+π*_a(x) ≥ c(a mod 3^k)·(x/a)^γ/(4^γ M) (lean/CollatzFMF/KLSound.lean). **The
+statement is not new** (Krasikov–Lagarias 2003, Theorem 2.2, constant 4·max c);
+the proof is new and shorter (direct induction on |S_a(x)|, no advanced
+arguments, no second certificate). VERIFIED by exact integer certificates:
+Krasikov–Lagarias Table 2 reproduced for k = 2..11; k = 12..19 agree with the
+values recorded in dpalmqvist/kollatz; highest certified exponent here
+0.90942 at k = 19 (others claim 0.9251 at k = 22). The LP certificates are
+not in Lean. Non-periodic weights depending on 2-adic or size features give
+exactly the level-k exponent (PROVED). For 3n−1 the LP is identical but this
+proof fails at the ratio step; that is where "+1" enters.
+
+#### Theorem 68 (PROVED, AI-refereed): rigidity of T and the control family S_a
+
+T(n) = n/2, (3n+1)/2 is the unique S: ℕ → ℕ with (I) the parity-prefix
+property, (II) S(n) < n for even n, (III) n < S(n) ≤ 2n for odd n; (III) is
+sharp on both sides. For every a ≥ 0 the map S_a (= T, except T − 2^a on
+n ≡ −1 mod 2^(a+1)) has (I), (II), agrees with T below 2^(a+1) − 1 and
+modulo 2^a, and has the fixed point 2^(a+1) − 1; S_0 is 3n−1. Hence any proof
+of "no nontrivial cycle" must use n < T(n) at n = 2^(a+1) − 1 for every a.
+Also PROVED: maps agreeing with T on [1, X] and modulo any m with a nontrivial
+cycle above X; an isometric conjugate agreeing with T on an initial segment
+with a divergent orbit (on ℕ₀). An H1 orbit never meets −1 mod 16, so H1 is
+the same statement for T and every S_a with a ≥ 3. **Add S_a (all a) to the
+mandatory litmus maps.** Recomputed: plain Eliahou at 2^71 gives cycle length
+≥ 114,208,327,604 (unchanged from 2^68).
+
+#### Theorem 69 (PROVED, AI-refereed; formulation and no-go): H1 as a 2-adic Cantor set
+
+H1 for all positive w ⇔ E ∩ ℤ_{>0} = ∅, E ⊂ ℤ_2 the attractor of
+{z → (8z−1)/9, z → 16z/27}, dim E = 0.287761. The closed ×2-invariant hull of
+the digit readings of E is all of [0,1], so the Shmerkin–Wu intersection
+theorem gives only the trivial bound through that embedding. The 3n−1 system
+has attractor −E, which contains the positive integer 1; every reflection-
+invariant datum (dimensions, hull, counts) is identical for E and −E, so no
+argument using only such data can prove H1. (The w2-alpha report's dilation
+claim needs the gate w ≡ −d mod 8, and its "3n−115" example is a cycle of the
+transformed system only; do not cite them.)
+
+#### Theorem 70 (KERNEL-CHECKED with constant 1196; PROVED + AI-refereed with constant 27.2; independently re-proved blind): uniform harmonic bound along every trajectory
+
+For every positive integer n and every stretch x_0, …, x_{K−1} of pairwise
+distinct terms of the T-trajectory of n: **Σ 1/x_k ≤ 27.2** (no computation
+used). Mechanism: Terras' bijection between [2^L, 2^(L+1)) and parity vectors
+of length L; a term is "good" if its level-L vector forces
+T^L(x) ≤ x/2^s; good terms are charged injectively-up-to-doubling to the term
+L steps later; bad vectors have exponentially small mass because 3 < 4.
+Consequences:
+- 1 ≤ T^k(n)·2^k/(3^(a_k)·n) ≤ 7.62 up to the first repeated term, and
+  Roosendaal's residue 2^E/(3^O·n) ≤ 5.72 for every n reaching 1 (constant
+  uses an exhaustive run below 2^32, reproduced by the referee; his
+  conjecture Res ≤ Res(993) = 1.2531 stays open).
+- Given the published verification below 2^71: on any divergent trajectory or
+  nontrivial cycle the product Π(1+1/(3x_i)) ≤ 1.386; hence
+  3^(a_k)/2^k → ∞ on a divergent trajectory, and a nontrivial cycle with a
+  odd terms has exactly ⌈a·log₂3⌉ terms.
+- Any distinct stretch has at most 11.3·X^0.94996 terms ≤ X.
+A second agent, given only the bare statement, produced an independent proof
+(notes/round6-nov2026/blind-H/REPORT.md): by hand, at most 18.0·X^0.94996
+terms ≤ X and Σ 1/x_k ≤ 94; computer-assisted, Σ 1/x_k ≤ 31.81. It did not
+re-derive the constants 27.2 and 11.3.
+Lean (lean/CollatzFMF/Harmonic.lean, HarmonicBeta.lean; standard axioms
+only): `theoremH_three` — for every sequence x with x(k+1) = T(x k) and
+every K such that x is injective on indices below K,
+Σ_{k<K} 1/x_k ≤ 1196. The kernel-checked constant comes from a crude
+rational Chernoff bound on the bad mass; the constants 27.2, 5.72, 7.62,
+1.386 and 11.3, the residue bound, the cycle-length corollary and the
+sojourn count are NOT in Lean.
+**Litmus:** equally true for 3n−1 (cycles through 1, 5, 17 checked), so it
+cannot separate +1 from −1 and is no route to descent; the proof collapses
+for 5n+1 (uses 3 < 4). Novelty: not found in print in three searches; it is a
+short step from Terras 1976 and Lagarias 1985 and may be folklore.
+
+#### Further Round 6 items
+
+- **Short intervals (PROVED, AI-refereed; folklore-level; no Collatz
+  content):** for every real x ≥ 3 some integer in
+  (x, x(1 + C(log x)^(−1/13.3))] reaches 1; C not computed; exponent from
+  Rhin's bound as quoted second-hand. Holds verbatim for 5n+1.
+- **CONDITIONAL on Mazur's natural-density Theorem 3.1:** every eventually
+  Syracuse-invariant set has a natural density; the "almost all get small" +
+  "positive proportion reach 1" bootstrap is the identity (F(c) = c); if
+  every target's predecessor set has positive upper density, "density one
+  reach 1" is equivalent to Collatz. Nothing at density level distinguishes
+  3n+1 from 3n−1 (3n−1 basins: 0.327 / 0.325 / 0.348 to 10^8).
+- **Stopping-time game (PROVED lemma; line DEAD):** certified ratios stall at
+  0.46 (j = 12–13) below Amano's 1/2.
+- **F_2[x] analogue (CANDIDATE, VERIFIED to degree 262,656):** for
+  f_j = Σ_{l=0}^{2^j} x^((2^j+1)l), t_min = (4j−3)·4^j + 9·2^j, which would
+  make the maximal stopping time superlinear (open in Alon–Behajaina–Paran
+  2024). Carry-free neighbour; does not port to ℤ.
+- **Rewriting systems (PROVED equivalences, AI-proved, not refereed; no
+  termination proof of any open system):** string rewriting systems RET
+  (termination ⇔ H1), W (termination ⇔ "no positive z has an infinite orbit
+  under z → 27z/16, z → (9z+1)/8", which implies H1; H1 is exactly the class
+  z ≡ 10 mod 11; this map has no positive cycle; VERIFIED no infinite orbit
+  for z ≤ 10^11, longest 16 steps) and G (termination ⇔ every growth-B chain
+  is finite; implied by the open "5 mod 8" conjecture of
+  Yolcu–Aaronson–Heule). SAT search for matrix interpretations (natural to
+  dimension 3, arctic to dimension 3) removes no rule from any of them; the
+  non-terminating 5n+1 and 3n−1 controls give the same frontier.
+- **REFUTED:** structured 2-adic seeds beat random search for long glides
+  (they give 1–4 steps per bit against 14–18 for records).
+- **Prior art that changes "Still open" lists above:** natural-density Tao is
+  claimed by Allikvere and Mazur (Theorem 58 now says so); a positive lower
+  natural density of integers reaching 1 is claimed by Mazur (ProofAtlas,
+  Sept 2026; Lean statement audited here and matches the prose; NOT rebuilt
+  here, since it pins Lean v4.30.0-rc2); predecessor exponents 0.90–0.925 are
+  claimed by others; Amano 2021 has stopping-time constant 6.95212.
 
 ### Audit Outcome Summary
 

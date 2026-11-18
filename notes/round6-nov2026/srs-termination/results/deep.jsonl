@@ -1,0 +1,6 @@
+{"system": "W", "stage": 0, "nrules": 11, "kind": "natural", "mode": "top", "rev": true, "d": 3, "V": 3, "lo": 0, "timeout": 1200.0, "result": "TIMEOUT", "wall": 1200.12}
+{"system": "W", "stage": 0, "nrules": 11, "kind": "arctic", "mode": "top", "rev": true, "d": 3, "V": 4, "lo": 0, "timeout": 1200.0, "result": "UNSAT", "vars": 22629, "clauses": 70443, "t_enc": 0.04, "t_sat": 34.93, "wall": 35.0}
+{"system": "G", "stage": 0, "nrules": 11, "kind": "natural", "mode": "top", "rev": true, "d": 3, "V": 3, "lo": 0, "timeout": 1200.0, "result": "TIMEOUT", "wall": 1200.12}
+{"system": "G", "stage": 0, "nrules": 11, "kind": "arctic", "mode": "top", "rev": true, "d": 3, "V": 4, "lo": 0, "timeout": 1200.0, "result": "UNSAT", "vars": 17430, "clauses": 54114, "t_enc": 0.03, "t_sat": 51.89, "wall": 51.94}
+{"system": "P", "stage": 0, "nrules": 10, "kind": "natural", "mode": "top", "rev": true, "d": 3, "V": 3, "lo": 0, "timeout": 1200.0, "result": "TIMEOUT", "wall": 1200.12}
+{"system": "P", "stage": 0, "nrules": 10, "kind": "arctic", "mode": "top", "rev": true, "d": 3, "V": 4, "lo": 0, "timeout": 1200.0, "result": "UNSAT", "vars": 18455, "clauses": 57288, "t_enc": 0.04, "t_sat": 93.66, "wall": 93.72}

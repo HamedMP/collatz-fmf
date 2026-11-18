@@ -1,0 +1,16 @@
+ThmA: 418338 repetition instances (74874 overlapping), violations 0
+T0 = 5.298802786555889  3/log2(9/8) = 17.654847577085153  kappa = 0.43383437337739883 0.43383437337739883  3^9<2^16: True  6.2988? 6.298802786555889  A1 const 3/(3log2(3)-4) = 3.974102089916917
+(1.1) is equivalent to 3B(v) >= 4e(v), i.e. 9x+12y >= 8x+12y : holds: True
+integer chain: (27/16)^3 = 3^9/2^12, so 2^(4B) < (w0+1)^4 3^(9B)/2^(12B)  <=> (w0+1)^4 3^(9B) > 2^(16B): OK
+B1: random morphisms x levels tested 1476, violations 0, min bits(w0+1)/B(X_t) ~ 1.714
+B3: Justin-shape instances 1888, shape failures 0; numeric bound tests 1888, violations 0
+PropD: commutator ab-ba = -11/128 ; m<500 coprime to 6: failures 0 ; two-orbit moduli 15
+litmus (3,+1): (15300, 0, 1.6548, None)
+litmus (3,-1): (cases, violations of 3-type conclusion, min log2(w0+1)/B(X), first non-growth) (15300, 376, 0.0833, (1, 'aa'))
+litmus (5,+1): same 3-type conclusion tested on 5-system: (15300, 0, 1.1547, None)
+   5-system: T_b = 4/(3log2 5-4) = 1.3487157581508826  T_a = 1.8249771595963773  2^(16/9) = 3.428975931412291  5^9<2^16: False
+   (3,-1) fixed point: step(1) = ('a', 1)  ; conclusion at w0=1, X=a: False
+   w=-1 <-> x = -5 (the -5 cycle of 3n+1)
+vacuity: DFS nodes 719345; longest itinerary of a positive w0 < 2^64: len 26, w0=13260338733143908048, word baaaababbbbbabaabbaababaaa
+   max B(prefix)/log2(w0+1) (len>=6): (1.5149251102957397, 56191431, 'abbaaabbbba', 39)
+   (Theorem B is non-trivial only when B(X) > 2.305 log2(w0+1), i.e. needs B(itinerary) >= 2B(X) > 4.6 log2(w0+1))

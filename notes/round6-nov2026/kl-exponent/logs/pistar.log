@@ -1,0 +1,65 @@
+== 3n+1: all a<=3000, x<=1e7
+map (3n+1)/2: tested 1000 targets a in [2,3000] (1 on a cycle), xmax=min(1e+12 a, 10000000), 182120946 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.231222 (a=2999, x->3998) ; cycle min ratio 2.706798 (a=2, x->4)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.032577 (a=2999, x->3998) ; cycle min ratio 3.856486 (a=2, x->8)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.407132 (a=2990, x->3986) ; cycle min ratio 4.981886 (a=2, x->8)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.211415 (a=2936, x->3914) ; cycle min ratio 6.713074 (a=2, x->8)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 6.220935 (a=2855, x->3806) ; cycle min ratio 8.066395 (a=2, x->8)
+== 3n+1: a in [3000,1e6] every 997th principal a, x<=min(65536a,1e8)
+map (3n+1)/2: tested 334 targets a in [3000,1000000] (0 on a cycle), xmax=min(65536 a, 100000000), 1543880 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.230987 (a=996014, x->1328018)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.032066 (a=987041, x->1316054)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.406511 (a=978068, x->1304090)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.210642 (a=843473, x->1124630)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 6.220111 (a=520445, x->693926)
+== 3n+1: a in [1e6,1e7] every 99991st, x<=4096a
+map (3n+1)/2: tested 31 targets a in [1000000,10000000] (0 on a cycle), xmax=min(4096 a, 40000000000), 1046780 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.230986 (a=9999191, x->13332254)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.032064 (a=9099272, x->12132362)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.406509 (a=2799839, x->3733118)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.210640 (a=5499596, x->7332794)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 6.774170 (a=2799839, x->3733118)
+== 3n+1: x just above a: all a<=200000, x<=16a
+map (3n+1)/2: tested 66667 targets a in [2,200000] (1 on a cycle), xmax=min(16 a, 1000000000), 8422804 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.230990 (a=200000, x->266666) ; cycle min ratio 2.706798 (a=2, x->4)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.032072 (a=199991, x->266654) ; cycle min ratio 3.856486 (a=2, x->8)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.406518 (a=199982, x->266642) ; cycle min ratio 4.981886 (a=2, x->8)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.210651 (a=199766, x->266354) ; cycle min ratio 6.713074 (a=2, x->8)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 6.220118 (a=199685, x->266246) ; cycle min ratio 8.066395 (a=2, x->8)
+== 5n+1: all a<=3000, x<=1e7
+map (5n+1)/2: tested 600 targets a in [1,3000] (9 on a cycle), xmax=min(1e+12 a, 10000000), 2306447 tree nodes
+  k=2 gamma=0.2577943 M=2.043695 : non-cycle min ratio 6.988328 (a=2978, x->4764) ; cycle min ratio 7.324314 (a=3, x->4)
+  k=3 gamma=0.2975477 M=4.356610 : non-cycle min ratio 8.358860 (a=2953, x->4724) ; cycle min ratio 10.620274 (a=3, x->4)
+  k=4 gamma=0.3332357 M=9.855178 : non-cycle min ratio 10.725635 (a=2578, x->4124) ; cycle min ratio 12.485345 (a=3, x->4)
+  k=5 gamma=0.3809085 M=19.582129 : non-cycle min ratio 12.768485 (a=1693, x->2708) ; cycle min ratio 24.884548 (a=3, x->4)
+  k=6 gamma=0.4105754 M=37.053307 : non-cycle min ratio 15.094800 (a=1693, x->2708) ; cycle min ratio 36.555084 (a=3, x->4)
+  k=7 gamma=0.4327938 M=64.465466 : non-cycle min ratio 20.009384 (a=1628, x->2604) ; cycle min ratio 57.030457 (a=68, x->108)
+== 5n+1: all a<=100000, x<=256a
+map (5n+1)/2: tested 20000 targets a in [1,100000] (9 on a cycle), xmax=min(256 a, 1000000000), 8730013 tree nodes
+  k=2 gamma=0.2577943 M=2.043695 : non-cycle min ratio 6.988035 (a=99978, x->159964) ; cycle min ratio 7.324314 (a=3, x->4)
+  k=3 gamma=0.2975477 M=4.356610 : non-cycle min ratio 8.358451 (a=99953, x->159924) ; cycle min ratio 10.620274 (a=3, x->4)
+  k=4 gamma=0.3332357 M=9.855178 : non-cycle min ratio 10.724960 (a=99453, x->159124) ; cycle min ratio 12.485345 (a=3, x->4)
+  k=5 gamma=0.3809085 M=19.582129 : non-cycle min ratio 12.767074 (a=98568, x->157708) ; cycle min ratio 24.884548 (a=3, x->4)
+  k=6 gamma=0.4105754 M=37.053307 : non-cycle min ratio 14.273351 (a=89193, x->142708) ; cycle min ratio 36.555084 (a=3, x->4)
+  k=7 gamma=0.4327938 M=64.465466 : non-cycle min ratio 15.188700 (a=89193, x->142708) ; cycle min ratio 57.030457 (a=68, x->108)
+== 3n-1: all a<=3000, x<=1e7
+map (3n-1)/2: tested 1000 targets a in [1,3000] (11 on a cycle), xmax=min(1e+12 a, 10000000), 114397898 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.187870 (a=16, x->22) ; cycle min ratio 1.425047 (a=1, x->2)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.002715 (a=52, x->70) ; cycle min ratio 1.981143 (a=1, x->2)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.385441 (a=88, x->118) ; cycle min ratio 2.015494 (a=1, x->2)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.200444 (a=223, x->298) ; cycle min ratio 2.261074 (a=1, x->2)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 6.217113 (a=790, x->1054) ; cycle min ratio 2.299529 (a=1, x->2)
+== 3n-1: all a<=200000, x<=16a
+map (3n-1)/2: tested 66667 targets a in [1,200000] (11 on a cycle), xmax=min(16 a, 1000000000), 8209441 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.187870 (a=16, x->22) ; cycle min ratio 1.425047 (a=1, x->2)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.002715 (a=52, x->70) ; cycle min ratio 1.981143 (a=1, x->2)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.385441 (a=88, x->118) ; cycle min ratio 2.015494 (a=1, x->2)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.200444 (a=223, x->298) ; cycle min ratio 2.261074 (a=1, x->2)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 6.217113 (a=790, x->1054) ; cycle min ratio 2.299529 (a=1, x->2)
+== 3n-1: a in [3000,1e6] every 997th, x<=min(65536a,1e8)
+map (3n-1)/2: tested 334 targets a in [3000,1000000] (0 on a cycle), xmax=min(65536 a, 100000000), 1275914 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.230869 (a=5992, x->7990)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.031808 (a=5992, x->7990)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.406464 (a=41884, x->55846)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.210615 (a=95722, x->127630)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 6.220093 (a=176479, x->235306)

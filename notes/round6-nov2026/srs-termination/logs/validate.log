@@ -1,0 +1,8 @@
+W   : 2 dynamic rules; inputs 1..1000000 x ['R']: 187499 rule applications validated; exceptions (map defined, no rule matches; all have finite orbits): [(7, 'R')]
+RET : 4 dynamic rules; inputs 1..1000000 x ['R0', 'R1']: 374997 rule applications validated; exceptions (map defined, no rule matches; all have finite orbits): [(7, 'R0'), (3, 'R1'), (14, 'R1')]
+G   : 2 dynamic rules; inputs 1..1000000 x ['O']: 187498 rule applications validated; exceptions (map defined, no rule matches; all have finite orbits): [(7, 'O'), (11, 'O')]
+P   : 1 dynamic rules; inputs 1..1000000 x ['R']: 62499 rule applications validated; exceptions (map defined, no rule matches; all have finite orbits): [(13, 'R')]
+cross (i)+(iv): two-state block map == paper T(n) == W-form block on z=33n+32 for all 0<=n<=1000000 (133333 defined)
+cross (ii): two-state map == real Collatz FMF growth-B hop onto a continuing Type-B state of depth in {0,1}, all 0<=n<=1000000, both states (375001 defined)
+cross (iii): G-run (rule-1 steps then one rule-2 step) == real growth-B hop for all odd 3<=x<=1000000 (125001 growth-B hops)
+identities: 16(11m'+1)=27(11m+1); 16(11n'+6)=27(11n+6); 128(115n''+112)=243(115n+112) OK

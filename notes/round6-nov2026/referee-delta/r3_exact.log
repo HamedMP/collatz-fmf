@@ -1,0 +1,7 @@
+Lemma1/2/PropI: 65535 integers, all levels 0..15 OK; max r/(bound)=1.000000; max 2^s T^L(x)/x over good=0.962302
+Prop I / Lemma 1 random large: 3000 OK
+d=+1: 54048 (stretch,s) checks OK; max sum=2.936739 (start 533112815616); max bad mass(s=3)=2.9275 (bound 19.372); max overhang=0.2660 (<=1); max ancestor ratio=1.9695 (<=2)
+d=-1: 53922 (stretch,s) checks OK; max sum=2.416341 (start 3072); max bad mass(s=3)=2.3958 (bound 19.372); max overhang=0.2802 (<=1); max ancestor ratio=1.9618 (<=2)
+bad counts by enumeration == binomial counts, and true bad mass <= per-level bound, L<=18 OK
+reciprocal-sum bounds OK
+Thm S: max N_L/2^(eta L) over tests = 1.6078 (bound 11.3)

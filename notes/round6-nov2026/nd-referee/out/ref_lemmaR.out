@@ -1,0 +1,35 @@
+1/ln(4/3) = 3.476059496782208
+--- slope log2(3)  [3n+1 and 3n-1]; predicted limit 3.4760594968
+  k*=     30  min K=3.45372364  max K=3.50606349  max|K-target|=3.000e-02
+  k*=    100  min K=3.46133554  max K=3.49144647  max|K-target|=1.539e-02
+  k*=    300  min K=3.46540488  max K=3.48632638  max|K-target|=1.065e-02
+  k*=   1000  min K=3.47206396  max K=3.48099023  max|K-target|=4.931e-03
+  k*=   3000  min K=3.47352504  max K=3.47839428  max|K-target|=2.534e-03
+  k*=  10000  min K=3.47440786  max K=3.47774139  max|K-target|=1.682e-03
+  k*=  30000  min K=3.47459614  max K=3.47758579  max|K-target|=1.526e-03
+  k*= 100000  min K=3.47478806  max K=3.47735346  max|K-target|=1.294e-03
+--- slope 3/2 (rational control); predicted limit 2.8853900818
+  k*=    300  min K=2.41741830  max K=3.40854068  max|K-target|=5.232e-01
+  k*=   1000  min K=2.45191482  max K=3.40851275  max|K-target|=5.231e-01
+  k*=   3000  min K=2.41521820  max K=3.39278704  max|K-target|=5.074e-01
+  k*=  10000  min K=2.44231423  max K=3.36093097  max|K-target|=4.755e-01
+--- slope 8/5 (rational control); predicted limit 3.6067376022
+  k*=    300  min K=3.36425266  max K=3.85884184  max|K-target|=2.521e-01
+  k*=   1000  min K=3.36378129  max K=3.85606263  max|K-target|=2.493e-01
+  k*=   3000  min K=3.36391124  max K=3.85202777  max|K-target|=2.453e-01
+  k*=  10000  min K=3.40165054  max K=3.83745516  max|K-target|=2.307e-01
+--- slope 19/12 (rational control); predicted limit 3.4624680981
+  k*=    300  min K=3.36714354  max K=3.55750994  max|K-target|=9.532e-02
+  k*=   1000  min K=3.36621119  max K=3.55748079  max|K-target|=9.626e-02
+  k*=   3000  min K=3.36483040  max K=3.55590095  max|K-target|=9.764e-02
+  k*=  10000  min K=3.38043922  max K=3.56296525  max|K-target|=1.005e-01
+--- slope 1054/665 (convergent of log2 3); predicted limit 3.4760587036
+  k*=   1000  min K=3.47094097  max K=3.47998921  max|K-target|=5.118e-03
+  k*= 100000  min K=3.47438891  max K=3.47779868  max|K-target|=1.740e-03
+--- slope 8/5+1e-9 (near-rational: shows why an irrationality MEASURE is needed); predicted limit 3.6067376022
+  k*=   1000  min K=3.36425263  max K=3.85884180  max|K-target|=2.521e-01
+  k*= 100000  min K=3.36378125  max K=3.85606260  max|K-target|=2.493e-01
+--- slope log2(5)  [5n+1: drift sign enters elsewhere]; predicted limit 4.4814201177
+  k*=    300  min K=4.47454349  max K=4.49047037  max|K-target|=9.050e-03
+  k*=   3000  min K=4.47921655  max K=4.48376954  max|K-target|=2.349e-03
+  k*=  30000  min K=4.48034943  max K=4.48251054  max|K-target|=1.090e-03

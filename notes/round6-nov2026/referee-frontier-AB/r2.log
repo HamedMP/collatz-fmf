@@ -1,0 +1,5 @@
+(A) shapes of length<=22: 191 failures: 0 worst min-ratio on grid: 2.3220338983050848 ('cdddccd', np.float64(0.475))
+(B) literal case-analysis witnesses checked: 86260 failures: 0
+(C) all 8192 words of length 14 : words failing for some grid rho: 2 ; of these NOT of the incomplete form c d^k c^j (no closing d): 0 []
+    limit case cddddd... all grid rho ok: True extra bad: []
+    limit case cdcccc... all grid rho ok: True extra bad: []

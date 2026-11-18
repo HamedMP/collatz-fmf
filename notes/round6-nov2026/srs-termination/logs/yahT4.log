@@ -1,0 +1,33 @@
+T-2        st0 n=10 natural top  org d=4 V=2  SAT        0.7s L 1 -> L f f
+T-2        st1 n= 9 natural top  org d=4 V=2  SAT        4.5s L 0 -> L t
+T-2        st2 n= 8 natural top  org d=4 V=2  SAT        0.2s L 2 -> L f t
+T-2        st3 n= 7 natural full org d=1 V=2  SAT        0.0s f R -> R
+T-2        st4 n= 6 natural full org d=1 V=2  SAT        0.0s t R -> 2 R
+T-2        st5 n= 5 natural full org d=1 V=2  UNSAT      0.0s 
+T-2        st5 n= 5 natural full rev d=1 V=2  UNSAT      0.0s 
+T-2        st5 n= 5 natural full org d=1 V=3  SAT        0.0s t 2 -> 2 t
+T-2        st6 n= 4 natural full org d=1 V=2  UNSAT      0.0s 
+T-2        st6 n= 4 natural full rev d=1 V=2  UNSAT      0.0s 
+T-2        st6 n= 4 natural full org d=1 V=3  SAT        0.0s f 1 -> 0 t; f 2 -> 1 f
+T-2        st7 n= 2 natural full org d=1 V=2  SAT        0.0s t 1 -> 2 f
+T-2        st8 n= 1 natural full org d=1 V=2  SAT        0.0s t 0 -> 1 t
+== T-2: PROVED, 0 rules remain: 
+T-10       st0 n=10 natural top  org d=4 V=2  TIMEOUT  300.1s 
+T-10       st0 n=10 arctic  top  org d=3 V=4  UNSAT     21.3s 
+T-10       st0 n=10 arctic  top  org d=4 V=3  SAT        0.4s L 0 -> L t
+T-10       st1 n= 9 natural top  org d=4 V=2  SAT        0.4s L 1 -> L f f
+T-10       st2 n= 8 natural full org d=1 V=2  SAT        0.0s f R -> R
+T-10       st3 n= 7 natural full org d=1 V=2  SAT        0.0s t R -> 2 R
+T-10       st4 n= 6 natural full org d=1 V=2  UNSAT      0.0s 
+T-10       st4 n= 6 natural full rev d=1 V=2  UNSAT      0.0s 
+T-10       st4 n= 6 natural full org d=1 V=3  SAT        0.0s f 2 -> 1 f
+T-10       st5 n= 5 natural full org d=1 V=2  SAT        0.0s t 1 -> 2 f
+T-10       st6 n= 4 natural full org d=1 V=2  SAT        0.0s t 0 -> 1 t
+T-10       st7 n= 3 natural full org d=1 V=2  SAT        0.0s f 1 -> 0 t
+T-10       st8 n= 2 natural full org d=1 V=2  UNSAT      0.0s 
+T-10       st8 n= 2 natural full rev d=1 V=2  UNSAT      0.0s 
+T-10       st8 n= 2 natural full org d=1 V=3  SAT        0.0s f 0 -> 0 f
+T-10       st9 n= 1 natural full org d=1 V=2  UNSAT      0.0s 
+T-10       st9 n= 1 natural full rev d=1 V=2  UNSAT      0.0s 
+T-10       st9 n= 1 natural full org d=1 V=3  SAT        0.0s t 2 -> 2 t
+== T-10: PROVED, 0 rules remain: 

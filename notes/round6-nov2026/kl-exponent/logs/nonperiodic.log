@@ -1,0 +1,57 @@
+plain level-k values (power iteration):
+  k=2 gamma_k=0.436588
+  k=3 gamma_k=0.611262
+  k=4 gamma_k=0.689109
+  k=5 gamma_k=0.733580
+  k=6 gamma_k=0.760819
+  k=7 gamma_k=0.782569
+  k=8 gamma_k=0.803197
+  k=9 gamma_k=0.816831
+
+(A) 2-adic feature  W = w(a mod 3^k, a mod 2^j)   [LP, HiGHS]
+  k=2 j=1 vars=    6: gamma=0.436588  plain LP gamma_k=0.436588  diff=+0.0e+00
+  k=2 j=2 vars=   12: gamma=0.436588  plain LP gamma_k=0.436588  diff=+1.7e-07
+  k=2 j=3 vars=   24: gamma=0.436588  plain LP gamma_k=0.436588  diff=+1.7e-07
+  k=3 j=1 vars=   18: gamma=0.611262  plain LP gamma_k=0.611262  diff=+0.0e+00
+  k=3 j=2 vars=   36: gamma=0.611262  plain LP gamma_k=0.611262  diff=+0.0e+00
+  k=3 j=3 vars=   72: gamma=0.611262  plain LP gamma_k=0.611262  diff=+0.0e+00
+  k=4 j=1 vars=   54: gamma=0.689109  plain LP gamma_k=0.689109  diff=+0.0e+00
+  k=4 j=2 vars=  108: gamma=0.689109  plain LP gamma_k=0.689109  diff=+0.0e+00
+  k=4 j=3 vars=  216: gamma=0.689109  plain LP gamma_k=0.689109  diff=+0.0e+00
+  k=5 j=1 vars=  162: gamma=0.733580  plain LP gamma_k=0.733580  diff=+0.0e+00
+  k=5 j=2 vars=  324: gamma=0.733580  plain LP gamma_k=0.733580  diff=+0.0e+00
+  k=5 j=3 vars=  648: gamma=0.733580  plain LP gamma_k=0.733580  diff=+0.0e+00
+
+(B) size feature  W = w(a mod 3^k, floor(log2 a) mod J)   [LP, HiGHS]
+  k=2 J=2 vars=    6: gamma=0.436588  plain LP gamma_k=0.436588  diff=+0.0e+00
+  k=2 J=3 vars=    9: gamma=0.436588  plain LP gamma_k=0.436588  diff=+0.0e+00
+  k=2 J=5 vars=   15: gamma=0.436588  plain LP gamma_k=0.436588  diff=+0.0e+00
+  k=3 J=2 vars=   18: gamma=0.611262  plain LP gamma_k=0.611262  diff=+0.0e+00
+  k=3 J=3 vars=   27: gamma=0.611262  plain LP gamma_k=0.611262  diff=+0.0e+00
+  k=3 J=5 vars=   45: gamma=0.611262  plain LP gamma_k=0.611262  diff=+0.0e+00
+  k=4 J=2 vars=   54: gamma=0.689109  plain LP gamma_k=0.689109  diff=+0.0e+00
+  k=4 J=3 vars=   81: gamma=0.689109  plain LP gamma_k=0.689109  diff=+0.0e+00
+  k=4 J=5 vars=  135: gamma=0.689109  plain LP gamma_k=0.689109  diff=+0.0e+00
+
+(C) rank-1 compression  c_(k+j) = u(low k digits) (x) v(top j digits)
+    params = 3^(k-1)+3^j ; 'gain' = (gamma_sep-gamma_k)/(gamma_(k+j)-gamma_k);
+    'k_eq' = level whose plain vector has as many parameters (log_3 params + 1)
+  k=2 j=1: params=    6 (full level 3:     9)  gamma_sep=0.436588  gamma_k=0.436588 gamma_(k+j)=0.611262 gain=-0.000  plain at equal size (k_eq=2.63, interpolated) 0.546795  => loss
+  k=2 j=2: params=   12 (full level 4:    27)  gamma_sep=0.436588  gamma_k=0.436588 gamma_(k+j)=0.689109 gain=-0.000  plain at equal size (k_eq=3.26, interpolated) 0.631647  => loss
+  k=2 j=3: params=   30 (full level 5:    81)  gamma_sep=0.436588  gamma_k=0.436588 gamma_(k+j)=0.733580 gain=-0.000  plain at equal size (k_eq=4.10, interpolated) 0.693374  => loss
+  k=3 j=1: params=   12 (full level 4:    27)  gamma_sep=0.611262  gamma_k=0.611262 gamma_(k+j)=0.689109 gain=-0.000  plain at equal size (k_eq=3.26, interpolated) 0.631647  => loss
+  k=3 j=2: params=   18 (full level 5:    81)  gamma_sep=0.611261  gamma_k=0.611262 gamma_(k+j)=0.733580 gain=-0.000  plain at equal size (k_eq=3.63, interpolated) 0.660378  => loss
+  k=3 j=3: params=   36 (full level 6:   243)  gamma_sep=0.611262  gamma_k=0.611262 gamma_(k+j)=0.760819 gain=-0.000  plain at equal size (k_eq=4.26, interpolated) 0.700754  => loss
+  k=4 j=1: params=   30 (full level 5:    81)  gamma_sep=0.689108  gamma_k=0.689109 gamma_(k+j)=0.733580 gain=-0.000  plain at equal size (k_eq=4.10, interpolated) 0.693374  => loss
+  k=4 j=2: params=   36 (full level 6:   243)  gamma_sep=0.689109  gamma_k=0.689109 gamma_(k+j)=0.760819 gain=-0.000  plain at equal size (k_eq=4.26, interpolated) 0.700754  => loss
+  k=4 j=3: params=   54 (full level 7:   729)  gamma_sep=0.689108  gamma_k=0.689109 gamma_(k+j)=0.782569 gain=-0.000  plain at equal size (k_eq=4.63, interpolated) 0.717167  => loss
+  k=5 j=1: params=   84 (full level 6:   243)  gamma_sep=0.733580  gamma_k=0.733580 gamma_(k+j)=0.760819 gain=-0.000  plain at equal size (k_eq=5.03, interpolated) 0.734482  => loss
+  k=5 j=2: params=   90 (full level 7:   729)  gamma_sep=0.733580  gamma_k=0.733580 gamma_(k+j)=0.782569 gain=-0.000  plain at equal size (k_eq=5.10, interpolated) 0.736192  => loss
+  k=6 j=1: params=  246 (full level 7:   729)  gamma_sep=0.760819  gamma_k=0.760819 gamma_(k+j)=0.782569 gain=-0.000  plain at equal size (k_eq=6.01, interpolated) 0.761062  => loss
+  k=6 j=2: params=  252 (full level 8:  2187)  gamma_sep=0.760818  gamma_k=0.760819 gamma_(k+j)=0.803197 gain=-0.000  plain at equal size (k_eq=6.03, interpolated) 0.761539  => loss
+  k=7 j=1: params=  732 (full level 8:  2187)  gamma_sep=0.782569  gamma_k=0.782569 gamma_(k+j)=0.803197 gain=-0.000  plain at equal size (k_eq=7.00, interpolated) 0.782646  => loss
+
+singular values of the level-K Perron vector reshaped (top j digits) x (low digits), log-domain:
+  K=8 j=2: sigma/sigma_1 = [1.0, 0.1003, 0.0922, 0.0448, 0.0424, 0.0419]
+  K=8 j=3: sigma/sigma_1 = [1.0, 0.1414, 0.1225, 0.0692, 0.061, 0.0563]
+  K=9 j=3: sigma/sigma_1 = [1.0, 0.114, 0.1049, 0.0512, 0.0497, 0.0477]

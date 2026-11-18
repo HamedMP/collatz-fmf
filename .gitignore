@@ -3,3 +3,38 @@ __pycache__/
 .DS_Store
 dist/
 site/paper/collatz-fmf.pdf
+lean/.lake/
+.claude/settings.local.json
+# round 6: large or third-party material, never commit
+notes/round6-nov2026/kl-exponent/lit/kollatz/
+notes/round6-nov2026/kl-exponent/cert/
+notes/round6-nov2026/mazur-audit/src/
+notes/round6-nov2026/mazur-audit/dl/
+notes/round6-nov2026/mazur-audit/build/
+# round 6: third-party literature and sources (download again from the URLs in the reports), build outputs
+notes/round6-nov2026/**/lit/
+notes/round6-nov2026/nd-referee/tao-src/
+notes/round6-nov2026/nd-referee/prior-art/
+notes/round6-nov2026/nd-referee/sources/
+notes/round6-nov2026/mazur-audit/txt/
+notes/round6-nov2026/srs-termination/published/
+notes/round6-nov2026/outside/data/certs/*.bin
+notes/round6-nov2026/**/__pycache__/
+notes/round6-nov2026/lean/lake-setup.log
+# round 6: compiled executables (rebuild from the .c beside them)
+notes/round6-nov2026/blind-H/numerics
+notes/round6-nov2026/kl-exponent/src/klrho_d
+notes/round6-nov2026/kl-exponent/src/klrho_f
+notes/round6-nov2026/kl-exponent/src/pistar
+notes/round6-nov2026/kl-exponent/src/pistar32
+notes/round6-nov2026/outside/scripts/f2max
+notes/round6-nov2026/outside/scripts/game2
+notes/round6-nov2026/referee-delta/r1_numerics
+notes/round6-nov2026/referee-delta/r5_MB
+notes/round6-nov2026/referee-kl-T/ref_pistar
+notes/round6-nov2026/w2-beta/basins
+notes/round6-nov2026/w2-beta/visits
+notes/round6-nov2026/w2-delta/s3_small
+notes/round6-nov2026/w2-delta/s4_generations
+notes/round6-nov2026/w2-delta/s5_small_stream
+notes/round6-nov2026/w2-gamma/glide

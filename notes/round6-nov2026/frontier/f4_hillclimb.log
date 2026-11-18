@@ -1,0 +1,6 @@
+lemma grid: max over (k,j,rho) of min candidate ratio = 2.72500 at (1, 2, Fraction(69, 40)) (claim <= 1+sqrt3=2.73205 <= 3)
+K=3 best screen 4.2000 refined(N=6000) 4.2000 at (34, 141) phi=['02', '200', '10011'] l=[1.    1.333 2.   ]
+lemma grid: max over (k,j,rho) of min candidate ratio = 2.72500 at (1, 2, Fraction(69, 40)) (claim <= 1+sqrt3=2.73205 <= 3)
+K=4 best screen 6.4284 refined(N=6000) 6.3906 at (63, 374) phi=['0312113', '201', '000303302', '301110'] l=[1.848 1.    2.865 1.421]
+lemma grid: max over (k,j,rho) of min candidate ratio = 2.72500 at (1, 2, Fraction(69, 40)) (claim <= 1+sqrt3=2.73205 <= 3)
+K=5 best screen 7.6442 refined(N=6000) 7.6442 at (150, 1147) phi=['0124431', '10044144', '221013340', '130300332', '32'] l=[2.056 1.64  3.208 3.739 1.   ]

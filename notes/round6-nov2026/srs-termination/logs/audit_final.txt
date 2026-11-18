@@ -1,0 +1,1259 @@
+=== certificate chains (each re-checked by a fresh `check.py` process) ===
+C3m.neg.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  CONTROL OK (no loop rule removed)
+C4-0.repro.json              rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[1, 0, 8, 9, 10, 4, 6, 5, 3, 2, 7] remaining=[]
+C4-2.repro.json              rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[1, 0, 8, 9, 10, 4, 6, 5, 3, 2, 7] remaining=[]
+C5.neg.json                  rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]  CONTROL OK (no loop rule removed)
+FMF3m.neg.json               rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  CONTROL OK (no loop rule removed)
+FMF5.neg.json                rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]  CONTROL OK (no loop rule removed)
+Farkas.farkas.json           rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Farkas.farkasneg.json        rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+G-0.calib.json               rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+G-1.calib.json               rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 9, 8, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+G.deep.json                  rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+G.front.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+G.main.json                  rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+G0y.calib2.json              rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[0, 7, 8, 9, 3, 5, 4, 2, 1, 6] remaining=[]
+G5.neg.json                  rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]  CONTROL OK (no loop rule removed)
+G~0.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+G~1.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 9, 8, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+G~10.sub.json                rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+G~2.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+G~3.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[3, 4, 5, 8, 7, 1, 9, 0, 2, 6] remaining=[]
+G~4.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[3, 4, 5, 8, 7, 1, 9, 0, 2, 6] remaining=[]
+G~5.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[1, 0, 7, 5, 8, 3, 4, 9, 2, 6] remaining=[]
+G~6.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+G~7.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+G~8.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[9, 8, 1, 0, 4, 6, 5, 3, 2, 7] remaining=[]
+G~9.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+P.calib.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+P.deep.json                  rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+RET-11.calib.json            rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+RET-no01.calib.json          rules==systems.py:True checker:OK  partial  steps=2 removed=[1, 0] remaining=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET-no10.calib.json          rules==systems.py:True checker:OK  partial  steps=2 removed=[1, 0] remaining=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET-r0.calib.json            rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 9, 8, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+RET-r1.calib.json            rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+RET.front.json               rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+RET.main.json                rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+RET~0.sub.json               rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET~1.sub.json               rules==systems.py:True checker:OK  partial  steps=2 removed=[1, 0] remaining=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET~10.sub.json              rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[11, 10, 0, 1, 3, 2, 6, 8, 7, 5, 4, 9] remaining=[]
+RET~11.sub.json              rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET~12.sub.json              rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET~2.sub.json               rules==systems.py:True checker:OK  partial  steps=2 removed=[1, 0] remaining=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET~3.sub.json               rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+RET~4.sub.json               rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[3, 2, 1, 0, 9, 10, 11, 8, 4, 5, 7, 6] remaining=[]
+RET~5.sub.json               rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[0, 2, 1, 5, 6, 7, 10, 9, 3, 11, 4, 8] remaining=[]
+RET~6.sub.json               rules==systems.py:True checker:OK  FULL PROOF  steps=12 removed=[2, 1, 3, 7, 9, 10, 11, 0, 6, 5, 4, 8] remaining=[]
+RET~7.sub.json               rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[2, 1, 3, 0, 9, 7, 10, 5, 6, 11, 4, 8] remaining=[]
+RET~8.sub.json               rules==systems.py:True checker:OK  partial  steps=4 removed=[1, 2, 0, 11] remaining=[3, 4, 5, 6, 7, 8, 9, 10]
+RET~9.sub.json               rules==systems.py:True checker:OK  partial  steps=1 removed=[0] remaining=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+S3.repro.json                rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[1, 0, 8, 9, 10, 4, 6, 5, 3, 2, 7] remaining=[]
+S3m.neg.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  CONTROL OK (no loop rule removed)
+T-0.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 9, 8, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+T-1.smoke.json               rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 8, 9, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+T-1.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 8, 9, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+T-10.yahT.json               rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+T-10.yahT4.json              rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[8, 9, 0, 1, 4, 6, 5, 3, 2, 7] remaining=[]
+T-2.yahT.json                rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+T-2.yahT4.json               rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[8, 7, 9, 0, 1, 6, 2, 3, 5, 4] remaining=[]
+T-3.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[3, 4, 5, 8, 7, 9, 0, 1, 2, 6] remaining=[]
+T-4.smoke.json               rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[5, 7, 8, 9, 0, 4, 3, 1, 2, 6] remaining=[]
+T-4.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[5, 7, 8, 9, 0, 4, 3, 1, 2, 6] remaining=[]
+T-5.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[5, 9, 7, 8, 0, 3, 4, 1, 2, 6] remaining=[]
+T-6.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[5, 9, 7, 8, 0, 3, 4, 1, 2, 6] remaining=[]
+T-7.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[7, 9, 8, 0, 1, 3, 4, 5, 6, 2] remaining=[]
+T-8.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[9, 8, 0, 1, 4, 6, 5, 3, 2, 7] remaining=[]
+T-9.yahT.json                rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[9, 0, 8, 1, 4, 6, 5, 3, 2, 7] remaining=[]
+T4-1.repro.json              rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[0, 1, 8, 9, 10, 4, 6, 5, 3, 2, 7] remaining=[]
+T4-3.repro.json              rules==systems.py:True checker:OK  FULL PROOF  steps=11 removed=[1, 0, 8, 9, 10, 4, 6, 5, 3, 2, 7] remaining=[]
+W-16.calib.json              rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[0, 7, 8, 9, 3, 5, 4, 2, 1, 6] remaining=[]
+W-r0.calib.json              rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 9, 8, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+W-r1.calib3.json             rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+W.deep.json                  rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+W.front.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+W.main.json                  rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+W01.main2.json               rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+W~0.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[7, 9, 8, 0, 3, 5, 4, 2, 1, 6] remaining=[]
+W~1.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[0, 7, 8, 9, 3, 5, 4, 2, 1, 6] remaining=[]
+W~10.sub.json                rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+W~2.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+W~3.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[1, 7, 3, 8, 9, 0, 4, 5, 2, 6] remaining=[]
+W~4.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[0, 5, 7, 8, 9, 1, 4, 3, 2, 6] remaining=[]
+W~5.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[1, 3, 8, 9, 0, 4, 5, 7, 2, 6] remaining=[]
+W~6.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=10 removed=[0, 9, 1, 4, 7, 8, 5, 3, 2, 6] remaining=[]
+W~7.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+W~8.sub.json                 rules==systems.py:True checker:OK  FULL PROOF  steps=9 removed=[9, 8, 0, 1, 4, 6, 5, 3, 2, 7] remaining=[]
+W~9.sub.json                 rules==systems.py:True checker:OK  partial  steps=0 removed=[] remaining=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+ALL CHECKS PASSED
+
+=== SAT-call log summary: per (tag, system, stage): kind/mode/orientation -> results by (d,V) ===
+--- calib
+  P stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  RET-11 stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)T20 (3,2)T30 (2,4)T30 (3,3)T30
+  RET-r0 stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+  RET-r0 stage 1 (9 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  RET-r0 stage 2 (8 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U
+  RET-r0 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET-r0 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET-r0 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W-r0 stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+  W-r0 stage 1 (9 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  W-r0 stage 2 (8 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U
+  W-r0 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W-r0 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W-r0 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W-16 stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+  W-16 stage 3 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W-16 stage 7 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W-16 stage 8 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G-0 stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  G-1 stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+  G-1 stage 1 (9 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  G-1 stage 2 (8 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U
+  G-1 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G-1 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G-1 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET-r1 stage 0 (11 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)T30 (2,4)T30 (3,3)T30
+  RET-no01 stage 1 (11 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)S
+  RET-no01 stage 2 (10 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  RET-no10 stage 1 (11 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)S
+  RET-no10 stage 2 (10 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+--- calib2
+  G0y stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U
+      arc/top/org      (1,3)U (1,4)U
+      arc/top/rev      (1,3)U (1,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U
+  G0y stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G0y stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G0y stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+--- calib3
+  W-r1 stage 0 (10 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)T30 (3,3)T30
+--- deep
+  W stage 0 (11 rules)
+      arc/top/rev      (3,4)U
+      nat/top/rev      (3,3)T1200
+  G stage 0 (11 rules)
+      arc/top/rev      (3,4)U
+      nat/top/rev      (3,3)T1200
+  P stage 0 (10 rules)
+      arc/top/rev      (3,4)U
+      nat/top/rev      (3,3)T1200
+--- farkas
+  Farkas stage 0 (14 rules)
+      arc/top/rev      (5,8)T1200
+--- farkasneg
+  Farkas stage 0 (14 rules)
+      arc/top/rev      (5,8)T1200
+--- front
+  W stage 0 (11 rules)
+      arc/full/org     (1,4)U (2,3)U (2,4)U
+      arc/top/rev      (1,4)U (2,3)U (2,4)U (3,3)U
+      nat/full/org     (1,2)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,4)U (2,2)U (2,3)U (3,2)U
+  G stage 0 (11 rules)
+      arc/full/org     (1,4)U (2,3)U (2,4)U
+      arc/top/rev      (1,4)U (2,3)U (2,4)U (3,3)U
+      nat/full/org     (1,2)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,4)U (2,2)U (2,3)U (3,2)U
+  RET stage 0 (13 rules)
+      arc/full/org     (1,4)U (2,3)U (2,4)U
+      arc/top/rev      (1,4)U (2,3)U (2,4)U (3,3)U
+      nat/full/org     (1,2)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,4)U (2,2)U (2,3)U (3,2)U
+--- main
+  W stage 0 (11 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  G stage 0 (11 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  RET stage 0 (13 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)T30 (2,4)T30 (3,3)T30
+--- main2
+  W01 stage 0 (11 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+--- neg
+  C3m stage 0 (11 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  C5 stage 0 (17 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  FMF3m stage 0 (13 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  FMF5 stage 0 (19 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  S3m stage 0 (12 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+  G5 stage 0 (17 rules)
+      arc/full/org     (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      arc/top/org      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)T30
+      arc/top/rev      (1,3)U (1,4)U (2,3)U (2,4)U (3,3)U (3,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/org      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (1,5)U (2,2)U (2,3)U (3,2)U (2,4)U (3,3)T30
+--- repro
+  S3 stage 1 (10 rules)
+      nat/top/rev      (1,2)U (1,3)U (2,2)U (2,3)S
+  S3 stage 5 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  S3 stage 9 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  S3 stage 10 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  C4-0 stage 0 (11 rules)
+      nat/top/rev      (1,2)U (1,3)U (2,2)U (2,3)U (2,4)U (2,5)T30 (3,2)U (3,3)S
+  C4-0 stage 5 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  C4-0 stage 9 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  C4-0 stage 10 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  C4-2 stage 5 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  C4-2 stage 9 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  C4-2 stage 10 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T4-1 stage 0 (11 rules)
+      nat/top/rev      (1,2)U (1,3)U (2,2)U (2,3)S
+  T4-1 stage 1 (10 rules)
+      nat/top/rev      (1,2)U (1,3)U (2,2)U (2,3)S
+  T4-1 stage 5 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T4-1 stage 9 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T4-1 stage 10 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T4-3 stage 0 (11 rules)
+      nat/top/rev      (1,2)U (1,3)U (2,2)U (2,3)U (2,4)U (2,5)S
+  T4-3 stage 5 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T4-3 stage 9 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T4-3 stage 10 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+--- smoke
+  T-1 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-1 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-1 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-4 stage 3 (7 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-4 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-4 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+--- sub
+  W~0 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U
+  W~0 stage 1 (9 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  W~0 stage 2 (8 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  W~0 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~0 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~0 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~1 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U
+  W~1 stage 3 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~1 stage 7 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~1 stage 8 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~2 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  W~3 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)S
+      nat/full/org     (1,2)U (1,3)U (1,4)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  W~3 stage 1 (9 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/full/rev     (1,2)U (1,3)U (1,4)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  W~3 stage 3 (7 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  W~3 stage 4 (6 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  W~3 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~3 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~4 stage 0 (10 rules)
+      nat/full/org     (1,2)U (1,3)U
+      nat/full/rev     (1,2)U (1,3)U
+      nat/top/org      (1,2)U (1,3)U
+      nat/top/rev      (1,2)U (1,3)S
+  W~4 stage 4 (6 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  W~4 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~4 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~5 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)S
+  W~5 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~5 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~6 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)S
+  W~6 stage 1 (9 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/full/rev     (1,2)U (1,3)U (1,4)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  W~6 stage 2 (8 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U
+  W~6 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~6 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~7 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  W~8 stage 0 (10 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  W~8 stage 1 (9 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  W~8 stage 3 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~8 stage 7 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~8 stage 8 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  W~9 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  W~10 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  G~0 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  G~1 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U
+  G~1 stage 1 (9 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  G~1 stage 2 (8 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  G~1 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~1 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~1 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~2 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  G~3 stage 3 (6 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  G~3 stage 5 (4 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  G~3 stage 7 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~3 stage 8 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~4 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/full/rev     (1,2)U (1,3)U (1,4)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  G~4 stage 4 (6 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  G~4 stage 6 (4 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  G~4 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~4 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~5 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)S
+  G~5 stage 1 (9 rules)
+      nat/full/org     (1,2)U (1,3)U (1,4)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)S
+  G~5 stage 7 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~5 stage 8 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~6 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  G~7 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  G~8 stage 0 (10 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  G~8 stage 1 (9 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  G~8 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~8 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~8 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  G~9 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  G~10 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  RET~0 stage 0 (12 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)T8
+  RET~1 stage 1 (11 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+  RET~1 stage 2 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  RET~2 stage 1 (11 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+  RET~2 stage 2 (10 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  RET~3 stage 0 (12 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)T8
+  RET~4 stage 0 (12 rules)
+      nat/full/org     (1,2)U (1,2)U
+      nat/full/rev     (1,2)U (1,2)U
+      nat/top/org      (1,2)U (1,2)U
+      nat/top/rev      (1,2)S
+  RET~4 stage 1 (11 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)S
+  RET~4 stage 3 (9 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U
+  RET~4 stage 7 (5 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~4 stage 8 (4 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~5 stage 0 (12 rules)
+      nat/full/org     (1,2)U (1,3)U
+      nat/full/rev     (1,2)U (1,3)U
+      nat/top/org      (1,2)U (1,3)U
+      nat/top/rev      (1,2)U (1,3)S
+  RET~5 stage 1 (11 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)S
+      nat/full/org     (1,2)U (1,3)U (1,4)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  RET~5 stage 6 (5 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  RET~5 stage 9 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~5 stage 10 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~6 stage 0 (12 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)U
+      nat/top/rev      (1,2)S
+  RET~6 stage 2 (10 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)U
+      nat/top/rev      (1,2)S
+  RET~6 stage 6 (6 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  RET~6 stage 10 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~6 stage 11 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~7 stage 0 (12 rules)
+      nat/full/org     (1,2)U (1,3)U
+      nat/full/rev     (1,2)U (1,3)U
+      nat/top/org      (1,2)U (1,3)U
+      nat/top/rev      (1,2)U (1,3)S
+  RET~7 stage 2 (10 rules)
+      nat/full/org     (1,2)U (1,3)U
+      nat/full/rev     (1,2)U (1,3)U
+      nat/top/org      (1,2)U (1,3)U
+      nat/top/rev      (1,2)U (1,3)S
+  RET~7 stage 3 (9 rules)
+      nat/full/org     (1,2)U (1,3)U
+      nat/full/rev     (1,2)U (1,3)U
+      nat/top/org      (1,2)U (1,3)U
+      nat/top/rev      (1,2)U (1,3)S
+  RET~7 stage 9 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~7 stage 10 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~8 stage 0 (12 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)S
+  RET~8 stage 2 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+  RET~8 stage 3 (9 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U
+  RET~8 stage 4 (8 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  RET~9 stage 0 (12 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)S
+  RET~9 stage 1 (11 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)T8
+  RET~10 stage 0 (12 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  RET~10 stage 1 (11 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  RET~10 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~10 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~10 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  RET~11 stage 0 (12 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)T8
+  RET~12 stage 0 (12 rules)
+      arc/full/org     (1,3)U (2,3)U
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)T8
+--- yahT
+  T-0 stage 0 (10 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)S
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U
+  T-0 stage 1 (9 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-0 stage 2 (8 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  T-0 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-0 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-0 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-1 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-1 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-1 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-2 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)U (3,3)U
+      arc/top/org      (1,3)U (2,3)U (2,4)U (3,3)U
+      arc/top/rev      (1,3)U (2,3)U (2,4)U (3,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+  T-3 stage 4 (5 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-3 stage 7 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-3 stage 8 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-4 stage 3 (7 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-4 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-4 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-5 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)U
+      arc/top/org      (1,3)U (2,3)U (2,4)U
+      arc/top/rev      (1,3)U (2,3)U (2,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)S
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  T-5 stage 1 (9 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)U
+      arc/top/org      (1,3)U (2,3)U (2,4)U
+      arc/top/rev      (1,3)U (2,3)U (2,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)S
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  T-5 stage 2 (8 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-5 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-5 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-6 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)U (3,3)S
+      arc/top/org      (1,3)U (2,3)U (2,4)U
+      arc/top/rev      (1,3)U (2,3)U (2,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+  T-6 stage 1 (9 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)U
+      arc/top/org      (1,3)U (2,3)U (2,4)U
+      arc/top/rev      (1,3)U (2,3)U (2,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)S
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  T-6 stage 2 (8 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-6 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-6 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-7 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)S
+      arc/top/org      (1,3)U (2,3)U
+      arc/top/rev      (1,3)U (2,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  T-7 stage 1 (9 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-7 stage 2 (8 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  T-7 stage 5 (5 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-7 stage 8 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-8 stage 0 (10 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-8 stage 1 (9 rules)
+      arc/full/org     (1,3)U
+      arc/top/org      (1,3)U
+      arc/top/rev      (1,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U
+  T-8 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-8 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-8 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-9 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)U
+      arc/top/org      (1,3)U (2,3)U (2,4)U
+      arc/top/rev      (1,3)U (2,3)U (2,4)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)S
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U
+  T-9 stage 2 (8 rules)
+      nat/full/org     (1,2)U
+      nat/full/rev     (1,2)U
+      nat/top/org      (1,2)S
+  T-9 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-9 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-9 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-10 stage 0 (10 rules)
+      arc/full/org     (1,3)U (2,3)U (2,4)U (3,3)U
+      arc/top/org      (1,3)U (2,3)U (2,4)U (3,3)U
+      arc/top/rev      (1,3)U (2,3)U (2,4)U (3,3)U
+      nat/full/org     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/full/rev     (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/top/org      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+      nat/top/rev      (1,2)U (1,3)U (1,4)U (2,2)U (2,3)U (3,2)U
+--- yahT4
+  T-2 stage 5 (5 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-2 stage 6 (4 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-10 stage 0 (10 rules)
+      arc/top/org      (3,4)U (4,3)S
+      nat/top/org      (4,2)T300
+  T-10 stage 4 (6 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-10 stage 8 (2 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U
+  T-10 stage 9 (1 rules)
+      nat/full/org     (1,2)U (1,3)S
+      nat/full/rev     (1,2)U

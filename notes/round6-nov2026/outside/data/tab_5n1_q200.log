@@ -1,0 +1,5 @@
+a=5 c=1 j=2 states=20 best p/q=40/200 fail at 41/200 cap=exact t=0s :: 
+a=5 c=1 j=3 states=100 best p/q=40/200 fail at 41/200 cap=exact t=0s :: 
+a=5 c=1 j=4 states=500 best p/q=40/200 fail at 41/200 cap=60000 t=0s :: 
+a=5 c=1 j=5 states=2500 best p/q=43/200 fail at 44/200 cap=60000 t=6s :: 
+a=5 c=1 j=6 states=12500 best p/q=48/200 fail at 49/200 cap=60000 t=4s :: 

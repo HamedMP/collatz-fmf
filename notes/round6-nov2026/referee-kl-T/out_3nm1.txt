@@ -1,0 +1,21 @@
+k 2 gamma_opt 0.4365884
+k 3 gamma_opt 0.6112622
+k 4 gamma_opt 0.6891089
+p=3 d=-1 x>=1a k=2 g=0.436578 M=1.832: min ratio non-cycle (np.float64(3.187839273969405), 16, 22)  cycle (np.float64(1.4250790875213788), 1, 2)
+p=3 d=-1 x>=1a k=2 g=0.261953 M=1.438: min ratio non-cycle (np.float64(2.645529628953328), 16, 22)  cycle (np.float64(1.724118734516132), 1, 2)
+p=3 d=-1 x>=1a k=3 g=0.611252 M=3.488: min ratio non-cycle (np.float64(5.003384782891113), 52, 70)  cycle (np.float64(1.990032416932164), 1, 2)
+p=3 d=-1 x>=1a k=3 g=0.366757 M=1.663: min ratio non-cycle (np.float64(2.9588052255464055), 16, 22)  cycle (np.float64(1.935856955255092), 1, 2)
+p=3 d=-1 x>=1a k=4 g=0.689099 M=5.491: min ratio non-cycle (np.float64(5.381721590148255), 88, 118)  cycle (np.float64(2.0141740447770764), 1, 2)
+p=3 d=-1 x>=1a k=4 g=0.413465 M=1.774: min ratio non-cycle (np.float64(3.1101230502037724), 16, 22)  cycle (np.float64(1.9333353992008682), 1, 2)
+p=3 d=-1 x>=4a k=2 g=0.436578 M=1.832: min ratio non-cycle (np.float64(7.999999992390378), 16, 64)  cycle (np.float64(2.1059389087272455), 1, 4)
+p=3 d=-1 x>=4a k=2 g=0.261953 M=1.438: min ratio non-cycle (np.float64(7.189214673518879), 4, 16)  cycle (np.float64(2.875685857003197), 1, 4)
+p=3 d=-1 x>=4a k=3 g=0.611252 M=3.488: min ratio non-cycle (np.float64(11.958140455186934), 16, 64)  cycle (np.float64(2.605462937771685), 1, 4)
+p=3 d=-1 x>=4a k=3 g=0.366757 M=1.663: min ratio non-cycle (np.float64(8.000000005936776), 16, 64)  cycle (np.float64(3.0026056989727454), 1, 4)
+p=3 d=-1 x>=4a k=4 g=0.689099 M=5.491: min ratio non-cycle (np.float64(15.135489632218661), 43, 172)  cycle (np.float64(2.4985471123849385), 1, 4)
+p=3 d=-1 x>=4a k=4 g=0.413465 M=1.774: min ratio non-cycle (np.float64(7.9999999990024), 16, 64)  cycle (np.float64(2.9031650407482443), 1, 4)
+p=3 d=-1 x>=256a k=2 g=0.436578 M=1.832: min ratio non-cycle (np.float64(43.67232267388496), 58, 15668)  cycle (np.float64(10.589841495216303), 1, 308)
+p=3 d=-1 x>=256a k=2 g=0.261953 M=1.438: min ratio non-cycle (np.float64(71.5406551052201), 58, 15668)  cycle (np.float64(30.47317147831623), 1, 256)
+p=3 d=-1 x>=256a k=3 g=0.611252 M=3.488: min ratio non-cycle (np.float64(35.21972904450108), 1066, 287508)  cycle (np.float64(6.134908671586372), 1, 308)
+p=3 d=-1 x>=256a k=3 g=0.366757 M=1.663: min ratio non-cycle (np.float64(53.19971075295471), 58, 15668)  cycle (np.float64(20.448376330440496), 1, 308)
+p=3 d=-1 x>=256a k=4 g=0.689099 M=5.491: min ratio non-cycle (np.float64(41.81416158666609), 1066, 287508)  cycle (np.float64(4.1952090740926495), 1, 308)
+p=3 d=-1 x>=256a k=4 g=0.413465 M=1.774: min ratio non-cycle (np.float64(46.62048197193407), 58, 15668)  cycle (np.float64(16.14053652242014), 1, 308)

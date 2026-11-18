@@ -1,0 +1,32 @@
+    k=17 gamma=0.897300000000 it=207 conv=1 lo=0.999735209196 hi=0.999735209197 spread=1217.3619577
+    k=17 gamma=0.896711498074 it=162 conv=1 lo=0.999961661461 hi=0.999961661462 spread=1208.8751909
+    k=17 gamma=0.896611877448 it=149 conv=1 lo=1.000000007979 hi=1.000000007980 spread=1207.4444258
+    k=17 gamma=0.896611898177 it=90 conv=1 lo=1.000000000000 hi=1.000000000001 spread=1207.4447234
+k=17 gamma* ~ 0.896611898  lambda* ~ 1.86168876
+    k=17 gamma=0.896601898176 it=133 conv=1 lo=1.000003849465 hi=1.000003849466 spread=1207.3011952
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k17_lower: gamma=0.8966018982 float ratios [1.0000038495,1.0000038495] spread=1207.301195
+    k=17 gamma=0.896621898177 it=138 conv=1 lo=0.999996150573 hi=0.999996150574 spread=1207.5882684
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k17_upper: gamma=0.8966218982 float ratios [0.9999961506,0.9999961506] spread=1207.588268
+VERIFIED k=17 N=43046721 mode=lower gamma=985824212530/2^40=0.8966018982 lambda=1.86167585 feasible: all rows hold; spread=1207.301195 min_rel_slack~3.308e-06 [numpy uint64 (overflow excluded) + 20006-row python-int sample]
+VERIFIED k=17 N=43046721 mode=upper gamma=985846202764/2^40=0.8966218982 lambda=1.86170166 infeasible: F(w) < w in all rows; spread=1207.588268 min_rel_slack~3.285e-06 [numpy uint64 (overflow excluded) + 20006-row python-int sample]
+    k=18 gamma=0.904611898176 it=214 conv=1 lo=0.999502501778 hi=0.999502501779 spread=1865.4814464
+    k=18 gamma=0.903506071476 it=171 conv=1 lo=0.999918308759 hi=0.999918308760 spread=1839.7891168
+    k=18 gamma=0.903288870021 it=159 conv=1 lo=1.000000033730 hi=1.000000033731 spread=1834.7843692
+    k=18 gamma=0.903288959663 it=103 conv=1 lo=0.999999999997 hi=0.999999999998 spread=1834.7864319
+k=18 gamma* ~ 0.903288960  lambda* ~ 1.87032497
+    k=18 gamma=0.903278959668 it=137 conv=1 lo=1.000003763057 hi=1.000003763058 spread=1834.5563389
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k18_lower: gamma=0.9032789597 float ratios [1.0000037631,1.0000037631] spread=1834.556339
+    k=18 gamma=0.903298959669 it=141 conv=1 lo=0.999996236971 hi=0.999996236972 spread=1835.0165540
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k18_upper: gamma=0.9032989597 float ratios [0.9999962370,0.9999962370] spread=1835.016554
+VERIFIED k=18 N=129140163 mode=lower gamma=993165719280/2^40=0.9032789597 lambda=1.87031200 feasible: all rows hold; spread=1834.556339 min_rel_slack~3.180e-06 [numpy uint64 (overflow excluded) + 20006-row python-int sample]
+VERIFIED k=18 N=129140163 mode=upper gamma=993187709514/2^40=0.9032989597 lambda=1.87033793 infeasible: F(w) < w in all rows; spread=1835.016554 min_rel_slack~3.213e-06 [numpy uint64 (overflow excluded) + 20006-row python-int sample]
+    k=19 gamma=0.911288959669 it=110 conv=1 lo=0.999317199432 hi=0.999320672172 spread=2851.8177969
+    k=19 gamma=0.909774968048 it=68 conv=1 lo=0.999873989378 hi=0.999877775654 spread=2795.1140137
+    k=19 gamma=0.909437684732 it=57 conv=1 lo=0.999998083734 hi=1.000002071113 spread=2782.6262207
+k=19 gamma* ~ 0.909437513  lambda* ~ 1.87831303
+    k=19 gamma=0.909427512684 it=31 conv=1 lo=1.000002089569 hi=1.000005990122 spread=2782.2519531
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k19_lower: gamma=0.9094275127 float ratios [1.0000020896,1.0000059901] spread=2782.251953
+    k=19 gamma=0.909447512685 it=36 conv=1 lo=0.999994263919 hi=0.999997896337 spread=2782.9929199
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k19_upper: gamma=0.9094475127 float ratios [0.9999942639,0.9999978963] spread=2782.992920
+VERIFIED k=19 N=387420489 mode=lower gamma=999926124816/2^40=0.9094275127 lambda=1.87830001 feasible: all rows hold; spread=2782.251953 min_rel_slack~2.107e-06 [numpy uint64 (overflow excluded) + 20006-row python-int sample]
+VERIFIED k=19 N=387420489 mode=upper gamma=999948115049/2^40=0.9094475127 lambda=1.87832605 infeasible: F(w) < w in all rows; spread=2782.992920 min_rel_slack~2.042e-06 [numpy uint64 (overflow excluded) + 20006-row python-int sample]

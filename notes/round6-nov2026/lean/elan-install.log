@@ -1,0 +1,2 @@
+info: downloading installer
+warning: $HOME differs from euid-obtained home directory: you may be using sudo

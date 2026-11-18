@@ -1,0 +1,4 @@
+1a: words with B<=21 fully brute-forced: 105 bad: 0
+1b: all 510 words len<=8: lift verified, bad: 0
+1c: cases 45000 violations 0 min log2(w0+1)/B(X) = 1.6547525794645899 ('aaba', 'a', 'cc', 2990143) threshold 0.43383; sim-checked 464
+1c (w0=32 mod 33): violations 0 min ratio 2.083333336916305 ('bbb', 'a', 'cc', 33554432)

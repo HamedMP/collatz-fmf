@@ -707,3 +707,97 @@ REFEREE-PACKAGE.md), then whether to publish the addendum.
   re-chunking of the FMF chain (equivalently, the classical Terras parity-vector
   framework at modulus 2^k); it yields no new lever on H1 or Lemma E. Worth one
   remark in the paper ("why 4") — not a research direction.**
+
+### November 17, 2026 — Round 6 (multi-agent campaign; artifacts in notes/round6-nov2026/)
+
+Claim boundary held: **Collatz, H1 and Lemma E remain open.** Every item below
+is AI-produced; "refereed" means blind hostile AI referees, never a human.
+Full statements: proof.md "Round 6 (November 2026)", Theorems 64–70.
+
+First wave (8 tracks):
+- **mazur-audit: DONE.** Statement audit of Mazur's three ProofAtlas claims
+  (positive lower density reaching 1 within 10.46 ln n; exponent 0.90;
+  natural-density descent): each Lean top-level statement matches its prose.
+  NOT rebuilt (all pin Lean v4.30.0-rc2; no second Mathlib fetched). 0.90 uses
+  17 `native_decide` sites; the natural-density archive has an unreferenced
+  vendored `collatz_conjecture := by sorry`. Status: claimed by others,
+  statement-audited, not independently built.
+- **sunit: DONE — PROVED modulo Evertse 1984, refereed x2, none broken**
+  (Theorem 66). Ineffective, not uniform in window length, vacuous for
+  bounded alphabets, transfers to 5n+1/3n−1.
+- **lean: DONE — KERNEL-CHECKED** `CollatzConjecture ↔ H1 ∧ LemmaE` and the
+  FMF/return-map formulas (Theorem 64). No statement in proof.md found false.
+- **frontier: DONE — two-block exclusion** (Theorem 65): refereed x2, none
+  broken; Theorems A, L, B KERNEL-CHECKED. Explicit 4-letter morphic
+  obstruction shows the repetition method cannot reach H1 in general.
+- **kl-exponent: DONE** (Theorem 67): new proof of a KNOWN statement, now
+  KERNEL-CHECKED; exponents reproduced to k = 19 (0.90942) by exact
+  certificates. Non-periodic weights: dead end (proved).
+- **outside: DONE.** Stopping-time game DEAD (0.46 < Amano's 1/2). F_2[x]
+  closed formula CANDIDATE (verified to degree 262,656; "Period Lemma" open).
+- **nd-referee: DONE.** Theorem ND sound modulo five written repairs; NO
+  priority (Allikvere 13 July 2026, Mazur 21 July 2026); Rhin misquoted
+  (7.616 only above an unspecified height; 13.3 explicit). Wording updated in
+  proof.md Theorem 58, proof-obligations.md, referee-brief.md,
+  notes/round4-july2026/README.md.
+- **srs-termination: DONE — CALIBRATED, NO NEW PROOF.** Three rewriting
+  systems with proved equivalences (RET: SN ⇔ H1; W: SN ⇔ H1+, the
+  all-positive-z form, which implies H1 and is not implied by Collatz;
+  G: SN ⇔ all growth-B chains finite, implied by Yolcu–Aaronson–Heule's open
+  "5 mod 8" conjecture). 16 published YAH results reproduced by search with
+  an independent checker; their Farkas certificate checks but was not found
+  by search. Calibrations only partly succeed (Lemma P is found only in the
+  adapted z-coordinate; the r = 1 restriction is not found): small matrix
+  interpretations see only the 2-adic valuation of the represented number.
+  No rule removable from RET, W, G or the {0,1}-alphabet slice at any tested
+  shape; the non-terminating 5n+1 / 3n−1 controls show the same UNSAT
+  frontier, so the frontier is evidence about the method only.
+
+Second wave (independent attempts, different approach families, ledger of
+blocked routes in notes/round6-nov2026/LEDGER.md):
+- **w2-alpha (×2×3 rigidity): PARTIAL, refereed** (Theorem 69). Formulation +
+  no-go: reflection-invariant data cannot prove H1; Shmerkin–Wu gives the
+  trivial bound through digit-reading hulls. Open lead: counting lemma FP-0.
+- **w2-beta (density → all): refereed.** Bootstrap is the identity; under
+  positive-density predecessor sets, density one ⇔ Collatz (family FAILS by
+  the equal-strength rule). Unconditional short-interval statement (no
+  Collatz content). Conditional: invariant sets have natural densities.
+- **w2-gamma (disproof/barriers): refereed** (Theorem 68). Rigidity of T and
+  the control family S_a; no counterexample candidate; structured seeds do
+  not beat random search (REFUTED). Eliahou bound recomputed, unchanged.
+- **w2-delta (free choice): refereed** (Theorem 70). Uniform harmonic bound
+  Σ 1/x_k ≤ 27.2 along every distinct stretch of every trajectory; bounded
+  residue; exact cycle length ⌈a log₂3⌉ given 2^71. True for 3n−1 as well.
+- **lean-gate: DONE.** Barrier.lean, TwoBlock.lean, BarrierH1.lean,
+  KLSound.lean, Harmonic.lean, HarmonicBeta.lean build with standard axioms
+  only. Theorem 70 is kernel-checked with the crude constant 1196 (the
+  refereed constant 27.2 is not formalized). A blind re-derivation from the
+  bare statement (blind-H/) proved it independently with constants 94 by
+  hand and 31.81 computer-assisted.
+
+Dead ends added this round (do not repeat; details in LEDGER.md):
+same-factor repetition beyond two blocks; S-unit windows uniform in length;
+modular invariants of the return map; seed gap principle; non-periodic KL
+weights; sliding-window stopping-time game; digit-hull Shmerkin–Wu;
+Fourier decay for the H1 Cantor measure (Erdős ternary-digit regime);
+density bootstrap; structured-seed disproof search; backward 3-adic charging
+to lower the 0.95 sojourn exponent.
+
+Corrections to earlier "Still open" / "most promising leads" lists:
+- "the two sharply-stated lemmas that would upgrade Tao's theorem to natural
+  density": overtaken — the upgrade is claimed by Allikvere and Mazur.
+- "extending Theorem G from uniform-morphic to general morphic words": done
+  for two letters (Theorem 65); provably out of reach of the method for four
+  letters (explicit obstruction); three letters open ("Lemma T", candidate).
+- Predecessor-count and stopping-time records are held by others
+  (0.9251 claimed; Amano 6.95212) and, if Mazur's positive-density claim
+  holds, the x^γ line is superseded.
+
+Best open leads, each a precise lemma strictly weaker than Collatz:
+(1) FP-0: #{w < 2^Q with itinerary ≥ 2Q bits} ≤ C·2^((s−δ)Q), s = 0.2878;
+(2) G2: power saving for second-generation large deviations (would lower the
+    0.95 exponent in Theorem 70);
+(3) Lemma T: early weighted repetition for primitive ternary morphisms;
+(4) power-run compression u^K g u'^K' via S-unit equations (bounded alphabet);
+(5) target-uniform positive density of predecessor sets from Mazur's proof;
+(6) F_2[x] Period Lemma (neighbour problem).

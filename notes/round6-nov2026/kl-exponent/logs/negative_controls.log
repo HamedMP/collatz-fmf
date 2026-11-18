@@ -1,0 +1,8 @@
+rejected as expected: k12_gamma_up (FAILED k=12 mode=lower gamma=938033328632/2^40 at residue m=2 )
+rejected as expected: k12_mode_swap (FAILED k=12 mode=upper gamma=938033218681/2^40 at residue m=2 )
+rejected as expected: k12_weight_up (FAILED k=12 mode=lower gamma=938033218681/2^40 at residue m=37037 )
+rejected as expected: k12_weight_dn (FAILED k=12 mode=lower gamma=938033218681/2^40 at residue m=3500 )
+rejected as expected: k12u_gamma_dn (FAILED k=12 mode=upper gamma=938033152711/2^40 at residue m=2 )
+rejected as expected: k17_gamma_up (FAILED k=17 mode=lower gamma=985837406669/2^40 at residue m=2 )
+rejected as expected: k17_weight_up (FAILED k=17 mode=lower gamma=985824212530/2^40 at residue m=94013 )
+rejected as expected: k17u_gamma_dn (FAILED k=17 mode=upper gamma=985833008625/2^40 at residue m=2 )

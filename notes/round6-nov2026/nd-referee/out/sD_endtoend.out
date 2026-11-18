@@ -1,0 +1,17 @@
+window empirics (exhaustive, no sampling) ...
+  TV(emp_y1, emp_y2) = 0.00204   TV(emp_y1, emp_y3) = 0.00153   [stabilization]
+[D1] PASS first-passage law identical across incommensurate + distant windows (the (1.20)-U claim)
+
+  m0   free-count mass (excess = early-dip triples)   TV(emp_y1, Q/|Q|) [shape]
+  2    1.398905  (+0.398905)
+  3    1.275678  (+0.275678)                        0.08729
+  4    1.188855  (+0.188855)
+  5    1.124002  (+0.124002)
+  6    1.074512  (+0.074512)                        0.05559
+  8    0.973812  (-0.026188)                        0.06694
+  excess decay ratios (m0=2..6): ['0.691', '0.685', '0.657', '0.601']  [geometric ~ 2/3]
+[D3] PASS excess mass decays geometrically with the (4/3)^{m0} standoff (dip-term analysis confirmed)
+[D2] PASS shape agreement improves with m0 (3 -> 6): 0.0873 -> 0.0556 (m0=8 truncated: 0.0669)
+
+ALL sD CHECKS COMPLETE
+exit 0

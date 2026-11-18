@@ -1,0 +1,3 @@
+G          st0 n=11 natural top  rev d=3 V=3  TIMEOUT 1200.1s 
+G          st0 n=11 arctic  top  rev d=3 V=4  UNSAT     51.9s 
+== G: STUCK, 11 rules remain: t t O -> 2 t O | t f t O -> 2 0 O | f 0 -> 0 f | f 1 -> 0 t | f 2 -> 1 f | t 0 -> 1 t | t 1 -> 2 f | t 2 -> 2 t | L 0 -> L t | L 1 -> L f f | L 2 -> L f t

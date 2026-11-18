@@ -1,0 +1,4 @@
+B2=2^32 (table 2^26): every 2<=n<B2 reaches 1
+M_B   = max F = 0.225654112732 at n=993  (exp = 1.253142144)
+H_B   = max H = 1.936738538 at n=4164943872
+P_B   = max C = 495 at n=2189840697

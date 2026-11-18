@@ -1,0 +1,20 @@
+  n   xi     LHS(sum_s)      RHS(E prod|f|)   LHS<=RHS+slack
+  7     1   0.04883812     0.26975630      OK (slacks 8.2e-07/8.7e-08)
+  7     2   0.01890712     0.15047526      OK (slacks 8.2e-07/8.7e-08)
+  7     5   0.02889830     0.22608128      OK (slacks 8.2e-07/8.7e-08)
+  7     7   0.05546464     0.24846286      OK (slacks 8.2e-07/8.7e-08)
+  7    10   0.03439336     0.16559707      OK (slacks 8.2e-07/8.7e-08)
+  7    29   0.04851161     0.26854128      OK (slacks 8.2e-07/8.7e-08)
+  8     1   0.02357014     0.13326575      OK (slacks 9.2e-07/1.2e-07)
+  8     2   0.02291163     0.09587538      OK (slacks 9.2e-07/1.2e-07)
+  8     5   0.03705076     0.14707451      OK (slacks 9.2e-07/1.2e-07)
+  8     7   0.02020223     0.15286492      OK (slacks 9.2e-07/1.2e-07)
+  8    10   0.01650343     0.06856490      OK (slacks 9.2e-07/1.2e-07)
+  8    29   0.03805071     0.15649065      OK (slacks 9.2e-07/1.2e-07)
+[B1] PASS Lemma P7 inequality holds at n=7,8 for all tested xi coprime to 3
+  n=7 xi=1: |S_chi|=0.02124307  <=  sum_s-version 0.04883812 (consistency)
+  n=8 xi=1: |S_chi|=0.01097787  <=  sum_s-version 0.02357014 (consistency)
+[B2] PASS plain |S_chi| <= summed phased version (consistency rows)
+
+ALL sB CHECKS COMPLETE
+exit 0
