@@ -67,10 +67,14 @@ The manuscript should not be accepted as claiming:
 - Empty exceptional sets from density-zero estimates.
 - Universal theorems from finite verifier output.
 - A theorem stronger than Tao's almost-all result without qualification.
-- That the candidate Tao-upgrade manuscript is established mathematics: the
-  natural-density upgrade ("Theorem ND",
-  `notes/round4-july2026/s5-completion/PROOFS.md`) is AI-proved and AI-refereed
-  only, awaiting human review, and is not a repository claim.
+- That the candidate Tao-upgrade manuscript is established mathematics or
+  new: the natural-density form of Tao's theorem ("Theorem ND",
+  `notes/round4-july2026/s5-completion/PROOFS.md`) is AI-generated with no
+  human review and is not a repository claim. The result was first claimed by
+  J. Allikvere (Zenodo, 13 July 2026) by essentially the same method and by
+  L. Mazur (ProofAtlas, 21 July 2026, claimed Lean-checked); the repository
+  claims no priority and no novelty. Known defects and repairs are listed in
+  `notes/round6-nov2026/nd-referee/REPORT.md`.
 
 ## Main Gap To Check
 

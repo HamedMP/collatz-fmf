@@ -1,0 +1,39 @@
+== exponents ==
+s/(2+4s) = 0.09132 ; s/4 = 0.07194
+(1-s)s/(2+4s) = 0.06504 ; (1-s)s/4 = 0.05124
+log exponent A': s/(1+2s) = 0.1826
+log exponent B1': term1 1+s/(1+2s) = 1.1826 ; term2 1.5-1/(2+4s) = 1.1826
+log exponent C': (1-s)*1.1826 = 0.8423 ; (1-s)*1.19 = 0.8476
+k coefficient 1/(1+2s) = 0.6347
+Remark 3: (1-s)/8 = 0.0890 ; rho0 = 1/(s+1/2) = 1.2694 ; 1/(2s) = 1.7376
+Remark 2: current saving exponent s*rho0 = 0.3653 ; Korobov c/rho^2 must exceed it at some rho>rho0:
+   threshold if valid only for rho>=2: c > 4*s*rho0 = 1.461 (report: 8s = 2.302)
+   threshold if valid down to rho0   : c > s*rho0^3 = 0.589 (report: 0.29)
+== Theorem A' bound * K^{s/(2+4s)} / (log2 K)^{s/(1+2s)} (e=0), should stay bounded ==
+log2K=       40 k=      18  log2(A' bound)=       -0.05  normalised 2^2.632 | log2(B' bound)=        4.28 normalised(1.19) 2^1.595
+log2K=       80 k=      42  log2(A' bound)=       -3.46  normalised 2^2.693 | log2(B' bound)=        2.01 normalised(1.19) 2^1.793
+log2K=      160 k=      92  log2(A' bound)=      -10.46  normalised 2^2.812 | log2(B' bound)=       -3.93 normalised(1.19) 2^1.972
+log2K=      320 k=     192  log2(A' bound)=      -24.91  normalised 2^2.792 | log2(B' bound)=      -17.32 normalised(1.19) 2^2.004
+log2K=      640 k=     394  log2(A' bound)=      -53.91  normalised 2^2.831 | log2(B' bound)=      -45.30 normalised(1.19) 2^2.055
+log2K=     1000 k=     622  log2(A' bound)=      -86.61  normalised 2^2.890 | log2(B' bound)=      -77.36 normalised(1.19) 2^2.101
+log2K=    10000 k=    6330  log2(A' bound)=     -907.93  normalised 2^2.870 | log2(B' bound)=     -895.32 normalised(1.19) 2^2.087
+log2K=   100000 k=   63449  log2(A' bound)=    -9126.44  normalised 2^2.761 | log2(B' bound)=    -9110.48 normalised(1.19) 2^1.998
+log2K=  1000000 k=  634685  log2(A' bound)=   -91315.86  normalised 2^2.887 | log2(B' bound)=   -91296.62 normalised(1.19) 2^2.053
+log2K=100000000 k=63471010  log2(A' bound)= -9132231.23  normalised 2^2.784 | log2(B' bound)= -9132205.30 normalised(1.19) 2^1.939
+kappa=8: sum 2^(s v2/2)/h = 5.893 <= 7.700 ; sum 1/h = 5.433 <= 6.600
+kappa=16: sum 2^(s v2/2)/h = 12.079 <= 13.940 ; sum 1/h = 10.974 <= 12.200
+kappa=24: sum 2^(s v2/2)/h = 18.274 <= 20.180 ; sum 1/h = 16.520 <= 17.800
+Remark 3 j=8: sum_a |.|^2 / (2^(j-1) sum M^2) = 1.000000
+Remark 3 j=12: sum_a |.|^2 / (2^(j-1) sum M^2) = 1.000000
+== Proposition G ==
+recursion vs direct sums, k<=26, 14 frequencies each: max abs err = 3.35e-14
+delta(k, n) for xi = 3^n, n = round(frac*k):
+ k        0.10    0.30    0.50    0.60    0.63    0.66    0.70
+  200    0.449   0.380   0.210   0.130   0.155   0.286   0.533
+  400    0.463   0.358   0.174   0.114   0.085   0.282   0.467
+  800    0.450   0.328   0.163   0.098   0.074   0.236   0.451
+k=200: min single-frequency delta = 0.097 at n=124 (n/k=0.620)
+      worst window (R=15) delta0 over n/k in [0.45,0.72] = 0.126 (report: 0.126)
+k=400: min single-frequency delta = 0.085 at n=252 (n/k=0.630)
+      worst window (R=20) delta0 over n/k in [0.45,0.72] = 0.099 (report: 0.099)
+precision check k=400,n=252: rel diff 1.4e-180

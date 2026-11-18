@@ -13,6 +13,20 @@ Includes a proof of the object of Tao's Remark 1.16 (fine-scale mixing of the
 entire affine map (S_n, X_n)), which Tao described as "plausibly attainable
 from the methods in this paper."
 
+**PRIORITY (added November 2026): none.** The same result was first claimed
+by J. Allikvere (Zenodo 10.5281/zenodo.21340150, version 1 of 13 July 2026)
+by essentially the same method, and by L. Mazur (ProofAtlas, version 2 dated
+21 July 2026, claimed Lean-checked) with explicit time bounds. This manuscript
+is self-dated 21 July 2026 and was first committed on 16 August 2026. The
+repository claims no priority and no novelty; the exponent 1/25 is a
+bookkeeping choice. A November 2026 AI referee
+(`../round6-nov2026/nd-referee/REPORT.md`) found no fatal gap but five defects
+needing written repairs: the chain grid in Theorem 3-U, the stated bound in
+Lemma B, step 4 of Lemma R, a misquotation of Rhin's irrationality measure
+(7.616 holds only above an unspecified height; the explicit all-heights
+exponent is 13.3, which gives about 1/36), and a misprinted exponent in
+Prop 5.2-U. The constant C is not explicit.
+
 **STATUS: candidate theorem — NOT established mathematics.** Produced by an AI
 agent and adversarially reviewed by two independent AI referees (both
 NOT-REFUTED, minor findings; every Tao citation verified against the local

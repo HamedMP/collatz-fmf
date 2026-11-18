@@ -1,0 +1,22 @@
+  d=1 cycle min=1 len=2 harmonic=1.500000
+d=1 N=10000000 max harmonic sum=2.936738 at n=8134656
+d=1 X=2^6 max#terms<=X = 19 at m=33 ratio=0.36556 (count/X=0.29688)
+d=1 X=2^7 max#terms<=X = 29 at m=97 ratio=0.28882 (count/X=0.22656)
+d=1 X=2^8 max#terms<=X = 44 at m=129 ratio=0.22684 (count/X=0.17188)
+d=1 X=2^9 max#terms<=X = 61 at m=417 ratio=0.16279 (count/X=0.11914)
+d=1 X=2^10 max#terms<=X = 76 at m=834 ratio=0.10499 (count/X=0.07422)
+d=1 X=2^11 max#terms<=X = 90 at m=1537 ratio=0.06436 (count/X=0.04395)
+d=1 X=2^12 max#terms<=X = 107 at m=4011 ratio=0.03961 (count/X=0.02612)
+d=1 X=2^13 max#terms<=X = 119 at m=8022 ratio=0.02280 (count/X=0.01453)
+d=1 X=2^14 max#terms<=X = 124 at m=14262 ratio=0.01230 (count/X=0.00757)
+d=1 X=2^15 max#terms<=X = 139 at m=23457 ratio=0.00714 (count/X=0.00424)
+d=1 X=2^16 max#terms<=X = 153 at m=40953 ratio=0.00407 (count/X=0.00233)
+d=1 X=2^17 max#terms<=X = 175 at m=74475 ratio=0.00241 (count/X=0.00134)
+d=1 X=2^18 max#terms<=X = 191 at m=174174 ratio=0.00136 (count/X=0.00073)
+d=1 X=2^19 max#terms<=X = 212 at m=412857 ratio=0.00078 (count/X=0.00040)
+d=1 X=2^20 max#terms<=X = 225 at m=869889 ratio=0.00043 (count/X=0.00021)
+d=1 X=2^21 max#terms<=X = 243 at m=1051086 ratio=0.00024 (count/X=0.00012)
+d=1 X=2^22 max#terms<=X = 264 at m=2952846 ratio=0.00014 (count/X=0.00006)
+d=1 X=2^23 max#terms<=X = 293 at m=6060534 ratio=0.00008 (count/X=0.00003)
+d=1 X=2^24 max#terms<=X = 314 at m=14365710 ratio=0.00004 (count/X=0.00002)
+d=1 worst sojourn ratio=0.36556

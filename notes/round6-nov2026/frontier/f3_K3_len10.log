@@ -1,0 +1,10 @@
+lemma grid: max over (k,j,rho) of min candidate ratio = 2.72500 at (1, 2, Fraction(69, 40)) (claim <= 1+sqrt3=2.73205 <= 3)
+K=3: 30363 primitive morphisms sampled; top iota (N=400 screening):
+  screen 4.049  refined(N=3000) 4.0489 at (L,i')=(28, 108)  phi=['01', '2', '110']  l=[1.247 1.    1.802]
+  screen 4.031  refined(N=3000) 4.0308 at (L,i')=(193, 778)  phi=['01', '2', '100']  l=[1.191 1.    1.839]
+  screen 3.650  refined(N=3000) 3.6502 at (L,i')=(6, 16)  phi=['01', '2', '110000100']  l=[1.    1.599 4.154]
+  screen 3.631  refined(N=3000) 3.6309 at (L,i')=(1, 5)  phi=['0212', '1102', '20']  l=[2.17  2.709 1.   ]
+  screen 3.626  refined(N=3000) 3.6069 at (L,i')=(158, 572)  phi=['021001', '01011010', '120022000']  l=[1.    1.288 1.531]
+  screen 3.365  refined(N=3000) 3.3022 at (L,i')=(47, 155)  phi=['0121', '1010202', '2011112222']  l=[1.    1.684 3.115]
+  screen 3.303  refined(N=3000) 3.3028 at (L,i')=(11, 37)  phi=['02', '20', '101']  l=[1.    1.    1.303]
+  screen 3.248  refined(N=3000) 3.1867 at (L,i')=(59, 184)  phi=['02112011', '20122', '00101200']  l=[1.415 1.    1.519]

@@ -132,7 +132,7 @@ Note that even both rank bounds with sharp constants cannot alone imply converge
 
 | Candidate | Artifact | Status |
 | --- | --- | --- |
-| **Theorem ND (CANDIDATE)**: natural-density upgrade of Tao's theorem — `{N : Col_min(N) > N0}` has upper natural density `<= C log^(-1/25) N0` | `notes/round4-july2026/s5-completion/PROOFS.md` (571-line manuscript; verification scripts sA--sE alongside) | Awaiting human review; not a repo claim. AI-proved and AI-refereed only (two independent adversarial AI referees, both NOT-REFUTED with minor findings). Treat exactly as an unrefereed preprint draft; it does not change any obligation above. |
+| **Theorem ND (CANDIDATE; no priority)**: natural-density form of Tao's theorem — `{N : Col_min(N) > N0}` has upper natural density `<= C log^(-1/25) N0`, C not explicit | `notes/round4-july2026/s5-completion/PROOFS.md` (571-line manuscript; scripts sA--sE alongside); round-6 referee report `notes/round6-nov2026/nd-referee/REPORT.md` | AI-generated, no human review; not a repo claim. First claimed by J. Allikvere (Zenodo, 13 July 2026) by essentially the same method and by L. Mazur (ProofAtlas, 21 July 2026, claimed Lean-checked); the repository claims no priority and no novelty. The November 2026 AI referee found no fatal gap but five defects needing written repairs (including a misquoted Rhin bound). It does not change any obligation above. |
 
 ## Verification Snapshot
 

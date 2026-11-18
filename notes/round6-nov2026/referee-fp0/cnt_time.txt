@@ -1,0 +1,1 @@
+taskset -c 1 ./r2_count 96 1 0 1 > cnt_3p1_Q96.txt  24.38s user 0.00s system 49% cpu 48.790 total

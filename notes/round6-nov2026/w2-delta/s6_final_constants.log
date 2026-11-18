@@ -1,0 +1,16 @@
+s=2 c=0.5000 tail<=6.7e-20  beta_all(0)=15.83431  tier-1: sum 1/x_k <= (beta_all(0)+1)/(1-c) = 33.6686
+s=3 c=0.2500 tail<=9.4e-20  beta_all(0)=19.37215  tier-1: sum 1/x_k <= (beta_all(0)+1)/(1-c) = 27.1629
+s=4 c=0.1250 tail<=1.3e-19  beta_all(0)=22.91451  tier-1: sum 1/x_k <= (beta_all(0)+1)/(1-c) = 27.3309
+s=5 c=0.0625 tail<=1.8e-19  beta_all(0)=26.45478  tier-1: sum 1/x_k <= (beta_all(0)+1)/(1-c) = 29.2851
+   L0=32 s=2: beta_all=3.49270 beta_odd=2.19972
+   L0=32 s=3: beta_all=4.78151 beta_odd=2.95685
+   L0=32 s=4: beta_all=6.39814 beta_odd=3.88391
+   L0=32 s=5: beta_all=8.25655 beta_odd=4.92932
+FINAL L0=32: eps=2.39e-07  U(all, levels>=L0) <= 6.37535   W_odd(levels>=L0) <= 4.55068
+   => log Res <= M_B + W_odd/3 = 1.74255 ,  Res(n) <= 5.7119  for every n reaching 1
+   => any distinct segment: prod over odd elements (1+1/(3x)) <= (4/3)*5.7119 = 7.6158 ; sum of 1/x_k <= 9.3121 (1 and 2 included: +1)
+orbit segments with all elements >= 2^32: sum 1/x <= 6.37535, odd sum <= 4.55068, product <= 4.55805
+orbit segments with all elements >= 2^40: sum 1/x <= 4.60964, odd sum <= 3.30063, product <= 3.00480
+orbit segments with all elements >= 2^60: sum 1/x <= 2.08571, odd sum <= 1.50015, product <= 1.64881
+orbit segments with all elements >= 2^68: sum 1/x <= 1.51080, odd sum <= 1.08814, product <= 1.43723
+orbit segments with all elements >= 2^71: sum 1/x <= 1.35939, odd sum <= 0.97906, product <= 1.38591

@@ -1,0 +1,8 @@
+product identity OK; n=27: [27, 41, 62, 31, 47, 71] 4 n=7: [7, 11, 17, 26, 13, 20] 4
+landing OK
+params 8 5 24 16/15 8/7 q= 1.949663830546796 A_min= 8.37741776722204 A= 9
+params 65 41 211 126/125 251/247 q= 1.9321796203338655 A_min= 9.72071397366866 A= 10
+27: count below 32 among first 71 = 10
+sojourn OK n<=20000; max count/1.9322^L = 0.8317542278024739
+beats trivial 2^L-1 from L = 67
+H constant: 161.33333333333334 exp(54) = 2.830753303274694e+23

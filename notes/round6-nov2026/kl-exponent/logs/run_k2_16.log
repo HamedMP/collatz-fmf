@@ -1,0 +1,167 @@
+k=2 gamma* ~ 0.436588393  lambda* ~ 1.35340009
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k2_lower: gamma=0.4365883734 float ratios [1.0000000185,1.0000000185] spread=1.831692
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k2_upper: gamma=0.4365884134 float ratios [0.9999999815,0.9999999815] spread=1.831692
+VERIFIED k=2 N=3 mode=lower gamma=480033993095/2^40=0.4365883734 lambda=1.35340007 feasible: all rows hold; spread=1.831692 min_rel_slack~1.846e-08 [python-int, all rows from residues]
+VERIFIED k=2 N=3 mode=upper gamma=480034037076/2^40=0.4365884134 lambda=1.35340011 infeasible: F(w) < w in all rows; spread=1.831692 min_rel_slack~1.846e-08 [python-int, all rows from residues]
+    k=3 gamma=0.444588393391 it=3829 conv=1 lo=1.131215114910 hi=1.131215114911 spread=2.7598766
+    k=3 gamma=0.718571455410 it=9875 conv=1 lo=0.926674788796 hi=0.926674788797 spread=4.0943812
+    k=3 gamma=0.613958533643 it=6582 conv=1 lo=0.998059062747 hi=0.998059062748 spread=3.5019700
+    k=3 gamma=0.611219751196 it=5537 conv=1 lo=1.000030598857 hi=1.000030598858 spread=3.4879748
+    k=3 gamma=0.611262216692 it=4449 conv=1 lo=0.999999987672 hi=0.999999987673 spread=3.4881913
+    k=3 gamma=0.611262199590 it=2406 conv=1 lo=1.000000000000 hi=1.000000000001 spread=3.4881912
+k=3 gamma* ~ 0.611262200  lambda* ~ 1.52759510
+    k=3 gamma=0.611262179588 it=2447 conv=1 lo=1.000000014418 hi=1.000000014419 spread=3.4881911
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k3_lower: gamma=0.6112621796 float ratios [1.0000000144,1.0000000144] spread=3.488191
+    k=3 gamma=0.611262219590 it=2628 conv=1 lo=0.999999985583 hi=0.999999985584 spread=3.4881913
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k3_upper: gamma=0.6112622196 float ratios [0.9999999856,0.9999999856] spread=3.488191
+VERIFIED k=3 N=9 mode=lower gamma=672089874077/2^40=0.6112621796 lambda=1.52759508 feasible: all rows hold; spread=3.488191 min_rel_slack~1.442e-08 [python-int, all rows from residues]
+VERIFIED k=3 N=9 mode=upper gamma=672089918059/2^40=0.6112622196 lambda=1.52759512 infeasible: F(w) < w in all rows; spread=3.488191 min_rel_slack~1.442e-08 [python-int, all rows from residues]
+    k=4 gamma=0.619262199589 it=111 conv=1 lo=1.047086825621 hi=1.047086825622 spread=4.6770166
+    k=4 gamma=0.721510769490 it=112 conv=1 lo=0.979186693995 hi=0.979186693996 spread=5.9326300
+    k=4 gamma=0.689433870613 it=100 conv=1 lo=0.999788136915 hi=0.999788136915 spread=5.4993912
+    k=4 gamma=0.689107440194 it=82 conv=1 lo=1.000000971754 hi=1.000000971754 spread=5.4951791
+    k=4 gamma=0.689108930441 it=60 conv=1 lo=0.999999999955 hi=0.999999999956 spread=5.4951983
+    k=4 gamma=0.689108930372 it=20 conv=1 lo=0.999999999999 hi=1.000000000000 spread=5.4951983
+k=4 gamma* ~ 0.689108930  lambda* ~ 1.61228739
+    k=4 gamma=0.689108910373 it=42 conv=1 lo=1.000000013041 hi=1.000000013042 spread=5.4951980
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k4_lower: gamma=0.6891089104 float ratios [1.0000000130,1.0000000130] spread=5.495198
+    k=4 gamma=0.689108950374 it=45 conv=1 lo=0.999999986956 hi=0.999999986957 spread=5.4951986
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k4_upper: gamma=0.6891089504 float ratios [0.9999999870,0.9999999870] spread=5.495199
+VERIFIED k=4 N=27 mode=lower gamma=757683259759/2^40=0.6891089104 lambda=1.61228737 feasible: all rows hold; spread=5.495198 min_rel_slack~1.304e-08 [python-int, all rows from residues]
+VERIFIED k=4 N=27 mode=upper gamma=757683303741/2^40=0.6891089504 lambda=1.61228742 infeasible: F(w) < w in all rows; spread=5.495199 min_rel_slack~1.304e-08 [python-int, all rows from residues]
+    k=5 gamma=0.697108930374 it=104 conv=1 lo=1.021042900192 hi=1.021042900193 spread=8.1423493
+    k=5 gamma=0.743385721747 it=471 conv=1 lo=0.994456932876 hi=0.994456932877 spread=9.3468855
+    k=5 gamma=0.733635938923 it=87 conv=1 lo=0.999968230155 hi=0.999968230156 spread=9.0771502
+    k=5 gamma=0.733579892263 it=72 conv=1 lo=0.999999981235 hi=0.999999981236 spread=9.0756238
+    k=5 gamma=0.733579859141 it=43 conv=1 lo=1.000000000000 hi=1.000000000001 spread=9.0756229
+k=5 gamma* ~ 0.733579859  lambda* ~ 1.66275990
+    k=5 gamma=0.733579839140 it=42 conv=1 lo=1.000000011331 hi=1.000000011332 spread=9.0756224
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k5_lower: gamma=0.7335798391 float ratios [1.0000000113,1.0000000113] spread=9.075622
+    k=5 gamma=0.733579879140 it=44 conv=1 lo=0.999999988670 hi=0.999999988671 spread=9.0756235
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k5_upper: gamma=0.7335798791 float ratios [0.9999999887,0.9999999887] spread=9.075623
+VERIFIED k=5 N=81 mode=lower gamma=806579563036/2^40=0.7335798391 lambda=1.66275988 feasible: all rows hold; spread=9.075622 min_rel_slack~1.133e-08 [python-int, all rows from residues]
+VERIFIED k=5 N=81 mode=upper gamma=806579607017/2^40=0.7335798791 lambda=1.66275992 infeasible: F(w) < w in all rows; spread=9.075623 min_rel_slack~1.133e-08 [python-int, all rows from residues]
+    k=6 gamma=0.741579859140 it=133 conv=1 lo=1.010791076917 hi=1.010791076918 spread=11.9571025
+    k=6 gamma=0.765431567473 it=131 conv=1 lo=0.997440550902 hi=0.997440550903 spread=13.1090395
+    k=6 gamma=0.760834282883 it=117 conv=1 lo=0.999991397239 hi=0.999991397240 spread=12.8777108
+    k=6 gamma=0.760818798334 it=85 conv=1 lo=1.000000006885 hi=1.000000006886 spread=12.8769394
+    k=6 gamma=0.760818810718 it=47 conv=1 lo=0.999999999999 hi=1.000000000000 spread=12.8769400
+k=6 gamma* ~ 0.760818811  lambda* ~ 1.69445205
+    k=6 gamma=0.760818790718 it=50 conv=1 lo=1.000000011119 hi=1.000000011120 spread=12.8769390
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k6_lower: gamma=0.7608187907 float ratios [1.0000000111,1.0000000111] spread=12.876939
+    k=6 gamma=0.760818830719 it=53 conv=1 lo=0.999999988878 hi=0.999999988879 spread=12.8769410
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k6_upper: gamma=0.7608188307 float ratios [0.9999999889,0.9999999889] spread=12.876941
+VERIFIED k=6 N=243 mode=lower gamma=836529107025/2^40=0.7608187907 lambda=1.69445203 feasible: all rows hold; spread=12.876939 min_rel_slack~1.112e-08 [python-int, all rows from residues]
+VERIFIED k=6 N=243 mode=upper gamma=836529151007/2^40=0.7608188307 lambda=1.69445207 infeasible: F(w) < w in all rows; spread=12.876941 min_rel_slack~1.112e-08 [python-int, all rows from residues]
+    k=7 gamma=0.768818810719 it=134 conv=1 lo=1.007311309495 hi=1.007311309496 spread=18.9681283
+    k=7 gamma=0.785007058359 it=118 conv=1 lo=0.998712842667 hi=0.998712842668 spread=20.4278015
+    k=7 gamma=0.782574890140 it=109 conv=1 lo=0.999996736174 hi=0.999996736175 spread=20.1969613
+    k=7 gamma=0.782568711230 it=79 conv=1 lo=1.000000001475 hi=1.000000001476 spread=20.1963785
+    k=7 gamma=0.782568714022 it=44 conv=1 lo=1.000000000000 hi=1.000000000000 spread=20.1963787
+k=7 gamma* ~ 0.782568714  lambda* ~ 1.72019094
+    k=7 gamma=0.782568694021 it=53 conv=1 lo=1.000000010569 hi=1.000000010570 spread=20.1963768
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k7_lower: gamma=0.7825686940 float ratios [1.0000000106,1.0000000106] spread=20.196377
+    k=7 gamma=0.782568734023 it=56 conv=1 lo=0.999999989430 hi=0.999999989431 spread=20.1963806
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k7_upper: gamma=0.7825687340 float ratios [0.9999999894,0.9999999894] spread=20.196381
+VERIFIED k=7 N=729 mode=lower gamma=860443378610/2^40=0.7825686940 lambda=1.72019092 feasible: all rows hold; spread=20.196377 min_rel_slack~1.057e-08 [python-int, all rows from residues]
+VERIFIED k=7 N=729 mode=upper gamma=860443422592/2^40=0.7825687340 lambda=1.72019097 infeasible: F(w) < w in all rows; spread=20.196381 min_rel_slack~1.057e-08 [python-int, all rows from residues]
+    k=8 gamma=0.790568714022 it=170 conv=1 lo=1.006284156658 hi=1.006284156659 spread=27.2636608
+    k=8 gamma=0.804489811088 it=157 conv=1 lo=0.999360954426 hi=0.999360954427 spread=29.3329307
+    k=8 gamma=0.803200791707 it=140 conv=1 lo=0.999998052040 hi=0.999998052041 spread=29.1321690
+    k=8 gamma=0.803196851722 it=104 conv=1 lo=1.000000000618 hi=1.000000000619 spread=29.1315575
+    k=8 gamma=0.803196852973 it=52 conv=1 lo=1.000000000000 hi=1.000000000001 spread=29.1315577
+k=8 gamma* ~ 0.803196853  lambda* ~ 1.74496349
+    k=8 gamma=0.803196832971 it=71 conv=1 lo=1.000000009892 hi=1.000000009893 spread=29.1315546
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k8_lower: gamma=0.8031968330 float ratios [1.0000000099,1.0000000099] spread=29.131555
+    k=8 gamma=0.803196872972 it=76 conv=1 lo=0.999999990109 hi=0.999999990110 spread=29.1315608
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k8_upper: gamma=0.8031968730 float ratios [0.9999999901,0.9999999901] spread=29.131561
+VERIFIED k=8 N=2187 mode=lower gamma=883124257244/2^40=0.8031968330 lambda=1.74496347 feasible: all rows hold; spread=29.131555 min_rel_slack~9.892e-09 [python-int, all rows from residues]
+VERIFIED k=8 N=2187 mode=upper gamma=883124301226/2^40=0.8031968730 lambda=1.74496352 infeasible: F(w) < w in all rows; spread=29.131561 min_rel_slack~9.890e-09 [python-int, all rows from residues]
+    k=9 gamma=0.811196852971 it=172 conv=1 lo=1.002701380591 hi=1.002701380592 spread=41.8750196
+    k=9 gamma=0.817191827240 it=157 conv=1 lo=0.999827510749 hi=0.999827510750 spread=43.4349502
+    k=9 gamma=0.816831523957 it=139 conv=1 lo=0.999999781650 hi=0.999999781651 spread=43.3394427
+    k=9 gamma=0.816831067321 it=93 conv=1 lo=1.000000000020 hi=1.000000000021 spread=43.3393218
+    k=9 gamma=0.816831067363 it=33 conv=1 lo=1.000000000000 hi=1.000000000000 spread=43.3393218
+k=9 gamma* ~ 0.816831067  lambda* ~ 1.76153247
+    k=9 gamma=0.816831047363 it=72 conv=1 lo=1.000000009564 hi=1.000000009565 spread=43.3393165
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k9_lower: gamma=0.8168310474 float ratios [1.0000000096,1.0000000096] spread=43.339316
+    k=9 gamma=0.816831087363 it=78 conv=1 lo=0.999999990435 hi=0.999999990436 spread=43.3393271
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k9_upper: gamma=0.8168310874 float ratios [0.9999999904,0.9999999904] spread=43.339327
+VERIFIED k=9 N=6561 mode=lower gamma=898115234504/2^40=0.8168310474 lambda=1.76153244 feasible: all rows hold; spread=43.339316 min_rel_slack~9.564e-09 [python-int, all rows from residues]
+VERIFIED k=9 N=6561 mode=upper gamma=898115278485/2^40=0.8168310874 lambda=1.76153249 infeasible: F(w) < w in all rows; spread=43.339327 min_rel_slack~9.564e-09 [python-int, all rows from residues]
+    k=10 gamma=0.824831067363 it=178 conv=1 lo=1.002194988179 hi=1.002194988180 spread=62.9645499
+    k=10 gamma=0.829703473391 it=153 conv=1 lo=0.999926985183 hi=0.999926985184 spread=65.0483030
+    k=10 gamma=0.829546441792 it=131 conv=1 lo=0.999999911575 hi=0.999999911576 spread=64.9800440
+    k=10 gamma=0.829546251396 it=87 conv=1 lo=1.000000000003 hi=1.000000000004 spread=64.9799613
+k=10 gamma* ~ 0.829546251  lambda* ~ 1.77712634
+    k=10 gamma=0.829546231387 it=73 conv=1 lo=1.000000009295 hi=1.000000009296 spread=64.9799526
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k10_lower: gamma=0.8295462314 float ratios [1.0000000093,1.0000000093] spread=64.979953
+    k=10 gamma=0.829546271389 it=77 conv=1 lo=0.999999990717 hi=0.999999990718 spread=64.9799700
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k10_upper: gamma=0.8295462714 float ratios [0.9999999907,0.9999999907] spread=64.979970
+VERIFIED k=10 N=19683 mode=lower gamma=912095727188/2^40=0.8295462314 lambda=1.77712632 feasible: all rows hold; spread=64.979953 min_rel_slack~9.295e-09 [python-int, all rows from residues]
+VERIFIED k=10 N=19683 mode=upper gamma=912095771170/2^40=0.8295462714 lambda=1.77712637 infeasible: F(w) < w in all rows; spread=64.979970 min_rel_slack~9.282e-09 [python-int, all rows from residues]
+    k=11 gamma=0.837546251388 it=184 conv=1 lo=1.001903662559 hi=1.001903662560 spread=95.2970816
+    k=11 gamma=0.841772591144 it=152 conv=1 lo=0.999992787635 hi=0.999992787636 spread=98.4129492
+    k=11 gamma=0.841756624161 it=115 conv=1 lo=0.999999992616 hi=0.999999992617 spread=98.4009832
+    k=11 gamma=0.841756607798 it=73 conv=1 lo=0.999999999999 hi=1.000000000000 spread=98.4009709
+k=11 gamma* ~ 0.841756608  lambda* ~ 1.79223101
+    k=11 gamma=0.841756587799 it=75 conv=1 lo=1.000000009024 hi=1.000000009025 spread=98.4009559
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k11_lower: gamma=0.8417565878 float ratios [1.0000000090,1.0000000090] spread=98.400956
+    k=11 gamma=0.841756627800 it=79 conv=1 lo=0.999999990973 hi=0.999999990974 spread=98.4009859
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k11_upper: gamma=0.8417566278 float ratios [0.9999999910,0.9999999910] spread=98.400986
+VERIFIED k=11 N=59049 mode=lower gamma=925521156042/2^40=0.8417565878 lambda=1.79223099 feasible: all rows hold; spread=98.400956 min_rel_slack~9.024e-09 [python-int, all rows from residues]
+VERIFIED k=11 N=59049 mode=upper gamma=925521200024/2^40=0.8417566278 lambda=1.79223104 infeasible: F(w) < w in all rows; spread=98.400986 min_rel_slack~9.026e-09 [python-int, all rows from residues]
+    k=12 gamma=0.849756607799 it=182 conv=1 lo=1.001482106239 hi=1.001482106240 spread=142.9356803
+    k=12 gamma=0.853047738920 it=151 conv=1 lo=1.000038758970 hi=1.000038758971 spread=146.8606001
+    k=12 gamma=0.853136182887 it=129 conv=1 lo=1.000000034847 hi=1.000000034848 spread=146.9675754
+    k=12 gamma=0.853136262479 it=86 conv=1 lo=1.000000000000 hi=1.000000000001 spread=146.9676717
+k=12 gamma* ~ 0.853136262  lambda* ~ 1.80642363
+    k=12 gamma=0.853136242477 it=77 conv=1 lo=1.000000008757 hi=1.000000008758 spread=146.9676475
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k12_lower: gamma=0.8531362425 float ratios [1.0000000088,1.0000000088] spread=146.967647
+    k=12 gamma=0.853136282478 it=81 conv=1 lo=0.999999991244 hi=0.999999991245 spread=146.9676959
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k12_upper: gamma=0.8531362825 float ratios [0.9999999912,0.9999999912] spread=146.967696
+VERIFIED k=12 N=177147 mode=lower gamma=938033218681/2^40=0.8531362425 lambda=1.80642360 feasible: all rows hold; spread=146.967647 min_rel_slack~8.757e-09 [python-int, all rows from residues]
+VERIFIED k=12 N=177147 mode=upper gamma=938033262662/2^40=0.8531362825 lambda=1.80642365 infeasible: F(w) < w in all rows; spread=146.967696 min_rel_slack~8.755e-09 [python-int, all rows from residues]
+    k=13 gamma=0.861136262478 it=187 conv=1 lo=1.000798436647 hi=1.000798436647 spread=219.8198591
+    k=13 gamma=0.862909858180 it=152 conv=1 lo=1.000040934234 hi=1.000040934235 spread=223.3363744
+    k=13 gamma=0.863005738749 it=132 conv=1 lo=1.000000019507 hi=1.000000019508 spread=223.5280916
+    k=13 gamma=0.863005784464 it=83 conv=1 lo=1.000000000000 hi=1.000000000001 spread=223.5281831
+k=13 gamma* ~ 0.863005784  lambda* ~ 1.81882380
+    k=13 gamma=0.863005764462 it=77 conv=1 lo=1.000000008535 hi=1.000000008536 spread=223.5281430
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k13_lower: gamma=0.8630057645 float ratios [1.0000000085,1.0000000085] spread=223.528143
+    k=13 gamma=0.863005804463 it=82 conv=1 lo=0.999999991466 hi=0.999999991467 spread=223.5282231
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k13_upper: gamma=0.8630058045 float ratios [0.9999999915,0.9999999915] spread=223.528223
+VERIFIED k=13 N=531441 mode=lower gamma=948884872864/2^40=0.8630057645 lambda=1.81882377 feasible: all rows hold; spread=223.528143 min_rel_slack~8.535e-09 [python-int, all rows from residues]
+VERIFIED k=13 N=531441 mode=upper gamma=948884916845/2^40=0.8630058045 lambda=1.81882382 infeasible: F(w) < w in all rows; spread=223.528223 min_rel_slack~8.533e-09 [python-int, all rows from residues]
+    k=14 gamma=0.871005784463 it=194 conv=1 lo=1.000601573385 hi=1.000601573386 spread=334.5457659
+    k=14 gamma=0.872342212269 it=153 conv=1 lo=1.000045797116 hi=1.000045797117 spread=338.8961216
+    k=14 gamma=0.872452369810 it=137 conv=1 lo=1.000000018231 hi=1.000000018232 spread=339.2572285
+    k=14 gamma=0.872452413682 it=88 conv=1 lo=1.000000000000 hi=1.000000000001 spread=339.2573724
+k=14 gamma* ~ 0.872452414  lambda* ~ 1.83077236
+    k=14 gamma=0.872452393680 it=83 conv=1 lo=1.000000008312 hi=1.000000008313 spread=339.2573068
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k14_lower: gamma=0.8724523937 float ratios [1.0000000083,1.0000000083] spread=339.257307
+    k=14 gamma=0.872452433681 it=87 conv=1 lo=0.999999991689 hi=0.999999991690 spread=339.2574380
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k14_upper: gamma=0.8724524337 float ratios [0.9999999917,0.9999999917] spread=339.257438
+VERIFIED k=14 N=1594323 mode=lower gamma=959271551532/2^40=0.8724523937 lambda=1.83077233 feasible: all rows hold; spread=339.257307 min_rel_slack~8.312e-09 [python-int, all rows from residues]
+VERIFIED k=14 N=1594323 mode=upper gamma=959271595514/2^40=0.8724524337 lambda=1.83077238 infeasible: F(w) < w in all rows; spread=339.257438 min_rel_slack~8.310e-09 [python-int, all rows from residues]
+    k=15 gamma=0.880452413681 it=196 conv=1 lo=1.000322114981 hi=1.000322114982 spread=512.0702388
+    k=15 gamma=0.881168109489 it=153 conv=1 lo=1.000032461948 hi=1.000032461949 spread=515.8920152
+    k=15 gamma=0.881248331753 it=141 conv=1 lo=1.000000007278 hi=1.000000007279 spread=516.3221668
+    k=15 gamma=0.881248349744 it=84 conv=1 lo=0.999999999999 hi=1.000000000000 spread=516.3222633
+k=15 gamma* ~ 0.881248350  lambda* ~ 1.84196845
+    k=15 gamma=0.881248329745 it=85 conv=1 lo=1.000000008090 hi=1.000000008091 spread=516.3221561
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k15_lower: gamma=0.8812483297 float ratios [1.0000000081,1.0000000081] spread=516.322156
+    k=15 gamma=0.881248369746 it=89 conv=1 lo=0.999999991908 hi=0.999999991909 spread=516.3223706
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k15_upper: gamma=0.8812483697 float ratios [0.9999999919,0.9999999919] spread=516.322371
+VERIFIED k=15 N=4782969 mode=lower gamma=968942785513/2^40=0.8812483297 lambda=1.84196842 feasible: all rows hold; spread=516.322156 min_rel_slack~8.090e-09 [python-int, all rows from residues]
+VERIFIED k=15 N=4782969 mode=upper gamma=968942829494/2^40=0.8812483697 lambda=1.84196847 infeasible: F(w) < w in all rows; spread=516.322371 min_rel_slack~8.091e-09 [python-int, all rows from residues]
+    k=16 gamma=0.889248349745 it=205 conv=1 lo=1.000007353080 hi=1.000007353080 spread=792.8937480
+    k=16 gamma=0.889264689863 it=133 conv=1 lo=1.000000909580 hi=1.000000909581 spread=793.0394022
+    k=16 gamma=0.889266996483 it=122 conv=1 lo=1.000000000004 hi=1.000000000005 spread=793.0599654
+k=16 gamma* ~ 0.889266996  lambda* ~ 1.85223480
+    k=16 gamma=0.889266976473 it=87 conv=1 lo=1.000000007895 hi=1.000000007896 spread=793.0597870
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k16_lower: gamma=0.8892669765 float ratios [1.0000000079,1.0000000079] spread=793.059787
+    k=16 gamma=0.889267016474 it=93 conv=1 lo=0.999999992121 hi=0.999999992122 spread=793.0601436
+  wrote /home/matrix/home/projects/collatz/repo/notes/round6-nov2026/kl-exponent/cert/k16_upper: gamma=0.8892670165 float ratios [0.9999999921,0.9999999921] spread=793.060144
+VERIFIED k=16 N=14348907 mode=lower gamma=977759380829/2^40=0.8892669765 lambda=1.85223478 feasible: all rows hold; spread=793.059787 min_rel_slack~7.895e-09 [python-int, all rows from residues]
+VERIFIED k=16 N=14348907 mode=upper gamma=977759424811/2^40=0.8892670165 lambda=1.85223483 infeasible: F(w) < w in all rows; spread=793.060144 min_rel_slack~7.878e-09 [python-int, all rows from residues]

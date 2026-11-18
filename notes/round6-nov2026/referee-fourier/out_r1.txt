@@ -1,0 +1,46 @@
+step1: E_k brute(3 seeds)==recursion, distinct, #=N_k for k<=26: True
+step1: one-step failures 0, 2-block failures 0, modulus failures 0, max dev 2.23e-14
+lambda^4-lambda-1 = 4.440892098500626e-16  s = 0.28776078708402897
+N_k/2^(sk): min 1.099401 (k>=1) max 1.638345 ; k=0: 1.000
+N_j nondecreasing for j>=1: True
+  N(Q=5,m): [4, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  N(Q=9,m): [8, 6, 5, 5, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  N(Q=12,m): [15, 7, 3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+step2: N(Q,m) non-increasing in m (Q<20, Q+m<=26): True
+  N(Q,Q) for Q=0..13: [1, 1, 1, 2, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1]
+step2: Selberg majorant/minorant valid, s(0), degree, coefficient bounds: True  max |s(h)|/bound = 0.9990
+step2: N(Q,m) <= sum_c S+(c/2^K) = sum_h s(h)T_K(h) <= report line-3 bound: True
+   K=24 Q=23 m=1  N(Q,m)=73  sum S+=152.82  chain bound=176.4  N_K=156
+   K=24 Q=22 m=2  N(Q,m)=35  sum S+=74.15  chain bound=96.8  N_K=156
+   K=24 Q=21 m=3  N(Q,m)=20  sum S+=37.79  chain bound=72.1  N_K=156
+   K=24 Q=20 m=4  N(Q,m)=11  sum S+=20.32  chain bound=54.8  N_K=156
+   K=24 Q=19 m=5  N(Q,m)=5  sum S+=10.55  chain bound=43.3  N_K=156
+   K=24 Q=18 m=6  N(Q,m)=3  sum S+=5.35  chain bound=42.8  N_K=156
+   K=24 Q=17 m=7  N(Q,m)=2  sum S+=4.11  chain bound=41.4  N_K=156
+   K=24 Q=16 m=8  N(Q,m)=2  sum S+=3.16  chain bound=42.2  N_K=156
+   K=24 Q=15 m=9  N(Q,m)=1  sum S+=2.08  chain bound=41.0  N_K=156
+   K=26 Q=25 m=1  N(Q,m)=118  sum S+=237.26  chain bound=271.9  N_K=236
+   K=26 Q=24 m=2  N(Q,m)=70  sum S+=129.33  chain bound=165.6  N_K=236
+   K=26 Q=23 m=3  N(Q,m)=30  sum S+=63.54  chain bound=102.9  N_K=236
+   K=26 Q=22 m=4  N(Q,m)=12  sum S+=28.26  chain bound=70.6  N_K=236
+   K=26 Q=21 m=5  N(Q,m)=6  sum S+=12.67  chain bound=57.7  N_K=236
+   K=26 Q=20 m=6  N(Q,m)=3  sum S+=7.57  chain bound=58.4  N_K=236
+   K=26 Q=19 m=7  N(Q,m)=3  sum S+=5.04  chain bound=51.7  N_K=236
+   K=26 Q=18 m=8  N(Q,m)=2  sum S+=4.06  chain bound=51.5  N_K=236
+   K=26 Q=17 m=9  N(Q,m)=1  sum S+=2.85  chain bound=51.5  N_K=236
+  delta=0.10 theta=0.02963: exponent term1 0.266658 term2 0.266658  s-delta' 0.266658
+  delta=0.25 theta=0.07752: exponent term1 0.232550 term2 0.232550  s-delta' 0.232550
+  delta=0.50 theta=0.16806: exponent term1 0.168061 term2 0.168061  s-delta' 0.168061
+  delta=0.90 theta=0.34950: exponent term1 0.038833 term2 0.038833  s-delta' 0.038833
+step4: parametrisation is a bijection onto E_K (K<=26), r in [-1,0]: True
+step4: mirror identity exact (12 h per K, K<=26): True
+   K=4 coincidences mod 1: [[('b', 0, '0'), ('a', -1, '-1')]]
+   K=5 coincidences mod 1: [[('b', 0, '0'), ('a', -1, '-1')]]
+   K=6 coincidences mod 1: [[('b', 0, '0'), ('a', -1, '-1')]]
+   K=7 coincidences mod 1: [[('b', 0, '0'), ('aa', -1, '-1')]]
+   K=8 coincidences mod 1: [[('bb', 0, '0'), ('aa', -1, '-1')]]
+   K=9 coincidences mod 1: [[('bb', 0, '0'), ('aa', -1, '-1')]]
+   K=22 coincidences mod 1: [[('bbbbb', 0, '0'), ('aaaaaaa', -1, '-1')]]
+   K=25 coincidences mod 1: [[('bbbbbb', 0, '0'), ('aaaaaaaa', -1, '-1')]]
+   K=26 coincidences mod 1: [[('bbbbbb', 0, '0'), ('aaaaaaaa', -1, '-1')]]
+   number of coincident groups per K (0..26): [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]  group sizes max: 2

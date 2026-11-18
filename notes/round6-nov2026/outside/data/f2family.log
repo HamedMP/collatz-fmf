@@ -1,0 +1,3 @@
+all (j,i) with 1<=i<=j<=7: OK
+j=8 n=65792 t=918528 predicted=918528 OK t/(n log2 n)=0.8723 [5s]
+j=9 n=262656 t=4196352 predicted=4196352 OK t/(n log2 n)=0.8875 [104s]

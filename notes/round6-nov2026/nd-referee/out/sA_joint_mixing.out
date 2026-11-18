@@ -1,0 +1,28 @@
+[A2] PASS row sums = C(s-1,n-1) exactly, n=5, s<= 33
+[A1] PASS n=5: max col-vs-Lemma1.12 diff 4.008e-08 <= exact tail 5.464e-06
+[A1-n2] PASS Syrac(Z/9) = Tao's published table (63rds)
+
+  n   m   Osc^J(m,n) [joint]   Osc(m,n) [plain]   ratio J/plain
+  6   1   1.001465            0.753646         1.329
+  6   2   0.845170            0.610627         1.384
+  6   3   0.728871            0.488543         1.492
+  6   4   0.619273            0.379723         1.631
+  6   5   0.464165            0.262678         1.767
+  7   1   1.004504            0.775811         1.295
+  7   2   0.852343            0.638060         1.336
+  7   3   0.740616            0.522790         1.417
+  7   4   0.649248            0.425085         1.527
+  7   5   0.556497            0.333654         1.668
+  7   6   0.418943            0.234852         1.784
+  8   1   1.000586            0.790843         1.265
+  8   2   0.862566            0.658194         1.311
+  8   3   0.748818            0.550911         1.359
+  8   4   0.662609            0.459377         1.442
+  8   5   0.588244            0.377921         1.557
+  8   6   0.506461            0.298827         1.695
+  8   7   0.383051            0.212734         1.801
+[A3] PASS joint oscillation tables computed exactly (see rows); decay in m at fixed n visible
+[A4] PASS X_n = F_(k+1)(block1) + 3^(k+1) 2^(-l) F_(n-k-1)(block2) mod 3^n for all 4^6 words, n=6,k=2
+
+ALL sA CHECKS COMPLETE
+exit 0

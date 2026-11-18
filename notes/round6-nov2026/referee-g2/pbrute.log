@@ -1,0 +1,4 @@
+B=1024 NU=200
+max ratio 1.8497 at rho=-4 t=-4 nu=1 v2=4
+max v2/log(2+max) = 8.1922 at rho=1 t=-1 nu=128 v2=9
+max v2 = 26 at rho=-97 t=-629 nu=177

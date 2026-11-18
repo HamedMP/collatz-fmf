@@ -1,0 +1,22 @@
+== 3n+1: all a<=120, x<=1e8
+map (3n+1)/2: tested 40 targets a in [2,120] (1 on a cycle), xmax=min(1e+12 a, 100000000), 628465538 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.236931 (a=119, x->158) ; cycle min ratio 2.706798 (a=2, x->4)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.046097 (a=110, x->146) ; cycle min ratio 3.856486 (a=2, x->8)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.431827 (a=74, x->98) ; cycle min ratio 4.981886 (a=2, x->8)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 6.327065 (a=20, x->26) ; cycle min ratio 6.713074 (a=2, x->8)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 9.038953 (a=20, x->26) ; cycle min ratio 8.066395 (a=2, x->8)
+== 3n-1: all a<=120, x<=1e8
+map (3n-1)/2: tested 40 targets a in [1,120] (10 on a cycle), xmax=min(1e+12 a, 100000000), 420390055 tree nodes
+  k=2 gamma=0.4365874 M=1.831691 : non-cycle min ratio 3.187870 (a=16, x->22) ; cycle min ratio 1.425047 (a=1, x->2)
+  k=3 gamma=0.6112612 M=3.488186 : non-cycle min ratio 5.002715 (a=52, x->70) ; cycle min ratio 1.981143 (a=1, x->2)
+  k=4 gamma=0.6891079 M=5.495185 : non-cycle min ratio 5.385441 (a=88, x->118) ; cycle min ratio 2.015494 (a=1, x->2)
+  k=5 gamma=0.7335789 M=9.075596 : non-cycle min ratio 7.405399 (a=106, x->142) ; cycle min ratio 2.261074 (a=1, x->2)
+  k=6 gamma=0.7608178 M=12.876890 : non-cycle min ratio 9.452377 (a=88, x->118) ; cycle min ratio 2.299529 (a=1, x->2)
+== 5n+1: all a<=3000, x<=1e9
+map (5n+1)/2: tested 600 targets a in [1,3000] (9 on a cycle), xmax=min(1e+12 a, 1000000000), 46742515 tree nodes
+  k=2 gamma=0.2577943 M=2.043695 : non-cycle min ratio 6.988328 (a=2978, x->4764) ; cycle min ratio 7.324314 (a=3, x->4)
+  k=3 gamma=0.2975477 M=4.356610 : non-cycle min ratio 8.358860 (a=2953, x->4724) ; cycle min ratio 10.620274 (a=3, x->4)
+  k=4 gamma=0.3332357 M=9.855178 : non-cycle min ratio 10.725635 (a=2578, x->4124) ; cycle min ratio 12.485345 (a=3, x->4)
+  k=5 gamma=0.3809085 M=19.582129 : non-cycle min ratio 12.768485 (a=1693, x->2708) ; cycle min ratio 24.884548 (a=3, x->4)
+  k=6 gamma=0.4105754 M=37.053307 : non-cycle min ratio 15.094800 (a=1693, x->2708) ; cycle min ratio 36.555084 (a=3, x->4)
+  k=7 gamma=0.4327938 M=64.465466 : non-cycle min ratio 20.009384 (a=1628, x->2604) ; cycle min ratio 57.030457 (a=68, x->108)

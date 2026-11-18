@@ -1,0 +1,79 @@
+Tao's Z/9 table x63 (expect 0 8 16 0 11 4 0 2 22): [ 0.  8. 16.  0. 11.  4.  0.  2. 22.]
+
+[M] max-mass of Syrac(Z/3^m) vs (2/3)^m and 2^-m
+  m=1  lost mass=0.0e+00  max=0.66666667  max/(2/3)^m=1.0000  max*2^m=1.3333
+  m=2  lost mass=0.0e+00  max=0.34920635  max/(2/3)^m=0.7857  max*2^m=1.3968
+  m=3  lost mass=0.0e+00  max=0.17765113  max/(2/3)^m=0.5996  max*2^m=1.4212
+  m=4  lost mass=2.2e-16  max=0.08973505  max/(2/3)^m=0.4543  max*2^m=1.4358
+  m=5  lost mass=7.8e-16  max=0.04517604  max/(2/3)^m=0.3431  max*2^m=1.4456
+  m=6  lost mass=3.2e-15  max=0.02267076  max/(2/3)^m=0.2582  max*2^m=1.4509
+  m=7  lost mass=1.1e-14  max=0.01136196  max/(2/3)^m=0.1941  max*2^m=1.4543
+  m=8  lost mass=3.2e-14  max=0.00569041  max/(2/3)^m=0.1458  max*2^m=1.4567
+
+[J*] Osc^J_{m,n} (joint in (S,X)) vs Tao's plain Osc_{m,n} (X only)
+   n  m   Osc_plain    Osc_joint    ratio
+   3  1   0.656161    0.998190    1.521
+   3  2   0.405740    0.748492    1.845
+   4  1   0.701277    1.000772    1.427
+   4  2   0.535031    0.823745    1.540
+   4  3   0.342513    0.616665    1.800
+   5  1   0.727045    0.995110    1.369
+   5  2   0.579620    0.838144    1.446
+   5  3   0.442783    0.705074    1.592
+   5  4   0.297214    0.527381    1.774
+   6  1   0.753647    1.001429    1.329
+   6  2   0.610628    0.845131    1.384
+   6  3   0.488544    0.728832    1.492
+   6  4   0.379723    0.619235    1.631
+   6  5   0.262678    0.464126    1.767
+   7  1   0.775812    1.004466    1.295
+   7  2   0.638060    0.852302    1.336
+   7  3   0.522790    0.740575    1.417
+   7  4   0.425085    0.649206    1.527
+   7  5   0.333654    0.556456    1.668
+   7  6   0.234852    0.418902    1.784
+   8  1   0.790845    1.000546    1.265
+   8  2   0.658194    0.862524    1.310
+   8  3   0.550911    0.748776    1.359
+   8  4   0.459377    0.662567    1.442
+   8  5   0.377921    0.588202    1.556
+   8  6   0.298827    0.506419    1.695
+   8  7   0.212734    0.383009    1.800
+
+[P7] sum_s |E 1_{S=s} chi(X_n)|  vs  |E chi(X_n)|  vs  E prod|f|  (need LHS <= RHS)
+  n=4 xi=1      sum_s=0.213696  plain=0.118017  majorant=0.343628  ok
+  n=4 xi=2      sum_s=0.184881  plain=0.072076  majorant=0.257496  ok
+  n=4 xi=4      sum_s=0.170846  plain=0.074166  majorant=0.405542  ok
+  n=4 xi=5      sum_s=0.295914  plain=0.101001  majorant=0.407320  ok
+  n=4 xi=7      sum_s=0.181269  plain=0.048483  majorant=0.356268  ok
+  n=4 xi=28     sum_s=0.235225  plain=0.128358  majorant=0.385034  ok
+  n=4 xi=80     sum_s=0.213696  plain=0.118017  majorant=0.343628  ok
+  n=5 xi=1      sum_s=0.163793  plain=0.086018  majorant=0.464765  ok
+  n=5 xi=2      sum_s=0.076786  plain=0.036811  majorant=0.220204  ok
+  n=5 xi=4      sum_s=0.093154  plain=0.053354  majorant=0.384824  ok
+  n=5 xi=5      sum_s=0.100542  plain=0.045672  majorant=0.421748  ok
+  n=5 xi=7      sum_s=0.123668  plain=0.035748  majorant=0.437276  ok
+  n=5 xi=82     sum_s=0.126957  plain=0.048814  majorant=0.338872  ok
+  n=5 xi=242    sum_s=0.163793  plain=0.086018  majorant=0.464765  ok
+  n=6 xi=1      sum_s=0.071058  plain=0.015217  majorant=0.201375  ok
+  n=6 xi=2      sum_s=0.066462  plain=0.035407  majorant=0.159926  ok
+  n=6 xi=4      sum_s=0.063110  plain=0.024387  majorant=0.245679  ok
+  n=6 xi=5      sum_s=0.063624  plain=0.008584  majorant=0.221495  ok
+  n=6 xi=7      sum_s=0.059106  plain=0.004834  majorant=0.221659  ok
+  n=6 xi=244    sum_s=0.070382  plain=0.029447  majorant=0.170718  ok
+  n=6 xi=728    sum_s=0.071058  plain=0.015217  majorant=0.201375  ok
+  n=7 xi=1      sum_s=0.048838  plain=0.021243  majorant=0.269756  ok
+  n=7 xi=2      sum_s=0.018907  plain=0.013497  majorant=0.150475  ok
+  n=7 xi=4      sum_s=0.029119  plain=0.014836  majorant=0.267735  ok
+  n=7 xi=5      sum_s=0.028898  plain=0.007878  majorant=0.226081  ok
+  n=7 xi=7      sum_s=0.055465  plain=0.012970  majorant=0.248463  ok
+  n=7 xi=730    sum_s=0.026885  plain=0.012500  majorant=0.209322  ok
+  n=7 xi=2186   sum_s=0.048838  plain=0.021243  majorant=0.269756  ok
+  n=8 xi=1      sum_s=0.023570  plain=0.010978  majorant=0.133266  ok
+  n=8 xi=2      sum_s=0.022912  plain=0.009551  majorant=0.095875  ok
+  n=8 xi=4      sum_s=0.018089  plain=0.011520  majorant=0.141869  ok
+  n=8 xi=5      sum_s=0.037051  plain=0.010667  majorant=0.147075  ok
+  n=8 xi=7      sum_s=0.020202  plain=0.006063  majorant=0.152865  ok
+  n=8 xi=2188   sum_s=0.022244  plain=0.008505  majorant=0.131686  ok
+  n=8 xi=6560   sum_s=0.023570  plain=0.010978  majorant=0.133266  ok
+P7 inequality: holds in all rows

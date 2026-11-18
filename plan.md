@@ -707,3 +707,207 @@ REFEREE-PACKAGE.md), then whether to publish the addendum.
   re-chunking of the FMF chain (equivalently, the classical Terras parity-vector
   framework at modulus 2^k); it yields no new lever on H1 or Lemma E. Worth one
   remark in the paper ("why 4") — not a research direction.**
+
+### November 17, 2026 — Round 6 (multi-agent campaign; artifacts in notes/round6-nov2026/)
+
+Claim boundary held: **Collatz, H1 and Lemma E remain open.** Every item below
+is AI-produced; "refereed" means blind hostile AI referees, never a human.
+Full statements: proof.md "Round 6 (November 2026)", Theorems 64–70.
+
+First wave (8 tracks):
+- **mazur-audit: DONE.** Statement audit of Mazur's three ProofAtlas claims
+  (positive lower density reaching 1 within 10.46 ln n; exponent 0.90;
+  natural-density descent): each Lean top-level statement matches its prose.
+  NOT rebuilt (all pin Lean v4.30.0-rc2; no second Mathlib fetched). 0.90 uses
+  17 `native_decide` sites; the natural-density archive has an unreferenced
+  vendored `collatz_conjecture := by sorry`. Status: claimed by others,
+  statement-audited, not independently built.
+- **sunit: DONE — PROVED modulo Evertse 1984, refereed x2, none broken**
+  (Theorem 66). Ineffective, not uniform in window length, vacuous for
+  bounded alphabets, transfers to 5n+1/3n−1.
+- **lean: DONE — KERNEL-CHECKED** `CollatzConjecture ↔ H1 ∧ LemmaE` and the
+  FMF/return-map formulas (Theorem 64). No statement in proof.md found false.
+- **frontier: DONE — two-block exclusion** (Theorem 65): refereed x2, none
+  broken; Theorems A, L, B KERNEL-CHECKED. Explicit 4-letter morphic
+  obstruction shows the repetition method cannot reach H1 in general.
+- **kl-exponent: DONE** (Theorem 67): new proof of a KNOWN statement, now
+  KERNEL-CHECKED; exponents reproduced to k = 19 (0.90942) by exact
+  certificates. Non-periodic weights: dead end (proved).
+- **outside: DONE.** Stopping-time game DEAD (0.46 < Amano's 1/2). F_2[x]
+  closed formula CANDIDATE (verified to degree 262,656; "Period Lemma" open).
+- **nd-referee: DONE.** Theorem ND sound modulo five written repairs; NO
+  priority (Allikvere 13 July 2026, Mazur 21 July 2026); Rhin misquoted
+  (7.616 only above an unspecified height; 13.3 explicit). Wording updated in
+  proof.md Theorem 58, proof-obligations.md, referee-brief.md,
+  notes/round4-july2026/README.md.
+- **srs-termination: DONE — CALIBRATED, NO NEW PROOF.** Three rewriting
+  systems with proved equivalences (RET: SN ⇔ H1; W: SN ⇔ H1+, the
+  all-positive-z form, which implies H1 and is not implied by Collatz;
+  G: SN ⇔ all growth-B chains finite, implied by Yolcu–Aaronson–Heule's open
+  "5 mod 8" conjecture). 16 published YAH results reproduced by search with
+  an independent checker; their Farkas certificate checks but was not found
+  by search. Calibrations only partly succeed (Lemma P is found only in the
+  adapted z-coordinate; the r = 1 restriction is not found): small matrix
+  interpretations see only the 2-adic valuation of the represented number.
+  No rule removable from RET, W, G or the {0,1}-alphabet slice at any tested
+  shape; the non-terminating 5n+1 / 3n−1 controls show the same UNSAT
+  frontier, so the frontier is evidence about the method only.
+
+Second wave (independent attempts, different approach families, ledger of
+blocked routes in notes/round6-nov2026/LEDGER.md):
+- **w2-alpha (×2×3 rigidity): PARTIAL, refereed** (Theorem 69). Formulation +
+  no-go: reflection-invariant data cannot prove H1; Shmerkin–Wu gives the
+  trivial bound through digit-reading hulls. Open lead: counting lemma FP-0.
+- **w2-beta (density → all): refereed.** Bootstrap is the identity; under
+  positive-density predecessor sets, density one ⇔ Collatz (family FAILS by
+  the equal-strength rule). Unconditional short-interval statement (no
+  Collatz content). Conditional: invariant sets have natural densities.
+- **w2-gamma (disproof/barriers): refereed** (Theorem 68). Rigidity of T and
+  the control family S_a; no counterexample candidate; structured seeds do
+  not beat random search (REFUTED). Eliahou bound recomputed, unchanged.
+- **w2-delta (free choice): refereed** (Theorem 70). Uniform harmonic bound
+  Σ 1/x_k ≤ 27.2 along every distinct stretch of every trajectory; bounded
+  residue; exact cycle length ⌈a log₂3⌉ given 2^71. True for 3n−1 as well.
+- **lean-gate: DONE.** Barrier.lean, TwoBlock.lean, BarrierH1.lean,
+  KLSound.lean, Harmonic.lean, HarmonicBeta.lean build with standard axioms
+  only. Theorem 70 is kernel-checked with the crude constant 1196 (the
+  refereed constant 27.2 is not formalized). A blind re-derivation from the
+  bare statement (blind-H/) proved it independently with constants 94 by
+  hand and 31.81 computer-assisted.
+
+Dead ends added this round (do not repeat; details in LEDGER.md):
+same-factor repetition beyond two blocks; S-unit windows uniform in length;
+modular invariants of the return map; seed gap principle; non-periodic KL
+weights; sliding-window stopping-time game; digit-hull Shmerkin–Wu;
+Fourier decay for the H1 Cantor measure (Erdős ternary-digit regime);
+density bootstrap; structured-seed disproof search; backward 3-adic charging
+to lower the 0.95 sojourn exponent.
+
+Corrections to earlier "Still open" / "most promising leads" lists:
+- "the two sharply-stated lemmas that would upgrade Tao's theorem to natural
+  density": overtaken — the upgrade is claimed by Allikvere and Mazur.
+- "extending Theorem G from uniform-morphic to general morphic words": done
+  for two letters (Theorem 65); provably out of reach of the method for four
+  letters (explicit obstruction); three letters open ("Lemma T", candidate).
+- Predecessor-count and stopping-time records are held by others
+  (0.9251 claimed; Amano 6.95212) and, if Mazur's positive-density claim
+  holds, the x^γ line is superseded.
+
+Best open leads, each a precise lemma strictly weaker than Collatz:
+(1) FP-0: #{w < 2^Q with itinerary ≥ 2Q bits} ≤ C·2^((s−δ)Q), s = 0.2878;
+(2) G2: power saving for second-generation large deviations (would lower the
+    0.95 exponent in Theorem 70);
+(3) Lemma T: early weighted repetition for primitive ternary morphisms;
+(4) power-run compression u^K g u'^K' via S-unit equations (bounded alphabet);
+(5) target-uniform positive density of predecessor sets from Mazur's proof;
+(6) F_2[x] Period Lemma (neighbour problem).
+
+Third wave (November 18, 2026; after the owner asked to proceed as recommended):
+- **Committed** the round on branch `round6-nov2026` (not pushed).
+- **lean-rigidity: DONE — KERNEL-CHECKED.** Uniqueness of T, the S_a family
+  and two-sided sharpness (Theorem 68).
+- **lean-sharp: DONE — KERNEL-CHECKED.** Harmonic bound 162, product identity,
+  residue bound (e^54), cycle exponent bounds and the conditional exact cycle
+  length, sojourn count 10·1.9322^L (Theorem 70). Sharp constants (27.2,
+  7.62, 1.386, 11.3) remain refereed-only.
+- **w3-fp0: refereed, none broken.** FP-0 (power saving) NOT proved. Proved:
+  a (log X)^(−0.0512) saving on the H1 seed count and polynomial Fourier
+  decay of the H1 Cantor set at fixed frequency; vacuous below Q ≈ 10^37.
+  FP-0 reduced to one estimate (SGP). Ledger family 19 narrowed to "power
+  decay blocked".
+- **w3-g2: refereed, none broken.** G2 (power saving) NOT proved. Proved: a
+  (log X)^(−0.986) saving on the sojourn count (given a cited ballot lemma)
+  and equidistribution of landing points at the critical pinning with a
+  sub-log-power rate whose constant (~e^(−165)) makes it contentless at any
+  reachable scale. Exact generation counts to 2^38 match the independence
+  model. The repo's Theorem 56 cannot be extended to the critical tilt q*.
+  G2 reduced to an Erdős-regime ternary-digit estimate.
+
+Net position after the third wave: both best open lemmas (FP-0, G2) ended in
+a logarithmic gain plus a reduction to the same obstruction — the
+distribution of ternary digits of powers of 2 (equivalently binary digits of
+powers of 3) at height comparable to the exponent, i.e. the Erdős
+ternary-digit / Furstenberg ×2×3 regime that Theorem 61 already identified.
+No route from any proved result of this round to H1 or Lemma E is known.
+
+Fourth wave, literature search (November 18, 2026) — **novelty corrections**:
+a dedicated prior-art search found that Theorem 70 (harmonic bound, bounded
+residue, sojourn exponent, cycle length) is already public with stronger
+constants (Nikzad–Frinkle–Bagherzadeh, Hexagon 2611.00033, Sept–Nov 2026;
+García–Tal 1999; MathOverflow 513539; rStation paper 28), that the repetition
+barrier and Sturmian exclusion of Theorem 65 are Dubickas 2009 (Glasgow Math.
+J. 51, Thm 5), and that Theorem 68 sits inside Bernstein–Lagarias 1996
+Appendix B. proof.md carries a prior-art notice at the top of the Round 6
+section. What remains ours: independent Lean formalizations; possibly the
+two-block lemma for non-primitive morphic words; the S-unit window law and
+the H1 seed-count log saving (no prior art found, thin coverage). Lesson for
+the process: run the literature agent BEFORE refereeing and formalizing, and
+search preprint servers and forums directly (Hexagon, Zenodo, rStation,
+StackExchange API, GitHub) — general web search surfaced none of these.
+
+Fourth wave, other results (November 18, 2026):
+- **Mazur positive-density Lean: REBUILT here** (Lean v4.30.0-rc2, Mathlib
+  5450b53, second cache in mazur-audit/build, 28 min on 2 cores): top theorem
+  uses standard axioms only. So "a positive lower density of integers reach
+  1 within 10.46 ln n steps" is machine-checked on its pinned toolchain,
+  third-party, not ours; kernel replay not run. The 0.90-exponent archive
+  was not rebuilt (needs ~10.6 GiB RAM for native_decide).
+- **w4-E (Lemma E from the all-trajectory tools): PARTIAL, nothing for Lemma
+  E.** The tools only forbid lingering; the 5n+1 orbit of 7 satisfies their
+  conclusions with generic hop letters, so no "eventually G01" slice can
+  follow from them. Corollaries (unrefereed): cycles have
+  {a log₂3} ≥ 0.5291 (0.9134 given NFB); real-shadow identity for divergent
+  orbits. Coordinator's brief was wrong on two points (pointwise growth from
+  the sojourn count; a 5n+1-refuted growth statement) — corrected in the
+  report.
+- **w4-wall (the digit obstruction): refereed.** Proved: Fourier-decay
+  exponent 0.0719 → 0.0913 and seed-count saving (log X)^(−0.0650) (asymptotic
+  only). Gap mapped: published short-sum bounds need length ≥ exp(c k^(2/3));
+  digit results stop at the Baker rate. Referee: w4-wall's "Remark 5" is
+  WRONG and w3-fp0 was right — FP-0 follows from POINTWISE power Fourier
+  decay of the H1 Cantor set (PFD); numerically PFD holds for all
+  frequencies with exponent ≥ ~0.055. New attempt w5-fourier targets PFD.
+- **w4-free: no route.** Benford-type law along every trajectory (control-
+  blind, unrefereed candidate); the time-L return map F has only the fixed
+  point 1 (verified to level 20000); runs of non-descending F-steps are
+  independent through 5 generations (exhaustive to level 33); two bad steps
+  in a row is lemma G2 again.
+- **lean-constants: DONE — KERNEL-CHECKED.** Harmonic bound 27.93 (refereed
+  27.163); unconditional exact cycle length for cycles above 2^71
+  (`cycle_length_above_71`); residue bound e^9.31; conditional residue split.
+  All known statements (see prior-art notice); the Lean proofs are ours.
+
+Fifth wave (November 18, 2026):
+- **w5-fourier (pointwise power Fourier decay, PFD): MAPPED, not proved;
+  self-refereed only.** Proved by the agent: (1) the corrected implication —
+  FP-0 follows from |T_K(h)| ≤ C·N_K^(1−δ) for INTEGERS 1 ≤ |h| ≤ N_K^δ at
+  full scale (Selberg majorant; no averaging, no 3-adic frequencies);
+  (2) this is equivalent to power equidistribution of the top ≍K bits of E_K
+  in every dyadic window; (3) mirror identity: T_K(h) is a 3-adic Fourier
+  transform at frequency −h·2^(−K); (4) an ab/ba pairing majorant with a
+  factor < 1 at every "good" node; (5) Lemma R: a run of J+1 consecutive bad
+  nodes forces ~6.3J equal bits in the 2-adic expansion of 11h·3^(−p).
+  So PFD follows from "no long runs of equal binary digits of 3^(−p) at
+  heights k ≥ 4p/3" — an Erdős-type statement; numerically the longest run
+  for h = 1, K = 1600 is 2. Literature: power decay for an EXPLICIT
+  self-similar measure is known only with nonlinearity (Bourgain–Dyatlov,
+  Sahlsten–Stevens); affine systems with commuting multipliers get
+  (poly)logarithmic rates (Li–Sahlsten, Varjú–Yu, Baker–Khalil–Sahlsten),
+  which is exactly the strength already proved here. The brief's
+  "finite-state" shortcut is refuted (top ternary digits control the phase).
+
+**Where the campaign stands after five waves.** Every line of attack on H1's
+counting form has been reduced, by proved steps, to one open problem: power
+Fourier decay / digit equidistribution for an explicit affine self-similar
+set with multipliers 2 and 3 (the Erdős ternary-digit, Furstenberg ×2×3
+regime; in fractal-geometry terms, power decay for an explicit
+non-homogeneous self-similar measure). Published tools stop at logarithmic
+rates. Lemma E has no reduction of this kind at all: the all-trajectory tools
+cannot distinguish its target. Nothing proved here is a route to Collatz.
+
+Session end (November 18, 2026): w5-fourier's reductions were refereed
+(none broken; two small repairs). A sixth attempt (w6-runs: triangle geometry
+of bad nodes; paths of slope 1.33–1.5 against hypotenuse slope 1.585) was
+killed by a usage limit before producing anything; its brief is saved at
+notes/round6-nov2026/w6-runs/BRIEF.md and is the next step. Current status
+and open items: notes/round6-nov2026/HANDOFF.md, top section.

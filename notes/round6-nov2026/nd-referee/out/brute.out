@@ -1,0 +1,80 @@
+[A] 3n+1, n<=100000000: numbers with no iterate below themselves: 0 ; longest stopping time 613 at n=63728127
+    => Col_min(n)=1 for every n<=100000000, so #{n<=N: Col_min(n)>f}/N = 0 for any f>=1 at these scales.
+[B] odd n in [N/2,N): fraction with Syr^m(n) <= f(N) for some m <= t*ln(n)/ln(4/3)
+    N        f(N)            t=1.0     t=1.1     t=1.25    t=1.5
+    1e4  lnln N   =   2.22  0.51120   0.56320   0.61320   0.72920
+    1e4  ln N     =   9.21  0.55520   0.58560   0.63280   0.74000
+    1e4  (ln N)^2 =  84.83  0.78000   0.82560   0.87240   0.91720
+    1e5  lnln N   =   2.44  0.51416   0.57636   0.63816   0.78356
+    1e5  ln N     =  11.51  0.56244   0.59640   0.68644   0.81404
+    1e5  (ln N)^2 = 132.55  0.85428   0.89588   0.92940   0.96788
+    1e6  lnln N   =   2.63  0.50656   0.57398   0.68281   0.83352
+    1e6  ln N     =  13.82  0.55471   0.61969   0.71684   0.84774
+    1e6  (ln N)^2 = 190.87  0.84426   0.88405   0.92716   0.96875
+    1e7  lnln N   =   2.78  0.50727   0.60518   0.70781   0.86016
+    1e7  ln N     =  16.12  0.55454   0.62614   0.72616   0.87111
+    1e7  (ln N)^2 = 259.79  0.82826   0.87513   0.92453   0.96825
+    1e8  lnln N   =   2.91  0.50901   0.61000   0.73407   0.86789
+    1e8  ln N     =  18.42  0.55491   0.62987   0.74496   0.88467
+    1e8  (ln N)^2 = 339.32  0.81728   0.86745   0.92046   0.96908
+[C] litmus maps n -> (q n + d)/2^v on odd n; fraction of odd n<=N whose orbit reaches <= B
+    (orbit abandoned as 'escaped' on exceeding 2^100 or after 5000 odd steps)
+    3n+1  B=20    N=1e3   reached<=B: 1.000000   escaped/undecided: 0.000000
+    3n+1  B=20    N=1e7   reached<=B: 1.000000   escaped/undecided: 0.000000
+    3n+1  B=1000  N=1e3   reached<=B: 1.000000   escaped/undecided: 0.000000
+    3n+1  B=1000  N=1e7   reached<=B: 1.000000   escaped/undecided: 0.000000
+    3n-1  B=20    N=1e3   reached<=B: 1.000000   escaped/undecided: 0.000000
+    3n-1  B=20    N=1e7   reached<=B: 1.000000   escaped/undecided: 0.000000
+    3n-1  B=1000  N=1e3   reached<=B: 1.000000   escaped/undecided: 0.000000
+    3n-1  B=1000  N=1e7   reached<=B: 1.000000   escaped/undecided: 0.000000
+    5n+1  B=20    N=1e3   reached<=B: 0.162000   escaped/undecided: 0.838000
+    5n+1  B=20    N=1e4   reached<=B: 0.073200   escaped/undecided: 0.926800
+    5n+1  B=20    N=1e5   reached<=B: 0.030760   escaped/undecided: 0.969240
+    5n+1  B=20    N=1e6   reached<=B: 0.013660   escaped/undecided: 0.986340
+    5n+1  B=20    N=1e7   reached<=B: 0.006088   escaped/undecided: 0.993912
+    5n+1  B=1000  N=1e3   reached<=B: 1.000000   escaped/undecided: 0.000000
+    5n+1  B=1000  N=1e4   reached<=B: 0.458800   escaped/undecided: 0.541200
+    5n+1  B=1000  N=1e5   reached<=B: 0.206560   escaped/undecided: 0.793440
+    5n+1  B=1000  N=1e6   reached<=B: 0.092840   escaped/undecided: 0.907160
+    5n+1  B=1000  N=1e7   reached<=B: 0.041502   escaped/undecided: 0.958498
+[D] x=2^10: TV( Pass_x(U_[y,2y)) with y=2^20 , Pass_x(other window) )
+    vs uniform [2y,4y)                                            TV = 0.00587
+    vs uniform [4y,8y)                                            TV = 0.00757
+    vs uniform [1.5y,3y) (non-dyadic start)                       TV = 0.00417
+    vs uniform [y,1.25y)  (quarter-octave: NOT covered by Thm 5-U) TV = 0.01418
+    vs uniform [1.75y,2y) (top eighth: NOT covered)               TV = 0.02666
+    vs log-uniform [y,2y)                                         TV = 0.00259
+    vs log-uniform [y,8y)  (Tao-type measure)                     TV = 0.00515
+    P(Pass_x <= x*j/8), j=1..8  uniform[y,2y): 0.1085 0.2422 0.3704 0.5134 0.6148 0.7354 0.8665 1.0000 
+                                 log-unif[y,8y): 0.1085 0.2424 0.3706 0.5135 0.6149 0.7353 0.8664 1.0000 
+[D] x=2^12: TV( Pass_x(U_[y,2y)) with y=2^22 , Pass_x(other window) )
+    vs uniform [2y,4y)                                            TV = 0.00592
+    vs uniform [4y,8y)                                            TV = 0.00746
+    vs uniform [1.5y,3y) (non-dyadic start)                       TV = 0.00432
+    vs uniform [y,1.25y)  (quarter-octave: NOT covered by Thm 5-U) TV = 0.01461
+    vs uniform [1.75y,2y) (top eighth: NOT covered)               TV = 0.02826
+    vs log-uniform [y,2y)                                         TV = 0.00270
+    vs log-uniform [y,8y)  (Tao-type measure)                     TV = 0.00497
+    P(Pass_x <= x*j/8), j=1..8  uniform[y,2y): 0.1183 0.2504 0.3749 0.5068 0.6233 0.7240 0.8675 1.0000 
+                                 log-unif[y,8y): 0.1183 0.2503 0.3747 0.5065 0.6231 0.7238 0.8673 1.0000 
+[D] x=2^14: TV( Pass_x(U_[y,2y)) with y=2^24 , Pass_x(other window) )
+    vs uniform [2y,4y)                                            TV = 0.00596
+    vs uniform [4y,8y)                                            TV = 0.00757
+    vs uniform [1.5y,3y) (non-dyadic start)                       TV = 0.00434
+    vs uniform [y,1.25y)  (quarter-octave: NOT covered by Thm 5-U) TV = 0.01484
+    vs uniform [1.75y,2y) (top eighth: NOT covered)               TV = 0.02832
+    vs log-uniform [y,2y)                                         TV = 0.00274
+    vs log-uniform [y,8y)  (Tao-type measure)                     TV = 0.00505
+    P(Pass_x <= x*j/8), j=1..8  uniform[y,2y): 0.1290 0.2589 0.3714 0.5026 0.6236 0.7304 0.8732 1.0000 
+                                 log-unif[y,8y): 0.1290 0.2589 0.3713 0.5026 0.6236 0.7304 0.8733 1.0000 
+[D] x=2^16: TV( Pass_x(U_[y,2y)) with y=2^24 , Pass_x(other window) )
+    vs uniform [2y,4y)                                            TV = 0.01222
+    vs uniform [4y,8y)                                            TV = 0.01543
+    vs uniform [1.5y,3y) (non-dyadic start)                       TV = 0.00883
+    vs uniform [y,1.25y)  (quarter-octave: NOT covered by Thm 5-U) TV = 0.02163
+    vs uniform [1.75y,2y) (top eighth: NOT covered)               TV = 0.03589
+    vs log-uniform [y,2y)                                         TV = 0.00354
+    vs log-uniform [y,8y)  (Tao-type measure)                     TV = 0.00916
+    P(Pass_x <= x*j/8), j=1..8  uniform[y,2y): 0.1276 0.2517 0.3699 0.5042 0.6220 0.7347 0.8715 1.0000 
+                                 log-unif[y,8y): 0.1277 0.2518 0.3700 0.5042 0.6220 0.7347 0.8715 1.0000 
+taskset -c 7 nice -n 5  100000000  61.88s user 0.02s system 67% cpu 1:32.31 total

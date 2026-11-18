@@ -1,0 +1,9 @@
+I1-I3 and 0<=tau<3^a OK on 131054 vectors, L<= 16
+L=12 a=7 m=0 h=1: groups=126  max| |E[chi|G]| - prod|f_j| | = 3.33e-16   max||f_j|-|cos(pi theta)|| over 105 pairs with b=3 = 2.29e-16
+L=12 a=7 m=3 h=5: groups=126  max| |E[chi|G]| - prod|f_j| | = 1.50e-15   max||f_j|-|cos(pi theta)|| over 105 pairs with b=3 = 5.83e-16
+L=14 a=9 m=2 h=7: groups=252  max| |E[chi|G]| - prod|f_j| | = 1.89e-15   max||f_j|-|cos(pi theta)|| over 280 pairs with b=3 = 3.33e-16
+L=14 a=9 m=4 h=6: groups=252  max| |E[chi|G]| - prod|f_j| | = 1.67e-15   max||f_j|-|cos(pi theta)|| over 280 pairs with b=3 = 3.33e-16
+L=15 a=9 m=5 h=9: groups=924  max| |E[chi|G]| - prod|f_j| | = 4.22e-15   max||f_j|-|cos(pi theta)|| over 756 pairs with b=3 = 3.33e-16
+L=16 a=10 m=3 h=11: groups=462  max| |E[chi|G]| - prod|f_j| | = 3.61e-15   max||f_j|-|cos(pi theta)|| over 630 pairs with b=3 = 2.22e-16
+L=16 a=10 m=7 h=18: groups=924  max| |E[chi|G]| - prod|f_j| | = 9.44e-15   max||f_j|-|cos(pi theta)|| over 1008 pairs with b=3 = 3.33e-16
+L=16 a=11 m=1 h=2: groups=462  max| |E[chi|G]| - prod|f_j| | = 6.94e-16   max||f_j|-|cos(pi theta)|| over 630 pairs with b=3 = 2.29e-16

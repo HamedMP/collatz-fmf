@@ -1,0 +1,20 @@
+✔ [18262/18265] Built CollatzFMF.SojournCount (10s)
+ℹ [18264/18265] Built CollatzFMF.SharpAxioms (4.8s)
+info: CollatzFMF/SharpAxioms.lean:13:0: 'CollatzFMF.HarmonicSharp.bad_mass_odd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:14:0: 'CollatzFMF.HarmonicSharp.theoremH_162' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:15:0: 'CollatzFMF.Sharp.product_identity_iterate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:16:0: 'CollatzFMF.Sharp.product_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:17:0: 'CollatzFMF.Sharp.residue_bound_of_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:18:0: 'CollatzFMF.Sharp.residue_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:19:0: 'CollatzFMF.Sharp.cycle_injective' depends on axioms: [propext, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:20:0: 'CollatzFMF.Sharp.cycle_bounds_of_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:21:0: 'CollatzFMF.Sharp.cycle_pow_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:22:0: 'CollatzFMF.Sharp.cycle_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:23:0: 'CollatzFMF.Sharp.cycle_sharp_of_sum_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:24:0: 'CollatzFMF.Sojourn.landing' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:25:0: 'CollatzFMF.Sojourn.class_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:26:0: 'CollatzFMF.Sojourn.sojourn_abstract' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:27:0: 'CollatzFMF.Sojourn.sojourn_39_20' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: CollatzFMF/SharpAxioms.lean:28:0: 'CollatzFMF.Sojourn.sojourn_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (18265 jobs).
+taskset -c 0-1 lake build CollatzFMF.SharpAxioms  17.83s user 9.66s system 95% cpu 28.722 total

@@ -1,0 +1,1 @@
+W01 : 2 dynamic rules; inputs 1..1000000 x ['R']: 132810 rule applications validated; exceptions (map defined, no rule matches; all have finite orbits): [(7, 'R'), (80, 'R')]

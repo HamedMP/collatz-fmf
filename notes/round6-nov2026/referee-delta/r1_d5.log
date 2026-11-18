@@ -1,0 +1,25 @@
+  d=5 cycle min=1 len=3 harmonic=1.750000
+  d=5 cycle min=19 len=5 harmonic=0.144771
+  d=5 cycle min=5 len=2 harmonic=0.300000
+  d=5 cycle min=23 len=5 harmonic=0.143969
+  d=5 cycle min=187 len=27 harmonic=0.030983
+  d=5 cycle min=347 len=27 harmonic=0.030949
+d=5 N=10000000 max harmonic sum=2.159722 at n=9437184
+d=5 X=2^6 max#terms<=X = 14 at m=39 ratio=0.26936 (count/X=0.21875)
+d=5 X=2^7 max#terms<=X = 19 at m=78 ratio=0.18923 (count/X=0.14844)
+d=5 X=2^8 max#terms<=X = 33 at m=198 ratio=0.17013 (count/X=0.12891)
+d=5 X=2^9 max#terms<=X = 47 at m=396 ratio=0.12543 (count/X=0.09180)
+d=5 X=2^10 max#terms<=X = 55 at m=942 ratio=0.07598 (count/X=0.05371)
+d=5 X=2^11 max#terms<=X = 64 at m=1317 ratio=0.04577 (count/X=0.03125)
+d=5 X=2^12 max#terms<=X = 72 at m=2085 ratio=0.02665 (count/X=0.01758)
+d=5 X=2^13 max#terms<=X = 86 at m=7685 ratio=0.01648 (count/X=0.01050)
+d=5 X=2^14 max#terms<=X = 103 at m=10710 ratio=0.01022 (count/X=0.00629)
+d=5 X=2^15 max#terms<=X = 115 at m=20055 ratio=0.00590 (count/X=0.00351)
+d=5 X=2^16 max#terms<=X = 129 at m=59781 ratio=0.00343 (count/X=0.00197)
+d=5 X=2^17 max#terms<=X = 154 at m=110439 ratio=0.00212 (count/X=0.00117)
+d=5 X=2^18 max#terms<=X = 173 at m=220878 ratio=0.00123 (count/X=0.00066)
+d=5 X=2^19 max#terms<=X = 182 at m=523566 ratio=0.00067 (count/X=0.00035)
+d=5 X=2^20 max#terms<=X = 203 at m=604389 ratio=0.00039 (count/X=0.00019)
+d=5 X=2^21 max#terms<=X = 225 at m=1074471 ratio=0.00022 (count/X=0.00011)
+d=5 X=2^22 max#terms<=X = 236 at m=3395886 ratio=0.00012 (count/X=0.00006)
+d=5 worst sojourn ratio=0.26936

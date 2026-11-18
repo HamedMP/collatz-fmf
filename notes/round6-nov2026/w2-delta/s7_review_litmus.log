@@ -1,0 +1,15 @@
+R1 lemma 2': 688133 exact instances, 0 violations
+R2 bookkeeping on 2866 trajectories (incl. 2^k-1, 2^k+1, records, 100-bit randoms): OK; max sum 1/x = 2.936235 (n=1986), max Res = 1.253142144 (n=993), max ancestor ratio = 1.9354 (<= 2)
+R3 sojourn count: max over tests of #{elements <= X}/X^eta = 1.0938  (theorem: <= 11.3)
+LITMUS 3n-1: lemma 11357 instances 0 violations; bookkeeping OK on 3100 segments; max sum 1/x = 2.4160 (n=1536); cycle sums {1: 1.0, 5: 0.44285714285714284, 17: 0.2594707823215244}  -> statement TRUE for 3n-1, no conflict
+LITMUS 3n+5: 6 cycles met from n<4000, max sum 1/x over distinct segments = 2.1593 (bounded by C(d) ~ C + O(log d); no conflict)
+LITMUS 3n+7: 2 cycles met from n<4000, max sum 1/x over distinct segments = 2.9823 (bounded by C(d) ~ C + O(log d); no conflict)
+LITMUS 3n+11: 3 cycles met from n<4000, max sum 1/x over distinct segments = 2.3285 (bounded by C(d) ~ C + O(log d); no conflict)
+LITMUS 3n+13: 10 cycles met from n<4000, max sum 1/x over distinct segments = 2.8968 (bounded by C(d) ~ C + O(log d); no conflict)
+LITMUS 3n+17: 3 cycles met from n<4000, max sum 1/x over distinct segments = 3.3573 (bounded by C(d) ~ C + O(log d); no conflict)
+LITMUS 3n+23: 4 cycles met from n<4000, max sum 1/x over distinct segments = 3.0025 (bounded by C(d) ~ C + O(log d); no conflict)
+LITMUS 3n+499: 21 cycles met from n<4000, max sum 1/x over distinct segments = 2.8024 (bounded by C(d) ~ C + O(log d); no conflict)
+LITMUS 5n+1: level 40 bad fraction = 0.923070 (beta diverges; q<4 is exactly the condition 1/log2(q) > 1/2)
+LITMUS 5n+1: level 160 bad fraction = 0.976117 (beta diverges; q<4 is exactly the condition 1/log2(q) > 1/2)
+LITMUS 5n+1: level 640 bad fraction = 0.999884 (beta diverges; q<4 is exactly the condition 1/log2(q) > 1/2)
+LITMUS 5n+1: cycle through 13: [13, 33, 83, 208, 104, 52, 26]  prod(1+1/(5x)) over odd = 1.024 = 2^7/5^3 = 1.024

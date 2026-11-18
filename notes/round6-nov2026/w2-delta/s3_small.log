@@ -1,0 +1,5 @@
+B=2^26: all 2<=n<B have finite stopping time (reach 1)
+M_B   = max Flog = 0.225654112732 at n=993  (exp = 1.253142144)
+max full log-residue = 0.225654125214 at n=993 (Res = 1.253142160)
+max harmonic sum over elements <B (float32 DP) = 1.936738 at n=16269312
+P_B   = max #elements <B on one trajectory = 339 at n=34162494
