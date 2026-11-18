@@ -1908,7 +1908,7 @@ not in Lean. Non-periodic weights depending on 2-adic or size features give
 exactly the level-k exponent (PROVED). For 3n−1 the LP is identical but this
 proof fails at the ratio step; that is where "+1" enters.
 
-#### Theorem 68 (PROVED, AI-refereed): rigidity of T and the control family S_a
+#### Theorem 68 (KERNEL-CHECKED for rigidity, S_a and two-sided sharpness; PROVED + AI-refereed for the rest): rigidity of T and the control family S_a
 
 T(n) = n/2, (3n+1)/2 is the unique S: ℕ → ℕ with (I) the parity-prefix
 property, (II) S(n) < n for even n, (III) n < S(n) ≤ 2n for odd n; (III) is
@@ -1920,7 +1920,12 @@ Also PROVED: maps agreeing with T on [1, X] and modulo any m with a nontrivial
 cycle above X; an isometric conjugate agreeing with T on an initial segment
 with a divergent orbit (on ℕ₀). An H1 orbit never meets −1 mod 16, so H1 is
 the same statement for T and every S_a with a ≥ 3. **Add S_a (all a) to the
-mandatory litmus maps.** Recomputed: plain Eliahou at 2^71 gives cycle length
+mandatory litmus maps.** Lean (lean/CollatzFMF/Rigidity.lean,
+RigiditySharp.lean): `theoremR`, `theoremR_lit` (uniqueness, valuation and
+literal forms of (I), with their equivalence `lemma1`), `theoremS` (every
+clause for S_a), `sharp_upper` (relaxing S(n) ≤ 2n to 2n+1 at the single
+point 2^(a+1) − 1 admits another map). Not in Lean: the cycle-implant and
+isometric-conjugate statements. Recomputed: plain Eliahou at 2^71 gives cycle length
 ≥ 114,208,327,604 (unchanged from 2^68).
 
 #### Theorem 69 (PROVED, AI-refereed; formulation and no-go): H1 as a 2-adic Cantor set
@@ -1935,7 +1940,7 @@ argument using only such data can prove H1. (The w2-alpha report's dilation
 claim needs the gate w ≡ −d mod 8, and its "3n−115" example is a cycle of the
 transformed system only; do not cite them.)
 
-#### Theorem 70 (KERNEL-CHECKED with constant 1196; PROVED + AI-refereed with constant 27.2; independently re-proved blind): uniform harmonic bound along every trajectory
+#### Theorem 70 (KERNEL-CHECKED with weaker constants; PROVED + AI-refereed with the sharp ones; independently re-proved blind): uniform harmonic bound along every trajectory
 
 For every positive integer n and every stretch x_0, …, x_{K−1} of pairwise
 distinct terms of the T-trajectory of n: **Σ 1/x_k ≤ 27.2** (no computation
@@ -1957,19 +1962,58 @@ A second agent, given only the bare statement, produced an independent proof
 (notes/round6-nov2026/blind-H/REPORT.md): by hand, at most 18.0·X^0.94996
 terms ≤ X and Σ 1/x_k ≤ 94; computer-assisted, Σ 1/x_k ≤ 31.81. It did not
 re-derive the constants 27.2 and 11.3.
-Lean (lean/CollatzFMF/Harmonic.lean, HarmonicBeta.lean; standard axioms
-only): `theoremH_three` — for every sequence x with x(k+1) = T(x k) and
-every K such that x is injective on indices below K,
-Σ_{k<K} 1/x_k ≤ 1196. The kernel-checked constant comes from a crude
-rational Chernoff bound on the bad mass; the constants 27.2, 5.72, 7.62,
-1.386 and 11.3, the residue bound, the cycle-length corollary and the
-sojourn count are NOT in Lean.
+Lean (lean/CollatzFMF/Harmonic*.lean, ResidueProduct.lean, SojournCount.lean;
+standard axioms only), for every sequence x with x(k+1) = T(x k), injective
+on indices below K:
+- `theoremH_162`: Σ_{k<K} 1/x_k ≤ 162 (refereed constant 27.2 not formalized);
+- `product_identity` (exact) and `residue_bound`:
+  x_0·3^(a_k) ≤ x_k·2^k ≤ e^54·x_0·3^(a_k) (refereed constant 7.62);
+- `cycle_pow_bounds`: on any cycle, 3^a < 2^p ≤ e^54·3^a; `cycle_sharp`:
+  p = ⌈a·log₂3⌉ under the explicit hypothesis that the reciprocal sum over
+  the cycle is ≤ σ with e^(σ/3) < 2 (this is where the 2^71 verification
+  would enter; it is not formalized);
+- `sojourn_sharp`: #{k < K : x_k < 2^L} ≤ 10·(9661/5000)^L (true base
+  2^0.94996 = 1.93181; the bound beats the trivial count only from L = 67).
+Only the 3x+1 map is formalized, not 3x−1.
 **Litmus:** equally true for 3n−1 (cycles through 1, 5, 17 checked), so it
 cannot separate +1 from −1 and is no route to descent; the proof collapses
 for 5n+1 (uses 3 < 4). Novelty: not found in print in three searches; it is a
 short step from Terras 1976 and Lagarias 1985 and may be folklore.
 
 #### Further Round 6 items
+
+- **Sojourn count with a log saving (PROVED given the Aïdékon–Shi ballot
+  lemma; AI-refereed; asymptotic only):** any stretch of pairwise distinct
+  terms of a T-trajectory has at most
+  C·X^0.94996·(log X)^(−0.986)·log log X terms ≤ X (C not explicit; the gain
+  over Theorem 70 only appears far above L = 3000). Citation corrected by
+  the referee: Aïdékon–Shi 2014, Lemma 2.2 (proof in arXiv:1006.1266).
+- **Equidistribution beyond the Terras horizon (PROVED given Tao's Lemma 7.4
+  and a Bugeaud–Laurent 2-adic bound checked second-hand only; AI-refereed;
+  contentless at any reachable scale):** for parity vectors of length L with
+  a ones, |L − a·log₂3| ≤ √a, the landing points T^L(y_v) mod 2^m (m ≤ √a)
+  are equidistributed with error C·exp(−c·log a/log log a); the constant c is
+  about e^(−165), so nothing is said below a ≈ exp(e^165). Not a power
+  saving. The power saving (lemma G2) is reduced to an Erdős-regime estimate
+  on ternary digits of powers of 2. **Theorem 56 cannot supply it:** the tilt
+  needed is exactly the excluded boundary q*.
+- **VERIFIED to X = 2^38:** counts of y ∈ [X, 2X) staying above X/2 for
+  λ·log₂X steps match the independent-generations random-walk model to
+  0.02% (λ ≤ 3); predicted exponent 1 − λ(1−η) with a (log X)^(−3/2) factor
+  (0.8999 at λ = 2).
+
+- **Seed count with a log saving (PROVED, AI-refereed; asymptotic only):**
+  with E the H1 Cantor set of Theorem 69, E_k = E mod 2^k, N_k = #E_k: for
+  1 ≤ m ≤ ½log₂Q − 8 the number of w < 2^Q with w mod 2^(Q+m) ∈ E_(Q+m)
+  equals 2^(−m)·N_(Q+m) up to relative error C·log Q·Q^(−s/4), s = 0.2878.
+  Hence #{w ≤ X with an infinite return-map itinerary} ≤
+  C·X^s·(log log X)^0.72·(log X)^(−0.0512), and the Fourier sums of E_K at any
+  fixed frequency h ≠ 0 are ≤ C·2^(v₂(h)/2)·K^(−s/4)·N_K. The exponent 0.2878
+  is unchanged (consistent with Theorem 57); the explicit inequalities are
+  vacuous below about Q = 10^37. Holds verbatim for 3n−1 and 5n+1. The power
+  saving (lemma FP-0) is reduced to square-root cancellation of these sums
+  averaged over about √k consecutive powers of 3 (open; Erdős regime). Exact
+  data: for 9 ≤ Q ≤ 112 only w = 0 has an itinerary of 2Q bits.
 
 - **Short intervals (PROVED, AI-refereed; folklore-level; no Collatz
   content):** for every real x ≥ 3 some integer in

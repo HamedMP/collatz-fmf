@@ -10,3 +10,5 @@ import CollatzFMF.BarrierH1
 import CollatzFMF.KLSound
 import CollatzFMF.GateAxioms
 import CollatzFMF.HarmonicAxioms
+import CollatzFMF.RigidityAxioms
+import CollatzFMF.SharpAxioms

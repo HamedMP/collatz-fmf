@@ -37,6 +37,14 @@ What exists now, by strength of check (no human review of anything):
   exponent, natural-density descent (all pin Lean v4.30.0-rc2; rebuilding
   needs a second Mathlib download, which the owner has not approved).
 
+Update 2026-11-18 (third wave): committed on branch `round6-nov2026`
+(not pushed). Additionally KERNEL-CHECKED: rigidity of T and the S_a control
+family (Thm 68); harmonic bound 162, residue bound, cycle exponent bounds,
+conditional exact cycle length, sojourn count 10·1.9322^L (Thm 70). Lemmas
+FP-0 and G2 were attacked: neither power saving was proved; each gave a
+refereed logarithmic gain and a reduction to the Erdős ternary-digit regime
+(see plan.md "Third wave" and LEDGER.md families 19′, 24).
+
 Open decisions for the owner:
 1. Whether to allow a second Mathlib fetch (~6–7 GB, agent's estimate) to
    rebuild Mazur's positive-density Lean.

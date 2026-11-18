@@ -58,3 +58,13 @@ Mandatory controls, extended: 5n+1, 3n−1, 3n+d, **and S_a for every a ≥ 0**
 (S_a = T except T − 2^a on n ≡ −1 mod 2^(a+1); fixed point 2^(a+1) − 1;
 S_0 is 3n−1). A correct proof of "no nontrivial cycle" must use
 n < T(n) at n = 2^(a+1) − 1 for every a.
+
+## Added after the third wave (2026-11-18)
+
+| # | Family | Status | Why blocked / what it gives |
+|---|---|---|---|
+| 19′ | Fourier decay of the H1 Cantor set (update of 19) | PARTLY DONE (w3-fp0, refereed) | Polynomial-in-K decay at fixed frequency and a (log X)^(−0.0512) saving on the seed count are proved; POWER decay / FP-0 needs square-root cancellation over ~√k consecutive powers of 3 (Erdős regime) |
+| 24 | Second-generation large deviations (lemma G2) via Tao's Section 7 at a tilted parameter | BLOCKED (w3-g2, refereed) | The required tilt is the critical boundary q* excluded by Theorem 56; black triangles can cover the diagonal; 2-adic Baker gives only log n/log log n scales. Log-power sojourn saving proved by a ballot argument instead |
+| 25 | Machine-checked controls | DONE (Lean) | Rigidity of T and the S_a family are kernel-checked; use them to test any "no cycles" argument |
+
+Common wall of families 18, 19, 24: digits of 2^(−j) mod 3^J with j ≍ J.

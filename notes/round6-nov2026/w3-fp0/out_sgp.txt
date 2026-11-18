@@ -1,0 +1,7 @@
+k=100 h=1 R=10 (system 3n+1): log2 avg = -16.55, log2 max = -15.49, log2 min = -19.16 ; sqrt benchmark -14.58 ; trivial 0
+k=200 h=1 R=15 (system 3n+1): log2 avg = -30.92, log2 max = -28.53, log2 min = -34.01 ; sqrt benchmark -28.97 ; trivial 0
+k=400 h=1 R=20 (system 3n+1): log2 avg = -59.89, log2 max = -58.40, log2 min = -62.73 ; sqrt benchmark -57.75 ; trivial 0
+k=400 h=6 R=20 (system 3n+1): log2 avg = -59.65, log2 max = -58.33, log2 min = -64.50 ; sqrt benchmark -57.75 ; trivial 0
+k=800 h=1 R=29 (system 3n+1): log2 avg = -116.25, log2 max = -113.51, log2 min = -124.04 ; sqrt benchmark -115.30 ; trivial 0
+k=800 h=1 R=29 (system 5n+1): log2 avg = -118.52, log2 max = -116.15, log2 min = -124.62 ; sqrt benchmark -115.30 ; trivial 0
+k=1600 h=1 R=40 (system 3n+1): log2 avg = -235.55, log2 max = -231.91, log2 min = -243.49 ; sqrt benchmark -230.41 ; trivial 0

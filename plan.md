@@ -801,3 +801,31 @@ Best open leads, each a precise lemma strictly weaker than Collatz:
 (4) power-run compression u^K g u'^K' via S-unit equations (bounded alphabet);
 (5) target-uniform positive density of predecessor sets from Mazur's proof;
 (6) F_2[x] Period Lemma (neighbour problem).
+
+Third wave (November 18, 2026; after the owner asked to proceed as recommended):
+- **Committed** the round on branch `round6-nov2026` (not pushed).
+- **lean-rigidity: DONE — KERNEL-CHECKED.** Uniqueness of T, the S_a family
+  and two-sided sharpness (Theorem 68).
+- **lean-sharp: DONE — KERNEL-CHECKED.** Harmonic bound 162, product identity,
+  residue bound (e^54), cycle exponent bounds and the conditional exact cycle
+  length, sojourn count 10·1.9322^L (Theorem 70). Sharp constants (27.2,
+  7.62, 1.386, 11.3) remain refereed-only.
+- **w3-fp0: refereed, none broken.** FP-0 (power saving) NOT proved. Proved:
+  a (log X)^(−0.0512) saving on the H1 seed count and polynomial Fourier
+  decay of the H1 Cantor set at fixed frequency; vacuous below Q ≈ 10^37.
+  FP-0 reduced to one estimate (SGP). Ledger family 19 narrowed to "power
+  decay blocked".
+- **w3-g2: refereed, none broken.** G2 (power saving) NOT proved. Proved: a
+  (log X)^(−0.986) saving on the sojourn count (given a cited ballot lemma)
+  and equidistribution of landing points at the critical pinning with a
+  sub-log-power rate whose constant (~e^(−165)) makes it contentless at any
+  reachable scale. Exact generation counts to 2^38 match the independence
+  model. The repo's Theorem 56 cannot be extended to the critical tilt q*.
+  G2 reduced to an Erdős-regime ternary-digit estimate.
+
+Net position after the third wave: both best open lemmas (FP-0, G2) ended in
+a logarithmic gain plus a reduction to the same obstruction — the
+distribution of ternary digits of powers of 2 (equivalently binary digits of
+powers of 3) at height comparable to the exponent, i.e. the Erdős
+ternary-digit / Furstenberg ×2×3 regime that Theorem 61 already identified.
+No route from any proved result of this round to H1 or Lemma E is known.
