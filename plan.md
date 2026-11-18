@@ -876,3 +876,31 @@ Fourth wave, other results (November 18, 2026):
   27.163); unconditional exact cycle length for cycles above 2^71
   (`cycle_length_above_71`); residue bound e^9.31; conditional residue split.
   All known statements (see prior-art notice); the Lean proofs are ours.
+
+Fifth wave (November 18, 2026):
+- **w5-fourier (pointwise power Fourier decay, PFD): MAPPED, not proved;
+  self-refereed only.** Proved by the agent: (1) the corrected implication —
+  FP-0 follows from |T_K(h)| ≤ C·N_K^(1−δ) for INTEGERS 1 ≤ |h| ≤ N_K^δ at
+  full scale (Selberg majorant; no averaging, no 3-adic frequencies);
+  (2) this is equivalent to power equidistribution of the top ≍K bits of E_K
+  in every dyadic window; (3) mirror identity: T_K(h) is a 3-adic Fourier
+  transform at frequency −h·2^(−K); (4) an ab/ba pairing majorant with a
+  factor < 1 at every "good" node; (5) Lemma R: a run of J+1 consecutive bad
+  nodes forces ~6.3J equal bits in the 2-adic expansion of 11h·3^(−p).
+  So PFD follows from "no long runs of equal binary digits of 3^(−p) at
+  heights k ≥ 4p/3" — an Erdős-type statement; numerically the longest run
+  for h = 1, K = 1600 is 2. Literature: power decay for an EXPLICIT
+  self-similar measure is known only with nonlinearity (Bourgain–Dyatlov,
+  Sahlsten–Stevens); affine systems with commuting multipliers get
+  (poly)logarithmic rates (Li–Sahlsten, Varjú–Yu, Baker–Khalil–Sahlsten),
+  which is exactly the strength already proved here. The brief's
+  "finite-state" shortcut is refuted (top ternary digits control the phase).
+
+**Where the campaign stands after five waves.** Every line of attack on H1's
+counting form has been reduced, by proved steps, to one open problem: power
+Fourier decay / digit equidistribution for an explicit affine self-similar
+set with multipliers 2 and 3 (the Erdős ternary-digit, Furstenberg ×2×3
+regime; in fractal-geometry terms, power decay for an explicit
+non-homogeneous self-similar measure). Published tools stop at logarithmic
+rates. Lemma E has no reduction of this kind at all: the all-trajectory tools
+cannot distinguish its target. Nothing proved here is a route to Collatz.

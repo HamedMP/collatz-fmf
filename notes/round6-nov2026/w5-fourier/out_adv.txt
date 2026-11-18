@@ -1,0 +1,14 @@
+K=800 num=3**40 r=2 eps=0.1 : U/N=2^-30.22  delta_U=0.1310  | gmin=32 (gmin/K=0.0400) good-node frac=0.714  beta=0.9782  bound-from-gmin delta=0.0044
+K=800 num=3**80 r=2 eps=0.1 : U/N=2^-27.77  delta_U=0.1204  | gmin=26 (gmin/K=0.0325) good-node frac=0.628  beta=0.9782  bound-from-gmin delta=0.0036
+K=800 num=3**160 r=2 eps=0.1 : U/N=2^-23.51  delta_U=0.1020  | gmin=25 (gmin/K=0.0312) good-node frac=0.505  beta=0.9782  bound-from-gmin delta=0.0034
+K=800 num=3**240 r=2 eps=0.1 : U/N=2^-19.75  delta_U=0.0856  | gmin=17 (gmin/K=0.0213) good-node frac=0.443  beta=0.9782  bound-from-gmin delta=0.0023
+K=800 num=3**320 r=2 eps=0.1 : U/N=2^-15.48  delta_U=0.0671  | gmin=13 (gmin/K=0.0163) good-node frac=0.446  beta=0.9782  bound-from-gmin delta=0.0018
+K=800 num=3**400 r=2 eps=0.1 : U/N=2^-10.03  delta_U=0.0435  | gmin=8 (gmin/K=0.0100) good-node frac=0.511  beta=0.9782  bound-from-gmin delta=0.0011
+K=800 num=3**480 r=2 eps=0.1 : U/N=2^-5.30  delta_U=0.0230  | gmin=3 (gmin/K=0.0037) good-node frac=0.640  beta=0.9782  bound-from-gmin delta=0.0004
+K=800 num=3**504 r=2 eps=0.1 : U/N=2^-3.74  delta_U=0.0162  | gmin=1 (gmin/K=0.0013) good-node frac=0.690  beta=0.9782  bound-from-gmin delta=0.0001
+K=800 num=3**528 r=2 eps=0.1 : U/N=2^-14.33  delta_U=0.0621  | gmin=14 (gmin/K=0.0175) good-node frac=0.738  beta=0.9782  bound-from-gmin delta=0.0019
+K=800 num=3**560 r=2 eps=0.1 : U/N=2^-30.26  delta_U=0.1312  | gmin=31 (gmin/K=0.0387) good-node frac=0.782  beta=0.9782  bound-from-gmin delta=0.0043
+K=800 num=1 r=3 eps=0.1 : U/N=2^-49.99  delta_U=0.2168  | gmin=0 (gmin/K=0.0000) good-node frac=0.000  beta=0.9782  bound-from-gmin delta=-0.0000
+K=800 num=1 r=4 eps=0.1 : U/N=2^-61.27  delta_U=0.2657  | gmin=0 (gmin/K=0.0000) good-node frac=0.000  beta=0.9782  bound-from-gmin delta=-0.0000
+K=800 num=1 r=5 eps=0.1 : U/N=2^-67.17  delta_U=0.2913  | gmin=0 (gmin/K=0.0000) good-node frac=0.000  beta=0.9782  bound-from-gmin delta=-0.0000
+K=400 num=1 r=8 eps=0.1 : U/N=2^-39.40  delta_U=0.3411  | gmin=0 (gmin/K=0.0000) good-node frac=0.000  beta=0.9782  bound-from-gmin delta=-0.0000

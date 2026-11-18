@@ -68,3 +68,16 @@ n < T(n) at n = 2^(a+1) − 1 for every a.
 | 25 | Machine-checked controls | DONE (Lean) | Rigidity of T and the S_a family are kernel-checked; use them to test any "no cycles" argument |
 
 Common wall of families 18, 19, 24: digits of 2^(−j) mod 3^J with j ≍ J.
+
+## Added after the fourth and fifth waves (2026-11-18)
+
+| # | Family | Status | Why blocked / what it gives |
+|---|---|---|---|
+| 26 | All-trajectory size tools (harmonic bound, residue, sojourn) applied to Lemma E | BLOCKED (w4-E) | They only forbid lingering; the 5n+1 orbit of 7 satisfies their conclusions with generic hop letters. Statements are prior art (Nikzad–Frinkle–Bagherzadeh 2026; García–Tal 1999) |
+| 27 | Short exponential sums of 3^i mod 2^k (Korobov–Vinogradov) for the digit wall | BLOCKED (w4-wall, refereed) | Published range R ≥ exp(c k^(2/3)) with saving exponent 10^(−11); pair method capped at K^(−1/8). Gave only 0.0719 → 0.0913 |
+| 28 | Pointwise power Fourier decay of the H1 Cantor set (PFD) | OPEN, the precise wall (w5-fourier) | PFD for integers |h| ≤ N^δ ⇒ FP-0 (proved). PFD ⇐ no long equal-bit runs in 3^(−p) at heights ≥ 4p/3 (Lemma R). Explicit affine self-similar measures: only (poly)log decay is known in the literature |
+| 29 | Time-L return map F(x) = T^⌊log₂x⌋(x); mantissa rotation; real-vs-2-adic series; rigidity-based potentials; nonstandard models | BLOCKED (w4-free) | Two bad F-steps = lemma G2; mantissa law is control-blind; series encodes size only; S_a differs from T at one far-out point |
+
+Process rule added: run a prior-art search (preprint servers and forums
+directly: Hexagon, Zenodo, rStation, StackExchange API, GitHub; not just web
+search) BEFORE refereeing or formalizing a result.
