@@ -1,0 +1,14 @@
+q=5 c=+1 odd n<30001 cap 2^300: escapes=14502 | sup harm=2.6664 (n=15) | sup log prod=0.2706 (n=15) inf log prod=0.0000 (n=29781) | sup N(2^L)/2^(eta L)=0.8039 (n=1)
+q=3 c=+1 odd n<30001 cap 2^300: escapes=0 | sup harm=2.9362 (n=12555) | sup log prod=0.5133 (n=993) inf log prod=0.2877 (n=1) | sup N(2^L)/2^(eta L)=0.8039 (n=3)
+q=3 c=-1 odd n<30001 cap 2^300: escapes=0 | sup harm=2.2666 (n=28407) | sup log prod=-0.0657 (n=41) inf log prod=-0.5232 (n=3) | sup N(2^L)/2^(eta L)=0.8039 (n=3)
+5n+1, n=7, K=20000 steps: bits(x_K)=3107  a_K/K=0.49750 (critical 1/log2 5=0.43068)  log2(x_K)/K=0.15535
+   sum 1/x_k = 0.4344716185554464782   xi_K = prod(1+1/(5x_i)) = 1.0736929211592685968
+   min of x_k for k>=100: 2^24, for k>=1000: 2^152, for k>=10000: 2^1554
+   k= 0 x_k=7  nu*5^a/2^k - x_k = 0.51585044811488   series delta_k = 0.51585044811488
+   k= 1 x_k=18  nu*5^a/2^k - x_k = 0.7896261202872   series delta_k = 0.7896261202872
+   k= 2 x_k=9  nu*5^a/2^k - x_k = 0.3948130601436   series delta_k = 0.3948130601436
+   k= 3 x_k=23  nu*5^a/2^k - x_k = 0.487032650359001   series delta_k = 0.487032650359001
+   k= 5 x_k=29  nu*5^a/2^k - x_k = 0.358790812948751   series delta_k = 0.358790812948751
+   k=10 x_k=573  nu*5^a/2^k - x_k = 0.413883065405287   series delta_k = 0.413883065405287
+   k=20 x_k=8749  nu*5^a/2^k - x_k = 0.601487204060165   series delta_k = 0.601487204060165
+   k=40 x_k=407433  nu*5^a/2^k - x_k = 2.0691961152556   series delta_k = 2.0691961152556

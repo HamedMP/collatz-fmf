@@ -1,0 +1,8 @@
+E_k inverse-branch construction == forward definition for k<=16
+N_j 2^-sj range: min 1.0000 (j=0) max 1.6383 (j=1)
+N_j 2^-sj over j<5000: [1.0000, 1.6383]
+LEMMA6 OK for all n<=k<=40; max fibre/N_{k-n} = 1.000
+PROP F: 8288 instances OK; max LHS/RHS1 = 0.5000 ; max RHS1/RHS2 = 0.6085
+pair counts by valuation OK (kappa<=16)
+geometric factor 2.3767 (claimed 2.377); 2*1.64*2^(3s)=5.9669 (<=6); 2*sqrt2*1.64*2.3767=11.0244 (<=11.1); *6.5=71.659 (claimed 72)
+ALL OK

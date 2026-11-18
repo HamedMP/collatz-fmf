@@ -844,3 +844,31 @@ the H1 seed-count log saving (no prior art found, thin coverage). Lesson for
 the process: run the literature agent BEFORE refereeing and formalizing, and
 search preprint servers and forums directly (Hexagon, Zenodo, rStation,
 StackExchange API, GitHub) — general web search surfaced none of these.
+
+Fourth wave, other results (November 18, 2026):
+- **Mazur positive-density Lean: REBUILT here** (Lean v4.30.0-rc2, Mathlib
+  5450b53, second cache in mazur-audit/build, 28 min on 2 cores): top theorem
+  uses standard axioms only. So "a positive lower density of integers reach
+  1 within 10.46 ln n steps" is machine-checked on its pinned toolchain,
+  third-party, not ours; kernel replay not run. The 0.90-exponent archive
+  was not rebuilt (needs ~10.6 GiB RAM for native_decide).
+- **w4-E (Lemma E from the all-trajectory tools): PARTIAL, nothing for Lemma
+  E.** The tools only forbid lingering; the 5n+1 orbit of 7 satisfies their
+  conclusions with generic hop letters, so no "eventually G01" slice can
+  follow from them. Corollaries (unrefereed): cycles have
+  {a log₂3} ≥ 0.5291 (0.9134 given NFB); real-shadow identity for divergent
+  orbits. Coordinator's brief was wrong on two points (pointwise growth from
+  the sojourn count; a 5n+1-refuted growth statement) — corrected in the
+  report.
+- **w4-wall (the digit obstruction): refereed.** Proved: Fourier-decay
+  exponent 0.0719 → 0.0913 and seed-count saving (log X)^(−0.0650) (asymptotic
+  only). Gap mapped: published short-sum bounds need length ≥ exp(c k^(2/3));
+  digit results stop at the Baker rate. Referee: w4-wall's "Remark 5" is
+  WRONG and w3-fp0 was right — FP-0 follows from POINTWISE power Fourier
+  decay of the H1 Cantor set (PFD); numerically PFD holds for all
+  frequencies with exponent ≥ ~0.055. New attempt w5-fourier targets PFD.
+- **w4-free: no route.** Benford-type law along every trajectory (control-
+  blind, unrefereed candidate); the time-L return map F has only the fixed
+  point 1 (verified to level 20000); runs of non-descending F-steps are
+  independent through 5 generations (exhaustive to level 33); two bad steps
+  in a row is lemma G2 again.

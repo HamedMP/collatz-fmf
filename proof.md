@@ -2095,8 +2095,15 @@ García–Tal 1999; MathOverflow 513539).
 - **Prior art that changes "Still open" lists above:** natural-density Tao is
   claimed by Allikvere and Mazur (Theorem 58 now says so); a positive lower
   natural density of integers reaching 1 is claimed by Mazur (ProofAtlas,
-  Sept 2026; Lean statement audited here and matches the prose; NOT rebuilt
-  here, since it pins Lean v4.30.0-rc2); predecessor exponents 0.90–0.925 are
+  Sept 2026; Lean statement audited here and matches the prose; **REBUILT
+  here on 18 Nov 2026** on its pinned toolchain Lean v4.30.0-rc2 / Mathlib
+  5450b53: 3949 jobs, 0 errors; `positive_density`, `densityConstant_pos`
+  and `cutoff_pos` depend only on propext, Classical.choice, Quot.sound.
+  Caveats: no independent kernel replay (lean4checker not run), downloaded
+  Mathlib oleans and a release-candidate toolchain are trusted, the proof
+  body was not read by anyone here, and the literature search reports
+  [second-hand] a Lean kernel bug patched 28 July 2026 that may bear on
+  toolchains pinned from that period); predecessor exponents 0.90–0.925 are
   claimed by others; Amano 2021 has stopping-time constant 6.95212.
 
 ### Audit Outcome Summary

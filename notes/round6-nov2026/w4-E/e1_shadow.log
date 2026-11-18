@@ -1,0 +1,30 @@
+3n+1   shadow identity: 18840 exact instances OK
+3n-1   shadow identity: 18840 exact instances OK
+5n+1   shadow identity: 18840 exact instances OK
+3n+5   shadow identity: 18840 exact instances OK
+3n+7   shadow identity: 18840 exact instances OK
+3n+11  shadow identity: 18840 exact instances OK
+S_0    shadow identity: 18840 exact instances OK
+S_3    shadow identity: 18840 exact instances OK
+S_6    shadow identity: 18840 exact instances OK
+TOTAL exact instances: 169560
+
+cycle identity 2^p/q^a = prod(1+c/(q x)) (exact):
+  3n+1 {1,2}     p=  2 a=  1 min=   1  2^p/q^a=1.333333  ceil(a log2 q)=  2 floor=  1  p==ceil:True
+  3n-1 {1}       p=  1 a=  1 min=   1  2^p/q^a=0.666667  ceil(a log2 q)=  2 floor=  1  p==ceil:False
+  3n-1 thru 5    p=  3 a=  2 min=   5  2^p/q^a=0.888889  ceil(a log2 q)=  4 floor=  3  p==ceil:False
+  3n-1 thru 17   p= 11 a=  7 min=  17  2^p/q^a=0.936443  ceil(a log2 q)= 12 floor= 11  p==ceil:False
+  5n+1 thru 13   p=  7 a=  3 min=  13  2^p/q^a=1.024000  ceil(a log2 q)=  7 floor=  6  p==ceil:True
+  5n+1 thru 17   p=  7 a=  3 min=  17  2^p/q^a=1.024000  ceil(a log2 q)=  7 floor=  6  p==ceil:True
+  5n+1 thru 1    p=  5 a=  2 min=   1  2^p/q^a=1.280000  ceil(a log2 q)=  5 floor=  4  p==ceil:True
+  3n+5 thru 1    p=  3 a=  1 min=   1  2^p/q^a=2.666667  ceil(a log2 q)=  2 floor=  1  p==ceil:False
+  3n+5 thru 19   p=  5 a=  3 min=  19  2^p/q^a=1.185185  ceil(a log2 q)=  5 floor=  4  p==ceil:True
+  3n+5 thru 23   p=  5 a=  3 min=  23  2^p/q^a=1.185185  ceil(a log2 q)=  5 floor=  4  p==ceil:True
+  3n+5 thru 187  p= 27 a= 17 min= 187  2^p/q^a=1.039318  ceil(a log2 q)= 27 floor= 26  p==ceil:True
+  3n+5 thru 347  p= 27 a= 17 min= 347  2^p/q^a=1.039318  ceil(a log2 q)= 27 floor= 26  p==ceil:True
+  3n+7 thru 5    p=  4 a=  2 min=   5  2^p/q^a=1.777778  ceil(a log2 q)=  4 floor=  3  p==ceil:True
+  3n+11 thru 1   p=  6 a=  2 min=   1  2^p/q^a=7.111111  ceil(a log2 q)=  4 floor=  3  p==ceil:False
+  3n+11 thru 13  p= 14 a=  8 min=  13  2^p/q^a=2.497180  ceil(a log2 q)= 13 floor= 12  p==ceil:False
+  S_0 fixed 1    p=  1 a=  1 min=   1  2^p/q^a=0.666667  ceil(a log2 q)=  2 floor=  1  p==ceil:False
+  S_3 fixed 15   p=  1 a=  1 min=  15  2^p/q^a=0.666667  ceil(a log2 q)=  2 floor=  1  p==ceil:False
+  S_6 fixed 127  p=  1 a=  1 min= 127  2^p/q^a=0.666667  ceil(a log2 q)=  2 floor=  1  p==ceil:False

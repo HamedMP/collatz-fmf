@@ -1,0 +1,23 @@
+j= 4 tau=    4 #a=    8 surv_d=4 max_complete=8.0e-16 max_I=    1.848 (/2^(j/2)=0.462) bound=    22.63 ratio=0.082 max_b|S|/2^(j/2)=0.9239 (limit sqrt2)
+      completion L1 const max_L=1.500 <= 2+ln(tau/2)=2.693 <= j
+j= 5 tau=    8 #a=   16 surv_d=4 max_complete=4.4e-16 max_I=    2.774 (/2^(j/2)=0.490) bound=    40.00 ratio=0.069 max_b|S|/2^(j/2)=0.7071 (limit sqrt2)
+      completion L1 const max_L=1.757 <= 2+ln(tau/2)=3.386 <= j
+j= 6 tau=   16 #a=   32 surv_d=8 max_complete=1.9e-15 max_I=    3.681 (/2^(j/2)=0.460) bound=    67.88 ratio=0.054 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=2.065 <= 2+ln(tau/2)=4.079 <= j
+j= 7 tau=   32 #a=   64 surv_d=8 max_complete=3.0e-15 max_I=    6.407 (/2^(j/2)=0.566) bound=   112.00 ratio=0.057 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=2.348 <= 2+ln(tau/2)=4.773 <= j
+j= 8 tau=   64 #a=  128 surv_d=8 max_complete=5.2e-15 max_I=    8.887 (/2^(j/2)=0.555) bound=   181.02 ratio=0.049 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=2.628 <= 2+ln(tau/2)=5.466 <= j
+j= 9 tau=  128 #a=  256 surv_d=8 max_complete=7.1e-15 max_I=   13.143 (/2^(j/2)=0.581) bound=   288.00 ratio=0.046 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=2.909 <= 2+ln(tau/2)=6.159 <= j
+j=10 tau=  256 #a=  512 surv_d=8 max_complete=1.4e-14 max_I=   17.029 (/2^(j/2)=0.532) bound=   452.55 ratio=0.038 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=3.190 <= 2+ln(tau/2)=6.852 <= j
+j=11 tau=  512 #a=   12 surv_d=8 max_complete=2.5e-14 max_I=   26.188 (/2^(j/2)=0.579) bound=   704.00 ratio=0.037 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=3.472 <= 2+ln(tau/2)=7.545 <= j
+j=12 tau= 1024 #a=   12 surv_d=8 max_complete=4.7e-14 max_I=   39.574 (/2^(j/2)=0.618) bound=  1086.12 ratio=0.036 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=3.753 <= 2+ln(tau/2)=8.238 <= j
+j=13 tau= 2048 #a=   12 surv_d=8 max_complete=9.1e-14 max_I=   58.054 (/2^(j/2)=0.641) bound=  1664.00 ratio=0.035 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=4.034 <= 2+ln(tau/2)=8.931 <= j
+j=14 tau= 4096 #a=   12 surv_d=8 max_complete=1.7e-13 max_I=   70.781 (/2^(j/2)=0.553) bound=  2534.27 ratio=0.028 max_b|S|/2^(j/2)=1.0000 (limit sqrt2)
+      completion L1 const max_L=4.314 <= 2+ln(tau/2)=9.625 <= j
+LEMMA5 OK worst ratio 0.08166018530477355

@@ -136,3 +136,48 @@ Mathematical lead, stated as a lemma to prove or kill by hand (it is the only no
 > **Lemma (uniform variation, Mazur Prop. 3.1).** Let b_0 ≥ 325, b_{j+1} = b_j + ⌊b_j/100⌋, k_n = ⌊b_n/4⌋, and for odd M ≥ 16^{b_0} let Z_n(M) = Σ_h ω(h)·ρ_{k_n}(R_h mod 3^{k_n}) over generation-n central first-crossing histories h from M with endpoint R_h. Then |Z_{n+1}(M) − Z_n(M)| ≤ C_{b_0}(n+1)^3 (q_1^n + q_2^n) with q_1, q_2 < 1 and C_{b_0} independent of M, given only Tao's bound Osc_{m,q}(μ_q) ≤ C_6 m^{−6}.
 
 If this lemma is right (I believe so, having re-derived the multiplicity bound (3.9) and the ratios), positive lower density of {n : n → 1} follows by the elementary steps 1, 2, 4 and the source-charge lemma, and the same proof gives positive lower density of the predecessor set of every target a with 3 ∤ a. For this repo the corollary is that a density-one statement for "reaches 1" is now the wall, and FMF-side effort on x^γ exponents has no remaining value for target 1.
+
+## Rebuild (2026-11-18)
+
+Verdict: **REBUILT — axioms: [propext, Classical.choice, Quot.sound]** for claim (1). Supersedes item 4 of (a) and section (e) for claim (1): "build passes, standard axioms only" is now REBUILT here, no longer PAGE-ASSERTS. Claims (2), (3) remain not rebuilt.
+
+**Setup.** Build copy `build/posdens-rebuild/` = `CollatzPositiveDensity.lean`, `Erdos1135/`, `FormalConjectures/`, `lakefile.toml`, `lake-manifest.json`, `lean-toolchain` copied from `src/posdens-paper/positive-density-log-time-collatz/` (v2.1 paper archive; the commit archive `posdens-checked` ships no lakefile). Not copied and not run: `Verification/` (its `run_cmd` blocks write files via `IO.FS.writeFile`; it is a non-default lake target) and `scripts/`. Pre-build scan of lakefile + 386 built `.lean` files for `IO.Process|run_cmd|extern|moreLinkArgs|initialize|#eval|IO.FS|script|unsafe|implemented_by|macro|elab|syntax|plugin|dynlib`: 0 hits; lakefile is plain TOML (one `require`, four `lean_lib`, no scripts/targets/link args).
+- Pin: Lean `leanprover/lean4:v4.30.0-rc2` (`lean --version`: commit `3dc1a088b6d2…`); Mathlib `5450b53e5ddc75d46418fabb605edbf36bd0beb6` (`git rev-parse HEAD` in `.lake/packages/mathlib` confirms; manifest unchanged by the build).
+- `lake exe cache get`: 8297/8297 files downloaded and decompressed, no errors. Mathlib was not compiled from source (0 `Built Mathlib…` lines).
+- `taskset -c 0-1 lake build` (`LEAN_NUM_THREADS=2`): `Build completed successfully (3949 jobs).` All 386 project modules (67,232 lines) built; 0 errors, 0 `sorry` warnings; 35 files with linter/deprecation warnings only (unused simp args, `<;>` style, deprecated `mul_le_mul_left'`). Wall time 28 min 40 s (20:15:15Z to 20:43:55Z). Disk: 8.2 GB build dir (7.1 GB Mathlib packages+cache) + 2.6 GB toolchain in `~/.elan`; 32 GB free afterwards. Logs: `build/posdens-rebuild/build.log` (sha256 `b84d57f7…`), `cache.log`.
+
+**Axioms, printed here** (`lake env lean RebuildAxioms.lean`, source in `scripts/RebuildAxioms.lean`, output `build/posdens-rebuild/axioms.out`), verbatim:
+```
+positive_density : ∀ (X : ℕ), cutoff ≤ X → ↑densityConstant * ↑X ≤ ↑(countBelow (523 / 50) X)
+theorem CollatzPositiveDensity.positive_density : ∀ (X : ℕ),
+  cutoff ≤ X → ↑densityConstant * ↑X ≤ ↑(countBelow (523 / 50) X) :=
+fun X hX => Erdos1135.ND.PositiveDensity.explicitPositiveDensityUnitSeedCount_ten46 X hX
+def CollatzPositiveDensity.step : ℕ → ℕ :=
+fun n => if Even n then n / 2 else 3 * n + 1
+def CollatzPositiveDensity.fastConvergent : ℝ → ℕ → Prop :=
+fun C n => 0 < n ∧ ∃ k, ↑k ≤ C * Real.log ↑n ∧ step^[k] n = 1
+def CollatzPositiveDensity.countBelow : ℝ → ℕ → ℕ :=
+fun C X => Nat.count (fastConvergent C) X
+def CollatzPositiveDensity.densityConstant : ℚ :=
+Erdos1135.ND.PositiveDensity.explicitPositiveDensityUnitSeedConstant
+def CollatzPositiveDensity.cutoff : ℕ :=
+Erdos1135.ND.PositiveDensity.explicitPositiveDensityUnitSeedCutoff
+densityConstant_pos : 0 < densityConstant
+cutoff_pos : 0 < cutoff
+'CollatzPositiveDensity.positive_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzPositiveDensity.densityConstant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzPositiveDensity.cutoff_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CollatzPositiveDensity.positive_density_ten48' depends on axioms: [propext, Classical.choice, Quot.sound]
+'rebuild_restatement' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+No `sorryAx`, no `Lean.ofReduceBool`, no custom axioms.
+
+**Independent restatement (own code, compiled against the built library).** `rebuild_restatement` in `scripts/RebuildAxioms.lean` states, in Mathlib vocabulary only (step written as `if m % 2 = 0 then m / 2 else 3 * m + 1`, no project definitions in the statement): `∃ c : ℝ, 0 < c ∧ ∃ X₀ : ℕ, ∀ X ≥ X₀, c * X ≤ Nat.count (fun n => 0 < n ∧ ∃ k : ℕ, (k:ℝ) ≤ (523/50) * Real.log n ∧ step^[k] n = 1) X`. It is derived from `positive_density` + `densityConstant_pos` and type-checks with the same three axioms.
+
+**Source identity.** `CollatzPositiveDensity.lean` sha256 `0670b896862f7b8a289c1e41e073ad250fd1898b5b27f6f98232e1ecb29a042a` in the build copy, in `src/posdens-paper` and in `src/posdens-checked` (`cmp` identical); `diff -rq` of `Erdos1135/` and `FormalConjectures/` between build copy and `src/posdens-checked`: no differences. The earlier audit did not record a per-file hash; identity is to the same extracted trees it read (archive hashes in (b)).
+
+**What it asserts.** There are an explicit rational c > 0 and natural X0 such that for every natural X ≥ X0, at least c·X of the integers 1 ≤ n < X reach 1 under the ordinary Collatz map (n/2 for even n, 3n+1 for odd n, no acceleration) within k ≤ 10.46·ln n steps. That is positive lower density of fast-converging starting values; it is not density one and not the Collatz conjecture, and c, X0 are astronomically small/large.
+
+**Step 6 (predecessor exponent 0.90): SKIPPED, not rebuilt.** Same pins (Lean v4.30.0-rc2, manifest Mathlib `5450b53e…`), but the archive's own `REPRODUCIBILITY.md` gives peak RSS about 10.6 GiB and 9.3 GiB for the two `native_decide` certificate modules (19.5 + 14.6 min on their machine), above this run's 5 GB RAM budget; it also needs the 1.29 GB `artifacts/` hex chunks extracted (`include_str`). Its axiom list (expected to include `Lean.ofReduceBool`) stays PAGE-ASSERTS.
+
+**Still unchecked.** (i) No `lean4checker`/external kernel replay of the produced oleans; the result rests on the Lean 4.30.0-rc2 kernel as run by `lake build`, on a release-candidate toolchain, and on the downloaded Mathlib olean cache being honest for that revision (Mathlib itself not recompiled). (ii) The 67k-line proof body was machine-checked, not read. (iii) Claims (2), (3) not rebuilt. (iv) `Verification/*.lean` from the archive not run (own axiom file used instead).
