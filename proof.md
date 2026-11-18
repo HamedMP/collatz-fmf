@@ -2023,6 +2023,19 @@ on indices below K:
 - `sojourn_sharp`: #{k < K : x_k < 2^L} ≤ 10·(9661/5000)^L (true base
   2^0.94996 = 1.93181; the bound beats the trivial count only from L = 67).
 Only the 3x+1 map is formalized, not 3x−1.
+Sharper constants (lean/CollatzFMF/Const*.lean, 18 Nov 2026; numerical steps
+by `decide +kernel` on exact binomial sums to level 300, no `native_decide`):
+- `theoremH_2793`: Σ_{k<K} 1/x_k ≤ 27.93 (refereed 27.163);
+- `harmonic_ge_71`: if all terms of the stretch are ≥ 2^71 then Σ 1/x_k ≤ 1.38;
+- **`cycle_length_above_71`: every T-cycle all of whose elements are ≥ 2^71,
+  with a odd terms and minimal period p, has 3^a < 2^p < 2·3^a, i.e.
+  p = ⌈a·log₂3⌉ — no further hypothesis.** The only external input for
+  "every nontrivial cycle" is the published verification below 2^71;
+- `residue_bound_931`: x_k·2^k ≤ e^9.31·x_0·3^(a_k) unconditionally;
+  `residue_split_32_odd`: ≤ E·4.9964 under the explicit hypothesis
+  `SmallHyp 32 E 497` (a statement about all n < 2^32, never asserted in
+  Lean; whether the exhaustive run establishes it in exactly this form has
+  not been refereed).
 **Litmus:** equally true for 3n−1 (cycles through 1, 5, 17 checked), so it
 cannot separate +1 from −1 and is no route to descent; the proof collapses
 for 5n+1 (uses 3 < 4). **Novelty: none for the statements** — see the prior-art

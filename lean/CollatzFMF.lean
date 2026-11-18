@@ -12,3 +12,4 @@ import CollatzFMF.GateAxioms
 import CollatzFMF.HarmonicAxioms
 import CollatzFMF.RigidityAxioms
 import CollatzFMF.SharpAxioms
+import CollatzFMF.ConstAxioms

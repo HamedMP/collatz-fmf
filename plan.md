@@ -872,3 +872,7 @@ Fourth wave, other results (November 18, 2026):
   point 1 (verified to level 20000); runs of non-descending F-steps are
   independent through 5 generations (exhaustive to level 33); two bad steps
   in a row is lemma G2 again.
+- **lean-constants: DONE — KERNEL-CHECKED.** Harmonic bound 27.93 (refereed
+  27.163); unconditional exact cycle length for cycles above 2^71
+  (`cycle_length_above_71`); residue bound e^9.31; conditional residue split.
+  All known statements (see prior-art notice); the Lean proofs are ours.
